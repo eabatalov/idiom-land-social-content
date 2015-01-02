@@ -1120,7 +1120,7 @@
                     </object-folder>
                 </object-folder>
             </object-folder>
-            <object-folder name="IdiomLandTestDialogLevel">
+            <object-folder name="IdiomLandWeeklySocialQuizzLevel">
                 <object-folder name="Background">
                     <object-folder name="TeacherAnim">
                         <object-type name="TestDialogEditor" sid="9944387148510453">
@@ -1429,7 +1429,7 @@
                     </object-type>
                 </object-folder>
                 <object-folder name="Question">
-                    <object-type name="TestDialogQuestionSituationPhoto" sid="9963078062898053">
+                    <object-type name="TestDialogQuestionPhoto" sid="9963078062898053">
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="1demo_policeman" pingpong="0" repeatcount="1" repeatto="0" sid="3368699911828553" speed="5">

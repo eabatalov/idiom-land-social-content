@@ -1,67 +1,24 @@
 {
-    "name" : "1demo",
+    "name" : "",
+    "polyProps" : {
+        "debug" : "no"
+    },
     "sections" : [
         {
             "polyProps" : {
-                "name" : "policeman",
-                "idiomId" : "PieceCake"
+                "questCardURL" : "http://photos-e.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/10843919_859160490790204_2056791875_n.jpg"
             },
             "questions" : [
                 {
                     "text" : [
-                        "\"Piece of cake\" means something very easy."
-                    ],
-                    "rightAnswer" : true
-                },
-                {
-                    "text" : [
-                        "\"Piece of cake\" is used when speaking about ",
-                        "very simple, easy things."
-                    ],
-                    "rightAnswer" : true
-                },
-                {
-                    "text" : [
-                        "Idiom \"Piece of cake\" means \"I don't know the way\"."
+                        "\"Flog a dead horse\" means to be successful."
                     ],
                     "rightAnswer" : false
                 },
                 {
                     "text" : [
-                        "Idiom \"Piece of cake\" means \"I'm busy\"."
-                    ],
-                    "rightAnswer" : false
-                }
-            ]
-        },
-        {
-            "polyProps" : {
-                "name" : "balloons",
-                "idiomId" : "PullLeg"
-            },
-            "questions" : [
-                {
-                    "text" : [
-                        "\"To pull someone's leg\" means to use magic."
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "Idiom \"To pull someone's leg\" means \"to buy a balloon\"."
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "\"To pull Foxy's leg\" means to joke with Foxy."
-                    ],
-                    "rightAnswer" : true
-                },
-                {
-                    "text" : [
-                        "\"Someone is pulling your leg\" means someone ",
-                        "is joking with you."
+                        "\"Flog a dead horse\" means to waste time trying ",
+                        "to do something that will not succeed."
                     ],
                     "rightAnswer" : true
                 }
@@ -69,107 +26,127 @@
         },
         {
             "polyProps" : {
-                "name" : "captain",
-                "idiomId" : "TakeSmonesBreathAway"
+                "questCardURL" : "http://photos-g.ak.instagram.com/hphotos-ak-xpf1/t51.2885-15/891506_1517204398553358_2103760431_n.jpg"
             },
             "questions" : [
                 {
                     "text" : [
-                        "Idiom \"To take somebody's breath away\" is not about ",
-                        "breathing."
+                        "\"Get your wires crossed\" is to misunderstand someone."
                     ],
                     "rightAnswer" : true
                 },
                 {
                     "text" : [
-                        "People say \"It takes my breath away\" ",
-                        "when something amazes them."
-                    ],
-                    "rightAnswer" : true
-                },
-                {
-                    "text" : [
-                        "The proper idiom to say when you're scared: ",
-                        "\"It took my breath away\"."
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "\"Takes your breath away\" is an idiom about ",
-                        "the lack of fresh air."
+                        "\"Get your wires crossed\" means to date with someone."
                     ],
                     "rightAnswer" : false
                 }
             ]
-       },
-       {
-           "polyProps" : {
-                "name" : "kebab",
-                "idiomId" : "PutASockInIt"
-           },
-           "questions" : [
+        },
+        {
+            "polyProps" : {
+                "questCardURL" : "http://photos-e.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/10881875_365298253642300_268380823_n.jpg"
+            },
+            "questions" : [
                 {
                     "text" : [
-                        "Idiom \"Put a sock in it\" is a request to wear a sock."
+                        "\"Get a kick out of music\" is to listen it loudly.",
+                        ""
                     ],
                     "rightAnswer" : false
                 },
                 {
                     "text" : [
-                        "\"Put a sock in it\" is the last stage of kebab cooking."
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "Idiom \"Put a sock in it\" is a request to be quiet."
-                    ],
-                    "rightAnswer" : true
-                },
-                {
-                    "text" : [
-                        "Idiom \"Put a sock in it\" is a request to be quiet."
+                        "\"Get a kick out of horror movies\" means to enjoy them very much.",
+                        ""
                     ],
                     "rightAnswer" : true
                 }
-           ]
+            ]
        },
        {
-           "polyProps" : {
-                "name" : "taxi",
-                "idiomId" : "NewKidOnTheBlock"
-           },
-           "questions" : [
-               {
-                   "text" : [
-                       "Idiom \"A new kid on the block\" means ",
-                       "that a child was born."
-                   ],
-                   "rightAnswer" : false
-               },
-               {
-                   "text" : [
-                       "\"New kid on the block\" is a person ",
-                       "with a lack of money."
-                   ],
-                   "rightAnswer" : false
-               },
-               {
-                   "text" : [
-                       "\"New kid on the block\" is ",
-                       "the newest person around, a newcomer."
-                   ],
-                   "rightAnswer" : true
-               },
-               {
+            "polyProps" : {
+                "questCardURL" : "http://photos-g.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/10724219_406139012876782_1987286775_n.jpg"
+            },
+            "questions" : [
+                {
                     "text" : [
-                        "Idiom \"New kid on the block\" is about ",
-                        "a person that has just joined a group of people."
+                        "\"Drag your feet\" is a sport excercise.",
+                        ""
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Dragging your feet\" is doing something slowly because ",
+                        "you don't want to do it."
                     ],
                     "rightAnswer" : true
-               }
-           ]
-        }
+                }
+            ]
+       },
+       {
+            "polyProps" : {
+                "questCardURL" : "http://photos-c.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10865052_273523019438586_1611682830_n.jpg"
+            },
+            "questions" : [
+                {
+                    "text" : [
+                        "\"Hit the sack\" is to be kicked by a sack.",
+                        ""
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Hit the sack\" is to go to bed in order to sleep.",
+                        ""
+                    ],
+                    "rightAnswer" : true
+                }
+            ]
+       },
+       {
+            "polyProps" : {
+                "questCardURL" : "http://photos-h.ak.instagram.com/hphotos-ak-xap1/t51.2885-15/1599879_606851646109415_319454872_n.jpg"
+            },
+            "questions" : [
+                {
+                    "text" : [
+                        "\"Have your cake and eat it too\" is to have half of a cake after you bite it.",
+                        ""
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Have your cake and eat it too\" is to have two good things at the same time.",
+                        ""
+                    ],
+                    "rightAnswer" : true
+                }
+            ]
+       },
+       {
+            "polyProps" : {
+                "questCardURL" : "http://photos-b.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848160_364721747061969_392480482_n.jpg"
+            },
+            "questions" : [
+                {
+                    "text" : [
+                        "\"Be down in the dumps\" is to have dirt clothes.",
+                        ""
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Be down in the dumps\" means to be unhappy.",
+                        ""
+                    ],
+                    "rightAnswer" : true
+                }
+            ]
+       }
     ]
 }

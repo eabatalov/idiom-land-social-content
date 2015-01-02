@@ -1,8 +1,6 @@
 node_modules
-idiomland_game.js
-idiomland_game.min.js
-main.js
-main.min.js
+weekly_quizz_game.js
+weekly_quizz_game.min.js
 package.json
 Gruntfile.js
 build*

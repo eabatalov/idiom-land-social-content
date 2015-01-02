@@ -50,7 +50,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TestDialogQuestionSituationPhoto" uid="59">
+                <instance type="TestDialogQuestionPhoto" uid="59">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

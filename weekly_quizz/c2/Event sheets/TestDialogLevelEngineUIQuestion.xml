@@ -73,7 +73,7 @@
                                         <action id="-15" name="Set visible" sid="8726771651706304" type="TestDialogAnswerFalseBtn">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="2401111692153728" type="TestDialogQuestionSituationPhoto">
+                                        <action id="-15" name="Set visible" sid="2401111692153728" type="TestDialogQuestionPhoto">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="6270060298649169" type="TestDialogQuestionText">
@@ -194,7 +194,7 @@
                                         <action id="-15" name="Set visible" sid="8364352895073177" type="TestDialogAnswerFalseBtn">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="8877517753550157" type="TestDialogQuestionSituationPhoto">
+                                        <action id="-15" name="Set visible" sid="8877517753550157" type="TestDialogQuestionPhoto">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="7139246266290228" type="TestDialogQuestionText">
