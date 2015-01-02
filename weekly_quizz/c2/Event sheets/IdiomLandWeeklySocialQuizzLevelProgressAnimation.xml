@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelProgressAnimation</name>
+    <events>
+        <event-group description="" sid="1825066022526561" title="Idiomalnd test dialog level progress animation">
+            <sub-events>
+                <variable constant="0" name="CurrentSuccessProgressPortion" sid="1993492425694685" static="1" type="number">0</variable>
+                <variable constant="0" name="CurrentFailProgressPortion" sid="2750573443156583" static="1" type="number">0</variable>
+                <variable constant="0" name="EditorAnimationFinished" sid="8450796129412447" static="1" type="number">0</variable>
+                <variable constant="0" name="ProgressLineUpdateAnimFinished" sid="9336606203169371" static="1" type="number">0</variable>
+                <event-block sid="537425664797791">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2504733622368947" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7432172337849453">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5750901929798808" type="System">
+                                    <param id="0" name="Variable">EditorAnimationFinished</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5988073046997559" type="System">
+                                    <param id="0" name="Variable">ProgressLineUpdateAnimFinished</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6014750921020437" type="System">
+                                    <param id="0" name="Variable">CurrentSuccessProgressPortion</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6185727728338464" type="System">
+                                    <param id="0" name="Variable">CurrentFailProgressPortion</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): 1 if new answer right, 0 if wrong&#x0D;&#x0A;param(1): current success progress portion&#x0D;&#x0A;param(2): current fail progress portion</comment>
+                <event-block sid="9743979097146476">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9695289420371468" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogRunUpdateProgressAnim&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6612711658537375">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="7259498930461493" type="System">
+                                    <param id="0" name="Variable">CurrentSuccessProgressPortion</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7395257810802026" type="System">
+                                    <param id="0" name="Variable">CurrentFailProgressPortion</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2161078335752195" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogEditorShowResult&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8146046332722539">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3520207551462389" type="Function">
+                            <param id="0" name="Name">&quot;onTestDialogEditorResultShown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1629370434423209">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="9134470877399854" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogProgressLineSet&quot;</param>
+                                    <param id="1" name="Parameter {n}">CurrentSuccessProgressPortion{###}CurrentFailProgressPortion</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6121872951334678">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7618606862218231" type="Function">
+                            <param id="0" name="Name">&quot;onTestDialogProgressLineUpdated&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2671185111487414">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="3410624366195246" type="System">
+                                    <param id="0" name="Variable">ProgressLineUpdateAnimFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8885304428687566" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogCompleteUpdateProgress_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2591617182409825">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4172506132210532" type="Function">
+                            <param id="0" name="Name">&quot;onTestDialogEditorShowResultCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="87222641357448">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="7957523908680874" type="System">
+                                    <param id="0" name="Variable">EditorAnimationFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="501552911511424" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogCompleteUpdateProgress_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4436288996790806">
+                    <conditions>
+                        <condition id="0" name="On function" sid="677253688410435" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogCompleteUpdateProgress_&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8101088020787174">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="320751223805802" type="System">
+                                    <param id="0" name="Variable">EditorAnimationFinished</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6509099684885288" type="System">
+                                    <param id="0" name="Variable">ProgressLineUpdateAnimFinished</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9930693601301184" type="System">
+                                    <param id="0" name="Variable">EditorAnimationFinished</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3723968887788629" type="System">
+                                    <param id="0" name="Variable">ProgressLineUpdateAnimFinished</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="427560751705196" type="Function">
+                                    <param id="0" name="Name">&quot;onTestDialogUpdateProgressAnimationCompleted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

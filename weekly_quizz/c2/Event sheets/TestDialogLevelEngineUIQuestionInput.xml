@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLevelEngineUIQuestionInput</name>
+    <events>
+        <event-group description="" sid="4207716206349355" title="Test dialog question input">
+            <sub-events>
+                <variable constant="0" name="IsInputEnabled" sid="3909536471053486" static="1" type="number">0</variable>
+                <variable constant="0" name="IsTouchingTrueButton" sid="4136290564053492" static="1" type="number">0</variable>
+                <variable constant="0" name="IsTouchingFalseButton" sid="6661246338341205" static="1" type="number">0</variable>
+                <event-block sid="1911565665725844">
+                    <conditions>
+                        <condition id="0" name="On function" sid="453333521719591" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="696133285126039">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2108833767850688" type="System">
+                                    <param id="0" name="Variable">IsInputEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6335338375502553" type="System">
+                                    <param id="0" name="Variable">IsTouchingTrueButton</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8965462461410902" type="System">
+                                    <param id="0" name="Variable">IsTouchingFalseButton</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3965498412572928">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="5369596067611456" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="7139976286371541" type="System">
+                            <param id="0" name="Variable">IsInputEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1460633685884175">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="1515729165937556" type="Touch">
+                                    <param id="0" name="Object">TestDialogAnswerTrueBtn</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1638454234595009" type="System">
+                                    <param id="0" name="Variable">IsTouchingTrueButton</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7390208427559036" type="System">
+                                    <param id="0" name="Variable">IsTouchingTrueButton</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="466418379087056" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogQuestionInputYesSoundDown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="65011353985068" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9312036295005082">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="7542114489620635" type="Touch">
+                                    <param id="0" name="Object">TestDialogAnswerFalseBtn</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4989470528030542" type="System">
+                                    <param id="0" name="Variable">IsTouchingFalseButton</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1043919494288131" type="System">
+                                    <param id="0" name="Variable">IsTouchingFalseButton</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="677404908519798" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogQuestionInputNoSoundDown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1349226185956513" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="463753406595978">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="9337189857052514" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="6587949083331996" type="System">
+                            <param id="0" name="Variable">IsInputEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2566975298083299">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6679274680974044" type="System">
+                                    <param id="0" name="Variable">IsTouchingTrueButton</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5946890283001215" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogInputInactivate_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9392511630828152">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="1687120232164052" type="Touch">
+                                            <param id="0" name="Object">TestDialogAnswerTrueBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1177505154069882" type="Function">
+                                            <param id="0" name="Name">&quot;TestDialogQuestionInputYesSoundUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7916867781430133" type="Function">
+                                            <param id="0" name="Name">&quot;onTestDialogAnswered&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;TRUE&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7080044441574692">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3746396995095079" type="System">
+                                    <param id="0" name="Variable">IsTouchingFalseButton</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2550789887253843" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogInputInactivate_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5007006561304917">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="4505555669887686" type="Touch">
+                                            <param id="0" name="Object">TestDialogAnswerFalseBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3241297473403233" type="Function">
+                                            <param id="0" name="Name">&quot;TestDialogQuestionInputNoSoundUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="911905228687764" type="Function">
+                                            <param id="0" name="Name">&quot;onTestDialogAnswered&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;FALSE&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4991277937018497">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3913687645073739" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogQuestionInputEnable&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9592407427229728">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="6350854424622794" type="System">
+                                    <param id="0" name="Variable">IsInputEnabled</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3506748566037607" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3591350071854891" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4283464163226887">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7886908112703895" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogQuestionInputDisable&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6017409815493035">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="7001139187693955" type="System">
+                                    <param id="0" name="Variable">IsInputEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7688357152937594" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogInputInactivate_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6774973977305697" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Animation">&quot;Disabled&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="402405128868073" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Animation">&quot;Disabled&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8844884921804586">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9792893416217426" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogInputInactivate_&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4220229719599043">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1701842083864465" type="System">
+                                    <param id="0" name="Variable">IsTouchingTrueButton</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2441870649558355" type="System">
+                                    <param id="0" name="Variable">IsTouchingFalseButton</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="932742645994152" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3548879092429951" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="3850333484350311" title="Test dialog question input sound">
+                    <sub-events>
+                        <event-block sid="7721238683886785">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3119567302492513" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogQuestionInputYesSoundDown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="7810916768861063" type="Audio">
+                                    <param id="0" name="Audio file">test_dialog_btn_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8613271792424548">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9055042646895583" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogQuestionInputYesSoundUp&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="8646662801782945" type="Audio">
+                                    <param id="0" name="Audio file">test_dialog_btn_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5255666130920698">
+                            <conditions>
+                                <condition id="0" name="On function" sid="364343048691485" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogQuestionInputNoSoundDown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="8146587105925467" type="Audio">
+                                    <param id="0" name="Audio file">test_dialog_btn_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3188471143842515">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5281888610216802" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogQuestionInputNoSoundUp&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="3460076335994655" type="Audio">
+                                    <param id="0" name="Audio file">test_dialog_btn_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

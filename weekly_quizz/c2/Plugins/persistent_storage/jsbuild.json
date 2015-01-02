@@ -1,0 +1,15 @@
+{
+    "module" : {
+        "name" : "c2-plugin-persistent-storage",
+        "description" : "",
+        "outDir" : ".",
+        "dependencies" : {
+            "base" : {
+                "lib-persistent-storage" : []
+             }
+        },
+        "src" : {
+            "base" : []
+        }
+    }
+}

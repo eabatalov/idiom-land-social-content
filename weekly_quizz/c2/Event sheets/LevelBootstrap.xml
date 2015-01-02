@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelBootstrap</name>
+    <events>
+        <event-group description="" sid="4504070315138877" title="Level bootstrap">
+            <sub-events>
+                <event-block sid="9261514154558078">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="60495905713041" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6620648605263027" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="3856266297919551" type="Function">
+                            <param id="0" name="Name">&quot;StartLevelSpecificBootstrap&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8166215365643649">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="4489852229581916" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7006111265717219" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

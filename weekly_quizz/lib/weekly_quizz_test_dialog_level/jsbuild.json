@@ -1,0 +1,21 @@
+{
+    "module" : {
+        "name" : "lib-weekly-quizz-level",
+        "description" : "",
+        "dependencies" : {
+            "base" : {
+                "lib-util" : [],
+                "lib-test-dialog-level" : []
+             },
+            "noweb" : {
+                "lib-jquery-core-nodom" : []
+            }
+        },
+        "src" : {
+            "base" : [
+                "src/WeeklyQuizzRuntime.js",
+                "src/WeeklyQuizzRuntimeController.js"
+            ]
+        }
+    }
+}

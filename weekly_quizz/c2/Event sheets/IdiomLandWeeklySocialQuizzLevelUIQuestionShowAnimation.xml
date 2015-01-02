@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelUIQuestionShowAnimation</name>
+    <events>
+        <event-group description="" sid="6579238557922507" title="Test dialog questione show animation">
+            <sub-events>
+                <event-block sid="6366006666553105">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4389850894235436" type="Function">
+                            <param id="0" name="Name">&quot;RunShowQuestionAnimation&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8091638230870852" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestion&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="1722034975933793" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogEditorSpeakQuestion&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="816118315599301">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5889756286099548" type="Function">
+                            <param id="0" name="Name">&quot;onQuestionShown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1384991818217103" type="Function">
+                            <param id="0" name="Name">&quot;onShowQuestionAnimationFinished&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

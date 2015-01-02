@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelAnimsInit</name>
+    <events>
+        <event-group description="" sid="3899175816717991" title="Test dialog level anims init">
+            <sub-events>
+                <event-group description="" sid="1856634527475394" title="Test dialogl level editor anim init">
+                    <sub-events>
+                        <variable constant="1" name="TEST_DIALOG_EDITOR_ANIM_UID" sid="4380648042145249" static="0" type="text">TEST_DIALOG_EDITOR_ANIM</variable>
+                        <event-block sid="3091108607397819">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4572329886493043" type="Function">
+                                    <param id="0" name="Name">&quot;InitTestDialogEditorAnim&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="666" name="Associate object type" sid="7377830225780378" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_body</param>
+                                    <param id="1" name="Name">&quot;teacher_body&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="9431298586820761" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_halfhand</param>
+                                    <param id="1" name="Name">&quot;teacher_half-hand&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="2693049858584654" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_head</param>
+                                    <param id="1" name="Name">&quot;teacher_head&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="8830221799988131" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_hand</param>
+                                    <param id="1" name="Name">&quot;teacher_hand&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="1098724752969884" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_leftbrow</param>
+                                    <param id="1" name="Name">&quot;teacher_left-brow&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="5223477088009355" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_rightbrow</param>
+                                    <param id="1" name="Name">&quot;teacher_right-brow&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="3994940457891998" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_eyes</param>
+                                    <param id="1" name="Name">&quot;teacher_eyes&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="2390999557652604" type="TestDialogEditor">
+                                    <param id="0" name="Object">TestDialogEditor_teacher_smile1</param>
+                                    <param id="1" name="Name">&quot;teacher_smile1&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="462547455622523" type="InitedAnimsDict">
+                                    <param id="0" name="Key">TEST_DIALOG_EDITOR_ANIM_UID</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5323333635152146" type="Function">
+                                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7315524766153691">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="8628621707090176" type="TestDialogEditor" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1132343181768647" type="Function">
+                                    <param id="0" name="Name">&quot;InitTestDialogEditorAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8964884992161375">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="8627930631341215" type="TestDialogEditor" />
+                                <condition id="3" name="Has key" sid="6267650333978485" type="InitedAnimsDict">
+                                    <param id="0" name="Key">TEST_DIALOG_EDITOR_ANIM_UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="475506221542473" type="Function">
+                                    <param id="0" name="Name">&quot;InitTestDialogEditorAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="535092684549859" title="Test dialogl level quest slide anim init">
+                    <sub-events>
+                        <variable constant="1" name="TEST_DIALOG_QUEST_SLIDE_ANIM_UID" sid="6711673357060418" static="0" type="text">TEST_DIALOG_QUEST_SLIDE_ANIM</variable>
+                        <event-block sid="6968137160927355">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9218280407691884" type="Function">
+                                    <param id="0" name="Name">&quot;InitTestDialogQuestSlideAnim&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="666" name="Associate object type" sid="274067254156241" type="TestDialogQuestSlide">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_spritequestion</param>
+                                    <param id="1" name="Name">&quot;quest-slide_sprite-question&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="2584412489279776" type="TestDialogQuestSlide">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_textblog</param>
+                                    <param id="1" name="Name">&quot;quest-slide_text-blog&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="8929755909661101" type="TestDialogQuestSlide">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_questicon</param>
+                                    <param id="1" name="Name">&quot;quest-slide_quest-icon&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="9637985052147964" type="TestDialogQuestSlide">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_trueoff</param>
+                                    <param id="1" name="Name">&quot;quest-slide_true-off&quot;</param>
+                                </action>
+                                <action id="666" name="Associate object type" sid="349809913313432" type="TestDialogQuestSlide">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_falseoff</param>
+                                    <param id="1" name="Name">&quot;quest-slide_false-off&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="8785686496023993" type="InitedAnimsDict">
+                                    <param id="0" name="Key">TEST_DIALOG_QUEST_SLIDE_ANIM_UID</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6599289566411786" type="Function">
+                                    <param id="0" name="Name">&quot;AnimInited&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5962096733122782">
+                            <conditions>
+                                <condition id="666" name="On initialised" sid="1543026993865985" type="TestDialogQuestSlide" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="343475819762463" type="Function">
+                                    <param id="0" name="Name">&quot;InitTestDialogQuestSlideAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9469320388142706">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="6143556457497231" type="TestDialogQuestSlide" />
+                                <condition id="3" name="Has key" sid="4386131459379281" type="InitedAnimsDict">
+                                    <param id="0" name="Key">TEST_DIALOG_QUEST_SLIDE_ANIM_UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="350504625233787" type="Function">
+                                    <param id="0" name="Name">&quot;InitTestDialogQuestSlideAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLevelEngineUIQuestion</name>
+    <events>
+        <event-group description="" sid="1196115894866197" title="Test dialog UI question">
+            <sub-events>
+                <comment>XXX SCML plugin does crazy stuff. It sets current animation after &quot;on initialized&quot; event to animation set in properties of SCML object.&#x0D;&#x0A;It does similar thing after creation of new SCML object with already downloaded scml file.</comment>
+                <variable constant="0" name="CurrentAnimName" sid="9354913321365401" static="1" type="text"></variable>
+                <variable constant="0" name="IsPinningQuestionSprites" sid="8327666631754996" static="1" type="number">0</variable>
+                <event-block sid="702941109665442">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3571673365154457" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9096625228498767" type="System">
+                            <param id="0" name="Variable">CurrentAnimName</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="919481199891058" type="System">
+                            <param id="0" name="Variable">IsPinningQuestionSprites</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="4569589823274896" title="Test dialog question animation (show question)">
+                    <sub-events>
+                        <event-block sid="3012559830329245">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7054235748709204" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2218010049844878">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1219676736636682" type="Function">
+                                            <param id="0" name="Name">&quot;ShowQuestionSync&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5265898662117725" type="Function">
+                                            <param id="0" name="Name">&quot;SetTestDialogSlideAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;start&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="2262946711507775" type="Audio">
+                                            <param id="0" name="Audio file">question_in</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5326808061585482">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9574518000045621" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestionSync&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4138731360226401">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="6984516144286269" type="TestDialogAnswerTrueBtn">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8726771651706304" type="TestDialogAnswerFalseBtn">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2401111692153728" type="TestDialogQuestionSituationPhoto">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6270060298649169" type="TestDialogQuestionText">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5020676740832289" type="TestDialogQuestSlide_questslide_falseoff">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="256079451717058" type="TestDialogQuestSlide_questslide_questicon">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="742999555579934" type="TestDialogQuestSlide_questslide_spritequestion">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5665601453773402" type="TestDialogQuestSlide_questslide_textblog">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="186178288426559" type="TestDialogQuestSlide_questslide_trueoff">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3896291566258925" type="TestDialogQuestionNumber">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="16" name="Set Visible" sid="9428300518927615" type="TestDialogQuestSlide">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6386132367206073" type="Function">
+                                            <param id="0" name="Name">&quot;TestDialogQuestionInputEnable&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7625259036712889" type="System">
+                                            <param id="0" name="Variable">IsPinningQuestionSprites</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4038359948594476">
+                            <conditions>
+                                <condition id="0" name="On animation finished" sid="6147923663088811" type="TestDialogQuestSlide">
+                                    <param id="0" name="Animation">&quot;start&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1393968905002302" type="System">
+                                    <param id="0" name="Variable">CurrentAnimName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;start&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="132416071857204" type="Function">
+                                    <param id="0" name="Name">&quot;onQuestionShown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7984171397852377" title="Test dialog question animation (hide question)">
+                    <sub-events>
+                        <comment>param(0): 1 for animated transition, 0 for instant</comment>
+                        <event-block sid="1706340663000714">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7591699628099928" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3626954873867282">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8975435748516653" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4897222326052776" type="Function">
+                                            <param id="0" name="Name">&quot;HideQuestionSync&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1973798377319906">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3669974164455719" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8572484994033654" type="Function">
+                                            <param id="0" name="Name">&quot;SetTestDialogSlideAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;end&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="5819882150375836" type="Audio">
+                                            <param id="0" name="Audio file">question_out</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2061124213658429">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4966007255910546" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestionSync&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="250383769768213">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="5873825007715341" type="TestDialogAnswerTrueBtn">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8364352895073177" type="TestDialogAnswerFalseBtn">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8877517753550157" type="TestDialogQuestionSituationPhoto">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7139246266290228" type="TestDialogQuestionText">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3628523101198697" type="TestDialogQuestSlide_questslide_falseoff">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1379826797248279" type="TestDialogQuestSlide_questslide_questicon">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2055450214725273" type="TestDialogQuestSlide_questslide_spritequestion">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9980305698429035" type="TestDialogQuestSlide_questslide_textblog">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8863650642571" type="TestDialogQuestSlide_questslide_trueoff">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="59671038125497" type="TestDialogQuestionNumber">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="16" name="Set Visible" sid="2940343160080854" type="TestDialogQuestSlide">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6686343048817049" type="Function">
+                                            <param id="0" name="Name">&quot;TestDialogQuestionInputDisable&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9376668079336089" type="System">
+                                            <param id="0" name="Variable">IsPinningQuestionSprites</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4877519040695962">
+                            <conditions>
+                                <condition id="0" name="On animation finished" sid="3132023587958978" type="TestDialogQuestSlide">
+                                    <param id="0" name="Animation">&quot;end&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="3925590892189063" type="System">
+                                    <param id="0" name="Variable">CurrentAnimName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;end&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6614287372974717" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestionSync&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="8197632945463677" type="Function">
+                                    <param id="0" name="Name">&quot;onQuestionHidden&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8129089222322401" title="Test dialog question animation (question spriter pinning)">
+                    <sub-events>
+                        <event-block sid="6132452827992874">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8125203374335149" type="System">
+                                    <param id="0" name="Variable">IsPinningQuestionSprites</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="6558867924749206" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_falseoff</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8096813736279347" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_falseoff.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1705928706441972" type="TestDialogAnswerFalseBtn">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_falseoff.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="8134736817417763" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_trueoff</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="1803707700160779" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_trueoff.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1314599252709456" type="TestDialogAnswerTrueBtn">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_trueoff.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="6823501796705922" type="TestDialogQuestionText">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_textblog</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8690492011862473" type="TestDialogQuestionText">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_textblog.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="5866000843299256" type="TestDialogQuestionText">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_textblog.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="3858666286888762" type="TestDialogQuestionNumber">
+                                    <param id="0" name="Object">TestDialogQuestSlide_questslide_questicon</param>
+                                    <param id="1" name="Image point (optional)">&quot;TextPoint&quot;</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="4396812659602249" type="TestDialogQuestionNumber">
+                                    <param id="0" name="Opacity">TestDialogQuestSlide_questslide_questicon.Opacity</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1821404788550573" type="TestDialogQuestionNumber">
+                                    <param id="0" name="Angle">TestDialogQuestSlide_questslide_questicon.angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="5039210623203536" title="Test dialog question animation change watchdog">
+                    <sub-events>
+                        <comment>param(0): anim name</comment>
+                        <event-block sid="6175188111706437">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5301178656965918" type="Function">
+                                    <param id="0" name="Name">&quot;SetTestDialogSlideAnim&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5039694978655495" type="System">
+                                    <param id="0" name="Variable">CurrentAnimName</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="2796460090446778" type="TestDialogQuestSlide">
+                                    <param id="0" name="Animation">CurrentAnimName</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="3" name="Set animation looping" sid="7719105238534456" type="TestDialogQuestSlide">
+                                    <param id="0" name="Loop animation?">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2734377596460034">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="160626230564042" type="System" />
+                                <condition id="4" inverted="1" name="Compare Current Animation" sid="4380227281178756" type="TestDialogQuestSlide">
+                                    <param id="0" name="Animation">CurrentAnimName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4797419938070546" type="Function">
+                                    <param id="0" name="Name">&quot;SetTestDialogSlideAnim&quot;</param>
+                                    <param id="1" name="Parameter {n}">CurrentAnimName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="4999611164947749" title="Test dialog question rendering">
+                    <sub-events>
+                        <comment>param(0): question number</comment>
+                        <event-block sid="3438067833747114">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8960264503965169" type="Function">
+                                    <param id="0" name="Name">&quot;onRenderCurrentQuestion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3180526520255133">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4032445172090928" type="TestDialogQuestionText">
+                                            <param id="0" name="Text">TestDialogLevelRuntime.getQuestionText</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="9219914005984554" type="TestDialogQuestionNumber">
+                                            <param id="0" name="Text">Function.Param(0) &amp; &quot;/&quot; &amp; TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

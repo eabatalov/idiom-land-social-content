@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLevelEngineBootstrap</name>
+    <events>
+        <event-group description="" sid="8221528859773657" title="Test dialog level engine bootstrap">
+            <sub-events>
+                <comment>param(0): dialog name&#x0D;&#x0A;param(1) 1 for debug mode, 0 for normal</comment>
+                <event-block sid="6623534031431153">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1906295898046953" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogLevelEngineStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9300981779128928">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="4470157216824774" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Run test dialog" sid="8949867089235339" type="TestDialogLevelRuntime">
+                                    <param id="0" name="Dialog name">Function.Param(0)</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1758271260635764">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4273377434624314" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Run test dialog" sid="6915871453093582" type="TestDialogLevelRuntime">
+                                    <param id="0" name="Dialog name">Function.Param(0)</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2581643353681643">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="6821669175444378" type="Function">
+                                    <param id="0" name="Name">&quot;OnTestDialogLevelEngineStarted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

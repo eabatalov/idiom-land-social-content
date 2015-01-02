@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelLayoutMain</name>
+    <events>
+        <event-group description="" sid="4904789417822062" title="Idiom Land test dialog level imports">
+            <sub-events>
+                <include>TestDialogLevelEngine</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8453601849545834" title="Idiom Land test dialog code">
+            <sub-events>
+                <include>IdiomLandWeeklySocialQuizzLevelUIQuestionShowAnimation</include>
+                <include>IdiomLandWeeklySocialQuizzLevelUIQuestion</include>
+                <include>IdiomLandWeeklySocialQuizzLevelProgressAnimation</include>
+                <include>IdiomLandWeeklySocialQuizzLevelUIEditorAnimation</include>
+                <include>IdiomLandWeeklySocialQuizzLevelDebug</include>
+                <include>IdiomLandWeeklySocialQuizzLevelBootstrap</include>
+                <include>IdiomLandWeeklySocialQuizzLevelAnimsInit</include>
+                <include>IdiomLandWeeklySocialQuizzLevelFinish</include>
+                <include>IdiomLandWeeklySocialQuizzLevelIntro</include>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

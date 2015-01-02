@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLevelEngine</name>
+    <events>
+        <event-group description="" sid="5324650509975314" title="Test dialog level engine imports">
+            <sub-events>
+                <include>LevelBootstrap</include>
+                <include>LevelAnimationsInit</include>
+                <include>LevelFade</include>
+                <include>LevelStartFinish</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5658125252373655" title="Test dialog level engine modules">
+            <sub-events>
+                <include>TestDialogLevelEngineUILib</include>
+                <include>TestDialogLevelEngineLogic</include>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

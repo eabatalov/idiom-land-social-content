@@ -1,0 +1,5 @@
+{
+    "c2-plugin-weekly-quizz-game" : "c2/Plugins/weekly_quizz_game/",
+    "c2-plugin-persistent-storage" : "c2/Plugins/persistent_storage/",
+    "lib-weekly-quizz-level" : "lib/weekly_quizz_test_dialog_level/"
+}

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestDialogLevelEngineMainLoop</name>
+    <events>
+        <event-group description="" sid="527778138977828" title="Test dialog level engine main loop">
+            <sub-events>
+                <variable constant="0" name="QuestDialogState" sid="3411119896356729" static="1" type="number">0</variable>
+                <variable constant="0" name="QuestDialogQuestionIsReady" sid="3369481590125779" static="1" type="number">0</variable>
+                <variable constant="0" name="QuestDialogLevelIsFinished" sid="3128404573209406" static="1" type="number">0</variable>
+                <variable constant="1" name="STATE_QUESTION_SHOW_PENDING" sid="8392840156263565" static="0" type="number">0</variable>
+                <variable constant="1" name="STATE_QUESTION_ANS_PENDING" sid="381553559102012" static="0" type="number">1</variable>
+                <variable constant="1" name="STATE_SHOWING_QUESTION" sid="3776962717714324" static="0" type="number">2</variable>
+                <variable constant="1" name="STATE_HIDING_QUESTION" sid="5332383907747587" static="0" type="number">3</variable>
+                <variable constant="1" name="STATE_SHOWING_ANSWER_RESULT" sid="1582637308483067" static="0" type="number">4</variable>
+                <event-block sid="4684221104302112">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8793254232354885" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6466525087324778">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1604564486233521" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_QUESTION_SHOW_PENDING</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6902255928265611" type="System">
+                                    <param id="0" name="Variable">QuestDialogQuestionIsReady</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5276118671154113" type="System">
+                                    <param id="0" name="Variable">QuestDialogLevelIsFinished</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7981002777212366">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9781691678820714" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>We can be late to hide the question because first question could be ready already</comment>
+                        <event-block sid="8613139278844116">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7597147860677363" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_QUESTION_SHOW_PENDING</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8042150162042799" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestion&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8449176597906831">
+                    <conditions>
+                        <condition id="0" name="Question is avaliable" sid="7690085275328368" type="TestDialogLevelRuntime" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6697791653393371">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9330505368063254" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_QUESTION_SHOW_PENDING</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4917491671834206" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestion_&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5644390285491642">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1668754060571419" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7657511333819166" type="System">
+                                    <param id="0" name="Variable">QuestDialogQuestionIsReady</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5693586939110489">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5536512380202676" type="Function">
+                            <param id="0" name="Name">&quot;onQuestionHidden&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3985223249075212">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3036048150591446" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_HIDING_QUESTION</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8802164653949189" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_QUESTION_SHOW_PENDING</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4468562722361966">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8943343109071464" type="System">
+                                            <param id="0" name="Variable">QuestDialogQuestionIsReady</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2045290793859369" type="System">
+                                            <param id="0" name="Variable">QuestDialogQuestionIsReady</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="954114835486977" type="Function">
+                                            <param id="0" name="Name">&quot;ShowQuestion_&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1297616395768173">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7881559564272549" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestion_&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6980531469577739">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4640348528321612" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_SHOWING_QUESTION</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4122984193716037" type="Function">
+                                    <param id="0" name="Name">&quot;onRenderCurrentQuestion&quot;</param>
+                                    <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getAnswersCount + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2650851625893176" type="Function">
+                                    <param id="0" name="Name">&quot;RunShowQuestionAnimation&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3216403711165854">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8661532682499059" type="Function">
+                            <param id="0" name="Name">&quot;onShowQuestionAnimationFinished&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1586973583028364">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4274598736568171" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_SHOWING_QUESTION</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2605947500529864" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_QUESTION_ANS_PENDING</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): answer &quot;TRUE&quot; or &quot;FALSE&quot;</comment>
+                <event-block sid="990375882030184">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9464033757572312" type="Function">
+                            <param id="0" name="Name">&quot;onTestDialogAnswered&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6890178504767063">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="567072447609173" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_QUESTION_ANS_PENDING</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2978341564067182" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Value">STATE_SHOWING_ANSWER_RESULT</param>
+                                </action>
+                                <action id="1" name="Answer current question" sid="7149732804419516" type="TestDialogLevelRuntime">
+                                    <param id="0" name="Answer &apos;TRUE&apos; | &apos;FALSE&apos;">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8001543940662543" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogUpdateProgress&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2609025174451097">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4898614830882634" type="Function">
+                            <param id="0" name="Name">&quot;onTestDialogProgressUpdated&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5932285446679229">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5801499796827448" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_SHOWING_ANSWER_RESULT</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3206537483974339">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7830927961908735" type="System">
+                                            <param id="0" name="Variable">QuestDialogLevelIsFinished</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8359720877158841" type="System">
+                                            <param id="0" name="Variable">QuestDialogState</param>
+                                            <param id="1" name="Value">STATE_HIDING_QUESTION</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6194785339426099" type="Function">
+                                            <param id="0" name="Name">&quot;HideQuestion&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1261392863117161">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4440027690884575" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4611805147211112" type="Function">
+                                            <param id="0" name="Name">&quot;onCompleteLevel&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3616566767917342">
+                    <conditions>
+                        <condition id="1" name="Dialog is finished" sid="5763633615320763" type="TestDialogLevelRuntime" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2764667361582496">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6545576557155011" type="System">
+                                    <param id="0" name="Variable">QuestDialogState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STATE_SHOWING_ANSWER_RESULT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5038255873480493" type="System">
+                                    <param id="0" name="Variable">QuestDialogLevelIsFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8883297389435771">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3193345096193806" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7751477342729536" type="Function">
+                                    <param id="0" name="Name">&quot;onCompleteLevel&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelUIQuestion</name>
+    <events>
+        <event-group description="" sid="3016750374095415" title="Idiom Land test dialog question">
+            <sub-events>
+                <comment>param(0): question number</comment>
+                <event-block sid="1774708406931333">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4503337590737918" type="Function">
+                            <param id="0" name="Name">&quot;onRenderCurrentQuestion&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2519827198606203">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="8915553666229226" type="Function">
+                                    <param id="0" name="Name">&quot;PlayQuestionSituationPhotoChangeSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="875810868366905" type="TestDialogQuestionSituationPhoto">
+                                    <param id="0" name="Animation">TestDialogLevelRuntime.getQuestionSectionPolyProp(&quot;name&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5694010220039567">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6842847736665843" type="Function">
+                            <param id="0" name="Name">&quot;PlayQuestionSituationPhotoChangeSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7019019938352652" type="Audio">
+                            <param id="0" name="Audio file">test_dialog_question_picture_change</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

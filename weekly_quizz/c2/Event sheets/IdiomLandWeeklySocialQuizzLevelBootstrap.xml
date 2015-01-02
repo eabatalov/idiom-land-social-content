@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelBootstrap</name>
+    <events>
+        <event-group description="" sid="8432883044702468" title="Idiomland test dialog bootstrap">
+            <sub-events>
+                <variable constant="1" name="QUIZZ_SCRIPT_NAME" sid="2448656606594703" static="0" type="text">social_quizz</variable>
+                <comment>No need to do anything</comment>
+                <event-block sid="5508099746899629">
+                    <conditions>
+                        <condition id="0" name="On function" sid="918092366978911" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="6583552400081521">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4105847471645928" type="Function">
+                            <param id="0" name="Name">&quot;StartLevelSpecificBootstrap&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3648646126847416" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="1412413833740111" type="Function">
+                            <param id="0" name="Name">&quot;WaitAnimationsInit&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8955747741208708">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7826832980762443" type="Function">
+                            <param id="0" name="Name">&quot;AnimsInited&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6387790348840982" type="Function">
+                            <param id="0" name="Name">&quot;ShowLevelIntro&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2132361424574856">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5516970134985589" type="Function">
+                            <param id="0" name="Name">&quot;onLevelIntroCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9121373299908102">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3641628291619022" type="Function">
+                                    <param id="0" name="Name">&quot;TestDialogLevelEngineStart&quot;</param>
+                                    <param id="1" name="Parameter {n}">QUIZZ_SCRIPT_NAME{###}IDIOMLAND_TEST_DIALOG_DEBUG_QUESTIONS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="153505200487016">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8158102101587224" type="Function">
+                            <param id="0" name="Name">&quot;OnTestDialogLevelEngineStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8184118811573223" type="Function">
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

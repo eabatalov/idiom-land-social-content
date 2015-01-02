@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelFinish</name>
+    <events>
+        <event-group description="" sid="847477020738295" title="Idiom Land test dialog finish">
+            <sub-events>
+                <event-block sid="6897731164582348">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3905809632982519" type="Function">
+                            <param id="0" name="Name">&quot;onCompleteLevel&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1962365848282795" type="Function">
+                            <param id="0" name="Name">&quot;SchedLayoutSwitchToLevelResults&quot;</param>
+                            <param id="1" name="Parameter {n}">1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

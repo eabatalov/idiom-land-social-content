@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IdiomLandWeeklySocialQuizzLevelUIEditorAnimation</name>
+    <events>
+        <event-group description="" sid="9587120985794143" title="Test dialog editor animation">
+            <sub-events>
+                <comment>param(0): 0 if results is fail, 1 if success</comment>
+                <event-block sid="9414044496161505">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7474339058288032" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogEditorShowResult&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4323737345449576">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="5532774380273722" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="8139111324686705" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;wrong&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="5079926655870955" type="Audio">
+                                    <param id="0" name="Audio file">teacher_no</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3580309697338949">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6049138142534683" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="788438727465626" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8368935598644457" type="System">
+                                    <param id="0" name="Seconds">0.285</param>
+                                </action>
+                                <action id="0" name="Play" sid="2167164848348388" type="Audio">
+                                    <param id="0" name="Audio file">teacher_yes</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5967515542736365" type="System">
+                                    <param id="0" name="Seconds">0.715</param>
+                                </action>
+                                <action id="0" name="Play" sid="9656337453594291" type="Audio">
+                                    <param id="0" name="Audio file">teacher_yes</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3494979727549809">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="1933297291156806" type="TestDialogEditor" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="9828351769649762">
+                            <conditions>
+                                <condition id="4" name="Compare Current Animation" sid="6118157940867063" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                </condition>
+                                <condition id="4" name="Compare Current Animation" sid="4423039116306597" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;wrong&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set animation" sid="3320674757418112" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;result&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7773030594062291" type="Function">
+                                    <param id="0" name="Name">&quot;onTestDialogEditorResultShown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7901275940908412">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5424496823131433" type="System" />
+                                <condition id="4" name="Compare Current Animation" sid="735094621092035" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;result&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="603217302235935" type="Function">
+                                    <param id="0" name="Name">&quot;EditorAnimRunIdle&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="2998109922220596" type="Function">
+                                    <param id="0" name="Name">&quot;onTestDialogEditorShowResultCompleted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2462294424181653">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1860879579318116" type="Function">
+                            <param id="0" name="Name">&quot;TestDialogEditorSpeakQuestion&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="7444961254295194" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;talk&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="7646909221859104" type="Audio">
+                            <param id="0" name="Audio file">teacher_talk</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8388220001624314">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="5806260947190891" type="TestDialogEditor" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1596249973431281">
+                            <conditions>
+                                <condition id="4" name="Compare Current Animation" sid="4101042742730035" type="TestDialogEditor">
+                                    <param id="0" name="Animation">&quot;talk&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1795818434989736" type="Function">
+                                    <param id="0" name="Name">&quot;EditorAnimRunIdle&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>For some reason our idle doesn&apos;t loop</comment>
+                <event-block sid="5552078296176114">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9344855325274227" type="Function">
+                            <param id="0" name="Name">&quot;EditorAnimRunIdle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="9027537274401258" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="3" name="Set animation looping" sid="9441644895669314" type="TestDialogEditor">
+                            <param id="0" name="Loop animation?">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6314517325909178">
+                    <conditions>
+                        <condition id="0" name="On animation finished" sid="7407119319469381" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="5023713097779702" type="TestDialogEditor">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

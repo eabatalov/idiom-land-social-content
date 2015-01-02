@@ -1,0 +1,16 @@
+{
+    "module" : {
+        "name" : "c2-plugin-weekly-quizz-game",
+        "description" : "",
+        "outDir" : ".",
+        "outFile" : "weekly_quizz_game",
+        "dependencies" : {
+            "base" : {
+                "c2-plugin-test-dialog-level-runtime" : [],
+                "c2-plugin-persistent-storage" : [],
+                "lib-weekly-quizz-level" : []
+            }
+        },
+        "src" : {}
+    }
+}
