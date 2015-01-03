@@ -134,7 +134,7 @@
                         <text>5/5</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-67,700,0</font>
-                        <color>71,189,131</color>
+                        <color>255,204,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -206,14 +206,80 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>35</x>
-                        <y>85</y>
+                        <x>27</x>
+                        <y>23</y>
                         <z>0</z>
                         <width>320</width>
                         <height>158</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShareVKBtn" uid="3">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Inactive</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>99</x>
+                        <y>258</y>
+                        <z>0</z>
+                        <width>125</width>
+                        <height>125</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504000008</hotspotX>
+                        <hotspotY>0.504000008</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShareFBBtn" uid="4">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Inactive</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>239</x>
+                        <y>262</y>
+                        <z>0</z>
+                        <width>125</width>
+                        <height>125</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504000008</hotspotX>
+                        <hotspotY>0.504000008</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShareTwBtn" uid="5">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Inactive</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>373</x>
+                        <y>267</y>
+                        <z>0</z>
+                        <width>125</width>
+                        <height>125</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504000008</hotspotX>
+                        <hotspotY>0.504000008</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

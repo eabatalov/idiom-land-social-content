@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelResultsBriefSocialShare</name>
+    <events>
+        <event-group description="" sid="2287860345232122" title="Level results brief social share">
+            <sub-events>
+                <variable constant="1" name="SHARE_URL" sid="9266829868150948" static="0" type="text">http://idiomland.com/quizz</variable>
+                <variable constant="1" name="SHARE_REDIRECT" sid="8954915833981114" static="0" type="text">http://idiomland.com</variable>
+                <variable constant="1" name="SHARE_TITLE" sid="9399908345305901" static="0" type="text">Idiom quizz of the week on idiomland.com</variable>
+                <comment>param(0): number of right answers&#x0D;&#x0A;param(1): number of question</comment>
+                <event-block sid="9037302464234928">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9483936830302757" type="Function">
+                            <param id="0" name="Name">&quot;genShareDescriptionStr&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="ShareDescrStr" sid="6929640981785215" static="0" type="text"></variable>
+                        <event-block sid="9709530080814953">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5799562206240721" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">&quot;I&apos;ve got &quot; &amp; str(Function.Param(0)) &amp; &quot; right answers out of &quot; &amp; str(Function.Param(1)) &amp; &quot; in idiom quizz of the week.&quot;</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="56994288881895" type="Function">
+                                    <param id="0" name="Value">shareDescrStr</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): number of right answers&#x0D;&#x0A;param(1): number of question</comment>
+                <event-block sid="116279697983179">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7902512169503354" type="Function">
+                            <param id="0" name="Name">&quot;genShareImgURL&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="1" name="SHARE_IMAGE" sid="6056071512944358" static="0" type="text">http://daoays4qt8cv.cloudfront.net/images/logo.png</variable>
+                        <event-block sid="5891098713888828">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="3881484756838388" type="Function">
+                                    <param id="0" name="Value">SHARE_IMAGE</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="4208458940800458" title="Share Twitter">
+                    <sub-events>
+                        <variable constant="1" name="TWITTER_SHARE_URL" sid="1187873532257974" static="0" type="text">https://twitter.com/intent/tweet?</variable>
+                        <variable constant="0" name="ShareRequest" sid="7095691289060056" static="0" type="text"></variable>
+                        <variable constant="0" name="ShareDescr" sid="7100207904762037" static="0" type="text"></variable>
+                        <comment>https://dev.twitter.com/web/tweet-button</comment>
+                        <event-block sid="8556486021781424">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7822946064166628" type="Function">
+                                    <param id="0" name="Name">&quot;ShareQuizzResultsTwitter&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5136422647261252">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="501768172972935" type="Function">
+                                            <param id="0" name="Name">&quot;genShareDescriptionStr&quot;</param>
+                                            <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5701446994037867" type="System">
+                                            <param id="0" name="Variable">ShareDescr</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4481173263849826" type="System">
+                                            <param id="0" name="Variable">ShareRequest</param>
+                                            <param id="1" name="Value">TWITTER_SHARE_URL &amp; &quot;url=&quot; &amp; SHARE_URL &amp; &quot;&amp;text=&quot; &amp; ShareDescr</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="9449720000986702" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">ShareRequest</param>
+                                        </action>
+                                        <action id="8" name="Open URL in new window" sid="6721987717327779" type="Browser">
+                                            <param id="0" name="URL">ShareRequest</param>
+                                            <param id="1" name="Tag">&quot;Share results&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8144572255837552" title="Share FB">
+                    <sub-events>
+                        <variable constant="1" name="FB_SHARE_URL" sid="4650528397799556" static="0" type="text">https://www.facebook.com/dialog/feed?app_id=346609838796881&amp;display=popup</variable>
+                        <variable constant="0" name="ShareRequest" sid="1525076151164794" static="0" type="text"></variable>
+                        <variable constant="0" name="ShareDescr" sid="5978668957652436" static="0" type="text"></variable>
+                        <variable constant="0" name="ShareImg" sid="6668407192267141" static="0" type="text"></variable>
+                        <comment>https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.2</comment>
+                        <event-block sid="4278758224473553">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3124899808052535" type="Function">
+                                    <param id="0" name="Name">&quot;ShareQuizzResultsFB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="711423385299396">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1496104352192968" type="Function">
+                                            <param id="0" name="Name">&quot;genShareDescriptionStr&quot;</param>
+                                            <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="389772527773191" type="System">
+                                            <param id="0" name="Variable">ShareDescr</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4990139424649262" type="Function">
+                                            <param id="0" name="Name">&quot;genShareImgURL&quot;</param>
+                                            <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6817281822773062" type="System">
+                                            <param id="0" name="Variable">ShareImg</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7733463627921942" type="System">
+                                            <param id="0" name="Variable">ShareRequest</param>
+                                            <param id="1" name="Value">FB_SHARE_URL &amp; &quot;&amp;link=&quot; &amp;URLEncode(SHARE_URL) &amp;  &quot;&amp;caption=&quot; &amp; URLEncode(SHARE_TITLE) &amp; &quot;&amp;description=&quot; &amp; URLEncode(ShareDescr) &amp; &quot;&amp;picture=&quot; &amp; URLEncode(ShareImg) &amp; &quot;&amp;redirect_uri=&quot; &amp; URLEncode(SHARE_REDIRECT)</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="4511113257004654" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">ShareRequest</param>
+                                        </action>
+                                        <action id="8" name="Open URL in new window" sid="9082567726683717" type="Browser">
+                                            <param id="0" name="URL">ShareRequest</param>
+                                            <param id="1" name="Tag">&quot;Share results&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2037334927363751" title="Share VK">
+                    <sub-events>
+                        <variable constant="1" name="VK_SHARE_URL" sid="2326791917683702" static="0" type="text">https://vk.com/share.php?</variable>
+                        <variable constant="0" name="ShareRequest" sid="6104686746592482" static="0" type="text"></variable>
+                        <variable constant="0" name="ShareDescr" sid="1928253216818733" static="0" type="text"></variable>
+                        <variable constant="0" name="ShareImg" sid="8606009493074196" static="0" type="text"></variable>
+                        <comment>https://vk.com/dev/share_details</comment>
+                        <event-block sid="4297004733486842">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8949531979640401" type="Function">
+                                    <param id="0" name="Name">&quot;ShareQuizzResultsVK&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8801161873830074">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5543399383820186" type="Function">
+                                            <param id="0" name="Name">&quot;genShareDescriptionStr&quot;</param>
+                                            <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7254292439030996" type="System">
+                                            <param id="0" name="Variable">ShareDescr</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6784802655029516" type="Function">
+                                            <param id="0" name="Name">&quot;genShareImgURL&quot;</param>
+                                            <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3993272599026766" type="System">
+                                            <param id="0" name="Variable">ShareImg</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4562155133655761" type="System">
+                                            <param id="0" name="Variable">ShareRequest</param>
+                                            <param id="1" name="Value">VK_SHARE_URL &amp; &quot;url=&quot; &amp; URLEncode(SHARE_URL) &amp; &quot;&amp;title=&quot; &amp; URLEncode(SHARE_TITLE) &amp; &quot;&amp;description=&quot; &amp; URLEncode(ShareDescr) &amp; &quot;&amp;image=&quot; &amp; URLEncode(ShareImg) &amp; &quot;&amp;noparse=true&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="5333838544786036" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">ShareRequest</param>
+                                        </action>
+                                        <action id="8" name="Open URL in new window" sid="9963885751198249" type="Browser">
+                                            <param id="0" name="URL">ShareRequest</param>
+                                            <param id="1" name="Tag">&quot;Share results&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="336332407331469" title="Level results brief social share buttons">
+                    <sub-events>
+                        <variable constant="0" name="IsTouchingFBBtn" sid="1895542407872389" static="1" type="number">0</variable>
+                        <variable constant="0" name="IsTouchingVKBtn" sid="4761017119287673" static="1" type="number">0</variable>
+                        <variable constant="0" name="IsTouchingTWBtn" sid="4870579474456233" static="1" type="number">0</variable>
+                        <event-block sid="8829634191085266">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="6594017377353688" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2709024659231724">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="656435357444456" type="System">
+                                            <param id="0" name="Variable">IsTouchingFBBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1834217805149826" type="System">
+                                            <param id="0" name="Variable">IsTouchingVKBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="305257153039448" type="System">
+                                            <param id="0" name="Variable">IsTouchingTWBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8608774497869284">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="5828336459364894" type="Touch" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3260449043888598">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5997562053525361" type="System">
+                                            <param id="0" name="Variable">IsTouchingFBBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="8339906011773642" type="Touch">
+                                            <param id="0" name="Object">ShareFBBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4303511431597207" type="System">
+                                            <param id="0" name="Variable">IsTouchingFBBtn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="8788819413932065" type="ShareFBBtn">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9053735613627049">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4722454196516763" type="System">
+                                            <param id="0" name="Variable">IsTouchingTWBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="712973897665794" type="Touch">
+                                            <param id="0" name="Object">ShareTwBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="1876616768612607" type="System">
+                                            <param id="0" name="Variable">IsTouchingTWBtn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="7531029706090925" type="ShareTwBtn">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="153432813357491">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5771558906585502" type="System">
+                                            <param id="0" name="Variable">IsTouchingVKBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="5400138403144901" type="Touch">
+                                            <param id="0" name="Object">ShareVKBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5992042392858321" type="System">
+                                            <param id="0" name="Variable">IsTouchingVKBtn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="2318368711325754" type="ShareVKBtn">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6159878584820896">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="839669795043099" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5090758101687432">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="343262261546539" type="System">
+                                            <param id="0" name="Variable">IsTouchingFBBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="4981408890041427" type="Touch">
+                                            <param id="0" name="Object">ShareFBBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8400894928950797" type="System">
+                                            <param id="0" name="Variable">IsTouchingFBBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="1203909509285798" type="ShareFBBtn">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8423194968835159" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2186128879876117" type="Function">
+                                            <param id="0" name="Name">&quot;ShareQuizzResultsFB&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4023945487733401">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6832335915630764" type="System">
+                                            <param id="0" name="Variable">IsTouchingTWBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="7804964830078555" type="Touch">
+                                            <param id="0" name="Object">ShareTwBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2985124923042557" type="System">
+                                            <param id="0" name="Variable">IsTouchingTWBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="981956934541522" type="ShareTwBtn">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3066893965315357" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9312318153538718" type="Function">
+                                            <param id="0" name="Name">&quot;ShareQuizzResultsTwitter&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5221736112965063">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="974884409401596" type="System">
+                                            <param id="0" name="Variable">IsTouchingVKBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="4" inverted="1" name="Is touching object" sid="7017220803072641" type="Touch">
+                                            <param id="0" name="Object">ShareVKBtn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="315139131549445" type="System">
+                                            <param id="0" name="Variable">IsTouchingVKBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="6515412586288602" type="ShareVKBtn">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1077654311532018" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="555886750443985" type="Function">
+                                            <param id="0" name="Name">&quot;ShareQuizzResultsVK&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

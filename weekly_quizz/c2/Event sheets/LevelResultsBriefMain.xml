@@ -5,11 +5,15 @@
     <events>
         <include>LevelResultsCommon</include>
         <include>LevelResultsBriefSound</include>
+        <include>LevelResultsBriefSocialShare</include>
         <event-group description="" sid="8501800471470332" title="Level results brief group">
             <sub-events>
                 <variable constant="1" name="SUCCESS_COLOR_R" sid="8384096303547795" static="0" type="number">71</variable>
                 <variable constant="1" name="SUCCESS_COLOR_G" sid="9044403269674197" static="0" type="number">189</variable>
                 <variable constant="1" name="SUCCESS_COLOR_B" sid="5817119571671729" static="0" type="number">131</variable>
+                <variable constant="1" name="MID_COLOR_R" sid="5200042749922571" static="0" type="number">255</variable>
+                <variable constant="1" name="MID_COLOR_G" sid="1839886509273911" static="0" type="number">204</variable>
+                <variable constant="1" name="MIDL_COLOR_B" sid="6007023114451495" static="0" type="number">0</variable>
                 <variable constant="1" name="FAIL_COLOR_R" sid="5500309230561139" static="0" type="number">240</variable>
                 <variable constant="1" name="FAIL_COLOR_G" sid="7408969497604845" static="0" type="number">51</variable>
                 <variable constant="1" name="FAIL_COLOR_B" sid="9454082368479114" static="0" type="number">29</variable>
@@ -28,109 +32,91 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9034670264578877">
+                        <event-block sid="2584539948342046">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="3592914172320456" type="System">
+                                <condition id="-8" name="Compare two values" sid="1385691497615874" type="System">
                                     <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount * 4 / 4</param>
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="6977032322954247" type="LevelResultsStars">
+                                    <param id="0" name="Animation">&quot;Perfect&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="4" name="Set font color" sid="4586302685619892" type="LevelResultsIdiomsGuessedText">
                                     <param id="0" name="Color">rgb(SUCCESS_COLOR_R, SUCCESS_COLOR_G, SUCCESS_COLOR_B)</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7088954537351567">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="4957958400154307" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set font color" sid="672275885026773" type="LevelResultsIdiomsGuessedText">
-                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                <action id="0" name="Call function" sid="1443338960580124" type="Function">
+                                    <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7183535531726794">
-                            <conditions />
-                            <actions />
-                            <sub-events>
-                                <event-block sid="2584539948342046">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="1385691497615874" type="System">
-                                            <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount * 4 / 4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="6977032322954247" type="LevelResultsStars">
-                                            <param id="0" name="Animation">&quot;Perfect&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="1443338960580124" type="Function">
-                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4797247765835928">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="7562797735163774" type="System" />
-                                        <condition id="-8" name="Compare two values" sid="3540276195062742" type="System">
-                                            <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 3 / 4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="4640743685248135" type="LevelResultsStars">
-                                            <param id="0" name="Animation">&quot;VeryGood&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="5433310604686044" type="Function">
-                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="890596134490252">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="1887743992201658" type="System" />
-                                        <condition id="-8" name="Compare two values" sid="3771920697803739" type="System">
-                                            <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 4 / 10</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="8561917473999286" type="LevelResultsStars">
-                                            <param id="0" name="Animation">&quot;Good&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="3081469328415479" type="Function">
-                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="7898662874921184">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="6181975964153841" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="9432217041324909" type="LevelResultsStars">
-                                            <param id="0" name="Animation">&quot;Fail&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="9212924022246887" type="Function">
-                                            <param id="0" name="Name">&quot;LvlResultsPlayLevelFailedSound&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        <event-block sid="4797247765835928">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7562797735163774" type="System" />
+                                <condition id="-8" name="Compare two values" sid="3540276195062742" type="System">
+                                    <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 3 / 4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4640743685248135" type="LevelResultsStars">
+                                    <param id="0" name="Animation">&quot;VeryGood&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="6079555579838802" type="LevelResultsIdiomsGuessedText">
+                                    <param id="0" name="Color">rgb(MID_COLOR_R, MID_COLOR_G, MIDL_COLOR_B)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5433310604686044" type="Function">
+                                    <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="890596134490252">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1887743992201658" type="System" />
+                                <condition id="-8" name="Compare two values" sid="3771920697803739" type="System">
+                                    <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 4 / 10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8561917473999286" type="LevelResultsStars">
+                                    <param id="0" name="Animation">&quot;Good&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="1094336533800731" type="LevelResultsIdiomsGuessedText">
+                                    <param id="0" name="Color">rgb(MID_COLOR_R, MID_COLOR_G, MIDL_COLOR_B)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1030470192909663" type="Function">
+                                    <param id="0" name="Name">&quot;LvlResultsPlayLevelFailedSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7898662874921184">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6181975964153841" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9432217041324909" type="LevelResultsStars">
+                                    <param id="0" name="Animation">&quot;Fail&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="672275885026773" type="LevelResultsIdiomsGuessedText">
+                                    <param id="0" name="Color">rgb(FAIL_COLOR_R, FAIL_COLOR_G, FAIL_COLOR_B)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9212924022246887" type="Function">
+                                    <param id="0" name="Name">&quot;LvlResultsPlayLevelFailedSound&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

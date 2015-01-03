@@ -6,7 +6,7 @@
         <include>PlayerId</include>
         <event-group description="" sid="2142958553433011" title="Level results brief main popup">
             <sub-events>
-                <variable constant="1" name="POPUP_AUTO_SHOW_TIMEOUT_SEC" sid="2360935152376111" static="0" type="number">10</variable>
+                <variable constant="1" name="POPUP_AUTO_SHOW_TIMEOUT_SEC" sid="2360935152376111" static="0" type="number">-1</variable>
                 <variable constant="1" name="GAME_SURVEY_ENTERED_KEY" sid="7478509650732039" static="0" type="text">game_survey_entered</variable>
                 <variable constant="1" name="SURVEY_URL" sid="3713919274627755" static="0" type="text">https://docs.google.com/forms/d/1PPEeWB-gg_5DV6fLnzxCyIMtvg80oxKRlItOLM6N4L8/viewform?entry.654823294=</variable>
                 <comment>Reseted only when game is restarted.</comment>
@@ -18,7 +18,13 @@
                     <actions />
                     <sub-events>
                         <event-block sid="4585414614780111">
-                            <conditions />
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2782268123473827" type="System">
+                                    <param id="0" name="Variable">POPUP_AUTO_SHOW_TIMEOUT_SEC</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="-16" name="Wait" sid="4959635795496469" type="System">
                                     <param id="0" name="Seconds">POPUP_AUTO_SHOW_TIMEOUT_SEC</param>
@@ -57,9 +63,14 @@
                             <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="6282712240004994" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block any="1" sid="3243676221887303">
+                        <comment>Promo isn&apos;t needed now</comment>
+                        <event-block any="1" disabled="1" sid="3243676221887303">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1733593393517483" type="System">
                                     <param id="0" name="First value">PersistentStorage.get(GAME_SURVEY_ENTERED_KEY)</param>
@@ -78,7 +89,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3447595122269228">
+                        <event-block disabled="1" sid="3447595122269228">
                             <conditions>
                                 <condition id="-22" name="Else" sid="8643441669109843" type="System" />
                             </conditions>

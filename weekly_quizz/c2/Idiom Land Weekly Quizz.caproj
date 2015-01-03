@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Idiom Land Social Weekly Quizz</name>
+    <name>Idiom Land Weekly Quizz</name>
     <description></description>
     <version>1.0</version>
     <author>Eugene Batalov, Andy Legenki, Vladimir Bayatov</author>
@@ -160,6 +160,41 @@
                         </object-type>
                         <object-type name="LevelResultsPopupText" sid="9666782739369366">
                             <plugin id="Text" />
+                        </object-type>
+                    </object-folder>
+                    <object-folder name="Share">
+                        <object-type name="ShareVKBtn" sid="4341004010746176">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="2445079524001655" speed="5">
+                                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="322778602856918" speed="5">
+                                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="ShareFBBtn" sid="6082128431207852">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="5277958380907783" speed="5">
+                                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6856818768894155" speed="5">
+                                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="ShareTwBtn" sid="7344317286640756">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="1015435274619279" speed="5">
+                                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                                </animation>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3835396725060162" speed="5">
+                                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
+                                </animation>
+                            </animation-folder>
                         </object-type>
                     </object-folder>
                     <object-type name="LevelResultsIdiomsGuessedText" sid="591804687404442">
@@ -1567,6 +1602,7 @@
                 <event-sheet>LevelResultsCommon.xml</event-sheet>
                 <event-sheet>LevelResultsPromoPopup.xml</event-sheet>
                 <event-sheet>LevelResultsBriefSound.xml</event-sheet>
+                <event-sheet>LevelResultsBriefSocialShare.xml</event-sheet>
             </event-folder>
             <event-folder name="MainMenu">
                 <event-sheet>MainMenuMain.xml</event-sheet>
