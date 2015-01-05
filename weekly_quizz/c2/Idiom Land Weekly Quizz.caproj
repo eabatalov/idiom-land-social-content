@@ -292,7 +292,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Perfect" pingpong="0" repeatcount="1" repeatto="0" sid="9375760314624475" speed="5">
-                                <frame duration="1" hotspotX="0.502381" hotspotY="0.505263" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars1.png">
+                                <frame duration="1" hotspotX="0.502632" hotspotY="0.507246" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-perfect.png">
                                     <collision-poly>
                                         <point x="0.240838" y="0.251366" />
                                         <point x="0.497382" y="0.136612" />
@@ -306,7 +306,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="Good" pingpong="0" repeatcount="1" repeatto="0" sid="4371243757916267" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars2.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-good.png">
                                     <collision-poly>
                                         <point x="0.109524" y="0.242105" />
                                         <point x="0.5" y="0.0210526" />
@@ -320,7 +320,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="NotBad" pingpong="0" repeatcount="1" repeatto="0" sid="9449754473685224" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars3.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-notbad.png">
                                     <collision-poly>
                                         <point x="0.111905" y="0.247368" />
                                         <point x="0.5" y="0.0210526" />
@@ -334,7 +334,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="7318544824155418" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars4.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-fail.png">
                                     <collision-poly>
                                         <point x="0.109524" y="0.242105" />
                                         <point x="0.5" y="0.0157895" />
@@ -351,35 +351,6 @@
                     </object-type>
                     <object-type name="LevelResultsCoinsFoundText" sid="8002558030475972">
                         <plugin id="Text" />
-                    </object-type>
-                    <object-type name="FollowBtn" sid="2466794985974797">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9265477183984625" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\FOLLOW-INSTAGRAM.png">
-                                    <collision-poly>
-                                        <point x="0.00584795" y="0.0307692" />
-                                        <point x="0.5" y="0" />
-                                        <point x="0.994152" y="0.0307692" />
-                                        <point x="0.994152" y="0.969231" />
-                                        <point x="0.5" y="1" />
-                                        <point x="0.00584795" y="0.969231" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                            <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="7348645868808079" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.507692">
-                                    <collision-poly>
-                                        <point x="0.00584795" y="0.0307692" />
-                                        <point x="0.5" y="0" />
-                                        <point x="0.994152" y="0.0307692" />
-                                        <point x="0.994152" y="0.969231" />
-                                        <point x="0.5" y="1" />
-                                        <point x="0.00584795" y="0.969231" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
                     </object-type>
                     <object-type name="ShareText" sid="4807618736147095">
                         <plugin id="Sprite" />
@@ -1595,7 +1566,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1140867433008862" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\intro\title.png">
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\intro.png">
                                     <collision-poly>
                                         <point x="0.00165563" y="0.00328947" />
                                         <point x="0.5" y="0.00328947" />
@@ -1642,6 +1613,41 @@
                             <point x="0.5" y="0.859574" />
                             <point x="0.392857" y="0.859574" />
                             <point x="0.130952" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="2142803905388872">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9497942977960349" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\share-result.png">
+                        <collision-poly>
+                            <point x="0.0111111" y="0.0666667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.95" y="0.3" />
+                            <point x="0.95" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0111111" y="0.933333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="8353130504852214">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5789532455806" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\RESULT-PRE-TILE.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.970817" y="0.7" />
+                            <point x="0.0291829" y="0.7" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

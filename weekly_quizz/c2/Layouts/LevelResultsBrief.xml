@@ -107,38 +107,16 @@
                         <x>693</x>
                         <y>132</y>
                         <z>0</z>
-                        <width>420</width>
-                        <height>190</height>
+                        <width>380</width>
+                        <height>207</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.502415478</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FollowBtn" uid="9">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Inactive</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>688</x>
-                        <y>408</y>
-                        <z>0</z>
-                        <width>342</width>
-                        <height>65</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.507692337</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ShareText" uid="11">
+                <instance type="Sprite2" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -148,13 +126,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>190</x>
-                        <y>219</y>
+                        <x>528.655822754</x>
+                        <y>411.797454834</y>
                         <z>0</z>
-                        <width>309</width>
+                        <width>180</width>
                         <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -194,35 +172,7 @@
             <global>0</global>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="LevelResultsIdiomsGuessedText" uid="296">
-                    <properties>
-                        <text>5/5</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-83,700,0</font>
-                        <color>255,204,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>766</x>
-                        <y>248</y>
-                        <z>0</z>
-                        <width>176</width>
-                        <height>123</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="Buttons" sid="5624167472434162">
@@ -251,7 +201,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>30</x>
-                        <y>385</y>
+                        <y>257</y>
                         <z>0</z>
                         <width>320</width>
                         <height>81</height>
@@ -273,7 +223,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>30</x>
-                        <y>33</y>
+                        <y>56</y>
                         <z>0</z>
                         <width>319</width>
                         <height>145</height>
@@ -294,8 +244,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>86</x>
-                        <y>298</y>
+                        <x>692</x>
+                        <y>406</y>
                         <z>0</z>
                         <width>78</width>
                         <height>79</height>
@@ -316,8 +266,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>188</x>
-                        <y>299</y>
+                        <x>786</x>
+                        <y>406</y>
                         <z>0</z>
                         <width>78</width>
                         <height>79</height>
@@ -338,14 +288,63 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>290</x>
-                        <y>298</y>
+                        <x>880</x>
+                        <y>406</y>
                         <z>0</z>
                         <width>78</width>
                         <height>79</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.506329119</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite3" uid="15">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>673.180847168</x>
+                        <y>363.356872559</y>
+                        <z>0</z>
+                        <width>514</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LevelResultsIdiomsGuessedText" uid="296">
+                    <properties>
+                        <text>5/5</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-83,700,0</font>
+                        <color>255,204,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>755</x>
+                        <y>252</y>
+                        <z>0</z>
+                        <width>176</width>
+                        <height>123</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
