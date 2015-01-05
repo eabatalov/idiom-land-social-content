@@ -305,7 +305,7 @@
                                     </collision-poly>
                                 </frame>
                             </animation>
-                            <animation framecount="1" loop="0" name="VeryGood" pingpong="0" repeatcount="1" repeatto="0" sid="4371243757916267" speed="5">
+                            <animation framecount="1" loop="0" name="Good" pingpong="0" repeatcount="1" repeatto="0" sid="4371243757916267" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars2.png">
                                     <collision-poly>
                                         <point x="0.109524" y="0.242105" />
@@ -319,7 +319,7 @@
                                     </collision-poly>
                                 </frame>
                             </animation>
-                            <animation framecount="1" loop="0" name="Good" pingpong="0" repeatcount="1" repeatto="0" sid="9449754473685224" speed="5">
+                            <animation framecount="1" loop="0" name="NotBad" pingpong="0" repeatcount="1" repeatto="0" sid="9449754473685224" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\input-method\stars3.png">
                                     <collision-poly>
                                         <point x="0.111905" y="0.247368" />
@@ -352,11 +352,23 @@
                     <object-type name="LevelResultsCoinsFoundText" sid="8002558030475972">
                         <plugin id="Text" />
                     </object-type>
-                    <object-type name="FollowButton" sid="2466794985974797">
+                    <object-type name="FollowBtn" sid="2466794985974797">
                         <plugin id="Sprite" />
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9265477183984625" speed="5">
+                            <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9265477183984625" speed="5">
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\FOLLOW-INSTAGRAM.png">
+                                    <collision-poly>
+                                        <point x="0.00584795" y="0.0307692" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.994152" y="0.0307692" />
+                                        <point x="0.994152" y="0.969231" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.00584795" y="0.969231" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="7348645868808079" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.507692">
                                     <collision-poly>
                                         <point x="0.00584795" y="0.0307692" />
                                         <point x="0.5" y="0" />

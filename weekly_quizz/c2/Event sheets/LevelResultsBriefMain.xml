@@ -36,8 +36,8 @@
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1385691497615874" type="System">
                                     <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount * 4 / 4</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -60,12 +60,12 @@
                                 <condition id="-8" name="Compare two values" sid="3540276195062742" type="System">
                                     <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 3 / 4</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 2.0 / 3</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="4640743685248135" type="LevelResultsStars">
-                                    <param id="0" name="Animation">&quot;VeryGood&quot;</param>
+                                    <param id="0" name="Animation">&quot;Good&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="4" name="Set font color" sid="6079555579838802" type="LevelResultsIdiomsGuessedText">
@@ -83,19 +83,19 @@
                                 <condition id="-8" name="Compare two values" sid="3771920697803739" type="System">
                                     <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 4 / 10</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 1.0 / 3</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8561917473999286" type="LevelResultsStars">
-                                    <param id="0" name="Animation">&quot;Good&quot;</param>
+                                    <param id="0" name="Animation">&quot;NotBad&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="4" name="Set font color" sid="1094336533800731" type="LevelResultsIdiomsGuessedText">
                                     <param id="0" name="Color">rgb(MID_COLOR_R, MID_COLOR_G, MIDL_COLOR_B)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="1030470192909663" type="Function">
-                                    <param id="0" name="Name">&quot;LvlResultsPlayLevelFailedSound&quot;</param>
+                                <action id="0" name="Call function" sid="6482860682036529" type="Function">
+                                    <param id="0" name="Name">&quot;LvlResultsPlayLevelSuccessSound&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>

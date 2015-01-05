@@ -116,10 +116,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FollowButton" uid="9">
+                <instance type="FollowBtn" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Inactive</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
