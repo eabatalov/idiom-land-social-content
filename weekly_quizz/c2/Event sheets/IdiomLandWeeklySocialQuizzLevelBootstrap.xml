@@ -39,8 +39,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="6387790348840982" type="Function">
-                            <param id="0" name="Name">&quot;ShowLevelIntro&quot;</param>
+                        <action id="0" name="Call function" sid="5265865124942556" type="Function">
+                            <param id="0" name="Name">&quot;onLevelIntroCompleted&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>

@@ -18,7 +18,6 @@
                 <include>IdiomLandWeeklySocialQuizzLevelBootstrap</include>
                 <include>IdiomLandWeeklySocialQuizzLevelAnimsInit</include>
                 <include>IdiomLandWeeklySocialQuizzLevelFinish</include>
-                <include>IdiomLandWeeklySocialQuizzLevelIntro</include>
             </sub-events>
         </event-group>
     </events>

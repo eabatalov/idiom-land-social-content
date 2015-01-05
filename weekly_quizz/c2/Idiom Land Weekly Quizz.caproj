@@ -38,7 +38,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>MainMenu</first-layout>
+    <first-layout>IdiomLandWeeklySocialQuizzLevel</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -263,17 +263,54 @@
                             </animation-folder>
                         </object-type>
                     </object-folder>
+                    <object-folder name="Navigation">
+                        <object-type name="LevelReplayBtn" sid="4332853495816837">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7475867165205389" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\button-retry.png">
+                                        <collision-poly>
+                                            <point x="0.147727" y="0.147727" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.852273" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.852273" y="0.852273" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.147727" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="LearnIdiomsBtn" sid="8991808887361028">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2918720804750634" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\introSprites\1\button-continue.png">
+                                        <collision-poly>
+                                            <point x="0.147727" y="0.147727" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.852273" y="0.147727" />
+                                            <point x="1" y="0.5" />
+                                            <point x="0.852273" y="0.852273" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.147727" y="0.852273" />
+                                            <point x="0" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
                     <object-type name="LevelResultsIdiomsGuessedText" sid="591804687404442">
-                        <plugin id="Text" />
-                    </object-type>
-                    <object-type name="LevelResultsSecretsFoundText" sid="8324317963687748">
                         <plugin id="Text" />
                     </object-type>
                     <object-type name="LevelResultsIdiomsGuessedBg" sid="7561690392124775">
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5063521196171061" speed="5">
-                                <frame duration="1" hotspotX="0.503448" hotspotY="1.00826" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\RESULT-TILE.png">
+                                <frame duration="1" hotspotX="0.503448" hotspotY="1.00826" original-source="E:\introSprites\1\RESULT-TILE.png">
                                     <collision-poly>
                                         <point x="0.120419" y="0.252264" />
                                         <point x="0.497382" y="0.05484" />
@@ -349,24 +386,6 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="LevelResultsCoinsFoundText" sid="8002558030475972">
-                        <plugin id="Text" />
-                    </object-type>
-                    <object-type name="ShareText" sid="4807618736147095">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3808221507125629" speed="5">
-                                <frame duration="1" hotspotX="0.501618" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\share-result.png">
-                                    <collision-poly>
-                                        <point x="0.00647249" y="0.0666667" />
-                                        <point x="0.977346" y="0.233333" />
-                                        <point x="1" y="1" />
-                                        <point x="0.00647249" y="0.933333" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
                     <object-type name="LeftBackTile" sid="2633127856267025">
                         <plugin id="Sprite" />
                         <animation-folder>
@@ -375,118 +394,38 @@
                             </animation>
                         </animation-folder>
                     </object-type>
-                </object-folder>
-                <object-folder name="Detailed">
-                    <object-type name="LevelResultsIdiomMeaningText" sid="3567831786456168">
-                        <plugin id="Text" />
-                        <instance-variables>
-                            <instance-variable name="Index" sid="8692695741756436" type="number" />
-                        </instance-variables>
-                        <container>
-                            <type>LevelResultsIdiomTitleText</type>
-                            <type>LevelResultsIdiomMeaningBg</type>
-                            <type>LevelResultsIdiomTitleBg</type>
-                            <type>LevelResultsIdiomMeaningText</type>
-                            <type>LevelResultsIdiomSuccessIndicator</type>
-                        </container>
-                    </object-type>
-                    <object-type name="LevelResultsIdiomSuccessIndicator" sid="9953672135447337">
+                    <object-type name="LevelResultsShareResultsLabel" sid="2142803905388872">
                         <plugin id="Sprite" />
-                        <instance-variables>
-                            <instance-variable name="Index" sid="3233607771119763" type="number" />
-                        </instance-variables>
-                        <container>
-                            <type>LevelResultsIdiomTitleText</type>
-                            <type>LevelResultsIdiomMeaningBg</type>
-                            <type>LevelResultsIdiomTitleBg</type>
-                            <type>LevelResultsIdiomMeaningText</type>
-                            <type>LevelResultsIdiomSuccessIndicator</type>
-                        </container>
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Guess" pingpong="0" repeatcount="1" repeatto="0" sid="8617214023878586" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9497942977960349" speed="5">
+                                <frame duration="1" hotspotX="0.502538" hotspotY="0.5" original-source="E:\introSprites\1\share-result.png">
                                     <collision-poly>
-                                        <point x="0" y="0" />
+                                        <point x="0.0111111" y="0.0666667" />
                                         <point x="0.5" y="0" />
-                                        <point x="0.864865" y="0.147059" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.864865" y="0.852941" />
+                                        <point x="0.95" y="0.3" />
+                                        <point x="0.95" y="0.5" />
+                                        <point x="1" y="1" />
                                         <point x="0.5" y="1" />
-                                        <point x="0.0675676" y="0.926471" />
-                                        <point x="0" y="0.5" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                            <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="3140631132054894" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                    <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="0.5" y="0" />
-                                        <point x="0.864865" y="0.147059" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.864865" y="0.852941" />
-                                        <point x="0.5" y="1" />
-                                        <point x="0.0675676" y="0.926471" />
-                                        <point x="0" y="0.5" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                            <animation framecount="1" loop="0" name="Ignore" pingpong="0" repeatcount="1" repeatto="0" sid="1710418827736003" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                    <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="0.5" y="0" />
-                                        <point x="0.864865" y="0.147059" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.864865" y="0.852941" />
-                                        <point x="0.5" y="1" />
-                                        <point x="0.0675676" y="0.926471" />
-                                        <point x="0" y="0.5" />
+                                        <point x="0.0111111" y="0.933333" />
                                     </collision-poly>
                                 </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
-                    <object-type name="LevelResultsIdiomTitleText" sid="8545187802478282">
-                        <plugin id="Text" />
-                        <instance-variables>
-                            <instance-variable name="Index" sid="4775299070438301" type="number" />
-                        </instance-variables>
-                        <container>
-                            <type>LevelResultsIdiomTitleText</type>
-                            <type>LevelResultsIdiomMeaningBg</type>
-                            <type>LevelResultsIdiomTitleBg</type>
-                            <type>LevelResultsIdiomMeaningText</type>
-                            <type>LevelResultsIdiomSuccessIndicator</type>
-                        </container>
-                    </object-type>
-                    <object-type name="LevelResultsIdiomTitleBg" sid="1703556656711394">
+                    <object-type name="LevelResultsDecoration" sid="8353130504852214">
                         <plugin id="Sprite" />
-                        <container>
-                            <type>LevelResultsIdiomTitleText</type>
-                            <type>LevelResultsIdiomMeaningBg</type>
-                            <type>LevelResultsIdiomTitleBg</type>
-                            <type>LevelResultsIdiomMeaningText</type>
-                            <type>LevelResultsIdiomSuccessIndicator</type>
-                        </container>
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9823628634022828" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.507463" />
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="LevelResultsIdiomMeaningBg" sid="1006767072642415">
-                        <plugin id="Sprite" />
-                        <container>
-                            <type>LevelResultsIdiomTitleText</type>
-                            <type>LevelResultsIdiomMeaningBg</type>
-                            <type>LevelResultsIdiomTitleBg</type>
-                            <type>LevelResultsIdiomMeaningText</type>
-                            <type>LevelResultsIdiomSuccessIndicator</type>
-                        </container>
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3320557601153585" speed="5">
-                                <frame duration="1" hotspotX="0.501235" hotspotY="0.507463" />
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5789532455806" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\RESULT-PRE-TILE.png">
+                                    <collision-poly>
+                                        <point x="0" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.970817" y="0.7" />
+                                        <point x="0.0291829" y="0.7" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -539,82 +478,6 @@
                 </object-type>
             </object-folder>
             <object-folder name="Common">
-                <object-folder name="Navigation">
-                    <object-type name="LevelReplayBtn" sid="4332853495816837">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7475867165205389" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\button-retry.png">
-                                    <collision-poly>
-                                        <point x="0.147727" y="0.147727" />
-                                        <point x="0.5" y="0" />
-                                        <point x="0.852273" y="0.147727" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.852273" y="0.852273" />
-                                        <point x="0.5" y="1" />
-                                        <point x="0.147727" y="0.852273" />
-                                        <point x="0" y="0.5" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="LevelNextBtn" sid="8991808887361028">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2918720804750634" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\button-continue.png">
-                                    <collision-poly>
-                                        <point x="0.147727" y="0.147727" />
-                                        <point x="0.5" y="0" />
-                                        <point x="0.852273" y="0.147727" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.852273" y="0.852273" />
-                                        <point x="0.5" y="1" />
-                                        <point x="0.147727" y="0.852273" />
-                                        <point x="0" y="0.5" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                            <animation framecount="1" loop="0" name="New" pingpong="0" repeatcount="1" repeatto="0" sid="163460420327213" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\button-continue.png">
-                                    <collision-poly>
-                                        <point x="0.003125" y="0.00632911" />
-                                        <point x="0.996875" y="0.00632911" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.978125" y="0.955696" />
-                                        <point x="0.5" y="0.981013" />
-                                        <point x="0.015625" y="0.968354" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                            <animation framecount="1" loop="0" name="Disable" pingpong="0" repeatcount="1" repeatto="0" sid="410460825789662" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\button-continue-diesble.png">
-                                    <collision-poly>
-                                        <point x="0.003125" y="0.00632911" />
-                                        <point x="0.996875" y="0.00632911" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.978125" y="0.955696" />
-                                        <point x="0.5" y="0.981013" />
-                                        <point x="0.015625" y="0.968354" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                            <animation framecount="1" loop="0" name="NextLevel" pingpong="0" repeatcount="1" repeatto="0" sid="8244179168967266" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\button-continue.png">
-                                    <collision-poly>
-                                        <point x="0.003125" y="0.00632911" />
-                                        <point x="0.996875" y="0.00632911" />
-                                        <point x="1" y="0.5" />
-                                        <point x="0.978125" y="0.955696" />
-                                        <point x="0.5" y="0.981013" />
-                                        <point x="0.015625" y="0.968354" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                </object-folder>
                 <object-type name="MenuBg" sid="4118067610103313">
                     <plugin id="Sprite" />
                     <animation-folder>
@@ -1543,6 +1406,25 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="TestDialogBackground1" sid="64760888511581">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2972697478670257" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\rightbars.png">
+                                    <collision-poly>
+                                        <point x="0.130952" y="0.0468085" />
+                                        <point x="0.5" y="0" />
+                                        <point x="1" y="0" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.922619" y="0.97234" />
+                                        <point x="0.5" y="0.859574" />
+                                        <point x="0.392857" y="0.859574" />
+                                        <point x="0.130952" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
                 </object-folder>
                 <object-folder name="Question">
                     <object-type name="TestDialogQuestionPhoto" sid="9963078062898053">
@@ -1561,36 +1443,6 @@
                         </animation-folder>
                     </object-type>
                 </object-folder>
-                <object-folder name="Intro">
-                    <object-type name="IdiomLandTestDialogIntroBg" sid="790422177730061">
-                        <plugin id="Sprite" />
-                        <animation-folder>
-                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1140867433008862" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\intro.png">
-                                    <collision-poly>
-                                        <point x="0.00165563" y="0.00328947" />
-                                        <point x="0.5" y="0.00328947" />
-                                        <point x="0.975166" y="0.0493421" />
-                                        <point x="0.996689" y="0.993421" />
-                                        <point x="0.5" y="0.996711" />
-                                        <point x="0.0248344" y="0.950658" />
-                                    </collision-poly>
-                                </frame>
-                            </animation>
-                        </animation-folder>
-                    </object-type>
-                    <object-type name="IdiomLandTestDialogIntroTxt" sid="6195278433095953">
-                        <plugin id="Text" />
-                    </object-type>
-                    <object-type name="IdiomLandTestDialogIntroContinueHelpTxt" sid="567224443143083">
-                        <plugin id="Text" />
-                        <behaviors>
-                            <behavior-type name="OpacitySine" sid="6559340833415571">
-                                <behavior id="Sin" />
-                            </behavior-type>
-                        </behaviors>
-                    </object-type>
-                </object-folder>
                 <object-type name="WeeklyQuizzGame" sid="4153392237207679">
                     <plugin id="WeeklyQuizzGamePlugin" />
                 </object-type>
@@ -1599,60 +1451,6 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-type name="Sprite" sid="64760888511581">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2972697478670257" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\rightbars.png">
-                        <collision-poly>
-                            <point x="0.130952" y="0.0468085" />
-                            <point x="0.5" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.922619" y="0.97234" />
-                            <point x="0.5" y="0.859574" />
-                            <point x="0.392857" y="0.859574" />
-                            <point x="0.130952" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="2142803905388872">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9497942977960349" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\share-result.png">
-                        <collision-poly>
-                            <point x="0.0111111" y="0.0666667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.95" y="0.3" />
-                            <point x="0.95" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0111111" y="0.933333" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite3" sid="8353130504852214">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5789532455806" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result\RESULT-PRE-TILE.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.970817" y="0.7" />
-                            <point x="0.0291829" y="0.7" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="animationresultFamily" plugin-id="Sprite" sid="719736049323703">
@@ -1670,9 +1468,6 @@
         <layout-folder name="Menus">
             <layout-folder name="LevelResults">
                 <layout>LevelResultsBrief.xml</layout>
-            </layout-folder>
-            <layout-folder name="MainMenu">
-                <layout>MainMenu.xml</layout>
             </layout-folder>
         </layout-folder>
     </layout-folder>
@@ -1728,7 +1523,6 @@
                 <event-sheet>IdiomLandWeeklySocialQuizzLevelDebug.xml</event-sheet>
                 <event-sheet>IdiomLandWeeklySocialQuizzLevelFinish.xml</event-sheet>
                 <event-sheet>IdiomLandWeeklySocialQuizzLevelProgressAnimation.xml</event-sheet>
-                <event-sheet>IdiomLandWeeklySocialQuizzLevelIntro.xml</event-sheet>
             </event-folder>
         </event-folder>
         <event-folder name="Menus">
@@ -1738,9 +1532,6 @@
                 <event-sheet>LevelResultsPromoPopup.xml</event-sheet>
                 <event-sheet>LevelResultsBriefSound.xml</event-sheet>
                 <event-sheet>LevelResultsBriefSocialShare.xml</event-sheet>
-            </event-folder>
-            <event-folder name="MainMenu">
-                <event-sheet>MainMenuMain.xml</event-sheet>
             </event-folder>
             <event-folder name="Common">
                 <event-sheet>MenuCommon.xml</event-sheet>

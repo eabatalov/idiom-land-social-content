@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="6579238557922507" title="Test dialog questione show animation">
             <sub-events>
+                <comment>Disable &quot;blah blah blah&quot; question speach as it doesn&apos;t look good now</comment>
                 <event-block sid="6366006666553105">
                     <conditions>
                         <condition id="0" name="On function" sid="4389850894235436" type="Function">
@@ -16,7 +17,7 @@
                             <param id="0" name="Name">&quot;ShowQuestion&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="1722034975933793" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="1722034975933793" type="Function">
                             <param id="0" name="Name">&quot;TestDialogEditorSpeakQuestion&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
