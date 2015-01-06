@@ -1532,6 +1532,7 @@
                 <event-sheet>LevelResultsPromoPopup.xml</event-sheet>
                 <event-sheet>LevelResultsBriefSound.xml</event-sheet>
                 <event-sheet>LevelResultsBriefSocialShare.xml</event-sheet>
+                <event-sheet>LevelResultsEstimation.xml</event-sheet>
             </event-folder>
             <event-folder name="Common">
                 <event-sheet>MenuCommon.xml</event-sheet>
@@ -1652,6 +1653,13 @@
             <file name="quest-slide.scon" />
             <file name="teacher.scml" />
             <file name="teacher.scon" />
+        </file-folder>
+        <file-folder name="Cards">
+            <file name="card_quizz_announce.png" />
+            <file name="card_share_result_beginner.png" />
+            <file name="card_share_result_expert.png" />
+            <file name="card_share_result_learner.png" />
+            <file name="card_share_result_nb.png" />
         </file-folder>
     </files-folder>
 </c2project>

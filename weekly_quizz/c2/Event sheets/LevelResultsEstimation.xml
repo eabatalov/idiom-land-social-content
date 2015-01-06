@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelResultsEstimation</name>
+    <events>
+        <variable constant="1" name="RESULT_FAIL" sid="9205527792702974" static="0" type="number">0</variable>
+        <variable constant="1" name="RESULT_NOT_BAD" sid="9531420091889958" static="0" type="number">1</variable>
+        <variable constant="1" name="RESULT_GOOD" sid="1233111021883495" static="0" type="number">2</variable>
+        <variable constant="1" name="RESULT_PERFECT" sid="2456672966893552" static="0" type="number">3</variable>
+        <event-group description="" sid="900228031952132" title="Level results estimation">
+            <sub-events>
+                <comment>param(0): right answers count&#x0D;&#x0A;param(1): questions count</comment>
+                <event-block sid="238987554672549">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8977704535799932" type="Function">
+                            <param id="0" name="Name">&quot;ComputeQuizzResult&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3532450015132584">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2469439785061617" type="System">
+                                    <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="889375915984103" type="Function">
+                                    <param id="0" name="Value">RESULT_PERFECT</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9118705755507387">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="173737256962266" type="System" />
+                                <condition id="-8" name="Compare two values" sid="8930909975978004" type="System">
+                                    <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 2.0 / 3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="2306159195809044" type="Function">
+                                    <param id="0" name="Value">RESULT_GOOD</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9423331792689729">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="252067869348318" type="System" />
+                                <condition id="-8" name="Compare two values" sid="542572659375565" type="System">
+                                    <param id="0" name="First value">TestDialogLevelRuntime.getRightAnswersCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">TestDialogLevelRuntime.getQuestionsCount  * 1.0 / 3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="2071056404160777" type="Function">
+                                    <param id="0" name="Value">RESULT_NOT_BAD</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9585085733109499">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="853082123266377" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="9864970577948394" type="Function">
+                                    <param id="0" name="Value">RESULT_FAIL</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

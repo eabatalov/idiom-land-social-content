@@ -1,0 +1,1545 @@
+{
+	"entity": [
+		{
+			"animation": [
+				{
+					"gline": [],
+					"id": 0,
+					"interval": 100,
+					"length": 1500,
+					"looping": "false",
+					"mainline": {
+						"key": [
+							{
+								"bone_ref": [],
+								"id": 0,
+								"object_ref": [
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 0,
+										"abs_y": -500,
+										"file": 0,
+										"folder": 0,
+										"id": 0,
+										"key": 0,
+										"name": "sprite-question",
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 40,
+										"abs_y": -380,
+										"file": 1,
+										"folder": 0,
+										"id": 1,
+										"key": 0,
+										"name": "text-blog",
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0.5,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 193,
+										"abs_y": -468,
+										"file": 2,
+										"folder": 0,
+										"id": 2,
+										"key": 0,
+										"name": "quest-icon",
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 30,
+										"abs_y": -104,
+										"file": 3,
+										"folder": 0,
+										"id": 3,
+										"key": 0,
+										"name": "true-off",
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 190,
+										"abs_y": -104,
+										"file": 4,
+										"folder": 0,
+										"id": 4,
+										"key": 0,
+										"name": "false-off",
+										"timeline": "4",
+										"z_index": "4"
+									}
+								]
+							},
+							{
+								"bone_ref": [],
+								"id": 1,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 0,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 0,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 0,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 1,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 1,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 212
+							},
+							{
+								"bone_ref": [],
+								"id": 2,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 1,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 1,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 2,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 2,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 388
+							},
+							{
+								"bone_ref": [],
+								"id": 3,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 1,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 2,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 2,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 2,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 692
+							},
+							{
+								"bone_ref": [],
+								"id": 4,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 2,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 3,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 2,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 2,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 748
+							},
+							{
+								"bone_ref": [],
+								"id": 5,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 2,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 3,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 4,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 3,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 3,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 948
+							},
+							{
+								"bone_ref": [],
+								"id": 6,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 3,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 4,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 5,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 4,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 4,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 1115
+							}
+						]
+					},
+					"name": "end",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 6,
+										"folder": 0
+									},
+									"time": 3
+								}
+							],
+							"name": "question_out"
+						}
+					],
+					"timeline": [
+						{
+							"id": 0,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"y": 500
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"y": 500
+									},
+									"spin": 0,
+									"time": 388
+								},
+								{
+									"id": 2,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"y": 500
+									},
+									"spin": 0,
+									"time": 948
+								},
+								{
+									"id": 3,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -381.578947,
+										"y": 501.315789
+									},
+									"spin": 0,
+									"time": 1115
+								}
+							],
+							"name": "sprite-question",
+							"obj": 0
+						},
+						{
+							"id": 1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": 40,
+										"y": 380
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": 40,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 388
+								},
+								{
+									"id": 2,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": 56,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 748
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": -1,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 948
+								},
+								{
+									"id": 4,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": -352.315789,
+										"y": 381.315789
+									},
+									"spin": 0,
+									"time": 1115
+								}
+							],
+							"name": "text-blog",
+							"obj": 1
+						},
+						{
+							"id": 2,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 193,
+										"y": 468
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 193,
+										"y": 468
+									},
+									"spin": 0,
+									"time": 388
+								},
+								{
+									"id": 2,
+									"object": {
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 193,
+										"y": 456
+									},
+									"spin": 0,
+									"time": 692
+								},
+								{
+									"id": 3,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 191,
+										"y": 539
+									},
+									"spin": 0,
+									"time": 748
+								},
+								{
+									"id": 4,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 191,
+										"y": 539
+									},
+									"spin": 0,
+									"time": 948
+								},
+								{
+									"id": 5,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 191,
+										"y": 539
+									},
+									"spin": 0,
+									"time": 1115
+								}
+							],
+							"name": "quest-icon",
+							"obj": 2
+						},
+						{
+							"id": 3,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30,
+										"y": 104
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30,
+										"y": 144
+									},
+									"spin": 0,
+									"time": 212
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30
+									},
+									"spin": 0,
+									"time": 388
+								},
+								{
+									"id": 3,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30
+									},
+									"spin": 0,
+									"time": 948
+								},
+								{
+									"id": 4,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30
+									},
+									"spin": 0,
+									"time": 1115
+								}
+							],
+							"name": "true-off",
+							"obj": 3
+						},
+						{
+							"id": 4,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": 104
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 192,
+										"y": 125
+									},
+									"spin": 0,
+									"time": 212
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": -32.98434
+									},
+									"spin": 0,
+									"time": 388
+								},
+								{
+									"id": 3,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": 13.01566
+									},
+									"spin": 0,
+									"time": 948
+								},
+								{
+									"id": 4,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": 13.01566
+									},
+									"spin": 0,
+									"time": 1115
+								}
+							],
+							"name": "false-off",
+							"obj": 4
+						}
+					]
+				},
+				{
+					"gline": [],
+					"id": 1,
+					"interval": 100,
+					"length": 1500,
+					"looping": "false",
+					"mainline": {
+						"key": [
+							{
+								"bone_ref": [],
+								"id": 0,
+								"object_ref": [
+									{
+										"abs_a": 0,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": -381.578947,
+										"abs_y": -501.315789,
+										"file": 0,
+										"folder": 0,
+										"id": 0,
+										"key": 0,
+										"name": "sprite-question",
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"abs_a": 0,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": -352.315789,
+										"abs_y": -381.315789,
+										"file": 1,
+										"folder": 0,
+										"id": 1,
+										"key": 0,
+										"name": "text-blog",
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"abs_a": 0,
+										"abs_angle": 0,
+										"abs_pivot_x": 0.5,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 191,
+										"abs_y": -539,
+										"file": 2,
+										"folder": 0,
+										"id": 2,
+										"key": 0,
+										"name": "quest-icon",
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"abs_a": 0,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 30,
+										"abs_y": 0,
+										"file": 3,
+										"folder": 0,
+										"id": 3,
+										"key": 0,
+										"name": "true-off",
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"abs_a": 0,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 190,
+										"abs_y": -13.01566,
+										"file": 4,
+										"folder": 0,
+										"id": 4,
+										"key": 0,
+										"name": "false-off",
+										"timeline": "4",
+										"z_index": "4"
+									}
+								]
+							},
+							{
+								"bone_ref": [],
+								"id": 1,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 1,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 1,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 1,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 1,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 266
+							},
+							{
+								"bone_ref": [],
+								"id": 2,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 2,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 2,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 1,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 1,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 443
+							},
+							{
+								"bone_ref": [],
+								"id": 3,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 2,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 3,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 1,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 1,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 585
+							},
+							{
+								"bone_ref": [],
+								"id": 4,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 2,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 3,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 4,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 2,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 2,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 921
+							},
+							{
+								"bone_ref": [],
+								"id": 5,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 2,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 3,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 4,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 3,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 3,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 1219
+							},
+							{
+								"bone_ref": [],
+								"id": 6,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 2,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 3,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 4,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 4,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 4,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 1264
+							},
+							{
+								"bone_ref": [],
+								"id": 7,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 3,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 4,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 5,
+										"timeline": "2",
+										"z_index": "2"
+									},
+									{
+										"id": 3,
+										"key": 5,
+										"timeline": "3",
+										"z_index": "3"
+									},
+									{
+										"id": 4,
+										"key": 5,
+										"timeline": "4",
+										"z_index": "4"
+									}
+								],
+								"time": 1426
+							}
+						]
+					},
+					"name": "start",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 5,
+										"folder": 0
+									},
+									"time": 5
+								}
+							],
+							"name": "question_in"
+						}
+					],
+					"timeline": [
+						{
+							"id": 0,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -381.578947,
+										"y": 501.315789
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"y": 500
+									},
+									"spin": 0,
+									"time": 266
+								},
+								{
+									"id": 2,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"y": 500
+									},
+									"spin": 0,
+									"time": 921
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"y": 500
+									},
+									"spin": 0,
+									"time": 1426
+								}
+							],
+							"name": "sprite-question",
+							"obj": 0
+						},
+						{
+							"id": 1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": -352.315789,
+										"y": 381.315789
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": -1,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 266
+								},
+								{
+									"id": 2,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": 56,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 443
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": 40,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 921
+								},
+								{
+									"id": 4,
+									"object": {
+										"angle": 0,
+										"file": 1,
+										"folder": 0,
+										"x": 40,
+										"y": 380
+									},
+									"spin": 0,
+									"time": 1426
+								}
+							],
+							"name": "text-blog",
+							"obj": 1
+						},
+						{
+							"id": 2,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 191,
+										"y": 539
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 191,
+										"y": 539
+									},
+									"spin": 0,
+									"time": 266
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 191,
+										"y": 539
+									},
+									"spin": 0,
+									"time": 443
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 193,
+										"y": 456
+									},
+									"spin": 0,
+									"time": 585
+								},
+								{
+									"id": 4,
+									"object": {
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 193,
+										"y": 468
+									},
+									"spin": 0,
+									"time": 921
+								},
+								{
+									"id": 5,
+									"object": {
+										"angle": 0,
+										"file": 2,
+										"folder": 0,
+										"x": 193,
+										"y": 468
+									},
+									"spin": 0,
+									"time": 1426
+								}
+							],
+							"name": "quest-icon",
+							"obj": 2
+						},
+						{
+							"id": 3,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30
+									},
+									"spin": 0,
+									"time": 266
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30
+									},
+									"spin": 0,
+									"time": 921
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30,
+										"y": 144
+									},
+									"spin": 0,
+									"time": 1219
+								},
+								{
+									"id": 4,
+									"object": {
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30,
+										"y": 120
+									},
+									"spin": 0,
+									"time": 1264
+								},
+								{
+									"id": 5,
+									"object": {
+										"angle": 0,
+										"file": 3,
+										"folder": 0,
+										"x": 30,
+										"y": 104
+									},
+									"spin": 0,
+									"time": 1426
+								}
+							],
+							"name": "true-off",
+							"obj": 3
+						},
+						{
+							"id": 4,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": 13.01566
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": 13.01566
+									},
+									"spin": 0,
+									"time": 266
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": -32.98434
+									},
+									"spin": 0,
+									"time": 921
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 192,
+										"y": 125
+									},
+									"spin": 0,
+									"time": 1219
+								},
+								{
+									"id": 4,
+									"object": {
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190.835938,
+										"y": 120
+									},
+									"spin": 0,
+									"time": 1264
+								},
+								{
+									"id": 5,
+									"object": {
+										"angle": 0,
+										"file": 4,
+										"folder": 0,
+										"x": 190,
+										"y": 104
+									},
+									"spin": 0,
+									"time": 1426
+								}
+							],
+							"name": "false-off",
+							"obj": 4
+						}
+					]
+				}
+			],
+			"character_map": [],
+			"id": 0,
+			"name": "quest-slide",
+			"obj_info": [
+				{
+					"frames": [
+						{
+							"file": 0,
+							"folder": 0
+						}
+					],
+					"name": "quest-slide_sprite-question",
+					"realname": "sprite-question",
+					"type": "sprite"
+				},
+				{
+					"frames": [
+						{
+							"file": 1,
+							"folder": 0
+						}
+					],
+					"name": "quest-slide_text-blog",
+					"realname": "text-blog",
+					"type": "sprite"
+				},
+				{
+					"frames": [
+						{
+							"file": 2,
+							"folder": 0
+						}
+					],
+					"name": "quest-slide_quest-icon",
+					"realname": "quest-icon",
+					"type": "sprite"
+				},
+				{
+					"frames": [
+						{
+							"file": 3,
+							"folder": 0
+						}
+					],
+					"name": "quest-slide_true-off",
+					"realname": "true-off",
+					"type": "sprite"
+				},
+				{
+					"frames": [
+						{
+							"file": 4,
+							"folder": 0
+						}
+					],
+					"name": "quest-slide_false-off",
+					"realname": "false-off",
+					"type": "sprite"
+				}
+			]
+		}
+	],
+	"folder": [
+		{
+			"file": [
+				{
+					"height": 500,
+					"id": 0,
+					"name": "sprite-question.png",
+					"pivot_x": 0,
+					"pivot_y": 1,
+					"width": 380
+				},
+				{
+					"height": 256,
+					"id": 1,
+					"name": "text-blog.png",
+					"pivot_x": 0,
+					"pivot_y": 1,
+					"width": 300
+				},
+				{
+					"height": 66,
+					"id": 2,
+					"name": "quest-icon.png",
+					"pivot_x": 0.5,
+					"pivot_y": 1,
+					"width": 156
+				},
+				{
+					"height": 80,
+					"id": 3,
+					"name": "true-off.png",
+					"pivot_x": 0,
+					"pivot_y": 1,
+					"width": 160
+				},
+				{
+					"height": 80,
+					"id": 4,
+					"name": "false-off.png",
+					"pivot_x": 0,
+					"pivot_y": 1,
+					"width": 160
+				},
+				{
+					"id": 5,
+					"name": "question_in.wav",
+					"type": "sound"
+				},
+				{
+					"id": 6,
+					"name": "question_out.wav",
+					"type": "sound"
+				}
+			],
+			"id": 0
+		}
+	],
+	"generator": "BrashMonkey Spriter",
+	"generator_version": "r2",
+	"scon_version": "1.0"
+}
