@@ -329,7 +329,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Perfect" pingpong="0" repeatcount="1" repeatto="0" sid="9375760314624475" speed="5">
-                                <frame duration="1" hotspotX="0.502632" hotspotY="0.507246" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-perfect.png">
+                                <frame duration="1" hotspotX="0.503333" hotspotY="0.507692" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\new-result\result-star-perfect.png">
                                     <collision-poly>
                                         <point x="0.240838" y="0.251366" />
                                         <point x="0.497382" y="0.136612" />
@@ -343,7 +343,7 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="Good" pingpong="0" repeatcount="1" repeatto="0" sid="4371243757916267" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-good.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.503846" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\new-result\result-star-notbad.png">
                                     <collision-poly>
                                         <point x="0.109524" y="0.242105" />
                                         <point x="0.5" y="0.0210526" />
@@ -357,21 +357,21 @@
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="NotBad" pingpong="0" repeatcount="1" repeatto="0" sid="9449754473685224" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-notbad.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.503846" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\new-result\result-star-good.png">
                                     <collision-poly>
-                                        <point x="0.111905" y="0.247368" />
-                                        <point x="0.5" y="0.0210526" />
-                                        <point x="0.890476" y="0.242105" />
-                                        <point x="0.990476" y="0.5" />
-                                        <point x="0.897619" y="0.773684" />
-                                        <point x="0.5" y="0.936842" />
-                                        <point x="0.102381" y="0.773684" />
-                                        <point x="0.00714286" y="0.5" />
+                                        <point x="0.171667" y="0.396154" />
+                                        <point x="0.5" y="0.530769" />
+                                        <point x="0.765" y="0.542308" />
+                                        <point x="0.38" y="0.5" />
+                                        <point x="0.861667" y="0.680769" />
+                                        <point x="0.5" y="0.680769" />
+                                        <point x="0.18" y="0.584615" />
+                                        <point x="0.166667" y="0.5" />
                                     </collision-poly>
                                 </frame>
                             </animation>
                             <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="7318544824155418" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\result-star-fail.png">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.503846" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\results\new-result\result-star-fail.png">
                                     <collision-poly>
                                         <point x="0.109524" y="0.242105" />
                                         <point x="0.5" y="0.0157895" />
@@ -1394,7 +1394,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889753829348977" speed="5">
-                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\background.jpg" />
+                                <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!learzing\app\Idiom_Land\new-mechanics\dialog\elements\background-new-result.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
