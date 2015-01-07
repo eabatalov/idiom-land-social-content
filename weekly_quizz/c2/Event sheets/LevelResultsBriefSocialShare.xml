@@ -6,13 +6,13 @@
         <event-group description="" sid="2287860345232122" title="Level results brief social share">
             <sub-events>
                 <variable constant="1" name="QUIZZ_URL" sid="9266829868150948" static="0" type="text">http://idiomland.com/quiz</variable>
-                <variable constant="1" name="SHARE_REDIRECT" sid="8954915833981114" static="0" type="text">http://idiomland.com</variable>
-                <variable constant="1" name="SHARE_TITLE" sid="9399908345305901" static="0" type="text">Idiom quizz of the week on idiomland.com</variable>
+                <variable constant="1" name="SHARE_REDIRECT" sid="8954915833981114" static="0" type="text">http://idiomland.com?from=quiz</variable>
+                <variable constant="1" name="SHARE_TITLE" sid="9399908345305901" static="0" type="text">Idiom Land Quiz of the Week</variable>
                 <comment>param(0): number of right answers&#x0D;&#x0A;param(1): number of question</comment>
                 <event-block sid="9037302464234928">
                     <conditions>
                         <condition id="0" name="On function" sid="9483936830302757" type="Function">
-                            <param id="0" name="Name">&quot;GenShareDescriptionStr&quot;</param>
+                            <param id="0" name="Name">&quot;GenShareDescriptionStrEnglish&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -104,6 +104,108 @@
                                     <param id="1" name="Value">ShareDescrStr &amp; &quot;! Try it out!&quot;</param>
                                 </action>
                                 <action id="1" name="Set return value" sid="56994288881895" type="Function">
+                                    <param id="0" name="Value">shareDescrStr</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): number of right answers&#x0D;&#x0A;param(1): number of question</comment>
+                <event-block sid="7126580670066616">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5696208986952136" type="Function">
+                            <param id="0" name="Name">&quot;GenShareDescriptionStrRussian&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="ShareDescrStr" sid="7173738397805129" static="0" type="text"></variable>
+                        <variable constant="0" name="Result" sid="1038007942002159" static="0" type="number">0</variable>
+                        <event-block sid="2664751100154249">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="5553393395581974" type="Function">
+                                    <param id="0" name="Name">&quot;ComputeQuizzResult&quot;</param>
+                                    <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2516895108191722" type="System">
+                                    <param id="0" name="Variable">Result</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9900684375988905" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">&quot;Мой результат теста на знание английских идиом: &quot; &amp; str(Function.Param(0)) &amp;&quot; / &quot; &amp; str(Function.Param(1)) &amp; &quot; (Idiom &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5383596291044234">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8528521554506967" type="System">
+                                    <param id="0" name="Variable">Result</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RESULT_PERFECT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3017322580823761" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">ShareDescrStr &amp; &quot; Expert&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="149975758030618">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1654673978829239" type="System">
+                                    <param id="0" name="Variable">Result</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RESULT_GOOD</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7002350995094818" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">ShareDescrStr &amp; &quot; Learner&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4771826332433899">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="781003250701197" type="System">
+                                    <param id="0" name="Variable">Result</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RESULT_NOT_BAD</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3506398742194926" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">ShareDescrStr &amp; &quot;Beginner&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4780864850372209">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="453301271128256" type="System">
+                                    <param id="0" name="Variable">Result</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RESULT_FAIL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7041337575784463" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">ShareDescrStr &amp; &quot;Newbie&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9242287695673286">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="3922851923448028" type="System">
+                                    <param id="0" name="Variable">ShareDescrStr</param>
+                                    <param id="1" name="Value">ShareDescrStr &amp; &quot;).&quot;</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="1997560864989592" type="Function">
                                     <param id="0" name="Value">shareDescrStr</param>
                                 </action>
                             </actions>
@@ -222,7 +324,7 @@
                                     <conditions />
                                     <actions>
                                         <action id="0" name="Call function" sid="501768172972935" type="Function">
-                                            <param id="0" name="Name">&quot;GenShareDescriptionStr&quot;</param>
+                                            <param id="0" name="Name">&quot;GenShareDescriptionStrEnglish&quot;</param>
                                             <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="5701446994037867" type="System">
@@ -257,7 +359,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="1496104352192968" type="Function">
-                                    <param id="0" name="Name">&quot;GenShareDescriptionStr&quot;</param>
+                                    <param id="0" name="Name">&quot;GenShareDescriptionStrEnglish&quot;</param>
                                     <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="389772527773191" type="System">
@@ -302,7 +404,7 @@
                                     <conditions />
                                     <actions>
                                         <action id="0" name="Call function" sid="5543399383820186" type="Function">
-                                            <param id="0" name="Name">&quot;GenShareDescriptionStr&quot;</param>
+                                            <param id="0" name="Name">&quot;GenShareDescriptionStrRussian&quot;</param>
                                             <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="7254292439030996" type="System">
@@ -641,7 +743,7 @@
                                                 </action>
                                                 <action id="0" name="Call function" sid="6303033505245991" type="Function">
                                                     <param id="0" name="Name">&quot;DoResultsShare&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;http://idiomland.com&quot;</param>
+                                                    <param id="1" name="Parameter {n}">SHARE_REDIRECT</param>
                                                 </action>
                                             </actions>
                                         </event-block>
