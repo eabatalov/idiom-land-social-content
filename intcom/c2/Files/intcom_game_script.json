@@ -1,0 +1,316 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "intro",
+						"objs": [
+							"Player",
+							"policeman"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						9
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"policeman"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						9
+					],
+					"outCondIds": [
+						3
+					],
+					"props": {
+						"id": "Player",
+						"text": "Hello!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						3
+					],
+					"outCondIds": [
+						7
+					],
+					"props": {
+						"id": "policeman",
+						"text": "Hi!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 5,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7
+					],
+					"outCondIds": [
+						19
+					],
+					"props": {
+						"id": "Player",
+						"name": "speak",
+						"secs": 3
+					}
+				},
+				{
+					"ver": 1,
+					"id": 21,
+					"type": 10,
+					"label": "NextStage",
+					"continue": false,
+					"inCondIds": [
+						20
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "intro",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "veider",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 1,
+					"label": "епта",
+					"continue": false,
+					"inCondIds": [
+						19
+					],
+					"outCondIds": [
+						20
+					],
+					"props": {
+						"id": "Player",
+						"text": "Епта",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 9,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 22,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 22,
+					"type": 9,
+					"label": "veider",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						12
+					],
+					"props": {
+						"name": "veider",
+						"objs": [
+							"Player",
+							"veider"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 23,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						12
+					],
+					"outCondIds": [
+						16
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"veider"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 24,
+					"type": 1,
+					"label": "Hello",
+					"continue": false,
+					"inCondIds": [
+						18
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "veider",
+						"text": "Hello!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 10,
+					"label": "PrevStage",
+					"continue": true,
+					"inCondIds": [
+						16
+					],
+					"outCondIds": [
+						18
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "intro",
+								"$$hashKey": "03K"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "veider",
+								"$$hashKey": "03M"
+							}
+						]
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 8,
+					"props": {}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineDialogUIHiding</name>
+    <events>
+        <event-group description="" sid="9622959118338766" title="Quest engine dialog UI hiding">
+            <sub-events>
+                <variable constant="0" name="PendingHideCallsCount" sid="602094810575557" static="1" type="number">0</variable>
+                <comment>Dialog UI should be explicitly hidden on layout start</comment>
+                <variable constant="0" name="IsPhraseVisible" sid="8415885846356448" static="1" type="number">1</variable>
+                <variable constant="0" name="IsQuizzVisible" sid="2275217893868348" static="1" type="number">1</variable>
+                <variable constant="0" name="IsNotificationVisible" sid="1094492035787047" static="1" type="number">1</variable>
+                <event-block sid="2936291383811159">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4941695226700236" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9295750013365618" type="System">
+                            <param id="0" name="Variable">IsPhraseVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4148274816455497" type="System">
+                            <param id="0" name="Variable">IsQuizzVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6580007433527916" type="System">
+                            <param id="0" name="Variable">IsNotificationVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6670221761270646" type="System">
+                            <param id="0" name="Variable">PendingHideCallsCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): stage&#x0D;&#x0A;param(1): 1 to allow animated transition 0 otherwise</comment>
+                <event-block sid="3156472250898389">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5093405010769742" type="Function">
+                            <param id="0" name="Name">&quot;HideStageUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="3099306298103869">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4437090519170637" type="System">
+                                    <param id="0" name="Variable">IsPhraseVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6691502790628637" type="System">
+                                    <param id="0" name="Variable">IsQuizzVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="3275121158332914" type="System">
+                                    <param id="0" name="Variable">IsNotificationVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3116943260358647">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4484168862089178" type="System">
+                                            <param id="0" name="Variable">PendingHideCallsCount</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6885775845132737" type="System">
+                                            <param id="0" name="Variable">PendingHideCallsCount</param>
+                                            <param id="1" name="Value">PendingHideCallsCount + 1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8941705085437658" type="Function">
+                                            <param id="0" name="Name">&quot;HidePhrase&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7703899467201282" type="Function">
+                                            <param id="0" name="Name">&quot;HideQuizz&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="533829614847119" type="Function">
+                                            <param id="0" name="Name">&quot;HideNotification&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6175973717754895">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9118207578240426" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Always hide quest controls in order to maintain the &quot;hide all stage controls on demand contract&quot;</comment>
+                                <event-block sid="5208617626276568">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3576827160189812" type="Function">
+                                            <param id="0" name="Name">&quot;onDialogHidden&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): 1 - visible, 0 - not</comment>
+                <event-block sid="4226294251647949">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4280733038829125" type="Function">
+                            <param id="0" name="Name">&quot;onPhraseVisibleChanged&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="976056802658954">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4989041686024547" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">IsPhraseVisible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4536744096986522" type="System">
+                                    <param id="0" name="Variable">IsPhraseVisible</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7705161222990876" type="Function">
+                                    <param id="0" name="Name">&quot;DialogComponentVisibilityChanged&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): 1 - visible, 0 - not</comment>
+                <event-block sid="4954367098600386">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8549843234673115" type="Function">
+                            <param id="0" name="Name">&quot;onQuizzVisibleChanged&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9565465384749513">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3792662922474089" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">IsQuizzVisible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3585938559770901" type="System">
+                                    <param id="0" name="Variable">IsQuizzVisible</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5742533399318069" type="Function">
+                                    <param id="0" name="Name">&quot;DialogComponentVisibilityChanged&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>param(0): 1 - visible, 0 - not</comment>
+                <event-block sid="4152799724229481">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8428168140729457" type="Function">
+                            <param id="0" name="Name">&quot;onNotificationVisibleChanged&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6646843437785073">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3602292057643261" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">IsNotificationVisible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1858206155386601" type="System">
+                                    <param id="0" name="Variable">IsNotificationVisible</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4767284666992488" type="Function">
+                                    <param id="0" name="Name">&quot;DialogComponentVisibilityChanged&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4614176983300651">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6403467256592012" type="Function">
+                            <param id="0" name="Name">&quot;DialogComponentVisibilityChanged&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9518351851636173">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6856808547021339" type="System">
+                                    <param id="0" name="Variable">IsPhraseVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6199273453164232" type="System">
+                                    <param id="0" name="Variable">IsQuizzVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="9493478824657867" type="System">
+                                    <param id="0" name="Variable">IsNotificationVisible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2680248877269659">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6679479932644771" type="System">
+                                            <param id="0" name="Variable">PendingHideCallsCount</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7471908124922079" type="System">
+                                            <param id="0" name="Variable">PendingHideCallsCount</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6083779988323326">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8817338467598089" type="Function">
+                                            <param id="0" name="Name">&quot;onDialogHidden&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1972742697210157">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2527091405848678" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7648933637547909" type="Function">
+                                    <param id="0" name="Name">&quot;onDialogVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,21 @@
+{
+    "module" : {
+        "name" : "c2-plugin-intcom-game",
+        "description" : "",
+        "outDir" : ".",
+        "outFile" : "intcom_game",
+        "dependencies" : {
+            "base" : {
+                "lib-util" : [],
+                "lib-intcom-game" : [],
+
+                "c2-plugin-quest-level-runtime" : [],
+                "c2-plugin-quest-persistent-storage" : [],
+                "c2-plugin-quest-game" : []
+             }
+        },
+        "src" : {
+            "web" : ["src/game_web.js"]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "module" : {
+        "name" : "lib-intcom-game",
+        "description" : "",
+        "dependencies" : {
+            "base" : {
+                "lib-util" : [],
+                "lib-quest-level" : [],
+                "lib-quest-game" : []
+             }
+        },
+        "src" : {
+            "base" : [
+                "src/InteractiveComicsGame.js"
+            ]
+        }
+    }
+}

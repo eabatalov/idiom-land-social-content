@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineBootstrap</name>
+    <events>
+        <event-group description="" sid="1015458994841946" title="Quest engine bootstrap">
+            <sub-events>
+                <variable constant="0" name="LevelName" sid="1759465988552774" static="1" type="text"></variable>
+                <variable constant="0" name="LevelFirstStage" sid="7624579566355837" static="1" type="text"></variable>
+                <event-block sid="563650159381391">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2654072418164568" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2784356679304557" type="System">
+                            <param id="0" name="Variable">LevelName</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9608529023367603" type="System">
+                            <param id="0" name="Variable">LevelFirstStage</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Starts quest initialization and execution (from 1st stage).&#x0D;&#x0A;param(0): level name&#x0D;&#x0A;param(1): initial level stage</comment>
+                <event-block sid="4009566570811764">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2896692718437938" type="Function">
+                            <param id="0" name="Name">&quot;StartQuestEngine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2074238474549542">
+                            <conditions />
+                            <actions>
+                                <action id="14" name="Log" sid="4706235827688399" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Starting quest engine&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4264590270856551" type="System">
+                                    <param id="0" name="Variable">LevelName</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1106964463494173" type="System">
+                                    <param id="0" name="Variable">LevelFirstStage</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="200" name="Start level" sid="4610911043383017" type="QuestLevelRuntime">
+                                    <param id="0" name="Level name">LevelName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Third stage of initialization: final game start preparation after quest engine initialization.</comment>
+                <comment>QuestLevelRuntime setup should run only after level has changed. See its implementation.</comment>
+                <event-block sid="3608536962210634">
+                    <conditions>
+                        <condition id="0" name="Level changed" sid="9984593045440814" type="QuestLevelRuntime" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="580288761672091">
+                            <conditions />
+                            <actions>
+                                <action id="14" name="Log" sid="959432429981909" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Quest engine level has started: &quot; &amp; LevelName</param>
+                                </action>
+                                <action id="2" name="Setup quest objects." sid="7533819724177504" type="QuestLevelRuntime">
+                                    <param id="0" name="NPC object type">NPC</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6043263542110386" type="Function">
+                                    <param id="0" name="Name">&quot;QuestEngineChangeStage&quot;</param>
+                                    <param id="1" name="Parameter {n}">LevelFirstStage</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7038655513719599" type="Function">
+                                    <param id="0" name="Name">&quot;onQuestEngineStarted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

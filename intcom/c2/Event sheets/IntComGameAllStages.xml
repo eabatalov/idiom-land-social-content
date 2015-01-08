@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComGameAllStages</name>
+    <events>
+        <event-block sid="8859104883265302">
+            <conditions>
+                <condition id="0" name="On function" sid="7176229399796632" type="Function">
+                    <param id="0" name="Name">&quot;IntComInitAllStages&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

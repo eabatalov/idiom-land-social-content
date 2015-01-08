@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NavigationMainMenuBtn</name>
+    <events>
+        <event-block sid="6271681334770988">
+            <conditions>
+                <condition id="0" name="On function" sid="3571656891413444" type="Function">
+                    <param id="0" name="Name">&quot;HomeTriggered&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="3989017715765523" type="Function">
+                    <param id="0" name="Name">&quot;GoToHomeScreen&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

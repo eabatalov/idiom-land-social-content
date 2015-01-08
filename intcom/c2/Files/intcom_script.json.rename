@@ -1,0 +1,81 @@
+{
+	"ver": 1,
+	"name": "intcom",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "intro",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "Player",
+						"text": "Hello!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				}
+			]
+		}
+	]
+}
