@@ -123,6 +123,9 @@
                                 <condition id="0" name="On function" sid="7296784793231019" type="Function">
                                     <param id="0" name="Name">&quot;NPCAnimRunPreemptable&quot; </param>
                                 </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="13500811184942" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>

@@ -58,7 +58,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Hello!",
+						"text": "Привет епта!",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -73,31 +73,13 @@
 						3
 					],
 					"outCondIds": [
-						7
+						25
 					],
 					"props": {
 						"id": "policeman",
-						"text": "Hi!",
+						"text": "Здарова.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 19,
-					"type": 5,
-					"label": "",
-					"continue": true,
-					"inCondIds": [
-						7
-					],
-					"outCondIds": [
-						19
-					],
-					"props": {
-						"id": "Player",
-						"name": "speak",
-						"secs": 3
 					}
 				},
 				{
@@ -107,7 +89,7 @@
 					"label": "NextStage",
 					"continue": false,
 					"inCondIds": [
-						20
+						39
 					],
 					"outCondIds": [],
 					"props": {
@@ -137,14 +119,115 @@
 					"label": "епта",
 					"continue": false,
 					"inCondIds": [
-						19
+						25
 					],
 					"outCondIds": [
-						20
+						26
 					],
 					"props": {
 						"id": "Player",
-						"text": "Епта",
+						"text": "Дай пройти, епта.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 34,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						26
+					],
+					"outCondIds": [
+						28
+					],
+					"props": {
+						"id": "policeman",
+						"text": "Стой! Не иди туда! Это самое гиблое место в городе! Ты пропадешь здесь! Отморозки повсюду. Т-вирус! Зомби! Никому не спастись!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 36,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						28,
+						32
+					],
+					"outCondIds": [
+						30,
+						38
+					],
+					"props": {
+						"id": "Player",
+						"text": "Ну че, идем?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Да",
+						"ans2": "Нет",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 37,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						30
+					],
+					"outCondIds": [
+						31
+					],
+					"props": {
+						"id": "policeman",
+						"text": "Сыкло!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 38,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						31
+					],
+					"outCondIds": [
+						32
+					],
+					"props": {
+						"id": "Player",
+						"text": "Бля...",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 45,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						38
+					],
+					"outCondIds": [
+						39
+					],
+					"props": {
+						"id": "Player",
+						"text": "Чет ты приуныл...",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -167,14 +250,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 7,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 9,
 					"type": 10,
 					"props": {
@@ -183,13 +258,59 @@
 				},
 				{
 					"ver": 1,
-					"id": 19,
-					"type": 8,
+					"id": 25,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 30,
+					"type": 4,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 20,
+					"id": 31,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 32,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 38,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 39,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -243,17 +364,19 @@
 					"ver": 1,
 					"id": 24,
 					"type": 1,
-					"label": "Hello",
+					"label": "Купи надувные!",
 					"continue": false,
 					"inCondIds": [
 						18
 					],
-					"outCondIds": [],
+					"outCondIds": [
+						49
+					],
 					"props": {
 						"id": "veider",
-						"text": "Hello!",
+						"text": "Купи надувные, гандоны!",
 						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"phraseSize": "MEDIUM"
 					}
 				},
 				{
@@ -287,6 +410,91 @@
 							}
 						]
 					}
+				},
+				{
+					"ver": 1,
+					"id": 39,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						51
+					],
+					"outCondIds": [
+						55
+					],
+					"props": {
+						"id": "Player",
+						"text": "Че бля?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 48,
+					"type": 10,
+					"label": "NextStage",
+					"continue": false,
+					"inCondIds": [
+						56
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "veider",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "cap",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 58,
+					"type": 5,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						49
+					],
+					"outCondIds": [
+						51
+					],
+					"props": {
+						"id": "Player",
+						"name": "dizzy",
+						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 60,
+					"type": 5,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						55
+					],
+					"outCondIds": [
+						56
+					],
+					"props": {
+						"id": "Player",
+						"name": "idle",
+						"secs": -1
+					}
 				}
 			],
 			"conds": [
@@ -309,6 +517,1082 @@
 					"id": 18,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 49,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 51,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 55,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 56,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 53,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 53,
+					"type": 9,
+					"label": "cap",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						46
+					],
+					"props": {
+						"name": "cap",
+						"objs": [
+							"Player",
+							"cap"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 54,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						46
+					],
+					"outCondIds": [
+						47
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"cap"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 56,
+					"type": 10,
+					"label": "PrevStage",
+					"continue": true,
+					"inCondIds": [
+						47
+					],
+					"outCondIds": [
+						48
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "veider",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "cap",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 57,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						48
+					],
+					"outCondIds": [
+						57
+					],
+					"props": {
+						"id": "cap",
+						"text": "Извините что обращаюсь...",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 61,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						57
+					],
+					"outCondIds": [
+						58
+					],
+					"props": {
+						"id": "Player",
+						"text": "Ну давай, рассказывай, давай.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 62,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						58
+					],
+					"outCondIds": [
+						59
+					],
+					"props": {
+						"id": "cap",
+						"text": "Ну… «Три семёрки» выпил, блядь, ну, бутылку.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 63,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						59
+					],
+					"outCondIds": [
+						60
+					],
+					"props": {
+						"id": "cap",
+						"text": "С одной дурой.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 64,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						60
+					],
+					"outCondIds": [
+						61
+					],
+					"props": {
+						"id": "cap",
+						"text": "Ну, а потом поебалися.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 65,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						61
+					],
+					"outCondIds": [
+						62
+					],
+					"props": {
+						"id": "Player",
+						"text": "Бля, охуительная история просто. У меня просто шишка так встала, что, блядь...",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 66,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						62
+					],
+					"outCondIds": [
+						63
+					],
+					"props": {
+						"id": "Player",
+						"text": "...сейчас стены ебать буду. Всё что ли, просто поебались и всё?",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 67,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						63
+					],
+					"outCondIds": [
+						64
+					],
+					"props": {
+						"id": "cap",
+						"text": "Там я срал, блядь. Голый залез в море и насрал.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 68,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						64
+					],
+					"outCondIds": [
+						66
+					],
+					"props": {
+						"id": "Player",
+						"text": "Предел настал моих… моего внимания по отношению к тебе, всё.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 69,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						67
+					],
+					"outCondIds": [
+						68
+					],
+					"props": {
+						"id": "Player",
+						"text": "Оооааа, бля, какой же ты мудак, блядь!",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 70,
+					"type": 5,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						66
+					],
+					"outCondIds": [
+						67
+					],
+					"props": {
+						"id": "Player",
+						"name": "dizzy",
+						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 72,
+					"type": 10,
+					"label": "NextStage",
+					"continue": false,
+					"inCondIds": [
+						68
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "cap",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "gops",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 46,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 47,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 48,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 57,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 58,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 59,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 60,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 61,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 62,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 63,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 64,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 66,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 67,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 68,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 73,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 73,
+					"type": 9,
+					"label": "gops",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						69
+					],
+					"props": {
+						"name": "gops",
+						"objs": [
+							"Player",
+							"potsik",
+							"1",
+							"2",
+							"3"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 74,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						69
+					],
+					"outCondIds": [
+						70
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"3",
+							"potsik",
+							"1",
+							"2"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 76,
+					"type": 10,
+					"label": "PrevStage",
+					"continue": true,
+					"inCondIds": [
+						70
+					],
+					"outCondIds": [
+						71
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "cap",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "gops",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 77,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						71
+					],
+					"outCondIds": [
+						75
+					],
+					"props": {
+						"id": "potsik",
+						"text": "Потрудитесь объяснить, почему данная сумма столь мала?",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 81,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						75
+					],
+					"outCondIds": [
+						76
+					],
+					"props": {
+						"id": "potsik",
+						"text": "Сэр, данное поместье принадлежит мне.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 82,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						76
+					],
+					"outCondIds": [
+						92
+					],
+					"props": {
+						"id": "potsik",
+						"text": "Вы вели себя не по-джентльменски — пришлось вас успокоить.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 83,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						93
+					],
+					"outCondIds": [
+						78
+					],
+					"props": {
+						"id": "potsik",
+						"text": "Вы провели время на моём пне, с вас причитается ровно 1000 рублей,",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 84,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						78
+					],
+					"outCondIds": [
+						79
+					],
+					"props": {
+						"id": "potsik",
+						"text": "по какой же причине вы предлагаете мне столь смехотворную сумму, неблагодарный вы тип!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 85,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						79
+					],
+					"outCondIds": [
+						80
+					],
+					"props": {
+						"id": "potsik",
+						"text": "Извольте покинуть сие место! Иначе придётся применить рукоприкладство!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 86,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						80
+					],
+					"outCondIds": [
+						81
+					],
+					"props": {
+						"id": "1",
+						"text": "Уебывай!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 87,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						81
+					],
+					"outCondIds": [
+						82
+					],
+					"props": {
+						"id": "2",
+						"text": "Уебывай!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 88,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						82
+					],
+					"outCondIds": [
+						83
+					],
+					"props": {
+						"id": "3",
+						"text": "Уебывай!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 89,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						83
+					],
+					"outCondIds": [
+						84
+					],
+					"props": {
+						"id": "Player",
+						"text": "Бля. Автор всего этого точно нормальный?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 91,
+					"type": 10,
+					"label": "NextStage",
+					"continue": false,
+					"inCondIds": [
+						84
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "gops",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "bus",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 103,
+					"type": 5,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						92
+					],
+					"outCondIds": [
+						93
+					],
+					"props": {
+						"id": "potsik",
+						"name": "dizzy",
+						"secs": 10
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 69,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 70,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 71,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 75,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 76,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 78,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 79,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 80,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 81,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 82,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 83,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 84,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 92,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 93,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 94,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 94,
+					"type": 9,
+					"label": "bus",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						85
+					],
+					"props": {
+						"name": "bus",
+						"objs": [
+							"Player",
+							"povar",
+							"bus"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 95,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						85
+					],
+					"outCondIds": [
+						86
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"povar",
+							"bus"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 97,
+					"type": 10,
+					"label": "PrevStage",
+					"continue": true,
+					"inCondIds": [
+						86
+					],
+					"outCondIds": [
+						87
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "gops",
+								"$$hashKey": "016"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "bus",
+								"$$hashKey": "018"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 98,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						87
+					],
+					"outCondIds": [
+						88
+					],
+					"props": {
+						"id": "Player",
+						"text": "Наконец-то что-то нормальное!",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 99,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						88
+					],
+					"outCondIds": [
+						89
+					],
+					"props": {
+						"id": "Player",
+						"text": "Я уеду жить в Лондон?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 100,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						89
+					],
+					"outCondIds": [
+						91
+					],
+					"props": {
+						"id": "bus",
+						"text": "Нет блять!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 102,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						91
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_TheEnd",
+						"rollbackName": null,
+						"source": "c2",
+						"params": []
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 85,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 86,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 87,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 88,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 89,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 91,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
 				}
 			]
 		}

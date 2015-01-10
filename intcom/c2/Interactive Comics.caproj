@@ -48,7 +48,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -1451,7 +1451,6 @@
                                 <instance-variable comment="If you change this tou should also change id in quest script" name="Stage" sid="319509391048857" type="string" />
                                 <instance-variable comment="If you change this you should also change id in quest script" name="NpcID" sid="9260969409441419" type="string" />
                                 <instance-variable name="NpcName" sid="6573839866278459" type="string" />
-                                <instance-variable name="AnimLooping" sid="1806468798856086" type="number" />
                                 <instance-variable name="AnimPrio" sid="3297950540861715" type="number" />
                             </instance-variables>
                             <behaviors>
@@ -1490,7 +1489,22 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="1" name="seller_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9326474329333388" speed="5">
+                                <animation framecount="1" loop="1" name="cap_speak" pingpong="0" repeatcount="1" repeatto="0" sid="7684054309327611" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.0666667" y="0" />
+                                        <collision-poly>
+                                            <point x="0.179104" y="0" />
+                                            <point x="0.542289" y="0.0012788" />
+                                            <point x="0.79602" y="0.13555" />
+                                            <point x="0.985075" y="0.509591" />
+                                            <point x="0.850746" y="0.947571" />
+                                            <point x="0.522388" y="0.976343" />
+                                            <point x="0.0945274" y="0.982737" />
+                                            <point x="0" y="0.503197" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="1" name="1_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9326474329333388" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.503497">
                                         <image-point name="SpeechOrigin" x="0.988095" y="0.314685" />
                                         <collision-poly>
@@ -1505,8 +1519,37 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="1" name="child_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9531740403944049" speed="5">
-                                    <frame duration="1" hotspotX="0.509434" hotspotY="0.5">
+                                <animation framecount="1" loop="1" name="2_idle" pingpong="0" repeatcount="1" repeatto="0" sid="4077695234714473" speed="5">
+                                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="1.02817" y="0.0725806" />
+                                        <collision-poly>
+                                            <point x="0" y="0.118121" />
+                                            <point x="0.497232" y="0.0156546" />
+                                            <point x="1" y="0.102111" />
+                                            <point x="0.857052" y="0.505575" />
+                                            <point x="0.801695" y="0.985887" />
+                                            <point x="0.524911" y="1" />
+                                            <point x="0.309018" y="1" />
+                                            <point x="0.115269" y="0.531191" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="1" name="3_idle" pingpong="0" repeatcount="1" repeatto="0" sid="6926131253992446" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="1.07143" y="0.145161" />
+                                        <collision-poly>
+                                            <point x="0.0536606" y="0.0312856" />
+                                            <point x="0.497157" y="0.0345351" />
+                                            <point x="1" y="0.0442837" />
+                                            <point x="0.946339" y="0.609701" />
+                                            <point x="0.809879" y="0.976897" />
+                                            <point x="0.241294" y="1" />
+                                            <point x="0.00248754" y="0.525214" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="1" name="potsik_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9531740403944049" speed="5">
+                                    <frame duration="1" hotspotX="0.509434" hotspotY="1">
                                         <image-point name="SpeechOrigin" x="1.01887" y="-0.271429" />
                                         <collision-poly>
                                             <point x="0.34188" y="0" />
@@ -1517,6 +1560,36 @@
                                             <point x="0.188034" y="1" />
                                             <point x="0.111111" y="0.732484" />
                                             <point x="0.102564" y="0.350318" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="1" name="potsik_speak" pingpong="0" repeatcount="1" repeatto="0" sid="1451539412992622" speed="5">
+                                    <frame duration="1" hotspotX="0.509434" hotspotY="1">
+                                        <image-point name="SpeechOrigin" x="1.01887" y="-0.271429" />
+                                        <collision-poly>
+                                            <point x="0.34188" y="0" />
+                                            <point x="0.495726" y="0" />
+                                            <point x="1" y="0" />
+                                            <point x="1" y="0.490446" />
+                                            <point x="0.982906" y="0.993631" />
+                                            <point x="0.188034" y="1" />
+                                            <point x="0.111111" y="0.732484" />
+                                            <point x="0.102564" y="0.350318" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="1" name="potsik_dizzy" pingpong="0" repeatcount="1" repeatto="0" sid="4910082744987102" speed="5">
+                                    <frame duration="1" hotspotX="0.506494" hotspotY="1" original-source="C:\Users\Eugene\Downloads\1307515179_6857234.png">
+                                        <image-point name="SpeechOrigin" x="0.857143" y="0.0434783" />
+                                        <collision-poly>
+                                            <point x="0.34188" y="0" />
+                                            <point x="0.495726" y="0" />
+                                            <point x="1" y="0" />
+                                            <point x="1" y="0.494008" />
+                                            <point x="0.982906" y="1" />
+                                            <point x="0.188034" y="1" />
+                                            <point x="0.111111" y="0.764957" />
+                                            <point x="0.102564" y="0.337143" />
                                         </collision-poly>
                                     </frame>
                                 </animation>
@@ -1550,51 +1623,7 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="1" name="taxi_driver1_idle" pingpong="0" repeatcount="1" repeatto="0" sid="8438642372233206" speed="5">
-                                    <frame duration="1" hotspotX="0.507937" hotspotY="0.496">
-                                        <image-point name="SpeechOrigin" x="-0.031746" y="0.008" />
-                                        <collision-poly>
-                                            <point x="0" y="0.0543999" />
-                                            <point x="0.511096" y="0" />
-                                            <point x="0.984917" y="0.0671996" />
-                                            <point x="0.965964" y="0.4288" />
-                                            <point x="0.78907" y="0.9984" />
-                                            <point x="0.517413" y="0.9632" />
-                                            <point x="0.144673" y="0.9984" />
-                                            <point x="0.0625447" y="0.470399" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="1" name="driver2_idle" pingpong="0" repeatcount="1" repeatto="0" sid="4077695234714473" speed="5">
-                                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="1.02817" y="0.0725806" />
-                                        <collision-poly>
-                                            <point x="0" y="0.118121" />
-                                            <point x="0.497232" y="0.0156546" />
-                                            <point x="1" y="0.102111" />
-                                            <point x="0.857052" y="0.505575" />
-                                            <point x="0.801695" y="0.985887" />
-                                            <point x="0.524911" y="1" />
-                                            <point x="0.309018" y="1" />
-                                            <point x="0.115269" y="0.531191" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="1" name="aguy_idle" pingpong="0" repeatcount="1" repeatto="0" sid="6926131253992446" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="1.07143" y="0.145161" />
-                                        <collision-poly>
-                                            <point x="0.0536606" y="0.0312856" />
-                                            <point x="0.497157" y="0.0345351" />
-                                            <point x="1" y="0.0442837" />
-                                            <point x="0.946339" y="0.609701" />
-                                            <point x="0.809879" y="0.976897" />
-                                            <point x="0.241294" y="1" />
-                                            <point x="0.00248754" y="0.525214" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="1" name="bus_driver_idle" pingpong="0" repeatcount="1" repeatto="0" sid="5161652397612776" speed="5">
+                                <animation framecount="1" loop="1" name="povar_idle" pingpong="0" repeatcount="1" repeatto="0" sid="5161652397612776" speed="5">
                                     <frame duration="1" hotspotX="0.506849" hotspotY="0.504065">
                                         <image-point name="SpeechOrigin" x="0.945205" y="0.203252" />
                                         <collision-poly>
@@ -1635,6 +1664,25 @@
                                             <point x="0.230769" y="0.794118" />
                                             <point x="0.021978" y="0.5" />
                                         </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="1" name="Player_dizzy" pingpong="0" repeatcount="1" repeatto="0" sid="2918466663869124" speed="1">
+                                    <frame duration="1" hotspotX="0.505495" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.912088" y="0.205882" />
+                                        <collision-poly>
+                                            <point x="0.263736" y="0.235294" />
+                                            <point x="0.494505" y="0.166667" />
+                                            <point x="0.714286" y="0.254902" />
+                                            <point x="0.989011" y="0.5" />
+                                            <point x="0.494505" y="0.941176" />
+                                            <point x="0.230769" y="0.794118" />
+                                            <point x="0.021978" y="0.5" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="bus_idle" pingpong="0" repeatcount="1" repeatto="0" sid="8210386674638485" speed="5">
+                                    <frame duration="1" hotspotX="0.502128" hotspotY="0.5" original-source="Y:\images.jpg">
+                                        <image-point name="SpeechOrigin" x="0.0723404" y="0.200935" />
                                     </frame>
                                 </animation>
                             </animation-folder>

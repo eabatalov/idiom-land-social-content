@@ -59,7 +59,7 @@
 						],
 						"props": {
 							"id": "Player",
-							"text": "Hello!",
+							"text": "Привет епта!",
 							"phraseType": "SPEAK",
 							"phraseSize": "SMALL"
 						}
@@ -74,31 +74,13 @@
 							3
 						],
 						"outCondIds": [
-							7
+							25
 						],
 						"props": {
 							"id": "policeman",
-							"text": "Hi!",
+							"text": "Здарова.",
 							"phraseType": "SPEAK",
 							"phraseSize": "SMALL"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 19,
-						"type": 5,
-						"label": "",
-						"continue": true,
-						"inCondIds": [
-							7
-						],
-						"outCondIds": [
-							19
-						],
-						"props": {
-							"id": "Player",
-							"name": "speak",
-							"secs": 3
 						}
 					},
 					{
@@ -108,7 +90,7 @@
 						"label": "NextStage",
 						"continue": false,
 						"inCondIds": [
-							20
+							39
 						],
 						"outCondIds": [],
 						"props": {
@@ -138,14 +120,115 @@
 						"label": "епта",
 						"continue": false,
 						"inCondIds": [
-							19
+							25
 						],
 						"outCondIds": [
-							20
+							26
 						],
 						"props": {
 							"id": "Player",
-							"text": "Епта",
+							"text": "Дай пройти, епта.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 34,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							26
+						],
+						"outCondIds": [
+							28
+						],
+						"props": {
+							"id": "policeman",
+							"text": "Стой! Не иди туда! Это самое гиблое место в городе! Ты пропадешь здесь! Отморозки повсюду. Т-вирус! Зомби! Никому не спастись!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 36,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							28,
+							32
+						],
+						"outCondIds": [
+							30,
+							38
+						],
+						"props": {
+							"id": "Player",
+							"text": "Ну че, идем?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Да",
+							"ans2": "Нет",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 37,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							30
+						],
+						"outCondIds": [
+							31
+						],
+						"props": {
+							"id": "policeman",
+							"text": "Сыкло!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 38,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							31
+						],
+						"outCondIds": [
+							32
+						],
+						"props": {
+							"id": "Player",
+							"text": "Бля...",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 45,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							38
+						],
+						"outCondIds": [
+							39
+						],
+						"props": {
+							"id": "Player",
+							"text": "Чет ты приуныл...",
 							"phraseType": "SPEAK",
 							"phraseSize": "SMALL"
 						}
@@ -168,14 +251,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 7,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
 						"id": 9,
 						"type": 10,
 						"props": {
@@ -184,13 +259,59 @@
 					},
 					{
 						"ver": 1,
-						"id": 19,
-						"type": 8,
+						"id": 25,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 26,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 28,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 30,
+						"type": 4,
 						"props": {}
 					},
 					{
 						"ver": 1,
-						"id": 20,
+						"id": 31,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 32,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 38,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 39,
 						"type": 11,
 						"props": {
 							"clearStage": true
@@ -244,17 +365,19 @@
 						"ver": 1,
 						"id": 24,
 						"type": 1,
-						"label": "Hello",
+						"label": "Купи надувные!",
 						"continue": false,
 						"inCondIds": [
 							18
 						],
-						"outCondIds": [],
+						"outCondIds": [
+							49
+						],
 						"props": {
 							"id": "veider",
-							"text": "Hello!",
+							"text": "Купи надувные, гандоны!",
 							"phraseType": "SPEAK",
-							"phraseSize": "SMALL"
+							"phraseSize": "MEDIUM"
 						}
 					},
 					{
@@ -288,6 +411,91 @@
 								}
 							]
 						}
+					},
+					{
+						"ver": 1,
+						"id": 39,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							51
+						],
+						"outCondIds": [
+							55
+						],
+						"props": {
+							"id": "Player",
+							"text": "Че бля?",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 48,
+						"type": 10,
+						"label": "NextStage",
+						"continue": false,
+						"inCondIds": [
+							56
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "veider",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "cap",
+									"$$hashKey": "018"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 58,
+						"type": 5,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							49
+						],
+						"outCondIds": [
+							51
+						],
+						"props": {
+							"id": "Player",
+							"name": "dizzy",
+							"secs": -1
+						}
+					},
+					{
+						"ver": 1,
+						"id": 60,
+						"type": 5,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							55
+						],
+						"outCondIds": [
+							56
+						],
+						"props": {
+							"id": "Player",
+							"name": "idle",
+							"secs": -1
+						}
 					}
 				],
 				"conds": [
@@ -310,6 +518,1082 @@
 						"id": 18,
 						"type": 8,
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 49,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 51,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 55,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 56,
+						"type": 8,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 53,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 53,
+						"type": 9,
+						"label": "cap",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							46
+						],
+						"props": {
+							"name": "cap",
+							"objs": [
+								"Player",
+								"cap"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 54,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							46
+						],
+						"outCondIds": [
+							47
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"cap"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 56,
+						"type": 10,
+						"label": "PrevStage",
+						"continue": true,
+						"inCondIds": [
+							47
+						],
+						"outCondIds": [
+							48
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "veider",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "cap",
+									"$$hashKey": "018"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 57,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							48
+						],
+						"outCondIds": [
+							57
+						],
+						"props": {
+							"id": "cap",
+							"text": "Извините что обращаюсь...",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 61,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							57
+						],
+						"outCondIds": [
+							58
+						],
+						"props": {
+							"id": "Player",
+							"text": "Ну давай, рассказывай, давай.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 62,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							58
+						],
+						"outCondIds": [
+							59
+						],
+						"props": {
+							"id": "cap",
+							"text": "Ну… «Три семёрки» выпил, блядь, ну, бутылку.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 63,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							59
+						],
+						"outCondIds": [
+							60
+						],
+						"props": {
+							"id": "cap",
+							"text": "С одной дурой.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 64,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							60
+						],
+						"outCondIds": [
+							61
+						],
+						"props": {
+							"id": "cap",
+							"text": "Ну, а потом поебалися.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 65,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							61
+						],
+						"outCondIds": [
+							62
+						],
+						"props": {
+							"id": "Player",
+							"text": "Бля, охуительная история просто. У меня просто шишка так встала, что, блядь...",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 66,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							62
+						],
+						"outCondIds": [
+							63
+						],
+						"props": {
+							"id": "Player",
+							"text": "...сейчас стены ебать буду. Всё что ли, просто поебались и всё?",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 67,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							63
+						],
+						"outCondIds": [
+							64
+						],
+						"props": {
+							"id": "cap",
+							"text": "Там я срал, блядь. Голый залез в море и насрал.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 68,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							64
+						],
+						"outCondIds": [
+							66
+						],
+						"props": {
+							"id": "Player",
+							"text": "Предел настал моих… моего внимания по отношению к тебе, всё.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 69,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							67
+						],
+						"outCondIds": [
+							68
+						],
+						"props": {
+							"id": "Player",
+							"text": "Оооааа, бля, какой же ты мудак, блядь!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 70,
+						"type": 5,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							66
+						],
+						"outCondIds": [
+							67
+						],
+						"props": {
+							"id": "Player",
+							"name": "dizzy",
+							"secs": -1
+						}
+					},
+					{
+						"ver": 1,
+						"id": 72,
+						"type": 10,
+						"label": "NextStage",
+						"continue": false,
+						"inCondIds": [
+							68
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "cap",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "gops",
+									"$$hashKey": "018"
+								}
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 46,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 47,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 48,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 57,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 58,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 59,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 60,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 61,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 62,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 63,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 64,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 66,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 67,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 68,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 73,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 73,
+						"type": 9,
+						"label": "gops",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							69
+						],
+						"props": {
+							"name": "gops",
+							"objs": [
+								"Player",
+								"potsik",
+								"1",
+								"2",
+								"3"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 74,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							69
+						],
+						"outCondIds": [
+							70
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"3",
+								"potsik",
+								"1",
+								"2"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 76,
+						"type": 10,
+						"label": "PrevStage",
+						"continue": true,
+						"inCondIds": [
+							70
+						],
+						"outCondIds": [
+							71
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "cap",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "gops",
+									"$$hashKey": "018"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 77,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							71
+						],
+						"outCondIds": [
+							75
+						],
+						"props": {
+							"id": "potsik",
+							"text": "Потрудитесь объяснить, почему данная сумма столь мала?",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 81,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							75
+						],
+						"outCondIds": [
+							76
+						],
+						"props": {
+							"id": "potsik",
+							"text": "Сэр, данное поместье принадлежит мне.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 82,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							76
+						],
+						"outCondIds": [
+							92
+						],
+						"props": {
+							"id": "potsik",
+							"text": "Вы вели себя не по-джентльменски — пришлось вас успокоить.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 83,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							93
+						],
+						"outCondIds": [
+							78
+						],
+						"props": {
+							"id": "potsik",
+							"text": "Вы провели время на моём пне, с вас причитается ровно 1000 рублей,",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 84,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							78
+						],
+						"outCondIds": [
+							79
+						],
+						"props": {
+							"id": "potsik",
+							"text": "по какой же причине вы предлагаете мне столь смехотворную сумму, неблагодарный вы тип!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 85,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							79
+						],
+						"outCondIds": [
+							80
+						],
+						"props": {
+							"id": "potsik",
+							"text": "Извольте покинуть сие место! Иначе придётся применить рукоприкладство!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 86,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							80
+						],
+						"outCondIds": [
+							81
+						],
+						"props": {
+							"id": "1",
+							"text": "Уебывай!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 87,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							81
+						],
+						"outCondIds": [
+							82
+						],
+						"props": {
+							"id": "2",
+							"text": "Уебывай!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 88,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							82
+						],
+						"outCondIds": [
+							83
+						],
+						"props": {
+							"id": "3",
+							"text": "Уебывай!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 89,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							83
+						],
+						"outCondIds": [
+							84
+						],
+						"props": {
+							"id": "Player",
+							"text": "Бля. Автор всего этого точно нормальный?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 91,
+						"type": 10,
+						"label": "NextStage",
+						"continue": false,
+						"inCondIds": [
+							84
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "gops",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "bus",
+									"$$hashKey": "018"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 103,
+						"type": 5,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							92
+						],
+						"outCondIds": [
+							93
+						],
+						"props": {
+							"id": "potsik",
+							"name": "dizzy",
+							"secs": 10
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 69,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 70,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 71,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 75,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 76,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 78,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 79,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 80,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 81,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 82,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 83,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 84,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 92,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 93,
+						"type": 8,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 94,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 94,
+						"type": 9,
+						"label": "bus",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							85
+						],
+						"props": {
+							"name": "bus",
+							"objs": [
+								"Player",
+								"povar",
+								"bus"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 95,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							85
+						],
+						"outCondIds": [
+							86
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"povar",
+								"bus"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 97,
+						"type": 10,
+						"label": "PrevStage",
+						"continue": true,
+						"inCondIds": [
+							86
+						],
+						"outCondIds": [
+							87
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "gops",
+									"$$hashKey": "016"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "bus",
+									"$$hashKey": "018"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 98,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							87
+						],
+						"outCondIds": [
+							88
+						],
+						"props": {
+							"id": "Player",
+							"text": "Наконец-то что-то нормальное!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 99,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							88
+						],
+						"outCondIds": [
+							89
+						],
+						"props": {
+							"id": "Player",
+							"text": "Я уеду жить в Лондон?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 100,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							89
+						],
+						"outCondIds": [
+							91
+						],
+						"props": {
+							"id": "bus",
+							"text": "Нет блять!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 102,
+						"type": 10,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							91
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_TheEnd",
+							"rollbackName": null,
+							"source": "c2",
+							"params": []
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 85,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 86,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 87,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 88,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 89,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 91,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
 					}
 				]
 			}
@@ -317,7 +1601,7 @@
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 11,
+		"currentStageId": 94,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -337,20 +1621,14 @@
 					{
 						"ver": 1,
 						"nodeId": 13,
-						"x": 472,
-						"y": 643
+						"x": 285,
+						"y": 710
 					},
 					{
 						"ver": 1,
 						"nodeId": 16,
-						"x": 861,
-						"y": 619
-					},
-					{
-						"ver": 1,
-						"nodeId": 19,
-						"x": 686,
-						"y": 401
+						"x": 311.41666666666663,
+						"y": 922.75
 					},
 					{
 						"ver": 1,
@@ -361,8 +1639,38 @@
 					{
 						"ver": 1,
 						"nodeId": 27,
-						"x": 931,
-						"y": 382
+						"x": 568.2499999999999,
+						"y": 949.2499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 34,
+						"x": 849.7500000000001,
+						"y": 927.7499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 36,
+						"x": 841.2499999999999,
+						"y": 677.4999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 37,
+						"x": 1160,
+						"y": 527.5
+					},
+					{
+						"ver": 1,
+						"nodeId": 38,
+						"x": 1249.9999999999998,
+						"y": 790
+					},
+					{
+						"ver": 1,
+						"nodeId": 45,
+						"x": 833.7499999999999,
+						"y": 403.74999999999994
 					}
 				],
 				"nodeIds": [
@@ -370,9 +1678,13 @@
 					12,
 					13,
 					16,
-					19,
 					21,
-					27
+					27,
+					34,
+					36,
+					37,
+					38,
+					45
 				],
 				"condViews": [
 					{
@@ -394,26 +1706,12 @@
 						"condId": 3,
 						"points": {
 							"src": {
-								"x": 552,
-								"y": 723
+								"x": 365,
+								"y": 790
 							},
 							"dst": {
-								"x": 941,
-								"y": 699
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 7,
-						"points": {
-							"src": {
-								"x": 941,
-								"y": 699
-							},
-							"dst": {
-								"x": 766,
-								"y": 481
+								"x": 391.41666666666663,
+								"y": 1002.75
 							}
 						}
 					},
@@ -426,32 +1724,116 @@
 								"y": 497
 							},
 							"dst": {
-								"x": 552,
-								"y": 723
+								"x": 365,
+								"y": 790
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 19,
+						"condId": 25,
 						"points": {
 							"src": {
-								"x": 766,
-								"y": 481
+								"x": 391.41666666666663,
+								"y": 1002.75
 							},
 							"dst": {
-								"x": 1011,
-								"y": 462
+								"x": 648.2499999999999,
+								"y": 1029.25
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 20,
+						"condId": 26,
 						"points": {
 							"src": {
-								"x": 1011,
-								"y": 462
+								"x": 648.2499999999999,
+								"y": 1029.25
+							},
+							"dst": {
+								"x": 929.7500000000001,
+								"y": 1007.7499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 28,
+						"points": {
+							"src": {
+								"x": 929.7500000000001,
+								"y": 1007.7499999999999
+							},
+							"dst": {
+								"x": 921.2499999999999,
+								"y": 757.4999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 30,
+						"points": {
+							"src": {
+								"x": 921.2499999999999,
+								"y": 757.4999999999998
+							},
+							"dst": {
+								"x": 1240,
+								"y": 607.5
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 31,
+						"points": {
+							"src": {
+								"x": 1240,
+								"y": 607.5
+							},
+							"dst": {
+								"x": 1329.9999999999998,
+								"y": 870
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 32,
+						"points": {
+							"src": {
+								"x": 1329.9999999999998,
+								"y": 870
+							},
+							"dst": {
+								"x": 921.2499999999999,
+								"y": 757.4999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 38,
+						"points": {
+							"src": {
+								"x": 921.2499999999999,
+								"y": 757.4999999999998
+							},
+							"dst": {
+								"x": 913.7499999999999,
+								"y": 483.74999999999994
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 39,
+						"points": {
+							"src": {
+								"x": 913.7499999999999,
+								"y": 483.74999999999994
 							},
 							"dst": {
 								"x": 932,
@@ -463,15 +1845,20 @@
 				"condIds": [
 					0,
 					3,
-					7,
 					9,
-					19,
-					20
+					25,
+					26,
+					28,
+					30,
+					31,
+					32,
+					38,
+					39
 				],
-				"scale": 1,
+				"scale": 0.6000000000000001,
 				"pos": {
-					"x": 0,
-					"y": 7
+					"x": 239,
+					"y": 190
 				}
 			},
 			{
@@ -486,27 +1873,55 @@
 					{
 						"ver": 1,
 						"nodeId": 23,
-						"x": 235,
-						"y": 375
+						"x": 234.99999999999997,
+						"y": 374.99999999999994
 					},
 					{
 						"ver": 1,
 						"nodeId": 24,
-						"x": 470,
-						"y": 656
+						"x": 343.7499999999999,
+						"y": 659.75
 					},
 					{
 						"ver": 1,
 						"nodeId": 26,
-						"x": 474,
-						"y": 374
+						"x": 554,
+						"y": 347.74999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 39,
+						"x": 958.7499999999998,
+						"y": 871.2499999999997
+					},
+					{
+						"ver": 1,
+						"nodeId": 48,
+						"x": 1077.5,
+						"y": 283.74999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 58,
+						"x": 623.7499999999999,
+						"y": 872.4999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 60,
+						"x": 1074.9999999999998,
+						"y": 623.7499999999999
 					}
 				],
 				"nodeIds": [
 					22,
 					23,
 					24,
-					26
+					26,
+					39,
+					48,
+					58,
+					60
 				],
 				"condViews": [
 					{
@@ -519,7 +1934,7 @@
 							},
 							"dst": {
 								"x": 315,
-								"y": 455
+								"y": 454.99999999999994
 							}
 						}
 					},
@@ -529,11 +1944,11 @@
 						"points": {
 							"src": {
 								"x": 315,
-								"y": 455
+								"y": 454.99999999999994
 							},
 							"dst": {
-								"x": 554,
-								"y": 454
+								"x": 634,
+								"y": 427.74999999999994
 							}
 						}
 					},
@@ -542,12 +1957,68 @@
 						"condId": 18,
 						"points": {
 							"src": {
-								"x": 554,
-								"y": 454
+								"x": 634,
+								"y": 427.74999999999994
 							},
 							"dst": {
-								"x": 550,
-								"y": 736
+								"x": 423.7499999999999,
+								"y": 739.75
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 49,
+						"points": {
+							"src": {
+								"x": 423.7499999999999,
+								"y": 739.75
+							},
+							"dst": {
+								"x": 703.7499999999999,
+								"y": 952.4999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 51,
+						"points": {
+							"src": {
+								"x": 703.7499999999999,
+								"y": 952.4999999999999
+							},
+							"dst": {
+								"x": 1038.7499999999998,
+								"y": 951.2499999999997
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 55,
+						"points": {
+							"src": {
+								"x": 1038.7499999999998,
+								"y": 951.2499999999997
+							},
+							"dst": {
+								"x": 1154.9999999999998,
+								"y": 703.7499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 56,
+						"points": {
+							"src": {
+								"x": 1154.9999999999998,
+								"y": 703.7499999999999
+							},
+							"dst": {
+								"x": 1157.5,
+								"y": 363.74999999999994
 							}
 						}
 					}
@@ -555,18 +2026,842 @@
 				"condIds": [
 					12,
 					16,
-					18
+					18,
+					49,
+					51,
+					55,
+					56
+				],
+				"scale": 0.10000000000000014,
+				"pos": {
+					"x": 110,
+					"y": 32
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 53,
+						"x": 400,
+						"y": 100
+					},
+					{
+						"ver": 1,
+						"nodeId": 54,
+						"x": 251,
+						"y": 390
+					},
+					{
+						"ver": 1,
+						"nodeId": 56,
+						"x": 362,
+						"y": 627
+					},
+					{
+						"ver": 1,
+						"nodeId": 57,
+						"x": 400.75,
+						"y": 887.5
+					},
+					{
+						"ver": 1,
+						"nodeId": 61,
+						"x": 617.5,
+						"y": 902.25
+					},
+					{
+						"ver": 1,
+						"nodeId": 62,
+						"x": 868.75,
+						"y": 907.4999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 63,
+						"x": 1125,
+						"y": 911.2499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 64,
+						"x": 1392.5,
+						"y": 913.7499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 65,
+						"x": 1378.75,
+						"y": 672.4999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 66,
+						"x": 1122.5,
+						"y": 687.4999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 67,
+						"x": 861.2499999999999,
+						"y": 674.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 68,
+						"x": 629.9999999999999,
+						"y": 672.4999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 69,
+						"x": 861.2499999999999,
+						"y": 448.74999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 70,
+						"x": 628.7499999999999,
+						"y": 453.75
+					},
+					{
+						"ver": 1,
+						"nodeId": 72,
+						"x": 1133.7499999999998,
+						"y": 425
+					}
+				],
+				"nodeIds": [
+					53,
+					54,
+					56,
+					57,
+					61,
+					62,
+					63,
+					64,
+					65,
+					66,
+					67,
+					68,
+					69,
+					70,
+					72
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 46,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 180
+							},
+							"dst": {
+								"x": 331,
+								"y": 470
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 47,
+						"points": {
+							"src": {
+								"x": 331,
+								"y": 470
+							},
+							"dst": {
+								"x": 442,
+								"y": 707
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 48,
+						"points": {
+							"src": {
+								"x": 442,
+								"y": 707
+							},
+							"dst": {
+								"x": 480.75,
+								"y": 967.5
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 57,
+						"points": {
+							"src": {
+								"x": 480.75,
+								"y": 967.5
+							},
+							"dst": {
+								"x": 697.5,
+								"y": 982.25
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 58,
+						"points": {
+							"src": {
+								"x": 697.5,
+								"y": 982.25
+							},
+							"dst": {
+								"x": 948.75,
+								"y": 987.4999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 59,
+						"points": {
+							"src": {
+								"x": 948.75,
+								"y": 987.4999999999999
+							},
+							"dst": {
+								"x": 1205,
+								"y": 991.2499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 60,
+						"points": {
+							"src": {
+								"x": 1205,
+								"y": 991.2499999999999
+							},
+							"dst": {
+								"x": 1472.5,
+								"y": 993.7499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 61,
+						"points": {
+							"src": {
+								"x": 1472.5,
+								"y": 993.7499999999999
+							},
+							"dst": {
+								"x": 1458.75,
+								"y": 752.4999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 62,
+						"points": {
+							"src": {
+								"x": 1458.75,
+								"y": 752.4999999999999
+							},
+							"dst": {
+								"x": 1202.5,
+								"y": 767.4999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 63,
+						"points": {
+							"src": {
+								"x": 1202.5,
+								"y": 767.4999999999999
+							},
+							"dst": {
+								"x": 941.2499999999999,
+								"y": 754.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 64,
+						"points": {
+							"src": {
+								"x": 941.2499999999999,
+								"y": 754.9999999999999
+							},
+							"dst": {
+								"x": 709.9999999999999,
+								"y": 752.4999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 66,
+						"points": {
+							"src": {
+								"x": 709.9999999999999,
+								"y": 752.4999999999999
+							},
+							"dst": {
+								"x": 708.7499999999999,
+								"y": 533.75
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 67,
+						"points": {
+							"src": {
+								"x": 708.7499999999999,
+								"y": 533.75
+							},
+							"dst": {
+								"x": 941.2499999999999,
+								"y": 528.75
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 68,
+						"points": {
+							"src": {
+								"x": 941.2499999999999,
+								"y": 528.75
+							},
+							"dst": {
+								"x": 1213.7499999999998,
+								"y": 505
+							}
+						}
+					}
+				],
+				"condIds": [
+					46,
+					47,
+					48,
+					57,
+					58,
+					59,
+					60,
+					61,
+					62,
+					63,
+					64,
+					66,
+					67,
+					68
+				],
+				"scale": 0.8,
+				"pos": {
+					"x": -30,
+					"y": 7
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 73,
+						"x": 400,
+						"y": 100
+					},
+					{
+						"ver": 1,
+						"nodeId": 74,
+						"x": 398,
+						"y": 374
+					},
+					{
+						"ver": 1,
+						"nodeId": 76,
+						"x": 650,
+						"y": 363
+					},
+					{
+						"ver": 1,
+						"nodeId": 77,
+						"x": 643.7499999999998,
+						"y": 613.75
+					},
+					{
+						"ver": 1,
+						"nodeId": 81,
+						"x": 360,
+						"y": 796.2499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 82,
+						"x": 552.4999999999999,
+						"y": 935
+					},
+					{
+						"ver": 1,
+						"nodeId": 83,
+						"x": 1172.5,
+						"y": 979.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 84,
+						"x": 1416.2499999999998,
+						"y": 937.4999999999997
+					},
+					{
+						"ver": 1,
+						"nodeId": 85,
+						"x": 1268.7499999999998,
+						"y": 733.7499999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 86,
+						"x": 991.2499999999998,
+						"y": 681.25
+					},
+					{
+						"ver": 1,
+						"nodeId": 87,
+						"x": 996.25,
+						"y": 427.5
+					},
+					{
+						"ver": 1,
+						"nodeId": 88,
+						"x": 1363.7499999999995,
+						"y": 538.75
+					},
+					{
+						"ver": 1,
+						"nodeId": 89,
+						"x": 1254.9999999999998,
+						"y": 291.25
+					},
+					{
+						"ver": 1,
+						"nodeId": 91,
+						"x": 931.2499999999998,
+						"y": 106.24999999999997
+					},
+					{
+						"ver": 1,
+						"nodeId": 103,
+						"x": 827.4999999999999,
+						"y": 950
+					}
+				],
+				"nodeIds": [
+					73,
+					74,
+					76,
+					77,
+					81,
+					82,
+					83,
+					84,
+					85,
+					86,
+					87,
+					88,
+					89,
+					91,
+					103
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 69,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 180
+							},
+							"dst": {
+								"x": 478,
+								"y": 454
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 70,
+						"points": {
+							"src": {
+								"x": 478,
+								"y": 454
+							},
+							"dst": {
+								"x": 730,
+								"y": 443
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 71,
+						"points": {
+							"src": {
+								"x": 730,
+								"y": 443
+							},
+							"dst": {
+								"x": 723.7499999999998,
+								"y": 693.75
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 75,
+						"points": {
+							"src": {
+								"x": 723.7499999999998,
+								"y": 693.75
+							},
+							"dst": {
+								"x": 440,
+								"y": 876.2499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 76,
+						"points": {
+							"src": {
+								"x": 440,
+								"y": 876.2499999999999
+							},
+							"dst": {
+								"x": 632.4999999999999,
+								"y": 1015
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 78,
+						"points": {
+							"src": {
+								"x": 1252.5,
+								"y": 1060
+							},
+							"dst": {
+								"x": 1496.2499999999998,
+								"y": 1017.4999999999997
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 79,
+						"points": {
+							"src": {
+								"x": 1496.2499999999998,
+								"y": 1017.4999999999997
+							},
+							"dst": {
+								"x": 1348.7499999999998,
+								"y": 813.7499999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 80,
+						"points": {
+							"src": {
+								"x": 1348.7499999999998,
+								"y": 813.7499999999998
+							},
+							"dst": {
+								"x": 1071.2499999999998,
+								"y": 761.25
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 81,
+						"points": {
+							"src": {
+								"x": 1071.2499999999998,
+								"y": 761.25
+							},
+							"dst": {
+								"x": 1076.25,
+								"y": 507.5
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 82,
+						"points": {
+							"src": {
+								"x": 1076.25,
+								"y": 507.5
+							},
+							"dst": {
+								"x": 1443.7499999999995,
+								"y": 618.75
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 83,
+						"points": {
+							"src": {
+								"x": 1443.7499999999995,
+								"y": 618.75
+							},
+							"dst": {
+								"x": 1334.9999999999998,
+								"y": 371.25
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 84,
+						"points": {
+							"src": {
+								"x": 1334.9999999999998,
+								"y": 371.25
+							},
+							"dst": {
+								"x": 1011.2499999999998,
+								"y": 186.24999999999997
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 92,
+						"points": {
+							"src": {
+								"x": 632.4999999999999,
+								"y": 1015
+							},
+							"dst": {
+								"x": 907.4999999999999,
+								"y": 1030
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 93,
+						"points": {
+							"src": {
+								"x": 907.4999999999999,
+								"y": 1030
+							},
+							"dst": {
+								"x": 1252.5,
+								"y": 1060
+							}
+						}
+					}
+				],
+				"condIds": [
+					69,
+					70,
+					71,
+					75,
+					76,
+					78,
+					79,
+					80,
+					81,
+					82,
+					83,
+					84,
+					92,
+					93
+				],
+				"scale": 0.8,
+				"pos": {
+					"x": 0,
+					"y": 4
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 94,
+						"x": 391,
+						"y": 87
+					},
+					{
+						"ver": 1,
+						"nodeId": 95,
+						"x": 339,
+						"y": 369
+					},
+					{
+						"ver": 1,
+						"nodeId": 97,
+						"x": 265,
+						"y": 624
+					},
+					{
+						"ver": 1,
+						"nodeId": 98,
+						"x": 570,
+						"y": 680
+					},
+					{
+						"ver": 1,
+						"nodeId": 99,
+						"x": 836,
+						"y": 670
+					},
+					{
+						"ver": 1,
+						"nodeId": 100,
+						"x": 1068,
+						"y": 656
+					},
+					{
+						"ver": 1,
+						"nodeId": 102,
+						"x": 933,
+						"y": 372
+					}
+				],
+				"nodeIds": [
+					94,
+					95,
+					97,
+					98,
+					99,
+					100,
+					102
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 85,
+						"points": {
+							"src": {
+								"x": 471,
+								"y": 167
+							},
+							"dst": {
+								"x": 419,
+								"y": 449
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 86,
+						"points": {
+							"src": {
+								"x": 419,
+								"y": 449
+							},
+							"dst": {
+								"x": 345,
+								"y": 704
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 87,
+						"points": {
+							"src": {
+								"x": 345,
+								"y": 704
+							},
+							"dst": {
+								"x": 650,
+								"y": 760
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 88,
+						"points": {
+							"src": {
+								"x": 650,
+								"y": 760
+							},
+							"dst": {
+								"x": 916,
+								"y": 750
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 89,
+						"points": {
+							"src": {
+								"x": 916,
+								"y": 750
+							},
+							"dst": {
+								"x": 1148,
+								"y": 736
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 91,
+						"points": {
+							"src": {
+								"x": 1148,
+								"y": 736
+							},
+							"dst": {
+								"x": 1013,
+								"y": 452
+							}
+						}
+					}
+				],
+				"condIds": [
+					85,
+					86,
+					87,
+					88,
+					89,
+					91
 				],
 				"scale": 1,
 				"pos": {
-					"x": 0,
-					"y": 0
+					"x": 1,
+					"y": 6
 				}
 			}
 		],
 		"stageIds": [
 			11,
-			22
+			22,
+			53,
+			73,
+			94
 		]
 	}
 }

@@ -11,5 +11,18 @@
             </conditions>
             <actions />
         </event-block>
+        <event-block sid="8080785156122793">
+            <conditions>
+                <condition id="0" name="On function" sid="2687317114523795" type="Function">
+                    <param id="0" name="Name">&quot;C2API_TheEnd&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="103170302996176" type="Browser">
+                    <param id="0" name="Message">&quot;Ну вот и все. Понравился комикс? Хочешь еще? Наркоман чтоли?&quot;</param>
+                </action>
+                <action id="1" name="Close" sid="5430897127698701" type="Browser" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

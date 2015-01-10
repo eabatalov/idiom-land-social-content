@@ -116,15 +116,14 @@
                 <instance type="NPC" uid="19">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>driver2_idle</initial-animation>
+                        <initial-animation>2_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>taxi1</Stage>
-                        <NpcID>driver2</NpcID>
-                        <NpcName>Taxi driver</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <Stage>gops</Stage>
+                        <NpcID>2</NpcID>
+                        <NpcName>На стреме</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -133,8 +132,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5336.291992188</x>
-                        <y>901.870483398</y>
+                        <x>4868</x>
+                        <y>962</y>
                         <z>0</z>
                         <width>71</width>
                         <height>124</height>
@@ -155,8 +154,7 @@
                     <instance-variables>
                         <Stage>veider</Stage>
                         <NpcID>veider</NpcID>
-                        <NpcName>Balloon Seller</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <NpcName>Волчина</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -165,8 +163,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2140</x>
-                        <y>869</y>
+                        <x>2355</x>
+                        <y>863</y>
                         <z>0</z>
                         <width>122</width>
                         <height>180</height>
@@ -180,15 +178,14 @@
                 <instance type="NPC" uid="57">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>child_idle</initial-animation>
+                        <initial-animation>potsik_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>kebab</Stage>
-                        <NpcID>child</NpcID>
-                        <NpcName>Boy</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <Stage>gops</Stage>
+                        <NpcID>potsik</NpcID>
+                        <NpcName>Поцык</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -197,14 +194,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4426.796875</x>
-                        <y>943.11730957</y>
+                        <x>4770</x>
+                        <y>922</y>
                         <z>0</z>
                         <width>53</width>
                         <height>70</height>
                         <depth>0</depth>
                         <hotspotX>0.509433985</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -217,10 +214,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>carousel</Stage>
+                        <Stage>cap</Stage>
                         <NpcID>cap</NpcID>
-                        <NpcName>Captain</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <NpcName>Алкаш</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -229,8 +225,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2785</x>
-                        <y>897</y>
+                        <x>3441</x>
+                        <y>878</y>
                         <z>0</z>
                         <width>90</width>
                         <height>138</height>
@@ -251,8 +247,7 @@
                     <instance-variables>
                         <Stage>intro</Stage>
                         <NpcID>policeman</NpcID>
-                        <NpcName>Policeman</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <NpcName>Мент</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -276,15 +271,14 @@
                 <instance type="NPC" uid="17">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>aguy_idle</initial-animation>
+                        <initial-animation>3_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>taxi2</Stage>
-                        <NpcID>aguy</NpcID>
-                        <NpcName>A guy</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <Stage>gops</Stage>
+                        <NpcID>3</NpcID>
+                        <NpcName>Нарк</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -293,8 +287,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5699.5</x>
-                        <y>891.5</y>
+                        <x>4884</x>
+                        <y>828</y>
                         <z>0</z>
                         <width>70</width>
                         <height>124</height>
@@ -315,8 +309,7 @@
                     <instance-variables>
                         <Stage>intro</Stage>
                         <NpcID>Player</NpcID>
-                        <NpcName>Foxy</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <NpcName>Баба</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -327,6 +320,130 @@
                     <world>
                         <x>573</x>
                         <y>866</y>
+                        <z>0</z>
+                        <width>91</width>
+                        <height>113.15625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505494535</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="2">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Player_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>veider</Stage>
+                        <NpcID>Player</NpcID>
+                        <NpcName>Баба</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2187</x>
+                        <y>894</y>
+                        <z>0</z>
+                        <width>91</width>
+                        <height>113.15625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505494535</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="4">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Player_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>cap</Stage>
+                        <NpcID>Player</NpcID>
+                        <NpcName>Баба</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3271</x>
+                        <y>898</y>
+                        <z>0</z>
+                        <width>91</width>
+                        <height>113.15625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505494535</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="5">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Player_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>gops</Stage>
+                        <NpcID>Player</NpcID>
+                        <NpcName>Баба</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4609</x>
+                        <y>896</y>
+                        <z>0</z>
+                        <width>91</width>
+                        <height>113.15625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505494535</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Player_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>bus</Stage>
+                        <NpcID>Player</NpcID>
+                        <NpcName>Баба</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6226</x>
+                        <y>927</y>
                         <z>0</z>
                         <width>91</width>
                         <height>113.15625</height>
@@ -372,50 +489,17 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="NPC" uid="276">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>bus_driver_idle</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>exit_bus</Stage>
-                        <NpcID>driver</NpcID>
-                        <NpcName>Bus driver</NpcName>
-                        <AnimLooping>0</AnimLooping>
-                        <AnimPrio>0</AnimPrio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="QuestEngineSpriteExtras" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>6514</x>
-                        <y>903</y>
-                        <z>0</z>
-                        <width>73</width>
-                        <height>123</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506849289</hotspotX>
-                        <hotspotY>0.504065037</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="NPC" uid="56">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>seller_idle</initial-animation>
+                        <initial-animation>1_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>kebab</Stage>
-                        <NpcID>seller</NpcID>
-                        <NpcName>Kebab Seller</NpcName>
-                        <AnimLooping>0</AnimLooping>
+                        <Stage>gops</Stage>
+                        <NpcID>1</NpcID>
+                        <NpcName>Бородатый</NpcName>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -424,14 +508,76 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4200.552246094</x>
-                        <y>951.244445801</y>
+                        <x>4510</x>
+                        <y>879</y>
                         <z>0</z>
                         <width>57.8360672</width>
                         <height>123.465606689</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.503496528</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="6">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bus_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>bus</Stage>
+                        <NpcID>bus</NpcID>
+                        <NpcName>Автобус</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6389</x>
+                        <y>792</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>214</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502127647</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="276">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>povar_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>bus</Stage>
+                        <NpcID>povar</NpcID>
+                        <NpcName>Повар</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6483</x>
+                        <y>916</y>
+                        <z>0</z>
+                        <width>73</width>
+                        <height>123</height>
+                        <depth>0</depth>
+                        <hotspotX>0.506849289</hotspotX>
+                        <hotspotY>0.504065037</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -474,8 +620,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1973</x>
-                        <y>649</y>
+                        <x>1732</x>
+                        <y>658</y>
                         <z>0</z>
                         <width>33</width>
                         <height>336</height>
@@ -494,7 +640,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>kebab</Stage>
+                        <Stage>gops</Stage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -506,40 +652,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4095</x>
-                        <y>700</y>
-                        <z>0</z>
-                        <width>33</width>
-                        <height>336</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StageMarker" uid="66">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>taxi1</Stage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4943</x>
-                        <y>644</y>
+                        <x>4055</x>
+                        <y>704</y>
                         <z>0</z>
                         <width>33</width>
                         <height>336</height>
@@ -558,7 +672,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>exit_bus</Stage>
+                        <Stage>bus</Stage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -570,8 +684,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>6153</x>
-                        <y>633</y>
+                        <x>5606</x>
+                        <y>640</y>
                         <z>0</z>
                         <width>33</width>
                         <height>336</height>
@@ -636,38 +750,6 @@
                     <world>
                         <x>2</x>
                         <y>644</y>
-                        <z>0</z>
-                        <width>33</width>
-                        <height>336</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StageMarker" uid="403">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>taxi2</Stage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>5530</x>
-                        <y>630</y>
                         <z>0</z>
                         <width>33</width>
                         <height>336</height>
