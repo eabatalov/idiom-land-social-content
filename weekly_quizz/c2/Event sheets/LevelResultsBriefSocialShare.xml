@@ -134,7 +134,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="9900684375988905" type="System">
                                     <param id="0" name="Variable">ShareDescrStr</param>
-                                    <param id="1" name="Value">&quot;Мой результат теста на знание английских идиом: &quot; &amp; str(Function.Param(0)) &amp;&quot; / &quot; &amp; str(Function.Param(1)) &amp; &quot; (Idiom &quot;</param>
+                                    <param id="1" name="Value">&quot;Мой результат теста на знание английских идиом: &quot; &amp; str(Function.Param(0)) &amp;&quot;/&quot; &amp; str(Function.Param(1)) &amp; &quot; (Idiom &quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -364,7 +364,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="389772527773191" type="System">
                                     <param id="0" name="Variable">ShareDescr</param>
-                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                    <param id="1" name="Value">Function.ReturnValue &amp; &quot; &quot; &amp; QUIZZ_URL</param>
                                 </action>
                                 <action id="0" name="Call function" sid="4990139424649262" type="Function">
                                     <param id="0" name="Name">&quot;GenShareImgURL&quot;</param>
@@ -407,9 +407,9 @@
                                             <param id="0" name="Name">&quot;GenShareDescriptionStrRussian&quot;</param>
                                             <param id="1" name="Parameter {n}">TestDialogLevelRuntime.getRightAnswersCount{###}TestDialogLevelRuntime.getQuestionsCount</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="7254292439030996" type="System">
+                                        <action id="-9" name="Set value" sid="6777681129805072" type="System">
                                             <param id="0" name="Variable">ShareDescr</param>
-                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                            <param id="1" name="Value">Function.ReturnValue &amp; &quot; &quot; &amp; QUIZZ_URL</param>
                                         </action>
                                         <action id="0" name="Call function" sid="6784802655029516" type="Function">
                                             <param id="0" name="Name">&quot;GenShareImgURL&quot;</param>
