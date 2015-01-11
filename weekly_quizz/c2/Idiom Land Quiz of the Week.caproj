@@ -1661,5 +1661,8 @@
             <file name="card_share_result_learner.png" />
             <file name="card_share_result_nb.png" />
         </file-folder>
+        <file-folder name="ScriptCacheDisable">
+            <file name=".htaccess" />
+        </file-folder>
     </files-folder>
 </c2project>
