@@ -1719,7 +1719,16 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder name="IntComGame" />
+        <object-folder name="IntComGame">
+            <object-type name="Penek" sid="3386575740523918">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6133889694998918" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501066" original-source="C:\Users\Eugene\Downloads\stul_iz_pnja.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families>
         <family name="animationresultFamily" plugin-id="Sprite" sid="719736049323703">

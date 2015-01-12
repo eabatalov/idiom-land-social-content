@@ -623,6 +623,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="14" name="Log" sid="2387936834227141" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Notification: animation end finished&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="6383349864739358" type="Function">
                                             <param id="0" name="Name">&quot;HideNotificationSync&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
@@ -666,7 +670,12 @@
                                     <param id="0" name="Name">&quot;HideNotificationSync&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="14" name="Log" sid="1580525642556289" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;HideNotificationSync&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="2560656458873753">
                                     <conditions />
@@ -698,7 +707,12 @@
                                     <param id="0" name="Name">&quot;HideNotificationAnimated&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="14" name="Log" sid="2844212883154394" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;HideNotificationAnimated&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="8385766481575486">
                                     <conditions>
@@ -861,7 +875,12 @@
                                     <param id="0" name="Name">&quot;HideNotification&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="14" name="Log" sid="2722121216093101" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;HideNotification&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="7351381172568601">
                                     <conditions>

@@ -35,7 +35,7 @@
 						0
 					],
 					"outCondIds": [
-						9
+						101
 					],
 					"props": {
 						"objs": [
@@ -51,7 +51,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						9
+						102
 					],
 					"outCondIds": [
 						3
@@ -89,7 +89,7 @@
 					"label": "NextStage",
 					"continue": false,
 					"inCondIds": [
-						39
+						146
 					],
 					"outCondIds": [],
 					"props": {
@@ -162,7 +162,7 @@
 					],
 					"outCondIds": [
 						30,
-						38
+						145
 					],
 					"props": {
 						"id": "Player",
@@ -215,21 +215,34 @@
 				},
 				{
 					"ver": 1,
-					"id": 45,
-					"type": 1,
+					"id": 112,
+					"type": 11,
+					"label": "Не пугайся",
+					"continue": false,
+					"inCondIds": [
+						101
+					],
+					"outCondIds": [
+						102
+					],
+					"props": {
+						"text": "Здравствуй Дорогой Друг,\nвпереди тебя ждут приключения.\nНо не надо пугаться. Расслабься.\nБыть лисой не просто."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 159,
+					"type": 11,
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						38
+						145
 					],
 					"outCondIds": [
-						39
+						146
 					],
 					"props": {
-						"id": "Player",
-						"text": "Чет ты приуныл...",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"text": "Отлично, дорогой друг!\nТы преодолел первое испытание.\nЛиса идет дальше и.. ЧТО ЭТО?!!!"
 					}
 				}
 			],
@@ -246,14 +259,6 @@
 					"type": 11,
 					"props": {
 						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 9,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
 					}
 				},
 				{
@@ -304,13 +309,29 @@
 				},
 				{
 					"ver": 1,
-					"id": 38,
+					"id": 101,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 102,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 145,
 					"type": 3,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 39,
+					"id": 146,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -437,7 +458,7 @@
 					"label": "NextStage",
 					"continue": false,
 					"inCondIds": [
-						56
+						148
 					],
 					"outCondIds": [],
 					"props": {
@@ -488,12 +509,28 @@
 						55
 					],
 					"outCondIds": [
-						56
+						147
 					],
 					"props": {
 						"id": "Player",
 						"name": "idle",
 						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 160,
+					"type": 11,
+					"label": "Бежим отсюда!!!",
+					"continue": false,
+					"inCondIds": [
+						147
+					],
+					"outCondIds": [
+						148
+					],
+					"props": {
+						"text": "Бежим отсюда!!!"
 					}
 				}
 			],
@@ -542,9 +579,17 @@
 				},
 				{
 					"ver": 1,
-					"id": 56,
+					"id": 147,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 148,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
 				}
 			]
 		},
@@ -600,7 +645,7 @@
 						47
 					],
 					"outCondIds": [
-						48
+						149
 					],
 					"props": {
 						"name": "C2API_GoToNextStage",
@@ -629,7 +674,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						48
+						150
 					],
 					"outCondIds": [
 						57
@@ -803,7 +848,7 @@
 						67
 					],
 					"outCondIds": [
-						68
+						153
 					],
 					"props": {
 						"id": "Player",
@@ -837,7 +882,7 @@
 					"label": "NextStage",
 					"continue": false,
 					"inCondIds": [
-						68
+						152
 					],
 					"outCondIds": [],
 					"props": {
@@ -859,6 +904,41 @@
 							}
 						]
 					}
+				},
+				{
+					"ver": 1,
+					"id": 161,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						149
+					],
+					"outCondIds": [
+						150
+					],
+					"props": {
+						"id": "Player",
+						"text": "Алкаш или нормальный дед?...",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 162,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						153
+					],
+					"outCondIds": [
+						152
+					],
+					"props": {
+						"text": "Кажется я вижу впереди мальчика!\nЕго окружили какие-то бандиты.\nНужно придти на помощь!"
+					}
 				}
 			],
 			"conds": [
@@ -875,12 +955,6 @@
 					"props": {
 						"clearStage": true
 					}
-				},
-				{
-					"ver": 1,
-					"id": 48,
-					"type": 8,
-					"props": {}
 				},
 				{
 					"ver": 1,
@@ -962,7 +1036,29 @@
 				},
 				{
 					"ver": 1,
-					"id": 68,
+					"id": 149,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 150,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 152,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 153,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -1114,14 +1210,14 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						93
+						195
 					],
 					"outCondIds": [
 						78
 					],
 					"props": {
 						"id": "potsik",
-						"text": "Вы провели время на моём пне, с вас причитается ровно 1000 рублей,",
+						"text": "Вы провели время на моём пне, с вас причитается ровно 1000 рублей.",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
@@ -1140,7 +1236,7 @@
 					],
 					"props": {
 						"id": "potsik",
-						"text": "по какой же причине вы предлагаете мне столь смехотворную сумму, неблагодарный вы тип!",
+						"text": "По какой же причине вы предлагаете мне столь смехотворную сумму, неблагодарный вы тип!",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
@@ -1231,7 +1327,7 @@
 						83
 					],
 					"outCondIds": [
-						84
+						196
 					],
 					"props": {
 						"id": "Player",
@@ -1247,7 +1343,7 @@
 					"label": "NextStage",
 					"continue": false,
 					"inCondIds": [
-						84
+						197
 					],
 					"outCondIds": [],
 					"props": {
@@ -1280,12 +1376,60 @@
 						92
 					],
 					"outCondIds": [
-						93
+						193
 					],
 					"props": {
 						"id": "potsik",
 						"name": "dizzy",
-						"secs": 10
+						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 209,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						194
+					],
+					"outCondIds": [
+						195
+					],
+					"props": {
+						"text": "Аха!\nЭто же поцык!\nКак я сразу не догадался?"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 210,
+					"type": 6,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						193
+					],
+					"outCondIds": [
+						194
+					],
+					"props": {
+						"secs": 3
+					}
+				},
+				{
+					"ver": 1,
+					"id": 211,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						196
+					],
+					"outCondIds": [
+						197
+					],
+					"props": {
+						"text": "Так, надо бежать отсюда!\nВидишь там автобус?\nСадись в него и поехали!"
 					}
 				}
 			],
@@ -1376,14 +1520,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 84,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 92,
 					"type": 11,
 					"props": {
@@ -1392,9 +1528,39 @@
 				},
 				{
 					"ver": 1,
-					"id": 93,
+					"id": 193,
 					"type": 8,
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 194,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 195,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 196,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 197,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
 				}
 			]
 		},
@@ -1522,7 +1688,7 @@
 						89
 					],
 					"outCondIds": [
-						91
+						205
 					],
 					"props": {
 						"id": "bus",
@@ -1533,19 +1699,67 @@
 				},
 				{
 					"ver": 1,
-					"id": 102,
-					"type": 10,
+					"id": 220,
+					"type": 11,
+					"label": "Конец",
+					"continue": false,
+					"inCondIds": [
+						205
+					],
+					"outCondIds": [
+						207
+					],
+					"props": {
+						"text": "Ну вот и все.\nПонравился комикс?"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 222,
+					"type": 11,
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						91
+						207,
+						212
 					],
-					"outCondIds": [],
+					"outCondIds": [
+						209
+					],
 					"props": {
-						"name": "C2API_TheEnd",
-						"rollbackName": null,
-						"source": "c2",
-						"params": []
+						"text": "Хочешь еще?"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 225,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						209
+					],
+					"outCondIds": [
+						211
+					],
+					"props": {
+						"text": "Наркоман чтоле?"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 228,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						211
+					],
+					"outCondIds": [
+						212
+					],
+					"props": {
+						"text": "Ещё???"
 					}
 				}
 			],
@@ -1588,7 +1802,39 @@
 				},
 				{
 					"ver": 1,
-					"id": 91,
+					"id": 205,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 207,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 209,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 211,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 212,
 					"type": 11,
 					"props": {
 						"clearStage": true

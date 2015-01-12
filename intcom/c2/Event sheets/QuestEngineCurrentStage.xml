@@ -68,7 +68,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="273905946795515" type="Function">
                                             <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;RECALL_LAST_UI_CMD&quot;{###}&quot;Player&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;RECALL_LAST_UI_CMD&quot;{###}&quot;Player&quot;{###}&quot;&quot;</param>
                                         </action>
                                         <action id="0" name="Call function" sid="8422606877246718" type="Function">
                                             <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>

@@ -392,37 +392,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NPC" uid="5">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Player_idle</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>gops</Stage>
-                        <NpcID>Player</NpcID>
-                        <NpcName>Баба</NpcName>
-                        <AnimPrio>0</AnimPrio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="QuestEngineSpriteExtras" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4609</x>
-                        <y>896</y>
-                        <z>0</z>
-                        <width>91</width>
-                        <height>113.15625</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505494535</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="NPC" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -444,6 +413,59 @@
                     <world>
                         <x>6226</x>
                         <y>927</y>
+                        <z>0</z>
+                        <width>91</width>
+                        <height>113.15625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505494535</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Penek" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4696</x>
+                        <y>894</y>
+                        <z>0</z>
+                        <width>99</width>
+                        <height>77</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501066089</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="5">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Player_idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>gops</Stage>
+                        <NpcID>Player</NpcID>
+                        <NpcName>Баба</NpcName>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4609</x>
+                        <y>896</y>
                         <z>0</z>
                         <width>91</width>
                         <height>113.15625</height>
@@ -539,8 +561,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>6389</x>
-                        <y>792</y>
+                        <x>6559</x>
+                        <y>795</y>
                         <z>0</z>
                         <width>235</width>
                         <height>214</height>
