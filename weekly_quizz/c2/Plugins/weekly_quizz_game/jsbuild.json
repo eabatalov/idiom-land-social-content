@@ -11,6 +11,8 @@
                 "lib-weekly-quizz-level" : []
             }
         },
-        "src" : {}
+        "src" : {
+            "web" : ["src/game_web.js"]
+        }
     }
 }
