@@ -420,5 +420,207 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="9673719341818984" title="Stage quiz">
+            <sub-events>
+                <variable constant="0" name="QuizSuccessCnt" sid="233908038270489" static="1" type="number">0</variable>
+                <variable constant="0" name="QuizOverallCnt" sid="7689959955237794" static="1" type="number">0</variable>
+                <event-block sid="9088814398775716">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6855215859250324" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7781518733896495">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2216573833282266" type="System">
+                                    <param id="0" name="Variable">QuizSuccessCnt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2696640048055546" type="System">
+                                    <param id="0" name="Variable">QuizOverallCnt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9721282524702219">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7485888713764551" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowFail&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Kostil</comment>
+                        <event-block sid="5050712781280086">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5734628688422418" type="System">
+                                    <param id="0" name="Variable">CurrentStageName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;quiz&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4415362251333322">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9861663601100977" type="System">
+                                            <param id="0" name="Variable">QuizOverallCnt</param>
+                                            <param id="1" name="Value">QuizOverallCnt + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3793017996164336">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="630105394322647" type="Function">
+                                    <param id="0" name="Name">&quot;RunFailNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="3651906622831895" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6746992719811928">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3848790690823425" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowSuccess&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Kostil</comment>
+                        <event-block sid="5597631700320918">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9232111977220989" type="System">
+                                    <param id="0" name="Variable">CurrentStageName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;quiz&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7696510588044551">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2821041351644097" type="System">
+                                            <param id="0" name="Variable">QuizOverallCnt</param>
+                                            <param id="1" name="Value">QuizOverallCnt + 1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4324555743101081" type="System">
+                                            <param id="0" name="Variable">QuizSuccessCnt</param>
+                                            <param id="1" name="Value">QuizSuccessCnt + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3277643396572092">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="167558387318821" type="Function">
+                                    <param id="0" name="Name">&quot;RunSuccessNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="2271016696404903" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="930340040578207">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2188242832488894" type="Function">
+                            <param id="0" name="Name">&quot;C2API_QuizInjectResult&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2447373004691107">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6428904975356998" type="System">
+                                    <param id="0" name="Variable">QuizSuccessCnt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7133444442536956" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3176875537904359">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7662074020356159" type="System" />
+                                <condition id="-14" name="Compare variable" sid="9482753381410465" type="System">
+                                    <param id="0" name="Variable">QuizSuccessCnt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5453555873678382" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9402836438367721">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7993760648835869" type="System" />
+                                <condition id="-14" name="Compare variable" sid="9059150772600595" type="System">
+                                    <param id="0" name="Variable">QuizSuccessCnt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="139241720211177" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2547130453175184">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4282655248284217" type="System" />
+                                <condition id="-14" name="Compare variable" sid="3019007421206918" type="System">
+                                    <param id="0" name="Variable">QuizSuccessCnt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="985906160937781" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="355089999840303">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="3979238763845015" type="Function">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

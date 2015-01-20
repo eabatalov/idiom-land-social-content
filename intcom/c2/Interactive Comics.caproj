@@ -8,7 +8,7 @@
     <author-website>http://idiomland.com</author-website>
     <app-id>com.idiomland</app-id>
     <unique-id>1qpq9otxp4r4o</unique-id>
-    <saved-with-version>19000</saved-with-version>
+    <saved-with-version>19500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -1435,6 +1435,11 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
+                                <animation framecount="1" loop="0" name="teacher_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9959761412612517" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.501312" original-source="Y:\teacher.png">
+                                        <image-point name="SpeechOrigin" x="0.898438" y="0.0866142" />
+                                    </frame>
+                                </animation>
                             </animation-folder>
                         </object-type>
                         <object-type global="1" name="RunningNPCAnimsOnCurUIActSeq" sid="9189467658925863">
@@ -1587,6 +1592,23 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9052856061187378" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="quiz">
+                <object-type name="QuizBg" sid="8550907192599546">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9883580693801639" speed="5">
+                            <frame duration="1" hotspotX="0.363265" hotspotY="0.174" original-source="Y:\quiz_bg.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.72551" y="0" />
+                                    <point x="0.72551" y="0.348" />
+                                    <point x="0" y="0.348" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>

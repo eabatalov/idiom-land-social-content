@@ -2470,31 +2470,13 @@
 							202
 						],
 						"outCondIds": [
-							139
+							342
 						],
 						"props": {
 							"id": "mamulia",
 							"text": "Oh, I'm off the hook!",
 							"phraseType": "THINK",
 							"phraseSize": "MEDIUM"
-						}
-					},
-					{
-						"ver": 1,
-						"id": 120,
-						"type": 10,
-						"label": "C2API_TheEnd",
-						"continue": false,
-						"inCondIds": [
-							139
-						],
-						"outCondIds": [],
-						"props": {
-							"name": "C2API_TheEnd",
-							"rollbackName": null,
-							"source": "c2",
-							"isPure": false,
-							"params": []
 						}
 					},
 					{
@@ -2729,6 +2711,37 @@
 							"ans3": "",
 							"ans4": ""
 						}
+					},
+					{
+						"ver": 1,
+						"id": 257,
+						"type": 10,
+						"label": "C2API_GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							342
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "parents_house",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "quiz",
+									"$$hashKey": "038"
+								}
+							]
+						}
 					}
 				],
 				"conds": [
@@ -2803,14 +2816,6 @@
 					{
 						"ver": 1,
 						"id": 137,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
-						"id": 139,
 						"type": 11,
 						"props": {
 							"clearStage": true
@@ -2955,6 +2960,558 @@
 						"id": 261,
 						"type": 3,
 						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 342,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 254,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 254,
+						"type": 9,
+						"label": "quiz",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							341
+						],
+						"props": {
+							"name": "quiz",
+							"objs": [
+								"Player",
+								"teacher"
+							],
+							"objPool": [],
+							"text": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 255,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							341
+						],
+						"outCondIds": [
+							388
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"teacher"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 261,
+						"type": 10,
+						"label": "C2API_GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							388
+						],
+						"outCondIds": [
+							389
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "parents_house",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "quiz",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 262,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							389
+						],
+						"outCondIds": [
+							348
+						],
+						"props": {
+							"id": "teacher",
+							"text": "This is the end of the story.\nNow let's check your understanding of it!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 263,
+						"type": 3,
+						"label": "Oxford?",
+						"continue": false,
+						"inCondIds": [
+							348
+						],
+						"outCondIds": [
+							362,
+							364
+						],
+						"props": {
+							"id": "teacher",
+							"text": "The family was traveling to Oxford by car.\nIs it true?",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE",
+							"ans1": "True",
+							"ans2": "False",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 264,
+						"type": 3,
+						"label": "Enough fuel?",
+						"continue": false,
+						"inCondIds": [
+							376,
+							378
+						],
+						"outCondIds": [
+							366,
+							369
+						],
+						"props": {
+							"id": "teacher",
+							"text": "There was enough fuel in the tank to get to Oxford when the family left the house.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE",
+							"ans1": "True",
+							"ans2": "False",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 270,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							375,
+							379
+						],
+						"outCondIds": [
+							371,
+							373
+						],
+						"props": {
+							"id": "teacher",
+							"text": "What was inside the box that was gifted to grandma?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Earrings",
+							"ans2": "Nothing",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 272,
+						"type": 1,
+						"label": "Wrong",
+						"continue": false,
+						"inCondIds": [
+							374
+						],
+						"outCondIds": [
+							382
+						],
+						"props": {
+							"id": "teacher",
+							"text": "Grandma decided to put earrings to the box. But the box was empty.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 275,
+						"type": 10,
+						"label": "C2API_ShowSuccess",
+						"continue": true,
+						"inCondIds": [
+							362
+						],
+						"outCondIds": [
+							376
+						],
+						"props": {
+							"name": "C2API_ShowSuccess",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 277,
+						"type": 10,
+						"label": "C2API_ShowFail",
+						"continue": true,
+						"inCondIds": [
+							364
+						],
+						"outCondIds": [
+							378
+						],
+						"props": {
+							"name": "C2API_ShowFail",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 279,
+						"type": 10,
+						"label": "C2API_ShowFail",
+						"continue": true,
+						"inCondIds": [
+							366
+						],
+						"outCondIds": [
+							379
+						],
+						"props": {
+							"name": "C2API_ShowFail",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 281,
+						"type": 10,
+						"label": "C2API_ShowSuccess",
+						"continue": true,
+						"inCondIds": [
+							369
+						],
+						"outCondIds": [
+							375
+						],
+						"props": {
+							"name": "C2API_ShowSuccess",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 283,
+						"type": 10,
+						"label": "C2API_ShowSuccess",
+						"continue": true,
+						"inCondIds": [
+							371
+						],
+						"outCondIds": [
+							381
+						],
+						"props": {
+							"name": "C2API_ShowSuccess",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 285,
+						"type": 10,
+						"label": "C2API_ShowFail",
+						"continue": true,
+						"inCondIds": [
+							373
+						],
+						"outCondIds": [
+							374
+						],
+						"props": {
+							"name": "C2API_ShowFail",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 287,
+						"type": 10,
+						"label": "C2API_QuizInjectResult",
+						"continue": false,
+						"inCondIds": [
+							381,
+							382
+						],
+						"outCondIds": [
+							383,
+							384,
+							385,
+							386
+						],
+						"props": {
+							"name": "C2API_QuizInjectResult",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 288,
+						"type": 1,
+						"label": "0",
+						"continue": false,
+						"inCondIds": [
+							383
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "0 out of 3. That's fail!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 293,
+						"type": 1,
+						"label": "1",
+						"continue": false,
+						"inCondIds": [
+							384
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "1 out of 3. Not bad.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 295,
+						"type": 1,
+						"label": "2",
+						"continue": false,
+						"inCondIds": [
+							385
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "2 out of 3. Good.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 297,
+						"type": 1,
+						"label": "3",
+						"continue": false,
+						"inCondIds": [
+							386
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "3 out of 3. Perfect!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 341,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 348,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 362,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 364,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 366,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 369,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 371,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 373,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 374,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 375,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 376,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 378,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 379,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 381,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 382,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 383,
+						"type": 10,
+						"props": {
+							"name": "0"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 384,
+						"type": 10,
+						"props": {
+							"name": "1"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 385,
+						"type": 10,
+						"props": {
+							"name": "2"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 386,
+						"type": 10,
+						"props": {
+							"name": "3"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 388,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 389,
+						"type": 8,
+						"props": {}
 					}
 				]
 			}
@@ -2962,7 +3519,7 @@
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 57,
+		"currentStageId": 254,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -3571,8 +4128,8 @@
 				],
 				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 242,
-					"y": 59
+					"x": 230,
+					"y": 249
 				}
 			},
 			{
@@ -4319,10 +4876,10 @@
 					179,
 					180
 				],
-				"scale": 0.5000000000000001,
+				"scale": 0.6000000000000001,
 				"pos": {
-					"x": 160,
-					"y": -154
+					"x": -103,
+					"y": -92
 				}
 			},
 			{
@@ -4687,10 +5244,10 @@
 					255,
 					256
 				],
-				"scale": 0.6000000000000001,
+				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 94,
-					"y": -19
+					"x": 236,
+					"y": 225
 				}
 			},
 			{
@@ -4711,8 +5268,8 @@
 					{
 						"ver": 1,
 						"nodeId": 62,
-						"x": 210.71428571428567,
-						"y": 662.8571428571427
+						"x": 208.71428571428567,
+						"y": 660.8571428571427
 					},
 					{
 						"ver": 1,
@@ -4735,8 +5292,8 @@
 					{
 						"ver": 1,
 						"nodeId": 67,
-						"x": 1501.071428571428,
-						"y": 880.892857142857
+						"x": 1503.0714285714278,
+						"y": 878.8928571428571
 					},
 					{
 						"ver": 1,
@@ -4791,12 +5348,6 @@
 						"nodeId": 119,
 						"x": 948.5714285714273,
 						"y": -95.14285714285731
-					},
-					{
-						"ver": 1,
-						"nodeId": 120,
-						"x": 649.9999999999998,
-						"y": -110.57142857142912
 					},
 					{
 						"ver": 1,
@@ -4863,6 +5414,12 @@
 						"nodeId": 225,
 						"x": 1117.9999999999995,
 						"y": 967.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 257,
+						"x": 633.9999999999999,
+						"y": -88
 					}
 				],
 				"nodeIds": [
@@ -4882,7 +5439,6 @@
 					75,
 					118,
 					119,
-					120,
 					152,
 					153,
 					154,
@@ -4893,7 +5449,8 @@
 					161,
 					162,
 					164,
-					225
+					225,
+					257
 				],
 				"condViews": [
 					{
@@ -4919,8 +5476,8 @@
 								"y": 457.14285714285705
 							},
 							"dst": {
-								"x": 290.71428571428567,
-								"y": 742.8571428571427
+								"x": 288.71428571428567,
+								"y": 740.8571428571427
 							}
 						}
 					},
@@ -4929,8 +5486,8 @@
 						"condId": 47,
 						"points": {
 							"src": {
-								"x": 290.71428571428567,
-								"y": 742.8571428571427
+								"x": 288.71428571428567,
+								"y": 740.8571428571427
 							},
 							"dst": {
 								"x": 88.57142857142861,
@@ -5041,26 +5598,12 @@
 						"condId": 137,
 						"points": {
 							"src": {
-								"x": 1581.071428571428,
-								"y": 960.892857142857
+								"x": 1583.0714285714278,
+								"y": 958.8928571428571
 							},
 							"dst": {
 								"x": 1612.4999999999998,
 								"y": 696.357142857143
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 139,
-						"points": {
-							"src": {
-								"x": 1028.5714285714273,
-								"y": -15.14285714285731
-							},
-							"dst": {
-								"x": 729.9999999999998,
-								"y": -30.571428571429124
 							}
 						}
 					},
@@ -5227,8 +5770,8 @@
 								"y": 1295.9999999999993
 							},
 							"dst": {
-								"x": 1581.071428571428,
-								"y": 960.892857142857
+								"x": 1583.0714285714278,
+								"y": 958.8928571428571
 							}
 						}
 					},
@@ -5325,8 +5868,22 @@
 								"y": 1047.9999999999998
 							},
 							"dst": {
-								"x": 1581.071428571428,
-								"y": 960.892857142857
+								"x": 1583.0714285714278,
+								"y": 958.8928571428571
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 342,
+						"points": {
+							"src": {
+								"x": 1028.5714285714273,
+								"y": -15.14285714285731
+							},
+							"dst": {
+								"x": 713.9999999999999,
+								"y": -8
 							}
 						}
 					}
@@ -5343,7 +5900,6 @@
 					134,
 					135,
 					137,
-					139,
 					182,
 					183,
 					185,
@@ -5362,12 +5918,477 @@
 					257,
 					259,
 					260,
-					261
+					261,
+					342
 				],
-				"scale": 0.6000000000000001,
+				"scale": 0.5000000000000001,
 				"pos": {
 					"x": 250,
-					"y": -248
+					"y": 198
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 254,
+						"x": -29.28571428571422,
+						"y": -129
+					},
+					{
+						"ver": 1,
+						"nodeId": 255,
+						"x": 286.0952380952382,
+						"y": -130.82539682539687
+					},
+					{
+						"ver": 1,
+						"nodeId": 261,
+						"x": 155.57142857142833,
+						"y": 50.53968253968182
+					},
+					{
+						"ver": 1,
+						"nodeId": 262,
+						"x": 9.20634920634933,
+						"y": 310.6349206349208
+					},
+					{
+						"ver": 1,
+						"nodeId": 263,
+						"x": 380.9523809523811,
+						"y": 214.2857142857141
+					},
+					{
+						"ver": 1,
+						"nodeId": 264,
+						"x": 126.66666666666657,
+						"y": 1006.8253968253965
+					},
+					{
+						"ver": 1,
+						"nodeId": 270,
+						"x": 604.285714285714,
+						"y": 1487.1428571428569
+					},
+					{
+						"ver": 1,
+						"nodeId": 272,
+						"x": 1148.5714285714284,
+						"y": 901.4285714285709
+					},
+					{
+						"ver": 1,
+						"nodeId": 275,
+						"x": 291.4285714285713,
+						"y": 547.1428571428569
+					},
+					{
+						"ver": 1,
+						"nodeId": 277,
+						"x": 2.857142857142435,
+						"y": 549.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 279,
+						"x": 152.85714285714272,
+						"y": 1382.857142857143
+					},
+					{
+						"ver": 1,
+						"nodeId": 281,
+						"x": 425.714285714286,
+						"y": 1142.8571428571422
+					},
+					{
+						"ver": 1,
+						"nodeId": 283,
+						"x": 837.1428571428576,
+						"y": 1081.4285714285716
+					},
+					{
+						"ver": 1,
+						"nodeId": 285,
+						"x": 1148.5714285714284,
+						"y": 1215.7142857142856
+					},
+					{
+						"ver": 1,
+						"nodeId": 287,
+						"x": 985.7142857142858,
+						"y": 617.142857142857
+					},
+					{
+						"ver": 1,
+						"nodeId": 288,
+						"x": 657.1428571428571,
+						"y": 407.1428571428571
+					},
+					{
+						"ver": 1,
+						"nodeId": 293,
+						"x": 907.1428571428571,
+						"y": 231.4285714285714
+					},
+					{
+						"ver": 1,
+						"nodeId": 295,
+						"x": 1157.142857142857,
+						"y": 241.42857142857144
+					},
+					{
+						"ver": 1,
+						"nodeId": 297,
+						"x": 1284.285714285714,
+						"y": 465.71428571428555
+					}
+				],
+				"nodeIds": [
+					254,
+					255,
+					261,
+					262,
+					263,
+					264,
+					270,
+					272,
+					275,
+					277,
+					279,
+					281,
+					283,
+					285,
+					287,
+					288,
+					293,
+					295,
+					297
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 341,
+						"points": {
+							"src": {
+								"x": 50.71428571428578,
+								"y": -49
+							},
+							"dst": {
+								"x": 366.0952380952382,
+								"y": -50.825396825396865
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 348,
+						"points": {
+							"src": {
+								"x": 89.20634920634933,
+								"y": 390.6349206349208
+							},
+							"dst": {
+								"x": 460.9523809523811,
+								"y": 294.2857142857141
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 362,
+						"points": {
+							"src": {
+								"x": 460.9523809523811,
+								"y": 294.2857142857141
+							},
+							"dst": {
+								"x": 371.4285714285713,
+								"y": 627.1428571428569
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 364,
+						"points": {
+							"src": {
+								"x": 460.9523809523811,
+								"y": 294.2857142857141
+							},
+							"dst": {
+								"x": 82.85714285714243,
+								"y": 629.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 366,
+						"points": {
+							"src": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							},
+							"dst": {
+								"x": 232.85714285714272,
+								"y": 1462.857142857143
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 369,
+						"points": {
+							"src": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							},
+							"dst": {
+								"x": 505.714285714286,
+								"y": 1222.8571428571422
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 371,
+						"points": {
+							"src": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							},
+							"dst": {
+								"x": 917.1428571428576,
+								"y": 1161.4285714285716
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 373,
+						"points": {
+							"src": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							},
+							"dst": {
+								"x": 1228.5714285714284,
+								"y": 1295.7142857142856
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 374,
+						"points": {
+							"src": {
+								"x": 1228.5714285714284,
+								"y": 1295.7142857142856
+							},
+							"dst": {
+								"x": 1228.5714285714284,
+								"y": 981.4285714285709
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 375,
+						"points": {
+							"src": {
+								"x": 505.714285714286,
+								"y": 1222.8571428571422
+							},
+							"dst": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 376,
+						"points": {
+							"src": {
+								"x": 371.4285714285713,
+								"y": 627.1428571428569
+							},
+							"dst": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 378,
+						"points": {
+							"src": {
+								"x": 82.85714285714243,
+								"y": 629.9999999999999
+							},
+							"dst": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 379,
+						"points": {
+							"src": {
+								"x": 232.85714285714272,
+								"y": 1462.857142857143
+							},
+							"dst": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 381,
+						"points": {
+							"src": {
+								"x": 917.1428571428576,
+								"y": 1161.4285714285716
+							},
+							"dst": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 382,
+						"points": {
+							"src": {
+								"x": 1228.5714285714284,
+								"y": 981.4285714285709
+							},
+							"dst": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 383,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 737.1428571428571,
+								"y": 487.1428571428571
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 384,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 987.1428571428571,
+								"y": 311.4285714285714
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 385,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 1237.142857142857,
+								"y": 321.42857142857144
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 386,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 1364.285714285714,
+								"y": 545.7142857142856
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 388,
+						"points": {
+							"src": {
+								"x": 366.0952380952382,
+								"y": -50.825396825396865
+							},
+							"dst": {
+								"x": 235.57142857142833,
+								"y": 130.53968253968182
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 389,
+						"points": {
+							"src": {
+								"x": 235.57142857142833,
+								"y": 130.53968253968182
+							},
+							"dst": {
+								"x": 89.20634920634933,
+								"y": 390.6349206349208
+							}
+						}
+					}
+				],
+				"condIds": [
+					341,
+					348,
+					362,
+					364,
+					366,
+					369,
+					371,
+					373,
+					374,
+					375,
+					376,
+					378,
+					379,
+					381,
+					382,
+					383,
+					384,
+					385,
+					386,
+					388,
+					389
+				],
+				"scale": 0.7000000000000001,
+				"pos": {
+					"x": 236,
+					"y": 127
 				}
 			}
 		],
@@ -5375,7 +6396,8 @@
 			11,
 			27,
 			49,
-			57
+			57,
+			254
 		]
 	}
 }

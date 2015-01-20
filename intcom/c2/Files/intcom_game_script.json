@@ -2469,31 +2469,13 @@
 						202
 					],
 					"outCondIds": [
-						139
+						342
 					],
 					"props": {
 						"id": "mamulia",
 						"text": "Oh, I'm off the hook!",
 						"phraseType": "THINK",
 						"phraseSize": "MEDIUM"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 120,
-					"type": 10,
-					"label": "C2API_TheEnd",
-					"continue": false,
-					"inCondIds": [
-						139
-					],
-					"outCondIds": [],
-					"props": {
-						"name": "C2API_TheEnd",
-						"rollbackName": null,
-						"source": "c2",
-						"isPure": false,
-						"params": []
 					}
 				},
 				{
@@ -2728,6 +2710,37 @@
 						"ans3": "",
 						"ans4": ""
 					}
+				},
+				{
+					"ver": 1,
+					"id": 257,
+					"type": 10,
+					"label": "C2API_GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						342
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "parents_house",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "quiz",
+								"$$hashKey": "038"
+							}
+						]
+					}
 				}
 			],
 			"conds": [
@@ -2802,14 +2815,6 @@
 				{
 					"ver": 1,
 					"id": 137,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 139,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -2953,6 +2958,558 @@
 					"ver": 1,
 					"id": 261,
 					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 342,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 254,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 254,
+					"type": 9,
+					"label": "quiz",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						341
+					],
+					"props": {
+						"name": "quiz",
+						"objs": [
+							"Player",
+							"teacher"
+						],
+						"objPool": [],
+						"text": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 255,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						341
+					],
+					"outCondIds": [
+						388
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"teacher"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 261,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						388
+					],
+					"outCondIds": [
+						389
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "parents_house",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "quiz",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 262,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						389
+					],
+					"outCondIds": [
+						348
+					],
+					"props": {
+						"id": "teacher",
+						"text": "This is the end of the story.\nNow let's check your understanding of it!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 263,
+					"type": 3,
+					"label": "Oxford?",
+					"continue": false,
+					"inCondIds": [
+						348
+					],
+					"outCondIds": [
+						362,
+						364
+					],
+					"props": {
+						"id": "teacher",
+						"text": "The family was traveling to Oxford by car.\nIs it true?",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE",
+						"ans1": "True",
+						"ans2": "False",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 264,
+					"type": 3,
+					"label": "Enough fuel?",
+					"continue": false,
+					"inCondIds": [
+						376,
+						378
+					],
+					"outCondIds": [
+						366,
+						369
+					],
+					"props": {
+						"id": "teacher",
+						"text": "There was enough fuel in the tank to get to Oxford when the family left the house.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE",
+						"ans1": "True",
+						"ans2": "False",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 270,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						375,
+						379
+					],
+					"outCondIds": [
+						371,
+						373
+					],
+					"props": {
+						"id": "teacher",
+						"text": "What was inside the box that was gifted to grandma?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Earrings",
+						"ans2": "Nothing",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 272,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						374
+					],
+					"outCondIds": [
+						382
+					],
+					"props": {
+						"id": "teacher",
+						"text": "Grandma decided to put earrings to the box. But the box was empty.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 275,
+					"type": 10,
+					"label": "C2API_ShowSuccess",
+					"continue": true,
+					"inCondIds": [
+						362
+					],
+					"outCondIds": [
+						376
+					],
+					"props": {
+						"name": "C2API_ShowSuccess",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 277,
+					"type": 10,
+					"label": "C2API_ShowFail",
+					"continue": true,
+					"inCondIds": [
+						364
+					],
+					"outCondIds": [
+						378
+					],
+					"props": {
+						"name": "C2API_ShowFail",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 279,
+					"type": 10,
+					"label": "C2API_ShowFail",
+					"continue": true,
+					"inCondIds": [
+						366
+					],
+					"outCondIds": [
+						379
+					],
+					"props": {
+						"name": "C2API_ShowFail",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 281,
+					"type": 10,
+					"label": "C2API_ShowSuccess",
+					"continue": true,
+					"inCondIds": [
+						369
+					],
+					"outCondIds": [
+						375
+					],
+					"props": {
+						"name": "C2API_ShowSuccess",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 283,
+					"type": 10,
+					"label": "C2API_ShowSuccess",
+					"continue": true,
+					"inCondIds": [
+						371
+					],
+					"outCondIds": [
+						381
+					],
+					"props": {
+						"name": "C2API_ShowSuccess",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 285,
+					"type": 10,
+					"label": "C2API_ShowFail",
+					"continue": true,
+					"inCondIds": [
+						373
+					],
+					"outCondIds": [
+						374
+					],
+					"props": {
+						"name": "C2API_ShowFail",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 287,
+					"type": 10,
+					"label": "C2API_QuizInjectResult",
+					"continue": false,
+					"inCondIds": [
+						381,
+						382
+					],
+					"outCondIds": [
+						383,
+						384,
+						385,
+						386
+					],
+					"props": {
+						"name": "C2API_QuizInjectResult",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 288,
+					"type": 1,
+					"label": "0",
+					"continue": false,
+					"inCondIds": [
+						383
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "0 out of 3. That's fail!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 293,
+					"type": 1,
+					"label": "1",
+					"continue": false,
+					"inCondIds": [
+						384
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "1 out of 3. Not bad.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 295,
+					"type": 1,
+					"label": "2",
+					"continue": false,
+					"inCondIds": [
+						385
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "2 out of 3. Good.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 297,
+					"type": 1,
+					"label": "3",
+					"continue": false,
+					"inCondIds": [
+						386
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "3 out of 3. Perfect!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 341,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 348,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 362,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 364,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 366,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 369,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 371,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 373,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 374,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 375,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 376,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 378,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 379,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 381,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 382,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 383,
+					"type": 10,
+					"props": {
+						"name": "0"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 384,
+					"type": 10,
+					"props": {
+						"name": "1"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 385,
+					"type": 10,
+					"props": {
+						"name": "2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 386,
+					"type": 10,
+					"props": {
+						"name": "3"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 388,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 389,
+					"type": 8,
 					"props": {}
 				}
 			]
