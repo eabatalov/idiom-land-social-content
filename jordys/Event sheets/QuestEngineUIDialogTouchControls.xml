@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineUIDialogTouchControls</name>
+    <events>
+        <event-group description="" sid="1065750602010446" title="Quest dialog UI (touch controls)">
+            <sub-events>
+                <event-block sid="1534086371529808">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8746941375807473" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="3854976757086915">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5175562917504832" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1729835696259503">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="8815113866669646" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>For callers: quest controls should be shown before UI transitions take place because quest controls are blinking and taking player&apos;s attention.&#x0D;&#x0A;We need player to look only at dialog UI transitions (not buttons blinking)</comment>
+                <event-block sid="6829042214390396">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7991541446327445" type="Function">
+                            <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5473417775148658">
+                            <conditions />
+                            <actions>
+                                <action id="14" name="Log" sid="7324580580578183" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Show quest controls. has_next: &quot; &amp; QuestLevelRuntime.getHasNext &amp; &quot; has_back: &quot; &amp; QuestLevelRuntime.getHasBack</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4279937134941422" type="Function">
+                                    <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4387593757315857">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4582666815229277" type="System">
+                                            <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7203615658544899" type="Function">
+                                            <param id="0" name="Name">&quot;ShowDialogNextBtn&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8253727406392547">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3630067756118228" type="System">
+                                            <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="768819341161426" type="Function">
+                                            <param id="0" name="Name">&quot;ShowDialogBackBtn&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3689534493559476">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6215540450612424" type="System">
+                                            <param id="0" name="First value">QuestLevelRuntime.getHasBack</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="3777333446122799" type="System">
+                                            <param id="0" name="First value">QuestLevelRuntime.getHasNext</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="4214726207283378" type="QuestNavlClutch">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3704952468126362">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3932568086881826" type="Function">
+                            <param id="0" name="Name">&quot;ShowDialogNextBtn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2690148089539972">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="6895629828091892" type="QuestNavNextBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7659778599830337" type="Function">
+                                    <param id="0" name="Name">&quot;onQuestNavNextBtnShow&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="222793651358033">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3239794570606995" type="Function">
+                            <param id="0" name="Name">&quot;ShowDialogBackBtn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7051304812300578">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="714608039634316" type="QuestNavBackBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6748880631610582" type="Function">
+                                    <param id="0" name="Name">&quot;onQuestNavBackBtnShow&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8432866550931957">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1902849756938587" type="Function">
+                            <param id="0" name="Name">&quot;HideQuestControls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9370659963728511">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="7805928425971772" type="QuestNavBackBtn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1244302302673063" type="QuestNavNextBtn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1097592461509717" type="QuestNavlClutch">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1665531120817962" type="Function">
+                                    <param id="0" name="Name">&quot;onQuestNavHidden&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7963913448261745">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7104697408404468" type="Function">
+                            <param id="0" name="Name">&quot;onAfterUICmdSeqProc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8602740721707717">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="5793862064153965" type="Function">
+                                    <param id="0" name="Name">&quot;ShowQuestControls&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

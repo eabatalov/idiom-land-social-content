@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComLevelDialogUIElementsTransitions</name>
+    <events>
+        <comment>NOTE: Code in this file may be separated to quest engine and level UI specific parts if needed</comment>
+        <comment>XXX leave it not in QuestDialog because dependencies will break on var deletetion</comment>
+        <event-group description="" sid="969413197294685" title="Quest dialog UI">
+            <sub-events>
+                <comment>&quot;STOPPED&quot; - no dialog step transitions are running&#x0D;&#x0A;&quot;STOPPED&quot; -&gt; &quot;TRANSITION_PENDING&quot; -&gt; &quot;TRANSITION_RUNNING&quot; -&gt; &quot;STEP_SHOW&quot; -&gt; &quot;STOPPED&quot;...</comment>
+                <variable constant="0" name="DialogUITransitionState" sid="1398252681402346" static="1" type="text">STOPPED</variable>
+                <variable constant="0" name="IsDialogUIPositioningStarted" sid="920441695999561" static="1" type="number">0</variable>
+                <comment>NPCP || NPCQ</comment>
+                <variable constant="0" name="CurrentDialogStepType" sid="100243762214278" static="1" type="text">NONE</variable>
+                <variable constant="0" name="CurrentDialogStepTargetUID" sid="745447582175586" static="1" type="number">0</variable>
+                <variable constant="0" name="CurrentDialogStepTargetID" sid="5998317827788772" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepTargetName" sid="1897180071777137" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgText" sid="1212501585194827" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgPhraseType" sid="8799376941356403" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgPhraseSize" sid="1434574900339979" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgAns1" sid="3727977218013296" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgAns2" sid="7024611937349962" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgAns3" sid="3370910633141851" static="1" type="text"></variable>
+                <variable constant="0" name="CurrentDialogStepArgAns4" sid="859894118807874" static="1" type="text"></variable>
+                <event-block sid="2422446890516834">
+                    <conditions>
+                        <condition id="0" name="On function" sid="764197738781917" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="412694249316967">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="4279432890691479" type="Function">
+                                    <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="7332049745168106" type="Function">
+                                    <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="2096605944371447" title="Quest dialog UI transitions">
+                    <sub-events>
+                        <event-block sid="5988855981867299">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4232207446988122" type="Function">
+                                    <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6575639396610187">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="897129423746816" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9337686832014888" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetUID</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6821534779903832" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetID</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4802226624669404" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetName</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2949351273205132" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgText</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3035334622803295" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9807387342663036" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns1</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7974508542301793" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns2</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4386774862948652" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns3</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3960202437216785" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns4</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1840505895481402">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4168935094695636" type="Function">
+                                    <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1296172376665128">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="770040688889699" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;STOPPED&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2119759281512796" type="System">
+                                            <param id="0" name="Variable">IsDialogUIPositioningStarted</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7244590661368552">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8373795978448313" type="Function">
+                                    <param id="0" name="Name">&quot;onDialogHidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="106132036912841" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;DialogState: &quot; &amp; DialogUITransitionState</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7242952126359453">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9949708342603732" type="Function">
+                                    <param id="0" name="Name">&quot;onDialogVisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="3642959793497668" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;DialogState: &quot; &amp; DialogUITransitionState</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1086270480141835">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2024734589785104" type="Function">
+                                    <param id="0" name="Name">&quot;onShowPhraseFinished&quot;</param>
+                                </condition>
+                                <condition id="0" name="On function" sid="353884083953509" type="Function">
+                                    <param id="0" name="Name">&quot;onShowQuizzFinished&quot;</param>
+                                </condition>
+                                <condition id="0" name="On function" sid="8786753090493846" type="Function">
+                                    <param id="0" name="Name">&quot;onShowNotificationFinished&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="6482220227571179" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;onShowXXXFinished&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9772557333360222">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9794090461444666" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2709686245962297">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="5370635132082436" type="System">
+                                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                                    <param id="1" name="Value">&quot;STEP_SHOW&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Transition finish notifiers</comment>
+                                        <event-block sid="2277519569666159">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="4321297377878843" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;NOTIFICATION&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="7781754068792083" type="Function">
+                                                    <param id="0" name="Name">&quot;onRunNotificationFinished&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2839260611316442">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="7287719961025767" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="2777609450855363" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9759037426599223" type="Function">
+                                                    <param id="0" name="Name">&quot;onRunNPCPhraseFinished&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2506923477105921">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="8492361010045994" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="9920250364815767" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4398311724542509" type="Function">
+                                                    <param id="0" name="Name">&quot;onRunNPCQuizzFinished&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1172434658560649">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6733031538806169" type="Function">
+                                    <param id="0" name="Name">&quot;RunNextDialogStepTransition&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Need to position dialog elements before running transitions to focus right</comment>
+                                <event-block sid="4578881098868702">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7477401277446601" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9734672298314608" type="System">
+                                            <param id="0" name="Variable">IsDialogUIPositioningStarted</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8534485977534207" type="Function">
+                                            <param id="0" name="Name">&quot;PositionDialogStep&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="1846923187471372">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1940629542870468" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="3498160596007627" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="1397792644842268" type="System">
+                                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                                    <param id="1" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="6164624999555192" type="System">
+                                                    <param id="0" name="Variable">CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                    <param id="1" name="Value">CurrentDialogStepTargetID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block any="1" sid="6341874737026462">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="33662020499207" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="995505883178565" type="Function">
+                                                            <param id="0" name="Name">&quot;RenderPhrase&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepArgText{###}CurrentDialogStepArgPhraseType{###}CurrentDialogStepTargetID{###}CurrentDialogStepTargetName{###}CurrentDialogStepArgPhraseSize</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="1440949659788079" type="Function">
+                                                            <param id="0" name="Name">&quot;ShowPhrase&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="8923427867943232">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="1121970718854724" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="892001086548449" type="Function">
+                                                            <param id="0" name="Name">&quot;RenderQuizz&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepArgText{###}CurrentDialogStepArgPhraseType{###}CurrentDialogStepTargetID{###}CurrentDialogStepTargetName{###}CurrentDialogStepArgAns1{###}CurrentDialogStepArgAns2{###}CurrentDialogStepArgAns3{###}CurrentDialogStepArgAns4{###}CurrentDialogStepArgPhraseSize</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="4921037501466652" type="Function">
+                                                            <param id="0" name="Name">&quot;ShowQuizz&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="4714394403589018">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="2562139086176787" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="7802953131354069" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;NOTIFICATION&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="4672732661195773" type="System">
+                                                    <param id="0" name="Variable">DialogUITransitionState</param>
+                                                    <param id="1" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="5816886402114509" type="System">
+                                                    <param id="0" name="Variable">CURRENT_TALKING_CHAR_ID_ON_STAGE</param>
+                                                    <param id="1" name="Value">&quot;Author&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="1975248324936283" type="Function">
+                                                    <param id="0" name="Name">&quot;RenderNotification&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CurrentDialogStepArgText</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="9262824237869607" type="Function">
+                                                    <param id="0" name="Name">&quot;ShowNotification&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8171324717824782">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="1527916058587722" type="System" />
+                                <condition id="-14" name="Compare variable" sid="385160499123939" type="System">
+                                    <param id="0" name="Variable">IsDialogUIPositioningStarted</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7159170725805914" type="Function">
+                                    <param id="0" name="Name">&quot;PositionDialogStep&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7880502816166155">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4064329658398754" type="Function">
+                                    <param id="0" name="Name">&quot;PositionDialogStep&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="6906775196547092">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8168945271787426" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="6279368416873686" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7746744828370376">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="4156473227874324" type="NPC">
+                                                    <param id="0" name="Unique ID">CurrentDialogStepTargetUID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="1801676435522333" type="Function">
+                                                    <param id="0" name="Name">&quot;PointPhraseToPosition&quot;</param>
+                                                    <param id="1" name="Parameter {n}">NPC.ImagePointX(&quot;SpeechOrigin&quot;){###}NPC.ImagePointY(&quot;SpeechOrigin&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): func name&#x0D;&#x0A;param(1): 4th func param</comment>
+                        <event-block sid="5331855320623979">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2306550232031034" type="Function">
+                                    <param id="0" name="Name">&quot;CallFuncWithCurrentTalkingCharOuterRect&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="CharOuterRectX1" sid="7531626733747657" static="0" type="number">0</variable>
+                                <variable constant="0" name="CharOuterRectX2" sid="384310841411898" static="0" type="number">0</variable>
+                                <variable constant="0" name="CharOuterRectY1" sid="5482477888780341" static="0" type="number">0</variable>
+                                <variable constant="0" name="CharOuterRectY2" sid="2745455787616098" static="0" type="number">0</variable>
+                                <event-block any="1" sid="6941972361772893">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8867475185056126" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="4278317439881298" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3373676199994091">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="1152402646460757" type="NPC">
+                                                    <param id="0" name="Unique ID">CurrentDialogStepTargetUID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="3438885380447476" type="System">
+                                                    <param id="0" name="Variable">CharOuterRectX1</param>
+                                                    <param id="1" name="Value">NPC.X - NPC.Width/ 2</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="6575406817952183" type="System">
+                                                    <param id="0" name="Variable">CharOuterRectY1</param>
+                                                    <param id="1" name="Value">NPC.Y - NPC.Height / 2</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="5900259594228934" type="System">
+                                                    <param id="0" name="Variable">CharOuterRectX2</param>
+                                                    <param id="1" name="Value">NPC.X + NPC.Width/ 2</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="1841173921298543" type="System">
+                                                    <param id="0" name="Variable">CharOuterRectY2</param>
+                                                    <param id="1" name="Value">NPC.Y + NPC.Height / 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2973710291240337">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2622691135431163" type="Function">
+                                            <param id="0" name="Name">&quot;PositionDialogStep&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="182667185000658" type="System">
+                                            <param id="0" name="Variable">CharOuterRectX1</param>
+                                            <param id="1" name="Value">min(DialogSpeechBg.X, CharOuterRectX1)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2944113401448903" type="System">
+                                            <param id="0" name="Variable">CharOuterRectY1</param>
+                                            <param id="1" name="Value">min(DialogSpeechBg.Y, CharOuterRectY1)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1775254324483763" type="System">
+                                            <param id="0" name="Variable">CharOuterRectX2</param>
+                                            <param id="1" name="Value">max(DialogSpeechBg.X + DialogSpeechBg.QuestEngineSpriteExtras.animFrameWidth( DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0), CharOuterRectX2)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="853036121112689" type="System">
+                                            <param id="0" name="Variable">CharOuterRectY2</param>
+                                            <param id="1" name="Value">max(DialogSpeechBg.Y + DialogSpeechBg.QuestEngineSpriteExtras.animFrameHeight(DialogSpeechBg.QuestEngineSpriteExtras.getCurrentAnimName, 0), CharOuterRectY2)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4304634051681513" type="Function">
+                                            <param id="0" name="Name">Function.Param(0)</param>
+                                            <param id="1" name="Parameter {n}">CharOuterRectX1{###}CharOuterRectY1{###}CharOuterRectX2{###}CharOuterRectY2{###}Function.Param(1)</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="3683010555468262" type="Function">
+                                            <param id="0" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7187286841125951">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7276484645931701" type="Function">
+                                    <param id="0" name="Name">&quot;onPhraseVisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2435211279943078">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4332586416036312" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TRANSITION_RUNNING&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="1846122096865694" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;onPhraseVisible&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="6315603385097093">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="8370223171471751" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;SPEAK&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="5191654844386688">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="5027969514068066" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="3898000489685818" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="8602256126347749" type="Function">
+                                                            <param id="0" name="Name">&quot;AnimNPCSay&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="8912830875612797">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="9551650377487034" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="317911055355482" type="System">
+                                                    <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;THINK&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="5574627166599601">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="597680896854104" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCP&quot;</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="1846749681866872" type="System">
+                                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;NPCQ&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="3358952245057313" type="Function">
+                                                            <param id="0" name="Name">&quot;AnimNPCThink&quot;</param>
+                                                            <param id="1" name="Parameter {n}">CurrentDialogStepTargetUID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="1577960149544768" title="Quest dialog UI (NPC)">
+                    <sub-events>
+                        <comment>Prerequisites: dialog hiding should be completed or running when functions are called</comment>
+                        <comment>param(0): NPC uid</comment>
+                        <event-block sid="2291611719647829">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4869219081682725" type="Function">
+                                    <param id="0" name="Name">&quot;RunNPCPhrase&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="8962122879126596" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="8405319738882157">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4621959163408316" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;STOPPED&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="3398832403678888" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;STEP_SHOW&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9433560448307386" type="Function">
+                                            <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1714112891377382" type="Function">
+                                            <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="264175153451144" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6295199421575603" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Value">&quot;NPCP&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5855994505908511" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetUID</param>
+                                            <param id="1" name="Value">NPC.UID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1982361331576859" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetID</param>
+                                            <param id="1" name="Value">NPC.NpcID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2677343637144443" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetName</param>
+                                            <param id="1" name="Value">NPC.NpcName</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7063956363751568" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1477958654394324" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseSize</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseSize</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7585777611360504" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgText</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getText</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4083378822148896" type="Function">
+                                            <param id="0" name="Name">&quot;RunNextDialogStepTransition&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): NPC uid</comment>
+                        <event-block sid="2986311682579704">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6535985195089081" type="Function">
+                                    <param id="0" name="Name">&quot;RunNPCQuizz&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2275424522732616" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="8669168678159219">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4576562999594525" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;STOPPED&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="9484332011751065" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;STEP_SHOW&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7466870765701752" type="Function">
+                                            <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2069647624428976" type="Function">
+                                            <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4925237451434835" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="635766706639037" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Value">&quot;NPCQ&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8726288628783004" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetUID</param>
+                                            <param id="1" name="Value">NPC.UID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1087182450767706" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetID</param>
+                                            <param id="1" name="Value">NPC.NpcID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2834069235588863" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepTargetName</param>
+                                            <param id="1" name="Value">NPC.NpcName</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2533740030057896" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6322713478126035" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgPhraseSize</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getPhraseSize</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8111857732104809" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgText</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getText</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9174667225916929" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns1</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getAnswer1Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2523082733767475" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns2</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getAnswer2Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2591594485538284" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns3</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getAnswer3Text</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9383192009716597" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgAns4</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getAnswer4Text</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8840880036648363" type="Function">
+                                            <param id="0" name="Name">&quot;RunNextDialogStepTransition&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="710615432483266" title="Quest dialog UI (Notification)">
+                    <sub-events>
+                        <event-block sid="3086431518048414">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9583882527726912" type="Function">
+                                    <param id="0" name="Name">&quot;RunNotification&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="4629973083935938">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="125065414293994" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;STOPPED&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="127540885514524" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;STEP_SHOW&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3148612069419097" type="Function">
+                                            <param id="0" name="Name">&quot;ResetDialogUIState&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6970954655932032" type="Function">
+                                            <param id="0" name="Name">&quot;ResetDialogStepState&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9115787008368876" type="System">
+                                            <param id="0" name="Variable">DialogUITransitionState</param>
+                                            <param id="1" name="Value">&quot;TRANSITION_PENDING&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2326585348138385" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepType</param>
+                                            <param id="1" name="Value">&quot;NOTIFICATION&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1997975287248424" type="System">
+                                            <param id="0" name="Variable">CurrentDialogStepArgText</param>
+                                            <param id="1" name="Value">QuestLevelRuntime.getText</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8332033472343096" type="Function">
+                                            <param id="0" name="Name">&quot;RunNextDialogStepTransition&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

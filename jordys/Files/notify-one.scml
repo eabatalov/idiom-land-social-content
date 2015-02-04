@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r2">
+    <folder id="0" name="body">
+        <file id="0" name="body/body.png" width="604" height="304" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="1" name="title">
+        <file id="0" name="title/title.png" width="600" height="72" pivot_x="1" pivot_y="1"/>
+        <file id="1" name="title/title-green.png" width="600" height="72" pivot_x="1" pivot_y="1"/>
+    </folder>
+    <folder id="2" name="img">
+        <file id="0" name="img/img-ava.png" width="170" height="160" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="img/img-keys.png" width="170" height="160" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="img/img-alt.png" width="170" height="160" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="3" name="text-blog">
+        <file id="0" name="text-blog/text-blog.png" width="324" height="129" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="4" name="text-title">
+        <file id="0" name="text-title/text-title.png" width="101" height="33" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <folder id="5">
+        <file id="0" name="notification_show.wav" type="sound"/>
+        <file id="1" name="notification_cross.wav" type="sound"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <obj_info name="entity_000_body" realname="body" type="sprite">
+            <frames>
+                <i folder="0" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="entity_000_title" realname="title" type="sprite">
+            <frames>
+                <i folder="1" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="entity_000_img-ava" realname="img-ava" type="sprite">
+            <frames>
+                <i folder="2" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="entity_000_text-blog" realname="text-blog" type="sprite">
+            <frames>
+                <i folder="3" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="entity_000_text-title" realname="text-title" type="sprite">
+            <frames>
+                <i folder="4" file="0"/>
+            </frames>
+        </obj_info>
+        <animation id="0" name="start" length="1000" interval="100" looping="false">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="body" folder="0" file="0" abs_x="-361.952381" abs_y="421" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" name="title" folder="1" file="0" abs_x="-358.054575" abs_y="416.074405" abs_angle="0.177751" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" name="img-ava" folder="2" file="0" abs_x="-325.757576" abs_y="325.497835" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" name="text-blog" folder="3" file="0" abs_x="-129.307359" abs_y="306.450216" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" name="text-title" folder="4" file="0" abs_x="-111.904762" abs_y="396.320346" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="1" time="301">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="1" z_index="4"/>
+                </key>
+                <key id="2" time="379">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="2" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="1" z_index="4"/>
+                </key>
+                <key id="3" time="659">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="3" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="3" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="2" z_index="4"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="body">
+                <key id="0">
+                    <object folder="0" file="0" x="-361.952381" y="421" angle="0" a="0"/>
+                </key>
+                <key id="1" time="301" spin="-1">
+                    <object folder="0" file="0" x="-301" y="161" angle="6.704816"/>
+                </key>
+                <key id="2" time="659" spin="0">
+                    <object folder="0" file="0" x="-300.047619" y="161" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="title">
+                <key id="0">
+                    <object folder="1" file="0" x="241.942538" y="417.935806" angle="0.177751" a="0"/>
+                </key>
+                <key id="1" time="301" spin="-1">
+                    <object folder="1" file="0" x="272.009559" y="351.942063" angle="13.272501"/>
+                </key>
+                <key id="2" time="379" spin="-1">
+                    <object folder="1" file="0" x="300.768859" y="185.222402" angle="3.098895"/>
+                </key>
+                <key id="3" time="659">
+                    <object folder="1" file="0" x="300.662162" y="159.062179" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="2" name="img-ava">
+                <key id="0" spin="0">
+                    <object folder="2" file="0" x="-325.757576" y="325.497835" angle="0" a="0"/>
+                </key>
+                <key id="1" time="301" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="64.545455" angle="0"/>
+                </key>
+                <key id="2" time="379" spin="0">
+                    <object folder="2" file="0" x="-258.138528" y="76.926407" angle="0"/>
+                </key>
+                <key id="3" time="659" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="64.545455" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="3" name="text-blog">
+                <key id="0">
+                    <object folder="3" file="0" x="-129.307359" y="306.450216" angle="0" a="0"/>
+                </key>
+                <key id="1" time="301" spin="-1">
+                    <object folder="3" file="0" x="-52.566045" y="72.948973" angle="6.704816" a="0"/>
+                </key>
+                <key id="2" time="659" spin="0">
+                    <object folder="3" file="0" x="-64.545455" y="44.545455" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="4" obj="4" name="text-title">
+                <key id="0">
+                    <object folder="4" file="0" x="-111.904762" y="396.320346" angle="0" a="0"/>
+                </key>
+                <key id="1" time="301" spin="-1">
+                    <object folder="4" file="0" x="-29.083153" y="169.075396" angle="6.704816" a="0"/>
+                </key>
+                <key id="2" time="659" spin="0">
+                    <object folder="4" file="0" x="-50" y="138" angle="0"/>
+                </key>
+            </timeline>
+            <soundline id="-1" name="notification_show">
+                <key id="0" time="1">
+                    <object folder="5" file="0"/>
+                </key>
+            </soundline>
+        </animation>
+        <animation id="1" name="idle" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="body" folder="0" file="0" abs_x="-300.047619" abs_y="161" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" name="title" folder="1" file="0" abs_x="-299.337838" abs_y="159.062179" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" name="img-ava" folder="2" file="0" abs_x="-259.090909" abs_y="64.545455" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" name="text-blog" folder="3" file="0" abs_x="-64.545455" abs_y="44.545455" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" name="text-title" folder="4" file="0" abs_x="-50" abs_y="138" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="4" key="0" z_index="4"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="body">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-300.047619" y="161" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="title">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="300.662162" y="159.062179" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="2" name="img-ava">
+                <key id="0" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="64.545455" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="3" name="text-blog">
+                <key id="0" spin="0">
+                    <object folder="3" file="0" x="-64.545455" y="44.545455" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="4" obj="4" name="text-title">
+                <key id="0" spin="0">
+                    <object folder="4" file="0" x="-50" y="138" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="2" name="cross" length="1000" interval="100" looping="false">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="body" folder="0" file="0" abs_x="-219.047619" abs_y="161" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" name="title" folder="1" file="0" abs_x="-218.337838" abs_y="159.062179" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" name="img-ava" folder="2" file="0" abs_x="-178.090909" abs_y="64.545455" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" name="text-blog" folder="3" file="0" abs_x="16.454545" abs_y="44.545455" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" name="text-title" folder="4" file="0" abs_x="31" abs_y="138" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="0" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="1" time="204">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="1" z_index="4"/>
+                </key>
+                <key id="2" time="399">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="2" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="2" z_index="4"/>
+                </key>
+                <key id="3" time="897">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="3" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="2" z_index="4"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="body">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-219.047619" y="161" angle="0" a="0"/>
+                </key>
+                <key id="1" time="204" spin="0">
+                    <object folder="0" file="0" x="-300.047619" y="161" angle="0"/>
+                </key>
+                <key id="2" time="399" spin="0">
+                    <object folder="0" file="0" x="-300.047619" y="161" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="title">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="381.662162" y="159.062179" angle="0" a="0"/>
+                </key>
+                <key id="1" time="204" spin="0">
+                    <object folder="1" file="0" x="300.662162" y="159.062179" angle="0"/>
+                </key>
+                <key id="2" time="399" spin="0">
+                    <object folder="1" file="0" x="300.662162" y="159.062179" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="2" name="img-ava">
+                <key id="0" spin="0">
+                    <object folder="2" file="0" x="-178.090909" y="64.545455" angle="0" a="0"/>
+                </key>
+                <key id="1" time="204" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="64.545455" angle="0"/>
+                </key>
+                <key id="2" time="399" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="58.54546" angle="0"/>
+                </key>
+                <key id="3" time="897" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="64.54546" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="3" name="text-blog">
+                <key id="0" spin="0">
+                    <object folder="3" file="0" x="16.454545" y="44.545455" angle="0" a="0"/>
+                </key>
+                <key id="1" time="204" spin="0">
+                    <object folder="3" file="0" x="-64.545455" y="44.545455" angle="0"/>
+                </key>
+                <key id="2" time="399" spin="0">
+                    <object folder="3" file="0" x="-64.545455" y="44.545455" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="4" obj="4" name="text-title">
+                <key id="0" spin="0">
+                    <object folder="4" file="0" x="31" y="138" angle="0" a="0"/>
+                </key>
+                <key id="1" time="204" spin="0">
+                    <object folder="4" file="0" x="-50" y="138" angle="0"/>
+                </key>
+                <key id="2" time="399" spin="0">
+                    <object folder="4" file="0" x="-50" y="138" angle="0"/>
+                </key>
+            </timeline>
+            <soundline id="-1" name="notification_cross">
+                <key id="0" time="2">
+                    <object folder="5" file="1"/>
+                </key>
+            </soundline>
+        </animation>
+        <animation id="3" name="end" length="1000" interval="100" looping="false">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="body" folder="0" file="0" abs_x="-300.047619" abs_y="161" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" name="title" folder="1" file="0" abs_x="-299.337838" abs_y="159.249171" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" name="img-ava" folder="2" file="0" abs_x="-259.090909" abs_y="64.545455" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" name="text-blog" folder="3" file="0" abs_x="-64.545455" abs_y="44.545455" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" name="text-title" folder="4" file="0" abs_x="-50" abs_y="138" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="1" time="452">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="1" z_index="4"/>
+                </key>
+                <key id="2" time="602">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="1" z_index="4"/>
+                </key>
+                <key id="3" time="758">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="3" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="2" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="2" z_index="4"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="body">
+                <key id="0" spin="-1">
+                    <object folder="0" file="0" x="-300.047619" y="161" angle="0"/>
+                </key>
+                <key id="1" time="602">
+                    <object folder="0" file="0" x="-300.047619" y="161" angle="352.229808" a="0.5"/>
+                </key>
+                <key id="2" time="758" spin="-1">
+                    <object folder="0" file="0" x="-274.047619" y="-58" angle="5.036709" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="title">
+                <key id="0">
+                    <object folder="1" file="0" x="300.662162" y="159.249171" angle="0"/>
+                </key>
+                <key id="1" time="452" spin="-1">
+                    <object folder="1" file="0" x="302.662162" y="181.249171" angle="1.842694"/>
+                </key>
+                <key id="2" time="602">
+                    <object folder="1" file="0" x="293.662162" y="81.249171" angle="354.720032" a="0.5"/>
+                </key>
+                <key id="3" time="758" spin="-1">
+                    <object folder="1" file="0" x="312.662162" y="-16.750829" angle="19.963219" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="2" name="img-ava">
+                <key id="0" spin="0">
+                    <object folder="2" file="0" x="-259.090909" y="64.545455" angle="0"/>
+                </key>
+                <key id="1" time="452" spin="0">
+                    <object folder="2" file="0" x="-262.342942" y="75.927568" angle="0"/>
+                </key>
+                <key id="2" time="758" spin="0">
+                    <object folder="2" file="0" x="-224.131559" y="-15.129342" angle="0" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="3" name="text-blog">
+                <key id="0" spin="0">
+                    <object folder="3" file="0" x="-64.545455" y="44.545455" angle="0"/>
+                </key>
+                <key id="1" time="452" spin="0">
+                    <object folder="3" file="0" x="-67.797487" y="55.927568" angle="0"/>
+                </key>
+                <key id="2" time="758" spin="0">
+                    <object folder="3" file="0" x="-29.586105" y="-35.129342" angle="0" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="4" obj="4" name="text-title">
+                <key id="0" spin="0">
+                    <object folder="4" file="0" x="-50" y="138" angle="0"/>
+                </key>
+                <key id="1" time="452" spin="0">
+                    <object folder="4" file="0" x="-33.252033" y="149.654841" angle="0"/>
+                </key>
+                <key id="2" time="758" spin="0">
+                    <object folder="4" file="0" x="4.95935" y="58.597931" angle="0" a="0"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

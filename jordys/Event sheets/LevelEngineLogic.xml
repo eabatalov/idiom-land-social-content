@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelEngineLogic</name>
+    <events>
+        <include>LevelBootstrap</include>
+        <include>LevelFade</include>
+        <include>LevelStartFinish</include>
+        <include>LevelInputMode</include>
+        <include>LevelAnimationsInit</include>
+    </events>
+</c2eventsheet>

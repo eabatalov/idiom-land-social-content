@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">IntComGame</layout>
+        <event-sheet order="1">IntComGameAllStages</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="animationresultFamily" />
+        <family expanded="0" name="notifyoneFamily" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Menus/" />
+        <folder expanded="1" path="object-folder/Menus/Common/" />
+        <folder expanded="1" path="object-folder/Menus/Common/Navigation/" />
+        <folder expanded="1" path="object-folder/Menus/LevelResultsBrief/" />
+        <folder expanded="1" path="object-folder/Menus/LevelResultsBrief/Popup/" />
+        <folder expanded="1" path="object-folder/LevelEngines/" />
+        <folder expanded="1" path="object-folder/LevelEngines/QuestLevelEngine/" />
+        <folder expanded="1" path="object-folder/LevelEngines/QuestLevelEngine/UILib/" />
+        <folder expanded="1" path="object-folder/LevelEngines/QuestLevelEngine/UILib/Dialog/" />
+        <folder expanded="1" path="object-folder/LevelEngines/QuestLevelEngine/UILib/DialogTouchControls/" />
+        <folder expanded="1" path="object-folder/LevelEngines/QuestLevelEngine/CoreLib/" />
+        <folder expanded="1" path="object-folder/LevelEngines/QuestLevelEngine/CoreLib/Plugins/" />
+        <folder expanded="1" path="object-folder/LevelEngines/LevelEngine/" />
+        <folder expanded="1" path="object-folder/LevelEngines/LevelEngine/CommonC2Deps/" />
+        <folder expanded="1" path="object-folder/LevelEngines/LevelEngine/UILib/" />
+        <folder expanded="1" path="object-folder/LevelEngines/LevelEngine/UILib/SideMenu/" />
+        <folder expanded="1" path="object-folder/LevelEngines/LevelEngine/UILib/ResultNotification/" />
+        <folder expanded="1" path="object-folder/LevelEngines/LevelEngine/Logic/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/UILib/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/UILib/GameHelp/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/UILib/Helpers/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/UILib/NotificationAnimation/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/UILib/StageMarker/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/Logic/" />
+        <folder expanded="1" path="object-folder/LevelEngines/IntComLevelEngine/Logic/NPC/" />
+        <folder expanded="0" path="object-folder/IntComGame/" />
+        <folder expanded="1" path="object-folder/IntComGame/leaving/" />
+        <folder expanded="1" path="object-folder/IntComGame/motorway/" />
+        <folder expanded="1" path="object-folder/IntComGame/near_parents_house/" />
+        <folder expanded="1" path="object-folder/IntComGame/parents_house/" />
+        <folder expanded="1" path="object-folder/IntComGame/quiz/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/Menus/" />
+        <folder expanded="1" path="layout-folder/Menus/LevelResults/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Menus/" />
+        <folder expanded="1" path="event-folder/Menus/LevelResults/" />
+        <folder expanded="1" path="event-folder/Menus/Common/" />
+        <folder expanded="1" path="event-folder/Common/" />
+        <folder expanded="1" path="event-folder/IntComGame/" />
+        <folder expanded="1" path="event-folder/IntComGame/Stages/" />
+        <folder expanded="0" path="event-folder/LevelEngines/" />
+        <folder expanded="0" path="event-folder/LevelEngines/QuestLevelEngine/" />
+        <folder expanded="1" path="event-folder/LevelEngines/QuestLevelEngine/CoreLib/" />
+        <folder expanded="1" path="event-folder/LevelEngines/QuestLevelEngine/UILib/" />
+        <folder expanded="0" path="event-folder/LevelEngines/LevelEngine/" />
+        <folder expanded="1" path="event-folder/LevelEngines/LevelEngine/UILib/" />
+        <folder expanded="1" path="event-folder/LevelEngines/LevelEngine/UILib/SideMenu/" />
+        <folder expanded="1" path="event-folder/LevelEngines/LevelEngine/Logic/" />
+        <folder expanded="0" path="event-folder/LevelEngines/IntComLevelEngine/" />
+        <folder expanded="1" path="event-folder/LevelEngines/IntComLevelEngine/UILib/" />
+        <folder expanded="1" path="event-folder/LevelEngines/IntComLevelEngine/Logic/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Spriter animations/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/Coins/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/AnimResult/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/Foxy/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/Notification/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/NPC/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/TalkStarter/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/Help/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/demo1/Carousel/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/demo1/Secret/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/Common/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/demo1/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/IntComLevelEngine/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/LevelEngine/" />
+        <folder expanded="1" path="sound-folder/Menus/" />
+        <folder expanded="1" path="sound-folder/LevelEngines/" />
+        <folder expanded="1" path="animation-folder/BackBtn/" />
+        <folder expanded="1" path="animation-folder/LevelReplayBtn/" />
+        <folder expanded="1" path="animation-folder/LevelNextBtn/" />
+        <folder expanded="1" path="animation-folder/MenuBg/" />
+        <folder expanded="1" path="animation-folder/MainMenuFade/" />
+        <folder expanded="1" path="animation-folder/SecondMenuBg/" />
+        <folder expanded="1" path="animation-folder/LevelResultsPopupBackground/" />
+        <folder expanded="1" path="animation-folder/LevelResultsPopupHeader/" />
+        <folder expanded="1" path="animation-folder/LevelResultsPopupBtnNo/" />
+        <folder expanded="1" path="animation-folder/LevelResultsPopupBtnYes/" />
+        <folder expanded="1" path="animation-folder/LevelResultsStars/" />
+        <folder expanded="1" path="animation-folder/DialogAns1Bg/" />
+        <folder expanded="1" path="animation-folder/DialogAns2Bg/" />
+        <folder expanded="1" path="animation-folder/DialogAns3Bg/" />
+        <folder expanded="1" path="animation-folder/DialogAns4Bg/" />
+        <folder expanded="1" path="animation-folder/DialogAnsBg/" />
+        <folder expanded="1" path="animation-folder/DialogPhraseBg/" />
+        <folder expanded="1" path="animation-folder/DialogSpeechBg/" />
+        <folder expanded="1" path="animation-folder/DialogSpeakerPhoto/" />
+        <folder expanded="1" path="animation-folder/QuestNavBackBtn/" />
+        <folder expanded="1" path="animation-folder/QuestNavlClutch/" />
+        <folder expanded="1" path="animation-folder/QuestNavNextBtn/" />
+        <folder expanded="1" path="animation-folder/SideMenuBg/" />
+        <folder expanded="1" path="animation-folder/SideMenuTrigger/" />
+        <folder expanded="1" path="animation-folder/NavMainMenuBtn/" />
+        <folder expanded="1" path="animation-folder/PauseBtn/" />
+        <folder expanded="1" path="animation-folder/GameHelpBtn/" />
+        <folder expanded="1" path="animation-folder/animationresult_animationresult_star/" />
+        <folder expanded="1" path="animation-folder/animationresult_animationresult_result1/" />
+        <folder expanded="1" path="animation-folder/animationresult_animationresult_point0/" />
+        <folder expanded="1" path="animation-folder/GameHelpBg/" />
+        <folder expanded="1" path="animation-folder/NavHelper/" />
+        <folder expanded="1" path="animation-folder/QuizzHelper/" />
+        <folder expanded="1" path="animation-folder/notifyone_entity_000_body/" />
+        <folder expanded="1" path="animation-folder/notifyone_entity_000_title/" />
+        <folder expanded="1" path="animation-folder/notifyone_entity_000_imgava/" />
+        <folder expanded="1" path="animation-folder/notifyone_entity_000_textblog/" />
+        <folder expanded="1" path="animation-folder/notifyone_entity_000_texttitle/" />
+        <folder expanded="1" path="animation-folder/StageMarker/" />
+        <folder expanded="1" path="animation-folder/NPC/" />
+        <folder expanded="1" path="animation-folder/CameraFocusIndicator/" />
+        <folder expanded="1" path="animation-folder/LeavingHouse/" />
+        <folder expanded="1" path="animation-folder/LeavingCarFront/" />
+        <folder expanded="1" path="animation-folder/Road/" />
+        <folder expanded="1" path="animation-folder/MotorwayBg/" />
+        <folder expanded="1" path="animation-folder/MotorwayCarSide/" />
+        <folder expanded="1" path="animation-folder/NearParentsHouse/" />
+        <folder expanded="1" path="animation-folder/Tree/" />
+        <folder expanded="1" path="animation-folder/ParentsHouseBg/" />
+        <folder expanded="1" path="animation-folder/QuizBg/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/Sprite17/" />
+        <folder expanded="1" path="animation-folder/Sprite18/" />
+        <folder expanded="1" path="animation-folder/Sprite19/" />
+        <folder expanded="1" path="animation-folder/Sprite20/" />
+        <folder expanded="1" path="animation-folder/Sprite21/" />
+        <folder expanded="1" path="animation-folder/Sprite22/" />
+        <folder expanded="1" path="animation-folder/Sprite23/" />
+        <folder expanded="1" path="animation-folder/Sprite25/" />
+        <folder expanded="1" path="animation-folder/Sprite26/" />
+    </folders-expanded>
+</c2uistate>
