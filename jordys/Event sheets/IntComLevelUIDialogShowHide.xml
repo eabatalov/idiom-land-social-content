@@ -410,10 +410,6 @@
                                             <param id="0" name="Object">notifyone_entity_000_body</param>
                                             <param id="1" name="Name">&quot;entity_000_body&quot;</param>
                                         </action>
-                                        <action id="666" name="Associate object type" sid="732503587111464" type="notifyone">
-                                            <param id="0" name="Object">notifyone_entity_000_title</param>
-                                            <param id="1" name="Name">&quot;entity_000_title&quot;</param>
-                                        </action>
                                         <action id="666" name="Associate object type" sid="361742655277284" type="notifyone">
                                             <param id="0" name="Object">notifyone_entity_000_imgava</param>
                                             <param id="1" name="Name">&quot;entity_000_img-ava&quot;</param>
@@ -421,10 +417,6 @@
                                         <action id="666" name="Associate object type" sid="1998534904949849" type="notifyone">
                                             <param id="0" name="Object">notifyone_entity_000_textblog</param>
                                             <param id="1" name="Name">&quot;entity_000_text-blog&quot;</param>
-                                        </action>
-                                        <action id="666" name="Associate object type" sid="8290200910969487" type="notifyone">
-                                            <param id="0" name="Object">notifyone_entity_000_texttitle</param>
-                                            <param id="1" name="Name">&quot;entity_000_text-title&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

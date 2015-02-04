@@ -15,14 +15,14 @@
 								"id": 0,
 								"object_ref": [
 									{
-										"abs_a": 0,
+										"abs_a": 1,
 										"abs_angle": 0,
 										"abs_pivot_x": 0,
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -361.952381,
-										"abs_y": -421,
+										"abs_x": -340,
+										"abs_y": -160,
 										"file": 0,
 										"folder": 0,
 										"id": 0,
@@ -33,18 +33,18 @@
 									},
 									{
 										"abs_a": 0,
-										"abs_angle": 0.17775100000000066,
-										"abs_pivot_x": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": 241.942538,
-										"abs_y": -417.935806,
+										"abs_x": -300,
+										"abs_y": -159,
 										"file": 0,
 										"folder": 1,
 										"id": 1,
 										"key": 0,
-										"name": "title",
+										"name": "img-ava",
 										"timeline": "1",
 										"z_index": "1"
 									},
@@ -55,49 +55,15 @@
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -325.757576,
-										"abs_y": -325.497835,
+										"abs_x": -60,
+										"abs_y": -135,
 										"file": 0,
 										"folder": 2,
 										"id": 2,
 										"key": 0,
-										"name": "img-ava",
+										"name": "text-blog",
 										"timeline": "2",
 										"z_index": "2"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -129.307359,
-										"abs_y": -306.450216,
-										"file": 0,
-										"folder": 3,
-										"id": 3,
-										"key": 0,
-										"name": "text-blog",
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -111.904762,
-										"abs_y": -396.320346,
-										"file": 0,
-										"folder": 4,
-										"id": 4,
-										"key": 0,
-										"name": "text-title",
-										"timeline": "4",
-										"z_index": "4"
 									}
 								]
 							},
@@ -122,21 +88,9 @@
 										"key": 1,
 										"timeline": "2",
 										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 1,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 1,
-										"timeline": "4",
-										"z_index": "4"
 									}
 								],
-								"time": 301
+								"time": 398
 							},
 							{
 								"bone_ref": [],
@@ -144,7 +98,7 @@
 								"object_ref": [
 									{
 										"id": 0,
-										"key": 1,
+										"key": 2,
 										"timeline": "0",
 										"z_index": "0"
 									},
@@ -159,21 +113,9 @@
 										"key": 2,
 										"timeline": "2",
 										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 1,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 1,
-										"timeline": "4",
-										"z_index": "4"
 									}
 								],
-								"time": 379
+								"time": 797
 							},
 							{
 								"bone_ref": [],
@@ -181,7 +123,7 @@
 								"object_ref": [
 									{
 										"id": 0,
-										"key": 2,
+										"key": 3,
 										"timeline": "0",
 										"z_index": "0"
 									},
@@ -196,21 +138,9 @@
 										"key": 3,
 										"timeline": "2",
 										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 2,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 2,
-										"timeline": "4",
-										"z_index": "4"
 									}
 								],
-								"time": 659
+								"time": 1000
 							}
 						]
 					},
@@ -223,7 +153,7 @@
 									"id": 0,
 									"object": {
 										"file": 0,
-										"folder": 5
+										"folder": 3
 									},
 									"time": 1
 								}
@@ -238,25 +168,25 @@
 								{
 									"id": 0,
 									"object": {
-										"a": 0,
 										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"x": -361.952381,
-										"y": 421
-									}
+										"x": -340,
+										"y": 160
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 6.704815999999994,
+										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"x": -301,
-										"y": 161
+										"x": -340,
+										"y": 1
 									},
-									"spin": -1,
-									"time": 301
+									"spin": 0,
+									"time": 398
 								},
 								{
 									"id": 2,
@@ -264,11 +194,22 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"x": -300.047619,
-										"y": 161
+										"x": -340,
+										"y": 12
 									},
 									"spin": 0,
-									"time": 659
+									"time": 797
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -340
+									},
+									"spin": 0,
+									"time": 1000
 								}
 							],
 							"name": "body",
@@ -281,36 +222,37 @@
 									"id": 0,
 									"object": {
 										"a": 0,
-										"angle": 0.17775100000000066,
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"x": 241.942538,
-										"y": 417.935806
-									}
+										"x": -300,
+										"y": 159
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 13.272500999999977,
+										"a": 0.8,
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"x": 272.009559,
-										"y": 351.942063
+										"x": -300
 									},
-									"spin": -1,
-									"time": 301
+									"spin": 0,
+									"time": 398
 								},
 								{
 									"id": 2,
 									"object": {
-										"angle": 3.0988950000000273,
+										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"x": 300.768859,
-										"y": 185.222402
+										"x": -300,
+										"y": -5
 									},
-									"spin": -1,
-									"time": 379
+									"spin": 0,
+									"time": 797
 								},
 								{
 									"id": 3,
@@ -318,13 +260,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"x": 300.662162,
-										"y": 159.062179
+										"x": -300,
+										"y": -1
 									},
-									"time": 659
+									"spin": 0,
+									"time": 1000
 								}
 							],
-							"name": "title",
+							"name": "img-ava",
 							"obj": 1
 						},
 						{
@@ -337,22 +280,23 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"x": -325.757576,
-										"y": 325.497835
+										"x": -60,
+										"y": 135
 									},
 									"spin": 0
 								},
 								{
 									"id": 1,
 									"object": {
+										"a": 0.6,
 										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"x": -259.090909,
-										"y": 64.545455
+										"x": -60,
+										"y": -25
 									},
 									"spin": 0,
-									"time": 301
+									"time": 398
 								},
 								{
 									"id": 2,
@@ -360,11 +304,11 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"x": -258.138528,
-										"y": 76.926407
+										"x": -60,
+										"y": -13
 									},
 									"spin": 0,
-									"time": 379
+									"time": 797
 								},
 								{
 									"id": 3,
@@ -372,101 +316,15 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"x": -259.090909,
-										"y": 64.545455
+										"x": -60,
+										"y": -25
 									},
 									"spin": 0,
-									"time": 659
-								}
-							],
-							"name": "img-ava",
-							"obj": 2
-						},
-						{
-							"id": 3,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -129.307359,
-										"y": 306.450216
-									}
-								},
-								{
-									"id": 1,
-									"object": {
-										"a": 0,
-										"angle": 6.704815999999994,
-										"file": 0,
-										"folder": 3,
-										"x": -52.566045,
-										"y": 72.948973
-									},
-									"spin": -1,
-									"time": 301
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -64.545455,
-										"y": 44.545455
-									},
-									"spin": 0,
-									"time": 659
+									"time": 1000
 								}
 							],
 							"name": "text-blog",
-							"obj": 3
-						},
-						{
-							"id": 4,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -111.904762,
-										"y": 396.320346
-									}
-								},
-								{
-									"id": 1,
-									"object": {
-										"a": 0,
-										"angle": 6.704815999999994,
-										"file": 0,
-										"folder": 4,
-										"x": -29.083153,
-										"y": 169.075396
-									},
-									"spin": -1,
-									"time": 301
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -50,
-										"y": 138
-									},
-									"spin": 0,
-									"time": 659
-								}
-							],
-							"name": "text-title",
-							"obj": 4
+							"obj": 2
 						}
 					]
 				},
@@ -475,6 +333,7 @@
 					"id": 1,
 					"interval": 100,
 					"length": 1000,
+					"looping": "false",
 					"mainline": {
 						"key": [
 							{
@@ -488,8 +347,8 @@
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -300.047619,
-										"abs_y": -161,
+										"abs_x": -340,
+										"abs_y": 0,
 										"file": 0,
 										"folder": 0,
 										"id": 0,
@@ -501,17 +360,17 @@
 									{
 										"abs_a": 1,
 										"abs_angle": 0,
-										"abs_pivot_x": 1,
+										"abs_pivot_x": 0,
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": 300.662162,
-										"abs_y": -159.062179,
+										"abs_x": -300,
+										"abs_y": 1,
 										"file": 0,
 										"folder": 1,
 										"id": 1,
 										"key": 0,
-										"name": "title",
+										"name": "img-ava",
 										"timeline": "1",
 										"z_index": "1"
 									},
@@ -522,15 +381,306 @@
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -259.090909,
-										"abs_y": -64.545455,
+										"abs_x": -60,
+										"abs_y": 25,
 										"file": 0,
 										"folder": 2,
 										"id": 2,
 										"key": 0,
-										"name": "img-ava",
+										"name": "text-blog",
 										"timeline": "2",
 										"z_index": "2"
+									}
+								]
+							},
+							{
+								"bone_ref": [],
+								"id": 1,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 1,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 1,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 1,
+										"timeline": "2",
+										"z_index": "2"
+									}
+								],
+								"time": 339
+							},
+							{
+								"bone_ref": [],
+								"id": 2,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 2,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 2,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 2,
+										"timeline": "2",
+										"z_index": "2"
+									}
+								],
+								"time": 685
+							},
+							{
+								"bone_ref": [],
+								"id": 3,
+								"object_ref": [
+									{
+										"id": 0,
+										"key": 3,
+										"timeline": "0",
+										"z_index": "0"
+									},
+									{
+										"id": 1,
+										"key": 3,
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"id": 2,
+										"key": 3,
+										"timeline": "2",
+										"z_index": "2"
+									}
+								],
+								"time": 889
+							}
+						]
+					},
+					"name": "end",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 0,
+										"folder": 3
+									},
+									"time": 1
+								}
+							],
+							"name": "notification_show"
+						}
+					],
+					"timeline": [
+						{
+							"id": 0,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -340
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -340,
+										"y": 12
+									},
+									"spin": 0,
+									"time": 339
+								},
+								{
+									"id": 2,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -340,
+										"y": 1
+									},
+									"spin": 0,
+									"time": 685
+								},
+								{
+									"id": 3,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 0,
+										"x": -340,
+										"y": 160
+									},
+									"spin": 0,
+									"time": 889
+								}
+							],
+							"name": "body",
+							"obj": 0
+						},
+						{
+							"id": 1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 1,
+										"x": -300,
+										"y": -1
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 1,
+										"x": -300,
+										"y": -5
+									},
+									"spin": 0,
+									"time": 339
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0.8,
+										"angle": 0,
+										"file": 0,
+										"folder": 1,
+										"x": -300
+									},
+									"spin": 0,
+									"time": 685
+								},
+								{
+									"id": 3,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 0,
+										"folder": 1,
+										"x": -300,
+										"y": 159
+									},
+									"spin": 0,
+									"time": 889
+								}
+							],
+							"name": "img-ava",
+							"obj": 1
+						},
+						{
+							"id": 2,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 2,
+										"x": -60,
+										"y": -25
+									},
+									"spin": 0
+								},
+								{
+									"id": 1,
+									"object": {
+										"angle": 0,
+										"file": 0,
+										"folder": 2,
+										"x": -60,
+										"y": -13
+									},
+									"spin": 0,
+									"time": 339
+								},
+								{
+									"id": 2,
+									"object": {
+										"a": 0.6,
+										"angle": 0,
+										"file": 0,
+										"folder": 2,
+										"x": -60,
+										"y": -25
+									},
+									"spin": 0,
+									"time": 685
+								},
+								{
+									"id": 3,
+									"object": {
+										"a": 0,
+										"angle": 0,
+										"file": 0,
+										"folder": 2,
+										"x": -60,
+										"y": 135
+									},
+									"spin": 0,
+									"time": 889
+								}
+							],
+							"name": "text-blog",
+							"obj": 2
+						}
+					]
+				},
+				{
+					"gline": [],
+					"id": 2,
+					"interval": 100,
+					"length": 200,
+					"mainline": {
+						"key": [
+							{
+								"bone_ref": [],
+								"id": 0,
+								"object_ref": [
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": -340,
+										"abs_y": 0,
+										"file": 0,
+										"folder": 0,
+										"id": 0,
+										"key": 0,
+										"name": "body",
+										"timeline": "0",
+										"z_index": "0"
 									},
 									{
 										"abs_a": 1,
@@ -539,32 +689,32 @@
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -64.545455,
-										"abs_y": -44.545455,
+										"abs_x": -300,
+										"abs_y": 1,
 										"file": 0,
-										"folder": 3,
-										"id": 3,
+										"folder": 1,
+										"id": 1,
+										"key": 0,
+										"name": "img-ava",
+										"timeline": "1",
+										"z_index": "1"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 1,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": -60,
+										"abs_y": 25,
+										"file": 0,
+										"folder": 2,
+										"id": 2,
 										"key": 0,
 										"name": "text-blog",
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 1,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -50,
-										"abs_y": -138,
-										"file": 0,
-										"folder": 4,
-										"id": 4,
-										"key": 0,
-										"name": "text-title",
-										"timeline": "4",
-										"z_index": "4"
+										"timeline": "2",
+										"z_index": "2"
 									}
 								]
 							}
@@ -581,8 +731,7 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"x": -300.047619,
-										"y": 161
+										"x": -340
 									},
 									"spin": 0
 								}
@@ -599,13 +748,13 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"x": 300.662162,
-										"y": 159.062179
+										"x": -300,
+										"y": -1
 									},
 									"spin": 0
 								}
 							],
-							"name": "title",
+							"name": "img-ava",
 							"obj": 1
 						},
 						{
@@ -617,509 +766,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"x": -259.090909,
-										"y": 64.545455
-									},
-									"spin": 0
-								}
-							],
-							"name": "img-ava",
-							"obj": 2
-						},
-						{
-							"id": 3,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -64.545455,
-										"y": 44.545455
+										"x": -60,
+										"y": -25
 									},
 									"spin": 0
 								}
 							],
 							"name": "text-blog",
-							"obj": 3
-						},
-						{
-							"id": 4,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -50,
-										"y": 138
-									},
-									"spin": 0
-								}
-							],
-							"name": "text-title",
-							"obj": 4
-						}
-					]
-				},
-				{
-					"gline": [],
-					"id": 2,
-					"interval": 100,
-					"length": 1000,
-					"looping": "false",
-					"mainline": {
-						"key": [
-							{
-								"bone_ref": [],
-								"id": 0,
-								"object_ref": [
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -219.047619,
-										"abs_y": -161,
-										"file": 0,
-										"folder": 0,
-										"id": 0,
-										"key": 0,
-										"name": "body",
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 1,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": 381.662162,
-										"abs_y": -159.062179,
-										"file": 0,
-										"folder": 1,
-										"id": 1,
-										"key": 0,
-										"name": "title",
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -178.090909,
-										"abs_y": -64.545455,
-										"file": 0,
-										"folder": 2,
-										"id": 2,
-										"key": 0,
-										"name": "img-ava",
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": 16.454545,
-										"abs_y": -44.545455,
-										"file": 0,
-										"folder": 3,
-										"id": 3,
-										"key": 0,
-										"name": "text-blog",
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 0,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": 31,
-										"abs_y": -138,
-										"file": 0,
-										"folder": 4,
-										"id": 4,
-										"key": 0,
-										"name": "text-title",
-										"timeline": "4",
-										"z_index": "4"
-									}
-								]
-							},
-							{
-								"bone_ref": [],
-								"id": 1,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 1,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 1,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 1,
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 1,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 1,
-										"timeline": "4",
-										"z_index": "4"
-									}
-								],
-								"time": 204
-							},
-							{
-								"bone_ref": [],
-								"id": 2,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 2,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 2,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 2,
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 2,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 2,
-										"timeline": "4",
-										"z_index": "4"
-									}
-								],
-								"time": 399
-							},
-							{
-								"bone_ref": [],
-								"id": 3,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 2,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 2,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 3,
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 2,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 2,
-										"timeline": "4",
-										"z_index": "4"
-									}
-								],
-								"time": 897
-							}
-						]
-					},
-					"name": "cross",
-					"soundline": [
-						{
-							"id": -1,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"file": 1,
-										"folder": 5
-									},
-									"time": 2
-								}
-							],
-							"name": "notification_cross"
-						}
-					],
-					"timeline": [
-						{
-							"id": 0,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 0,
-										"x": -219.047619,
-										"y": 161
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 0,
-										"x": -300.047619,
-										"y": 161
-									},
-									"spin": 0,
-									"time": 204
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 0,
-										"x": -300.047619,
-										"y": 161
-									},
-									"spin": 0,
-									"time": 399
-								}
-							],
-							"name": "body",
-							"obj": 0
-						},
-						{
-							"id": 1,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 1,
-										"x": 381.662162,
-										"y": 159.062179
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 1,
-										"x": 300.662162,
-										"y": 159.062179
-									},
-									"spin": 0,
-									"time": 204
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 1,
-										"x": 300.662162,
-										"y": 159.062179
-									},
-									"spin": 0,
-									"time": 399
-								}
-							],
-							"name": "title",
-							"obj": 1
-						},
-						{
-							"id": 2,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 2,
-										"x": -178.090909,
-										"y": 64.545455
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 2,
-										"x": -259.090909,
-										"y": 64.545455
-									},
-									"spin": 0,
-									"time": 204
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 2,
-										"x": -259.090909,
-										"y": 58.54546
-									},
-									"spin": 0,
-									"time": 399
-								},
-								{
-									"id": 3,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 2,
-										"x": -259.090909,
-										"y": 64.54546
-									},
-									"spin": 0,
-									"time": 897
-								}
-							],
-							"name": "img-ava",
 							"obj": 2
-						},
-						{
-							"id": 3,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": 16.454545,
-										"y": 44.545455
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -64.545455,
-										"y": 44.545455
-									},
-									"spin": 0,
-									"time": 204
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -64.545455,
-										"y": 44.545455
-									},
-									"spin": 0,
-									"time": 399
-								}
-							],
-							"name": "text-blog",
-							"obj": 3
-						},
-						{
-							"id": 4,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": 31,
-										"y": 138
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -50,
-										"y": 138
-									},
-									"spin": 0,
-									"time": 204
-								},
-								{
-									"id": 2,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -50,
-										"y": 138
-									},
-									"spin": 0,
-									"time": 399
-								}
-							],
-							"name": "text-title",
-							"obj": 4
 						}
 					]
 				},
@@ -1142,8 +796,8 @@
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -300.047619,
-										"abs_y": -161,
+										"abs_x": -340,
+										"abs_y": 0,
 										"file": 0,
 										"folder": 0,
 										"id": 0,
@@ -1155,17 +809,17 @@
 									{
 										"abs_a": 1,
 										"abs_angle": 0,
-										"abs_pivot_x": 1,
+										"abs_pivot_x": 0,
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": 300.662162,
-										"abs_y": -159.249171,
+										"abs_x": -300,
+										"abs_y": 1,
 										"file": 0,
 										"folder": 1,
 										"id": 1,
 										"key": 0,
-										"name": "title",
+										"name": "img-ava",
 										"timeline": "1",
 										"z_index": "1"
 									},
@@ -1176,166 +830,37 @@
 										"abs_pivot_y": 1,
 										"abs_scale_x": 1,
 										"abs_scale_y": 1,
-										"abs_x": -259.090909,
-										"abs_y": -64.545455,
+										"abs_x": -60,
+										"abs_y": 25,
 										"file": 0,
 										"folder": 2,
 										"id": 2,
 										"key": 0,
-										"name": "img-ava",
+										"name": "text-blog",
 										"timeline": "2",
 										"z_index": "2"
-									},
-									{
-										"abs_a": 1,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -64.545455,
-										"abs_y": -44.545455,
-										"file": 0,
-										"folder": 3,
-										"id": 3,
-										"key": 0,
-										"name": "text-blog",
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 1,
-										"abs_angle": 0,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 1,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -50,
-										"abs_y": -138,
-										"file": 0,
-										"folder": 4,
-										"id": 4,
-										"key": 0,
-										"name": "text-title",
-										"timeline": "4",
-										"z_index": "4"
 									}
 								]
-							},
-							{
-								"bone_ref": [],
-								"id": 1,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 0,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 1,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 1,
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 1,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 1,
-										"timeline": "4",
-										"z_index": "4"
-									}
-								],
-								"time": 452
-							},
-							{
-								"bone_ref": [],
-								"id": 2,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 1,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 2,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 1,
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 1,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 1,
-										"timeline": "4",
-										"z_index": "4"
-									}
-								],
-								"time": 602
-							},
-							{
-								"bone_ref": [],
-								"id": 3,
-								"object_ref": [
-									{
-										"id": 0,
-										"key": 2,
-										"timeline": "0",
-										"z_index": "0"
-									},
-									{
-										"id": 1,
-										"key": 3,
-										"timeline": "1",
-										"z_index": "1"
-									},
-									{
-										"id": 2,
-										"key": 2,
-										"timeline": "2",
-										"z_index": "2"
-									},
-									{
-										"id": 3,
-										"key": 2,
-										"timeline": "3",
-										"z_index": "3"
-									},
-									{
-										"id": 4,
-										"key": 2,
-										"timeline": "4",
-										"z_index": "4"
-									}
-								],
-								"time": 758
 							}
 						]
 					},
-					"name": "end",
+					"name": "cross",
+					"soundline": [
+						{
+							"id": -1,
+							"key": [
+								{
+									"id": 0,
+									"object": {
+										"file": 1,
+										"folder": 3
+									},
+									"time": 2
+								}
+							],
+							"name": "notification_cross"
+						}
+					],
 					"timeline": [
 						{
 							"id": 0,
@@ -1346,35 +871,9 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 0,
-										"x": -300.047619,
-										"y": 161
+										"x": -340
 									},
-									"spin": -1
-								},
-								{
-									"id": 1,
-									"object": {
-										"a": 0.5,
-										"angle": 352.229808,
-										"file": 0,
-										"folder": 0,
-										"x": -300.047619,
-										"y": 161
-									},
-									"time": 602
-								},
-								{
-									"id": 2,
-									"object": {
-										"a": 0,
-										"angle": 5.0367089999999735,
-										"file": 0,
-										"folder": 0,
-										"x": -274.047619,
-										"y": -58
-									},
-									"spin": -1,
-									"time": 758
+									"spin": 0
 								}
 							],
 							"name": "body",
@@ -1389,49 +888,13 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1,
-										"x": 300.662162,
-										"y": 159.249171
-									}
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 1.8426939999999945,
-										"file": 0,
-										"folder": 1,
-										"x": 302.662162,
-										"y": 181.249171
+										"x": -300,
+										"y": -1
 									},
-									"spin": -1,
-									"time": 452
-								},
-								{
-									"id": 2,
-									"object": {
-										"a": 0.5,
-										"angle": 354.720032,
-										"file": 0,
-										"folder": 1,
-										"x": 293.662162,
-										"y": 81.249171
-									},
-									"time": 602
-								},
-								{
-									"id": 3,
-									"object": {
-										"a": 0,
-										"angle": 19.96321899999998,
-										"file": 0,
-										"folder": 1,
-										"x": 312.662162,
-										"y": -16.750829
-									},
-									"spin": -1,
-									"time": 758
+									"spin": 0
 								}
 							],
-							"name": "title",
+							"name": "img-ava",
 							"obj": 1
 						},
 						{
@@ -1443,125 +906,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 2,
-										"x": -259.090909,
-										"y": 64.545455
+										"x": -60,
+										"y": -25
 									},
 									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 2,
-										"x": -262.342942,
-										"y": 75.927568
-									},
-									"spin": 0,
-									"time": 452
-								},
-								{
-									"id": 2,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 2,
-										"x": -224.131559,
-										"y": -15.129342
-									},
-									"spin": 0,
-									"time": 758
-								}
-							],
-							"name": "img-ava",
-							"obj": 2
-						},
-						{
-							"id": 3,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -64.545455,
-										"y": 44.545455
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -67.797487,
-										"y": 55.927568
-									},
-									"spin": 0,
-									"time": 452
-								},
-								{
-									"id": 2,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 3,
-										"x": -29.586105,
-										"y": -35.129342
-									},
-									"spin": 0,
-									"time": 758
 								}
 							],
 							"name": "text-blog",
-							"obj": 3
-						},
-						{
-							"id": 4,
-							"key": [
-								{
-									"id": 0,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -50,
-										"y": 138
-									},
-									"spin": 0
-								},
-								{
-									"id": 1,
-									"object": {
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": -33.252033,
-										"y": 149.654841
-									},
-									"spin": 0,
-									"time": 452
-								},
-								{
-									"id": 2,
-									"object": {
-										"a": 0,
-										"angle": 0,
-										"file": 0,
-										"folder": 4,
-										"x": 4.95935,
-										"y": 58.597931
-									},
-									"spin": 0,
-									"time": 758
-								}
-							],
-							"name": "text-title",
-							"obj": 4
+							"obj": 2
 						}
 					]
 				}
@@ -1588,8 +940,8 @@
 							"folder": 1
 						}
 					],
-					"name": "entity_000_title",
-					"realname": "title",
+					"name": "entity_000_img-ava",
+					"realname": "img-ava",
 					"type": "sprite"
 				},
 				{
@@ -1599,30 +951,8 @@
 							"folder": 2
 						}
 					],
-					"name": "entity_000_img-ava",
-					"realname": "img-ava",
-					"type": "sprite"
-				},
-				{
-					"frames": [
-						{
-							"file": 0,
-							"folder": 3
-						}
-					],
 					"name": "entity_000_text-blog",
 					"realname": "text-blog",
-					"type": "sprite"
-				},
-				{
-					"frames": [
-						{
-							"file": 0,
-							"folder": 4
-						}
-					],
-					"name": "entity_000_text-title",
-					"realname": "text-title",
 					"type": "sprite"
 				}
 			]
@@ -1632,38 +962,16 @@
 		{
 			"file": [
 				{
-					"height": 304,
+					"height": 160,
 					"id": 0,
 					"name": "body/body.png",
 					"pivot_x": 0,
 					"pivot_y": 1,
-					"width": 604
+					"width": 680
 				}
 			],
 			"id": 0,
 			"name": "body"
-		},
-		{
-			"file": [
-				{
-					"height": 72,
-					"id": 0,
-					"name": "title/title.png",
-					"pivot_x": 1,
-					"pivot_y": 1,
-					"width": 600
-				},
-				{
-					"height": 72,
-					"id": 1,
-					"name": "title/title-green.png",
-					"pivot_x": 1,
-					"pivot_y": 1,
-					"width": 600
-				}
-			],
-			"id": 1,
-			"name": "title"
 		},
 		{
 			"file": [
@@ -1673,26 +981,10 @@
 					"name": "img/img-ava.png",
 					"pivot_x": 0,
 					"pivot_y": 1,
-					"width": 170
-				},
-				{
-					"height": 160,
-					"id": 1,
-					"name": "img/img-keys.png",
-					"pivot_x": 0,
-					"pivot_y": 1,
-					"width": 170
-				},
-				{
-					"height": 160,
-					"id": 2,
-					"name": "img/img-alt.png",
-					"pivot_x": 0,
-					"pivot_y": 1,
-					"width": 170
+					"width": 160
 				}
 			],
-			"id": 2,
+			"id": 1,
 			"name": "img"
 		},
 		{
@@ -1706,22 +998,8 @@
 					"width": 324
 				}
 			],
-			"id": 3,
+			"id": 2,
 			"name": "text-blog"
-		},
-		{
-			"file": [
-				{
-					"height": 33,
-					"id": 0,
-					"name": "text-title/text-title.png",
-					"pivot_x": 0,
-					"pivot_y": 1,
-					"width": 101
-				}
-			],
-			"id": 4,
-			"name": "text-title"
 		},
 		{
 			"file": [
@@ -1736,7 +1014,7 @@
 					"type": "sound"
 				}
 			],
-			"id": 5
+			"id": 3
 		}
 	],
 	"generator": "BrashMonkey Spriter",

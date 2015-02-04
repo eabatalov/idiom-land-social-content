@@ -132,10 +132,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/NavHelper/" />
         <folder expanded="1" path="animation-folder/QuizzHelper/" />
         <folder expanded="1" path="animation-folder/notifyone_entity_000_body/" />
-        <folder expanded="1" path="animation-folder/notifyone_entity_000_title/" />
         <folder expanded="1" path="animation-folder/notifyone_entity_000_imgava/" />
         <folder expanded="1" path="animation-folder/notifyone_entity_000_textblog/" />
-        <folder expanded="1" path="animation-folder/notifyone_entity_000_texttitle/" />
         <folder expanded="1" path="animation-folder/StageMarker/" />
         <folder expanded="1" path="animation-folder/NPC/" />
         <folder expanded="1" path="animation-folder/CameraFocusIndicator/" />

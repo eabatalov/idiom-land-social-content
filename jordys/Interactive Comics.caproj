@@ -29,6 +29,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Eugene/Learzing" id="QuestEngineSpriteExtras" version="1">QuestEngineSpriteExtras</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -47,7 +48,7 @@
     <configuration-settings>
         <prop name="Clear background">No</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Off</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Loader style">Progress bar only</prop>
         <prop name="Orientations">Any</prop>
@@ -1157,14 +1158,12 @@
                             <container>
                                 <type>notifyone</type>
                                 <type>notifyone_entity_000_body</type>
-                                <type>notifyone_entity_000_title</type>
                                 <type>notifyone_entity_000_imgava</type>
                                 <type>notifyone_entity_000_textblog</type>
-                                <type>notifyone_entity_000_texttitle</type>
                             </container>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2745069094082963" speed="0">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\notification\body\body.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Documents\GitHub\idiom-land-social-content\jordys\Spriter\notification\body\body.png">
                                         <collision-poly>
                                             <point x="0.00165563" y="0.00328947" />
                                             <point x="0.5" y="0.00328947" />
@@ -1177,46 +1176,17 @@
                                 </animation>
                             </animation-folder>
                         </object-type>
-                        <object-type name="notifyone_entity_000_title" sid="2986781444639968">
-                            <plugin id="Sprite" />
-                            <container>
-                                <type>notifyone</type>
-                                <type>notifyone_entity_000_body</type>
-                                <type>notifyone_entity_000_title</type>
-                                <type>notifyone_entity_000_imgava</type>
-                                <type>notifyone_entity_000_textblog</type>
-                                <type>notifyone_entity_000_texttitle</type>
-                            </container>
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3765775170375986" speed="0">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\notification\title\title.png">
-                                        <collision-poly>
-                                            <point x="0" y="0" />
-                                            <point x="0.5" y="0" />
-                                            <point x="0.978333" y="0.180556" />
-                                            <point x="0.998333" y="0.5" />
-                                            <point x="0.965" y="0.708333" />
-                                            <point x="0.5" y="1" />
-                                            <point x="0.0433333" y="0.638889" />
-                                            <point x="0" y="0.5" />
-                                        </collision-poly>
-                                    </frame>
-                                </animation>
-                            </animation-folder>
-                        </object-type>
                         <object-type name="notifyone_entity_000_imgava" sid="8518213966659646">
                             <plugin id="Sprite" />
                             <container>
                                 <type>notifyone</type>
                                 <type>notifyone_entity_000_body</type>
-                                <type>notifyone_entity_000_title</type>
                                 <type>notifyone_entity_000_imgava</type>
                                 <type>notifyone_entity_000_textblog</type>
-                                <type>notifyone_entity_000_texttitle</type>
                             </container>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6904276760953464" speed="0">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\notification\img\img-ava.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Andy\Documents\GitHub\idiom-land-social-content\jordys\Spriter\notification\img\img-ava.png">
                                         <collision-poly>
                                             <point x="0.135294" y="0.14375" />
                                             <point x="0.5" y="0" />
@@ -1236,41 +1206,12 @@
                             <container>
                                 <type>notifyone</type>
                                 <type>notifyone_entity_000_body</type>
-                                <type>notifyone_entity_000_title</type>
                                 <type>notifyone_entity_000_imgava</type>
                                 <type>notifyone_entity_000_textblog</type>
-                                <type>notifyone_entity_000_texttitle</type>
                             </container>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7520140645377676" speed="0">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\notification\text-blog\text-blog.png" />
-                                </animation>
-                            </animation-folder>
-                        </object-type>
-                        <object-type name="notifyone_entity_000_texttitle" sid="7150050782682212">
-                            <plugin id="Sprite" />
-                            <container>
-                                <type>notifyone</type>
-                                <type>notifyone_entity_000_body</type>
-                                <type>notifyone_entity_000_title</type>
-                                <type>notifyone_entity_000_imgava</type>
-                                <type>notifyone_entity_000_textblog</type>
-                                <type>notifyone_entity_000_texttitle</type>
-                            </container>
-                            <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1011610784776907" speed="0">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="Y:\notification\text-title\text-title.png">
-                                        <collision-poly>
-                                            <point x="0.01" y="0.030303" />
-                                            <point x="0.5" y="0.0606061" />
-                                            <point x="0.87" y="0.393939" />
-                                            <point x="0.96" y="0.484848" />
-                                            <point x="0.92" y="0.757576" />
-                                            <point x="0.5" y="0.757576" />
-                                            <point x="0.13" y="0.606061" />
-                                            <point x="0.01" y="0.484848" />
-                                        </collision-poly>
-                                    </frame>
+                                    <frame duration="1" hotspotX="0" hotspotY="-0.124031" original-source="Y:\notification\text-blog\text-blog.png" />
                                 </animation>
                             </animation-folder>
                         </object-type>
@@ -1279,10 +1220,8 @@
                             <container>
                                 <type>notifyone</type>
                                 <type>notifyone_entity_000_body</type>
-                                <type>notifyone_entity_000_title</type>
                                 <type>notifyone_entity_000_imgava</type>
                                 <type>notifyone_entity_000_textblog</type>
-                                <type>notifyone_entity_000_texttitle</type>
                             </container>
                         </object-type>
                     </object-folder>
@@ -1778,6 +1717,11 @@
         </object-type>
         <object-type name="Sprite7" sid="5793069098357294">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="3199580693192619">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4498145997003141" speed="5">
                     <frame duration="1" hotspotX="0.503185" hotspotY="0.503185" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\sun.png">
@@ -2121,8 +2065,6 @@
                 <member>notifyone_entity_000_body</member>
                 <member>notifyone_entity_000_imgava</member>
                 <member>notifyone_entity_000_textblog</member>
-                <member>notifyone_entity_000_texttitle</member>
-                <member>notifyone_entity_000_title</member>
             </members>
         </family>
     </families>
