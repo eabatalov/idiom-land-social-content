@@ -262,8 +262,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="563708641937197" type="NPC">
-                                    <param id="0" name="X">424</param>
-                                    <param id="1" name="Y">2600</param>
+                                    <param id="0" name="X">338</param>
+                                    <param id="1" name="Y">2688</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -293,8 +293,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="6380766220056305" type="NPC">
-                                    <param id="0" name="X">399</param>
-                                    <param id="1" name="Y">1779</param>
+                                    <param id="0" name="X">450</param>
+                                    <param id="1" name="Y">2674</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -328,8 +328,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="6529703311524378" type="NPC">
-                                    <param id="0" name="X">1121</param>
-                                    <param id="1" name="Y">2492</param>
+                                    <param id="0" name="X">1012</param>
+                                    <param id="1" name="Y">2500</param>
                                 </action>
                             </actions>
                         </event-block>

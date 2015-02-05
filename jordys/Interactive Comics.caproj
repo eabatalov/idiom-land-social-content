@@ -1268,8 +1268,8 @@
                             </behaviors>
                             <animation-folder>
                                 <animation framecount="1" loop="1" name="potsik_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9531740403944049" speed="5">
-                                    <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\boyface.png">
-                                        <image-point name="SpeechOrigin" x="1.12857" y="0.431818" />
+                                    <frame duration="1" hotspotX="0.511278" hotspotY="1" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_19.png">
+                                        <image-point name="SpeechOrigin" x="0.473684" y="0.115789" />
                                         <collision-poly>
                                             <point x="0.34188" y="0" />
                                             <point x="0.495726" y="0" />
@@ -1283,8 +1283,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="1" name="papulia_idle" pingpong="0" repeatcount="1" repeatto="0" sid="7340825399109747" speed="5">
-                                    <frame duration="1" hotspotX="0.5" hotspotY="0.503876" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\daddy.png">
-                                        <image-point name="SpeechOrigin" x="0.697674" y="0.372093" />
+                                    <frame duration="1" hotspotX="0.502762" hotspotY="0.503158" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_03.png">
+                                        <image-point name="SpeechOrigin" x="0.430939" y="0.0905263" />
                                         <collision-poly>
                                             <point x="0.263736" y="0.235294" />
                                             <point x="0.494505" y="0.166667" />
@@ -1297,8 +1297,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="1" name="mamulia_idle" pingpong="0" repeatcount="1" repeatto="0" sid="8564107958997752" speed="5">
-                                    <frame duration="1" hotspotX="0.504951" hotspotY="0.504274" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\mommy.png">
-                                        <image-point name="SpeechOrigin" x="0.722772" y="0.376068" />
+                                    <frame duration="1" hotspotX="0.502762" hotspotY="0.504651" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_06.png">
+                                        <image-point name="SpeechOrigin" x="0.39779" y="0.139535" />
                                         <collision-poly>
                                             <point x="0.263736" y="0.235294" />
                                             <point x="0.494505" y="0.166667" />
@@ -1311,8 +1311,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="1" name="mamulia_box" pingpong="0" repeatcount="1" repeatto="0" sid="9284831019956576" speed="5">
-                                    <frame duration="1" hotspotX="0.472527" hotspotY="0.519608">
-                                        <image-point name="SpeechOrigin" x="0.725275" y="0.372549" />
+                                    <frame duration="1" hotspotX="0.472222" hotspotY="0.518605" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_08.png">
+                                        <image-point name="SpeechOrigin" x="0.727778" y="0.372093" />
                                         <collision-poly>
                                             <point x="0.263736" y="0.235294" />
                                             <point x="0.494505" y="0.166667" />
@@ -1328,8 +1328,8 @@
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 </animation>
                                 <animation framecount="1" loop="1" name="ded_idle" pingpong="0" repeatcount="1" repeatto="0" sid="2146354270426134" speed="5">
-                                    <frame duration="1" hotspotX="0.503356" hotspotY="0.501742" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\grandpa.png">
-                                        <image-point name="SpeechOrigin" x="0.691275" y="0.372822" />
+                                    <frame duration="1" hotspotX="0.505747" hotspotY="0.502538" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_11.png">
+                                        <image-point name="SpeechOrigin" x="0.683908" y="0.187817" />
                                         <collision-poly>
                                             <point x="0.263736" y="0.235294" />
                                             <point x="0.494505" y="0.166667" />
@@ -1342,22 +1342,23 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="1" name="baba_idle" pingpong="0" repeatcount="1" repeatto="0" sid="3753897174617865" speed="5">
-                                    <frame duration="1" hotspotX="0.508621" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\grandma.png">
-                                        <image-point name="SpeechOrigin" x="0.724138" y="0.371212" />
+                                    <frame duration="1" hotspotX="0.508671" hotspotY="0.501348" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_14.png">
+                                        <image-point name="SpeechOrigin" x="0.734104" y="0.153639" />
                                         <collision-poly>
-                                            <point x="0.263736" y="0.235294" />
-                                            <point x="0.494505" y="0.166667" />
-                                            <point x="0.714286" y="0.254902" />
-                                            <point x="0.989011" y="0.5" />
-                                            <point x="0.494505" y="0.941176" />
-                                            <point x="0.230769" y="0.794118" />
-                                            <point x="0.021978" y="0.5" />
+                                            <point x="0.156069" y="0.0727763" />
+                                            <point x="0.49711" y="0" />
+                                            <point x="0.843931" y="0.0727763" />
+                                            <point x="0.797688" y="0.498652" />
+                                            <point x="0.676301" y="0.849057" />
+                                            <point x="0.49711" y="0.77628" />
+                                            <point x="0.300578" y="0.859838" />
+                                            <point x="0.277457" y="0.498652" />
                                         </collision-poly>
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="1" name="baba_box" pingpong="0" repeatcount="1" repeatto="0" sid="1901858467064917" speed="5">
-                                    <frame duration="1" hotspotX="0.505495" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.725275" y="0.372549" />
+                                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chars\characters_16.png">
+                                        <image-point name="SpeechOrigin" x="0.719101" y="0.163043" />
                                         <collision-poly>
                                             <point x="0.263736" y="0.235294" />
                                             <point x="0.494505" y="0.166667" />
@@ -1371,7 +1372,7 @@
                                 </animation>
                                 <animation framecount="1" loop="0" name="teacher_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9959761412612517" speed="5">
                                     <frame duration="1" hotspotX="0.503876" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\teacher.png">
-                                        <image-point name="SpeechOrigin" x="0.899225" y="0.0868056" />
+                                        <image-point name="SpeechOrigin" x="0.403101" y="0.177083" />
                                         <collision-poly>
                                             <point x="0.124031" y="0.0555556" />
                                             <point x="0.496124" y="0" />
@@ -1490,7 +1491,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="7348698747892953" speed="5">
-                            <frame duration="1" hotspotX="0.497925" hotspotY="0.939891" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front.png">
+                            <frame duration="1" hotspotX="0.506224" hotspotY="0.459016" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front.png">
                                 <collision-poly>
                                     <point x="0.00414938" y="0.00819672" />
                                     <point x="0.995851" y="0.00819672" />
@@ -1891,9 +1892,6 @@
                 <behavior-type name="Sine" sid="846272700604257">
                     <behavior id="Sin" />
                 </behavior-type>
-                <behavior-type name="Sine2" sid="173651050762058">
-                    <behavior id="Sin" />
-                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6290678552011397" speed="5">
@@ -2046,6 +2044,25 @@
                             <point x="0.497297" y="1" />
                             <point x="0.0108108" y="0.857143" />
                             <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite24" sid="9837662430650817">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7217993814558953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\back-element.png">
+                        <collision-poly>
+                            <point x="0.434426" y="0.434426" />
+                            <point x="0.5" y="0.45082" />
+                            <point x="0.532787" y="0.467213" />
+                            <point x="0.540984" y="0.5" />
+                            <point x="0.52459" y="0.52459" />
+                            <point x="0.5" y="0.737705" />
+                            <point x="0.303279" y="0.696721" />
+                            <point x="0.295082" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
