@@ -9,7 +9,7 @@
         <event-group description="" sid="460933006001851" title="Local var scope 1">
             <sub-events>
                 <variable constant="1" name="LEVEL_NAME" sid="146390735041057" static="0" type="text">intcom_game</variable>
-                <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">parents_house</variable>
+                <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">motorway</variable>
                 <variable constant="1" name="LEVEL_INITIAL_STAGE2" sid="8147115900324013" static="0" type="text">leaving</variable>
                 <variable constant="1" name="LEVEL_SPRITER_ANIMS_TO_INIT" sid="5379837504000799" static="0" type="number">0</variable>
                 <event-block sid="2994783783040874">
