@@ -48,8 +48,8 @@
     <configuration-settings>
         <prop name="Clear background">No</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Off</prop>
-        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar only</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
