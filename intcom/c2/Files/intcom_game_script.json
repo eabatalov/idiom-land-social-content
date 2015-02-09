@@ -60,26 +60,10 @@
 						1
 					],
 					"outCondIds": [
-						2
+						391
 					],
 					"props": {
-						"text": "On Sunday, David decided he would go and see his parents who lived in Oxford."
-					}
-				},
-				{
-					"ver": 1,
-					"id": 14,
-					"type": 11,
-					"label": "Intro",
-					"continue": false,
-					"inCondIds": [
-						2
-					],
-					"outCondIds": [
-						5
-					],
-					"props": {
-						"text": "They wanted to leave early to avoid the crowds, so they got up at half past six..."
+						"text": "On Friday evening, David Jordy decided to visit his parents who lived in Oxford."
 					}
 				},
 				{
@@ -95,7 +79,7 @@
 						126
 					],
 					"props": {
-						"text": "By seven o'clock, they were ready. They got into the car and set off."
+						"text": "By seven o'clock, the Jordys were ready. They got into the car and set off."
 					}
 				},
 				{
@@ -105,7 +89,7 @@
 					"label": "Show/Hide NPCs",
 					"continue": true,
 					"inCondIds": [
-						5
+						391
 					],
 					"outCondIds": [
 						6
@@ -589,22 +573,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 2,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 6,
 					"type": 8,
 					"props": {}
@@ -764,6 +732,14 @@
 				{
 					"ver": 1,
 					"id": 258,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 391,
 					"type": 11,
 					"props": {
 						"clearStage": true

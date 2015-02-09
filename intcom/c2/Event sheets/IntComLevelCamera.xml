@@ -66,6 +66,7 @@
                                         <variable constant="1" name="XXX_DIALOG_FOCUS_LAYER_NAME" sid="8337283390654884" static="0" type="text">Speech</variable>
                                         <variable constant="1" name="MAX_AVOIDABLE_CAMERA_MOVE_PX" sid="7150457245813031" static="0" type="number">200</variable>
                                         <variable constant="1" name="FOCUS_RECT_QUIZZ_DIST_ADD_PX" sid="3458661094361083" static="0" type="number">0</variable>
+                                        <variable constant="1" name="FOCUS_RECT_QUIZZ_DIST_ADD_PY" sid="4531314262298781" static="0" type="number">0</variable>
                                         <variable constant="1" name="DIALOG_LRMARGINS_PX" sid="1228383527319362" static="0" type="number">100</variable>
                                         <event-block sid="1419971731760746">
                                             <conditions />
@@ -106,17 +107,13 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-9" name="Set value" sid="3857157833040818" type="System">
+                                                <action disabled="1" id="-9" name="Set value" sid="3857157833040818" type="System">
                                                     <param id="0" name="Variable">DialogFocusRectX1</param>
                                                     <param id="1" name="Value">DialogFocusRectX1 - DialogAnsBg.Width - FOCUS_RECT_QUIZZ_DIST_ADD_PX</param>
                                                 </action>
-                                                <action disabled="1" id="-9" name="Set value" sid="7912522797710847" type="System">
-                                                    <param id="0" name="Variable">DialogFocusRectX1</param>
-                                                    <param id="1" name="Value">DialogFocusRectX1 - DialogAnsBg.Width / 2</param>
-                                                </action>
-                                                <action disabled="1" id="-9" name="Set value" sid="4224056997123757" type="System">
-                                                    <param id="0" name="Variable">DialogFocusRectX2</param>
-                                                    <param id="1" name="Value">DialogFocusRectX2 - DialogSpeechBg.Width / 2</param>
+                                                <action id="-9" name="Set value" sid="7522637922260956" type="System">
+                                                    <param id="0" name="Variable">DialogFocusRectY1</param>
+                                                    <param id="1" name="Value">DialogFocusRectY1 - DialogAnsBg.Height - FOCUS_RECT_QUIZZ_DIST_ADD_PY</param>
                                                 </action>
                                             </actions>
                                         </event-block>

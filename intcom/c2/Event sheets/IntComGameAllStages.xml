@@ -193,13 +193,12 @@
                     </actions>
                     <sub-events>
                         <event-block sid="9375622403489078">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="6083492234472897" type="Sprite23">
-                                    <param id="0" name="Unique ID">77</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions>
                                 <action behavior="Sine" id="0" name="Set active" sid="7171971297215765" type="Sprite23">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="8271819228033693" type="MotorwayCarSide">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -219,13 +218,12 @@
                     </actions>
                     <sub-events>
                         <event-block sid="4886748123923793">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="570646055846217" type="Sprite23">
-                                    <param id="0" name="Unique ID">77</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions>
                                 <action behavior="Sine" id="0" name="Set active" sid="4163983364069804" type="Sprite23">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="233802066011327" type="MotorwayCarSide">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -318,6 +316,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>sinulia</comment>
                         <event-block sid="7535049121879418">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="8695035719555195" type="NPC">
@@ -326,11 +325,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="6529703311524378" type="NPC">
-                                    <param id="0" name="X">1012</param>
-                                    <param id="1" name="Y">2500</param>
+                                    <param id="0" name="X">1248.112</param>
+                                    <param id="1" name="Y">2576.636</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>mamulia</comment>
                         <event-block sid="1819334592229231">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="705664929733167" type="NPC">
@@ -339,11 +339,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="8666896082966952" type="NPC">
-                                    <param id="0" name="X">1150</param>
-                                    <param id="1" name="Y">2400</param>
+                                    <param id="0" name="X">1174.059</param>
+                                    <param id="1" name="Y">2461.685</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>papulia</comment>
                         <event-block sid="4142315847820618">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="7137972178413004" type="NPC">
@@ -352,8 +353,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="9439136612128411" type="NPC">
-                                    <param id="0" name="X">1120</param>
-                                    <param id="1" name="Y">2460</param>
+                                    <param id="0" name="X">1344.702</param>
+                                    <param id="1" name="Y">2494.768</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -375,6 +376,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>sinulia</comment>
                         <event-block sid="9220207590476804">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="6268739693738423" type="NPC">
@@ -383,11 +385,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="9781301651067352" type="NPC">
-                                    <param id="0" name="X">1120</param>
-                                    <param id="1" name="Y">2490</param>
+                                    <param id="0" name="X">888.46</param>
+                                    <param id="1" name="Y">2549.933</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>mamulia</comment>
                         <event-block sid="5227605148236547">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="7949652186980505" type="NPC">
@@ -396,11 +399,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="9094978955945674" type="NPC">
-                                    <param id="0" name="X">1160</param>
-                                    <param id="1" name="Y">2400</param>
+                                    <param id="0" name="X">1068.759</param>
+                                    <param id="1" name="Y">2512.11</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>papulia</comment>
                         <event-block sid="1660337036105409">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="9210430259629422" type="NPC">
@@ -409,8 +413,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="2755770813327304" type="NPC">
-                                    <param id="0" name="X">1120</param>
-                                    <param id="1" name="Y">2460</param>
+                                    <param id="0" name="X">1112.595</param>
+                                    <param id="1" name="Y">2455.469</param>
                                 </action>
                             </actions>
                         </event-block>
