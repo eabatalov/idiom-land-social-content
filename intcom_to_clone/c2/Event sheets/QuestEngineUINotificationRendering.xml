@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineUINotificationRendering</name>
+    <events>
+        <event-group description="" sid="3505658347400191" title="Quest engine UI notification rendering">
+            <sub-events>
+                <event-block sid="9716550961121792">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7379017286148076" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9337586926764892" type="Function">
+                            <param id="0" name="Name">&quot;HideNotification&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="6190684084110143" type="NotificationTxt">
+                            <param id="0" name="Layer">&quot;Notification&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>param(0): notification text</comment>
+                <event-block sid="2745829667144827">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5843894674947315" type="Function">
+                            <param id="0" name="Name">&quot;RenderNotification&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1387908001704656">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="2406608656861376" type="NotificationTxt">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="9525785598349825" type="NotificationTxt" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

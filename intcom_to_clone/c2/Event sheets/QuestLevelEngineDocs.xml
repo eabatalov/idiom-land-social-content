@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestLevelEngineDocs</name>
+    <events>
+        <comment>Quest engine is divided into to parts:&#x0D;&#x0A;1. CoreLib - small code base independent from UI&#x0D;&#x0A;2. UILib - set of reusable UI controls dedicated for levels that use quest engine&#x0D;&#x0A;Particular level is responsible for connecting UI controls it uses with quest engine core.</comment>
+        <event-group description="" sid="8623534773795385" title="Quest engine documentation" />
+    </events>
+</c2eventsheet>

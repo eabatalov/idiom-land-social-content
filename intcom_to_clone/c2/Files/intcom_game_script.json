@@ -1,0 +1,3494 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "leaving",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "leaving",
+						"objs": [
+							"Player",
+							"papulia",
+							"mamulia",
+							"sinulia",
+							"car"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"car",
+							"papulia",
+							"mamulia",
+							"sinulia"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 11,
+					"label": "Intro",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [
+						391
+					],
+					"props": {
+						"text": "On Friday evening, David Jordy decided to visit his parents who lived in Oxford."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 11,
+					"label": "Set off",
+					"continue": false,
+					"inCondIds": [
+						6
+					],
+					"outCondIds": [
+						126
+					],
+					"props": {
+						"text": "By seven o'clock, the Jordys were ready. They got into the car and set off."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 17,
+					"type": 10,
+					"label": "Show/Hide NPCs",
+					"continue": true,
+					"inCondIds": [
+						391
+					],
+					"outCondIds": [
+						6
+					],
+					"props": {
+						"name": "C2API_LeavingShowNPCs",
+						"rollbackName": "C2API_LeavingHideNPCs",
+						"source": "c2",
+						"isPure": false,
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 1,
+					"label": "Have you got everything?",
+					"continue": false,
+					"inCondIds": [
+						128,
+						258
+					],
+					"outCondIds": [
+						140
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Have you got everything?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 1,
+					"label": "Of course I have",
+					"continue": false,
+					"inCondIds": [
+						151
+					],
+					"outCondIds": [
+						9
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Of course I have.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 1,
+					"label": "I'm sure we've forgotten something.",
+					"continue": false,
+					"inCondIds": [
+						9
+					],
+					"outCondIds": [
+						10
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "I'm sure we've forgotten something.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 21,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						10
+					],
+					"outCondIds": [
+						11
+					],
+					"props": {
+						"id": "papulia",
+						"text": "No, the presents are on the back seat and the book Dad wanted is here,",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 22,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						11
+					],
+					"outCondIds": [
+						71
+					],
+					"props": {
+						"id": "papulia",
+						"text": "our over-night bag is in the boot - what could we forgotten?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 10,
+					"label": "C2API_GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						71,
+						155
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "leaving",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "motorway",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 116,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						126
+					],
+					"outCondIds": [
+						163
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Have you notified your parents about the visit?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 117,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						168
+					],
+					"outCondIds": [
+						128
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Nope, it's a surprise!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 121,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						140
+					],
+					"outCondIds": [
+						143,
+						148
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Have I got everything?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Of course I have",
+						"ans2": "Think about it again...",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 124,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						143
+					],
+					"outCondIds": [
+						144,
+						149
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Have I got everything?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Of course I have",
+						"ans2": "Think about it again...",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 126,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						144
+					],
+					"outCondIds": [
+						150,
+						153
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Have I got everything?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Of course I have",
+						"ans2": "Think about it again...",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 128,
+					"type": 10,
+					"label": "C2API_SetBool",
+					"continue": true,
+					"inCondIds": [
+						148,
+						149,
+						150
+					],
+					"outCondIds": [
+						151
+					],
+					"props": {
+						"name": "C2API_SetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "tank_fill_forgotten",
+								"$$hashKey": "09Y"
+							},
+							{
+								"type": "str",
+								"name": "val",
+								"value": "true",
+								"$$hashKey": "0A0"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 131,
+					"type": 10,
+					"label": "C2API_SetBool",
+					"continue": true,
+					"inCondIds": [
+						153
+					],
+					"outCondIds": [
+						161
+					],
+					"props": {
+						"name": "C2API_SetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "tank_fill_forgotten",
+								"$$hashKey": "09Y"
+							},
+							{
+								"type": "str",
+								"name": "val",
+								"value": "false",
+								"$$hashKey": "0A0"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 132,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						162
+					],
+					"outCondIds": [
+						155
+					],
+					"props": {
+						"id": "papulia",
+						"text": "I forgot to fill the tank before leaving. We drive to petrol station first.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 136,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						161
+					],
+					"outCondIds": [
+						162
+					],
+					"props": {
+						"id": "papulia",
+						"text": "You said we had forgotten something and you were right.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 137,
+					"type": 3,
+					"label": "Have I notified?",
+					"continue": false,
+					"inCondIds": [
+						163
+					],
+					"outCondIds": [
+						166,
+						167
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Have I?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "No, it's a surprise!",
+						"ans2": "Of course!",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 138,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						169
+					],
+					"outCondIds": [
+						258
+					],
+					"props": {
+						"id": "papulia",
+						"text": "I rang Dad last night and told him we would arrive at about ten.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 141,
+					"type": 10,
+					"label": "C2API_SetBool",
+					"continue": true,
+					"inCondIds": [
+						167
+					],
+					"outCondIds": [
+						169
+					],
+					"props": {
+						"name": "C2API_SetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "parents_notified",
+								"$$hashKey": "09Y"
+							},
+							{
+								"type": "str",
+								"name": "val",
+								"value": "true",
+								"$$hashKey": "0A0"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 143,
+					"type": 10,
+					"label": "C2API_SetBool",
+					"continue": true,
+					"inCondIds": [
+						166
+					],
+					"outCondIds": [
+						168
+					],
+					"props": {
+						"name": "C2API_SetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "parents_notified",
+								"$$hashKey": "09Y"
+							},
+							{
+								"type": "str",
+								"name": "val",
+								"value": "false",
+								"$$hashKey": "0A0"
+							}
+						]
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 6,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 9,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 10,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 71,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 126,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 128,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 140,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 143,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 144,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 148,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 149,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 150,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 151,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 153,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 155,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 161,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 162,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 163,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 166,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 167,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 168,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 169,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 258,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 391,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 27,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 9,
+					"label": "motorway",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						16
+					],
+					"props": {
+						"name": "motorway",
+						"objs": [
+							"Player",
+							"sinulia",
+							"papulia",
+							"mamulia",
+							"car"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						16
+					],
+					"outCondIds": [
+						18
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"car",
+							"sinulia",
+							"papulia",
+							"mamulia"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 31,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						18
+					],
+					"outCondIds": [
+						21
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "leaving",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "motorway",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 32,
+					"type": 1,
+					"label": "How far to go?",
+					"continue": false,
+					"inCondIds": [
+						70
+					],
+					"outCondIds": [
+						23
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "How far to go?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 34,
+					"type": 10,
+					"label": "C2API_MotorwayCarGo",
+					"continue": true,
+					"inCondIds": [
+						21
+					],
+					"outCondIds": [
+						69
+					],
+					"props": {
+						"name": "C2API_MotorwayCarGo",
+						"rollbackName": "C2API_MotorwayCarStop",
+						"source": "c2",
+						"isPure": false,
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 35,
+					"type": 1,
+					"label": "Only another fifty miles",
+					"continue": false,
+					"inCondIds": [
+						23
+					],
+					"outCondIds": [
+						156
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Only another fifty miles. We'll be there in an hour.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 39,
+					"type": 10,
+					"label": "C2API_MotorwayCarStop",
+					"continue": true,
+					"inCondIds": [
+						68
+					],
+					"outCondIds": [
+						67
+					],
+					"props": {
+						"name": "C2API_MotorwayCarStop",
+						"rollbackName": "C2API_MotorwayCarGo",
+						"source": "c2",
+						"isPure": false,
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 40,
+					"type": 1,
+					"label": "Damn! Tank",
+					"continue": false,
+					"inCondIds": [
+						66
+					],
+					"outCondIds": [
+						68
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Damn! I know what I forgot. I forgot to fill the tank before leaving.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 41,
+					"type": 11,
+					"label": "slow down.",
+					"continue": false,
+					"inCondIds": [
+						157
+					],
+					"outCondIds": [
+						66
+					],
+					"props": {
+						"text": "Suddenly, the motor coughed and the car began to slow down."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 42,
+					"type": 11,
+					"label": "Fortunately",
+					"continue": false,
+					"inCondIds": [
+						82
+					],
+					"outCondIds": [
+						36
+					],
+					"props": {
+						"text": "Fortunately, they could continue their journey."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 43,
+					"type": 1,
+					"label": "I'm sorry, love",
+					"continue": false,
+					"inCondIds": [
+						67
+					],
+					"outCondIds": [
+						32
+					],
+					"props": {
+						"id": "papulia",
+						"text": "I'm sorry, love, I should have listened to you,",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 44,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						32
+					],
+					"outCondIds": [
+						33
+					],
+					"props": {
+						"id": "papulia",
+						"text": "you said we had forgotten something and you were right.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 45,
+					"type": 1,
+					"label": "Yes, it's silly to",
+					"continue": false,
+					"inCondIds": [
+						33
+					],
+					"outCondIds": [
+						72
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Yes, it's silly to run out of petrol on the motorway. You ought to have checked before.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 48,
+					"type": 10,
+					"label": "C2API_GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						36,
+						160
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "motorway",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "near_parents_house",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 78,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						69
+					],
+					"outCondIds": [
+						70
+					],
+					"props": {
+						"text": "They took the motorway and were soon driving quickly towards Oxford."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 79,
+					"type": 3,
+					"label": "How can I help",
+					"continue": false,
+					"inCondIds": [
+						72,
+						77
+					],
+					"outCondIds": [
+						73,
+						74,
+						78
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "How can I help my parents in this difficult situation?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Be calm",
+						"ans2": "Call police",
+						"ans3": "Sing a song about fuel",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 80,
+					"type": 1,
+					"label": "What can I do?",
+					"continue": false,
+					"inCondIds": [
+						73
+					],
+					"outCondIds": [
+						75
+					],
+					"props": {
+						"id": "papulia",
+						"text": "What... What can I do?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 81,
+					"type": 1,
+					"label": "Mobile Network Not Available",
+					"continue": false,
+					"inCondIds": [
+						74
+					],
+					"outCondIds": [
+						76
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "\"Mobile Network Not Available\"\n:(",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 82,
+					"type": -1,
+					"label": "Connect",
+					"continue": true,
+					"inCondIds": [
+						75,
+						76
+					],
+					"outCondIds": [
+						77
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 83,
+					"type": 1,
+					"label": "Gimme fuel",
+					"continue": false,
+					"inCondIds": [
+						78
+					],
+					"outCondIds": [
+						79
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "Gimme fuel,\nGimme fire,\nGimme that which I desire,\nOoh!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 84,
+					"type": 1,
+					"label": "Remember",
+					"continue": false,
+					"inCondIds": [
+						79
+					],
+					"outCondIds": [
+						81
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Oh son, you saved us!\nI remember now!\nThere is a can of petrol in the boot!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 85,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						81
+					],
+					"outCondIds": [
+						82
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Good job, Thomas.\nYou hit the nail on the head!",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 134,
+					"type": 10,
+					"label": "C2API_GetBool",
+					"continue": false,
+					"inCondIds": [
+						156
+					],
+					"outCondIds": [
+						157,
+						172
+					],
+					"props": {
+						"name": "C2API_GetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": true,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "tank_fill_forgotten",
+								"$$hashKey": "09Y"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 135,
+					"type": 11,
+					"label": "They continued their journey.",
+					"continue": false,
+					"inCondIds": [
+						180
+					],
+					"outCondIds": [
+						160
+					],
+					"props": {
+						"text": "They continued their journey."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 144,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						172
+					],
+					"outCondIds": [
+						173
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "What's inside this box, Mom?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 145,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						173
+					],
+					"outCondIds": [
+						174
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "It's a gift for grandma.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 146,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						174
+					],
+					"outCondIds": [
+						175
+					],
+					"props": {
+						"id": "papulia",
+						"text": "But what's inside of it?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 147,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						175
+					],
+					"outCondIds": [
+						176
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Actually nothing. It's just an old box. I found this one in the attic.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 148,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						176
+					],
+					"outCondIds": [
+						177
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "We have no money for a good gift for now.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 149,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						177
+					],
+					"outCondIds": [
+						178
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "Yesterday our cat was pre-approved for  another credit card.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 150,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						178
+					],
+					"outCondIds": [
+						179
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Ha-ha-ha-ha!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 151,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						179
+					],
+					"outCondIds": [
+						180
+					],
+					"props": {
+						"id": "papulia",
+						"text": "So we would buy something better for the next visit.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 21,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 23,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 32,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 33,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 36,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 66,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 67,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 68,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 69,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 70,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 72,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 73,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 74,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 75,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 76,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 77,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 78,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 79,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 81,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 82,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 156,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 157,
+					"type": 10,
+					"props": {
+						"name": "true"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 160,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 172,
+					"type": 10,
+					"props": {
+						"name": "false"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 173,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 174,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 175,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 176,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 177,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 178,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 179,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 180,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 49,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 49,
+					"type": 9,
+					"label": "near_parents_house",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						37
+					],
+					"props": {
+						"name": "near_parents_house",
+						"objs": [
+							"Player",
+							"mamulia",
+							"papulia",
+							"sinulia",
+							"ded",
+							"baba"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 50,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						37
+					],
+					"outCondIds": [
+						39
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"baba",
+							"mamulia",
+							"papulia",
+							"sinulia",
+							"ded"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 53,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						39
+					],
+					"outCondIds": [
+						42
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "motorway",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "near_parents_house",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 54,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						43
+					],
+					"outCondIds": [
+						253
+					],
+					"props": {
+						"text": "Oxford looked very beautiful that morning. It is not for nothing that it is called \"The city of Sprites\"."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 56,
+					"type": 1,
+					"label": "wow",
+					"continue": true,
+					"inCondIds": [
+						42
+					],
+					"outCondIds": [
+						43
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "Wow!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 60,
+					"type": 10,
+					"label": "C2API_GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						121
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "near_parents_house",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "parents_house",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 86,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						254
+					],
+					"outCondIds": [
+						252
+					],
+					"props": {
+						"text": "David hasn't told his parents about the meeting but his father greeted them at the door."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 109,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						252
+					],
+					"outCondIds": [
+						116
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Surprise!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 110,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						116
+					],
+					"outCondIds": [
+						117
+					],
+					"props": {
+						"id": "ded",
+						"text": "Surprise???\nHa-ha! I've read about your visit on Twitter.\nYou tweet like a teenager, David!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 111,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						117
+					],
+					"outCondIds": [
+						119
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Is this @bigboy777 follower is my dad?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 112,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						119
+					],
+					"outCondIds": [
+						122
+					],
+					"props": {
+						"id": "ded",
+						"text": "Your phone calls are rare, so we decided to look after you on Twitter.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 113,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						124
+					],
+					"outCondIds": [
+						121
+					],
+					"props": {
+						"id": "ded",
+						"text": "Oh, Thomas. Apple of my eye!\nYou look well. Everybody come in!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 114,
+					"type": 10,
+					"label": "C2API_NearParentsHouseComeCloser",
+					"continue": true,
+					"inCondIds": [
+						122,
+						256
+					],
+					"outCondIds": [
+						125
+					],
+					"props": {
+						"name": "C2API_NearParentsHouseComeCloser",
+						"rollbackName": "C2API_NearParentsHouseComeBack",
+						"source": "c2",
+						"isPure": false,
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 115,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						125
+					],
+					"outCondIds": [
+						124
+					],
+					"props": {
+						"id": "sinulia",
+						"text": "Hi grandpa!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 222,
+					"type": 10,
+					"label": "C2API_GetBool",
+					"continue": false,
+					"inCondIds": [
+						253
+					],
+					"outCondIds": [
+						254,
+						255
+					],
+					"props": {
+						"name": "C2API_GetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": true,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "parents_notified",
+								"$$hashKey": "09Y"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 224,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						255
+					],
+					"outCondIds": [
+						256
+					],
+					"props": {
+						"text": "David told his parents about the meeting. His father greeted them at the door."
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 37,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 39,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 42,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 43,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 116,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 117,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 119,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 121,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 122,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 124,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 125,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 252,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 253,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 254,
+					"type": 10,
+					"props": {
+						"name": "false"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 255,
+					"type": 10,
+					"props": {
+						"name": "true"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 256,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 57,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 57,
+					"type": 9,
+					"label": "parents_house",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						44
+					],
+					"props": {
+						"name": "parents_house",
+						"objs": [
+							"Player",
+							"ded",
+							"baba",
+							"papulia",
+							"sinulia",
+							"mamulia"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 58,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						44
+					],
+					"outCondIds": [
+						46
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"ded",
+							"baba",
+							"papulia",
+							"sinulia",
+							"mamulia"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 62,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						46
+					],
+					"outCondIds": [
+						47
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "near_parents_house",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "parents_house",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 63,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						47
+					],
+					"outCondIds": [
+						192
+					],
+					"props": {
+						"id": "baba",
+						"text": "Did you have a good trip?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 64,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						182,
+						194
+					],
+					"outCondIds": [
+						50
+					],
+					"props": {
+						"id": "papulia",
+						"text": "Er, yes thanks, it was alright.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 66,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						50,
+						191
+					],
+					"outCondIds": [
+						61
+					],
+					"props": {
+						"id": "baba",
+						"text": "Put your bags down and come here.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 67,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						196,
+						261
+					],
+					"outCondIds": [
+						137
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "It's just a little something I found in a junk... I mean, in an antique shop.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 69,
+					"type": 5,
+					"label": "mamulia_box",
+					"continue": true,
+					"inCondIds": [
+						131
+					],
+					"outCondIds": [
+						132
+					],
+					"props": {
+						"id": "mamulia",
+						"name": "box",
+						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 70,
+					"type": 5,
+					"label": "mamulia_idle",
+					"continue": true,
+					"inCondIds": [
+						134
+					],
+					"outCondIds": [
+						56
+					],
+					"props": {
+						"id": "mamulia",
+						"name": "idle",
+						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 71,
+					"type": 5,
+					"label": "baba_box",
+					"continue": true,
+					"inCondIds": [
+						56
+					],
+					"outCondIds": [
+						135
+					],
+					"props": {
+						"id": "baba",
+						"name": "box",
+						"secs": -1
+					}
+				},
+				{
+					"ver": 1,
+					"id": 72,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						135
+					],
+					"outCondIds": [
+						195
+					],
+					"props": {
+						"id": "baba",
+						"text": "Oh, it's lovely! But what is it?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 73,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						137
+					],
+					"outCondIds": [
+						199
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Well. it's Victorian. It's a... thing.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 74,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						201,
+						257
+					],
+					"outCondIds": [
+						202
+					],
+					"props": {
+						"id": "baba",
+						"text": "I think I'll put my earrings in it!",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 75,
+					"type": 10,
+					"label": "C2API_ParentsHouseComeHere",
+					"continue": true,
+					"inCondIds": [
+						61
+					],
+					"outCondIds": [
+						131
+					],
+					"props": {
+						"name": "C2API_ParentsHouseComeHere",
+						"rollbackName": "C2API_ParentsHouseComeBack",
+						"source": "c2",
+						"isPure": false,
+						"params": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 118,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						132
+					],
+					"outCondIds": [
+						134
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Here is a small present for you.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 119,
+					"type": 1,
+					"label": "Oh, I'm off the hook!",
+					"continue": false,
+					"inCondIds": [
+						202
+					],
+					"outCondIds": [
+						342
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Oh, I'm off the hook!",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 152,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						193
+					],
+					"outCondIds": [
+						182,
+						183
+					],
+					"props": {
+						"id": "papulia",
+						"text": "What to say?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Yep!",
+						"ans2": "No...",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 153,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						183
+					],
+					"outCondIds": [
+						185
+					],
+					"props": {
+						"id": "papulia",
+						"text": "No, we didn't.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 154,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						185
+					],
+					"outCondIds": [
+						188
+					],
+					"props": {
+						"id": "papulia",
+						"text": "I forgot to fill the tank and we ran out of fuel on the road.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 155,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						189
+					],
+					"outCondIds": [
+						190
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "Thomas saved us!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 156,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						188
+					],
+					"outCondIds": [
+						189
+					],
+					"props": {
+						"id": "ded",
+						"text": "It's in your usual style, David!\n:))",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 157,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						190
+					],
+					"outCondIds": [
+						191
+					],
+					"props": {
+						"id": "ded",
+						"text": "Good boy!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 160,
+					"type": 10,
+					"label": "C2API_GetBool",
+					"continue": false,
+					"inCondIds": [
+						192
+					],
+					"outCondIds": [
+						193,
+						194
+					],
+					"props": {
+						"name": "C2API_GetBool",
+						"rollbackName": null,
+						"source": "c2",
+						"isPure": true,
+						"params": [
+							{
+								"type": "str",
+								"name": "name",
+								"value": "tank_fill_forgotten",
+								"$$hashKey": "09Y"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 161,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						195
+					],
+					"outCondIds": [
+						196,
+						259
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "What to answer?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "It's antique",
+						"ans2": "I found it in a junk",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 162,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						260
+					],
+					"outCondIds": [
+						257
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "It's just a little something I found in a junk...",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 164,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						199
+					],
+					"outCondIds": [
+						201
+					],
+					"props": {
+						"id": "baba",
+						"text": "This looks very expensive!",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 225,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						259
+					],
+					"outCondIds": [
+						260,
+						261
+					],
+					"props": {
+						"id": "mamulia",
+						"text": "If I tell the truth Grandma may get angry... I don't want to get any problems in the family.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE",
+						"ans1": "Say that the box is antique",
+						"ans2": "Say that the box is just old",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 257,
+					"type": 10,
+					"label": "C2API_GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						342
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "parents_house",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "quiz",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 44,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 46,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 47,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 50,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 56,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 61,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 131,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 132,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 134,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 135,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 137,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 182,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 183,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 185,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 188,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 189,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 190,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 191,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 192,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 193,
+					"type": 10,
+					"props": {
+						"name": "true"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 194,
+					"type": 10,
+					"props": {
+						"name": "false"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 195,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 196,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 199,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 201,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 202,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 257,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 259,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 260,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 261,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 342,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 254,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 254,
+					"type": 9,
+					"label": "quiz",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						341
+					],
+					"props": {
+						"name": "quiz",
+						"objs": [
+							"Player",
+							"teacher"
+						],
+						"objPool": [],
+						"text": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 255,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						341
+					],
+					"outCondIds": [
+						388
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"teacher"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 261,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						388
+					],
+					"outCondIds": [
+						389
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"isPure": false,
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "parents_house",
+								"$$hashKey": "036"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "quiz",
+								"$$hashKey": "038"
+							}
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 262,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						389
+					],
+					"outCondIds": [
+						348
+					],
+					"props": {
+						"id": "teacher",
+						"text": "This is the end of the story.\nNow let's check your understanding of it!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 263,
+					"type": 3,
+					"label": "Oxford?",
+					"continue": false,
+					"inCondIds": [
+						348
+					],
+					"outCondIds": [
+						362,
+						364
+					],
+					"props": {
+						"id": "teacher",
+						"text": "The family was traveling to Oxford by car.\nIs it true?",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE",
+						"ans1": "True",
+						"ans2": "False",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 264,
+					"type": 3,
+					"label": "Enough fuel?",
+					"continue": false,
+					"inCondIds": [
+						376,
+						378
+					],
+					"outCondIds": [
+						366,
+						369
+					],
+					"props": {
+						"id": "teacher",
+						"text": "There was enough fuel in the tank to get to Oxford when the family left the house.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE",
+						"ans1": "True",
+						"ans2": "False",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 270,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						375,
+						379
+					],
+					"outCondIds": [
+						371,
+						373
+					],
+					"props": {
+						"id": "teacher",
+						"text": "What was inside the box that was gifted to grandma?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Earrings",
+						"ans2": "Nothing",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 272,
+					"type": 1,
+					"label": "Wrong",
+					"continue": false,
+					"inCondIds": [
+						374
+					],
+					"outCondIds": [
+						382
+					],
+					"props": {
+						"id": "teacher",
+						"text": "Grandma decided to put earrings to the box. But the box was empty.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 275,
+					"type": 10,
+					"label": "C2API_ShowSuccess",
+					"continue": true,
+					"inCondIds": [
+						362
+					],
+					"outCondIds": [
+						376
+					],
+					"props": {
+						"name": "C2API_ShowSuccess",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 277,
+					"type": 10,
+					"label": "C2API_ShowFail",
+					"continue": true,
+					"inCondIds": [
+						364
+					],
+					"outCondIds": [
+						378
+					],
+					"props": {
+						"name": "C2API_ShowFail",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 279,
+					"type": 10,
+					"label": "C2API_ShowFail",
+					"continue": true,
+					"inCondIds": [
+						366
+					],
+					"outCondIds": [
+						379
+					],
+					"props": {
+						"name": "C2API_ShowFail",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 281,
+					"type": 10,
+					"label": "C2API_ShowSuccess",
+					"continue": true,
+					"inCondIds": [
+						369
+					],
+					"outCondIds": [
+						375
+					],
+					"props": {
+						"name": "C2API_ShowSuccess",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 283,
+					"type": 10,
+					"label": "C2API_ShowSuccess",
+					"continue": true,
+					"inCondIds": [
+						371
+					],
+					"outCondIds": [
+						381
+					],
+					"props": {
+						"name": "C2API_ShowSuccess",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 285,
+					"type": 10,
+					"label": "C2API_ShowFail",
+					"continue": true,
+					"inCondIds": [
+						373
+					],
+					"outCondIds": [
+						374
+					],
+					"props": {
+						"name": "C2API_ShowFail",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 287,
+					"type": 10,
+					"label": "C2API_QuizInjectResult",
+					"continue": false,
+					"inCondIds": [
+						381,
+						382
+					],
+					"outCondIds": [
+						383,
+						384,
+						385,
+						386
+					],
+					"props": {
+						"name": "C2API_QuizInjectResult",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 288,
+					"type": 1,
+					"label": "0",
+					"continue": false,
+					"inCondIds": [
+						383
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "0 out of 3. That's fail!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 293,
+					"type": 1,
+					"label": "1",
+					"continue": false,
+					"inCondIds": [
+						384
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "1 out of 3. Not bad.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 295,
+					"type": 1,
+					"label": "2",
+					"continue": false,
+					"inCondIds": [
+						385
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "2 out of 3. Good.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 297,
+					"type": 1,
+					"label": "3",
+					"continue": false,
+					"inCondIds": [
+						386
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "teacher",
+						"text": "3 out of 3. Perfect!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 341,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 348,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 362,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 364,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 366,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 369,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 371,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 373,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 374,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 375,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 376,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 378,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 379,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 381,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 382,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 383,
+					"type": 10,
+					"props": {
+						"name": "0"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 384,
+					"type": 10,
+					"props": {
+						"name": "1"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 385,
+					"type": 10,
+					"props": {
+						"name": "2"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 386,
+					"type": 10,
+					"props": {
+						"name": "3"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 388,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 389,
+					"type": 8,
+					"props": {}
+				}
+			]
+		}
+	]
+}

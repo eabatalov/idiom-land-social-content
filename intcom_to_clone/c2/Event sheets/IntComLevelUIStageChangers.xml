@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComLevelUIStageChangers</name>
+    <events>
+        <event-group description="" sid="1402522102387408" title="Interactive comics level stage changers">
+            <sub-events>
+                <variable constant="0" name="PendingStageToGo" sid="3356955334022284" static="1" type="text"></variable>
+                <variable constant="0" name="StageChangeState" sid="910204630080008" static="1" type="number">0</variable>
+                <variable constant="1" name="STAGE_CHANGE_NONE" sid="8795284314640539" static="0" type="number">0</variable>
+                <variable constant="1" name="STAGE_CHANGE_NEXT_FUNC_PENDING_1" sid="1738845348878861" static="0" type="number">1</variable>
+                <variable constant="1" name="STAGE_CHANGE_NEXT_FUNC_PENDING_2" sid="6731444462107057" static="0" type="number">2</variable>
+                <variable constant="1" name="STAGE_CHANGE_PREV_FUNC_PENDING_1" sid="6203326990471465" static="0" type="number">3</variable>
+                <variable constant="1" name="STAGE_CHANGE_PREV_FUNC_PENDING_2" sid="5490697103368139" static="0" type="number">4</variable>
+                <variable constant="1" name="STAGE_CHANGE_PREV_FUNC_PENDING_3" sid="3323186525126797" static="0" type="number">5</variable>
+                <event-block sid="3118791250098896">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1381465258156887" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3253979678663745">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1985002521235815" type="System">
+                                    <param id="0" name="Variable">PendingStageToGo</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5252883904651398" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Value">STAGE_CHANGE_NONE</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>api_param(&apos;0&apos;): current stage name&#x0D;&#x0A;api_param(&apos;1&apos;): next stage name</comment>
+                <event-block sid="942115302350124">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3440019069661866" type="Function">
+                            <param id="0" name="Name">&quot;C2API_GoToNextStage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="7485245814096448" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="PCurrentStageName" sid="606546028390264" static="0" type="text"></variable>
+                        <variable constant="0" name="PNextStageName" sid="7839481191594823" static="0" type="text"></variable>
+                        <event-block sid="5709304910517801">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4708132005932234" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_NONE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1879481428394043" type="System">
+                                    <param id="0" name="Variable">PCurrentStageName</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getParamByName(&quot;0&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5554166819795192" type="System">
+                                    <param id="0" name="Variable">PNextStageName</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getParamByName(&quot;1&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9165885953337179">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1085452507717177" type="System">
+                                            <param id="0" name="Variable">CurrentStageName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">PNextStageName</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5371385226153297" type="System">
+                                            <param id="0" name="Variable">PendingStageToGo</param>
+                                            <param id="1" name="Value">PNextStageName</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9560685603496707" type="System">
+                                            <param id="0" name="Variable">StageChangeState</param>
+                                            <param id="1" name="Value">STAGE_CHANGE_NEXT_FUNC_PENDING_1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="706987352177441">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3122474067417003" type="System" />
+                                <condition id="-14" name="Compare variable" sid="1391046395892213" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_NEXT_FUNC_PENDING_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2432078360668757" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Value">STAGE_CHANGE_NONE</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Called the second time as a result of &quot;last UI cmd recall&quot;</comment>
+                        <event-block sid="8531184421025082">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8978413134482342" type="System" />
+                                <condition id="-14" name="Compare variable" sid="7375899805795643" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_PREV_FUNC_PENDING_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3180287725576484" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Value">STAGE_CHANGE_PREV_FUNC_PENDING_3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8412036394775676" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;BACK&quot;{###}&quot;Player&quot;{###}&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>api_param(&apos;0&apos;): prev stage name&#x0D;&#x0A;api_param(&apos;1&apos;): current stage name</comment>
+                <event-block sid="2495822201862698">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3757300073286922" type="Function">
+                            <param id="0" name="Name">&quot;C2API_GoToPrevStage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="4448210915341228" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="PPrevStageName" sid="9940377137787141" static="0" type="text"></variable>
+                        <variable constant="0" name="PCurrentStageName" sid="8464111118922954" static="0" type="text"></variable>
+                        <event-block sid="3892438800718684">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9529870874394366" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_NONE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2247599492807501" type="System">
+                                    <param id="0" name="Variable">PPrevStageName</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getParamByName(&quot;0&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8056607408105347" type="System">
+                                    <param id="0" name="Variable">PCurrentStageName</param>
+                                    <param id="1" name="Value">QuestLevelRuntime.getParamByName(&quot;1&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8810689652341917">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2526719223854714" type="System">
+                                            <param id="0" name="Variable">CurrentStageName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">PPrevStageName</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6933103436933881" type="System">
+                                            <param id="0" name="Variable">PendingStageToGo</param>
+                                            <param id="1" name="Value">PPrevStageName</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="327961334526838" type="System">
+                                            <param id="0" name="Variable">StageChangeState</param>
+                                            <param id="1" name="Value">STAGE_CHANGE_PREV_FUNC_PENDING_1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Called the third time as a result of &quot;C2API_GoToNextStage&quot; rollback</comment>
+                        <event-block sid="6453453529996787">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4214182808688789" type="System" />
+                                <condition id="-14" name="Compare variable" sid="1100828865669551" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_PREV_FUNC_PENDING_3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1066173818480253" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Value">STAGE_CHANGE_NONE</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8429846590837105">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7910287578733775" type="Function">
+                            <param id="0" name="Name">&quot;onAfterUICmdSeqProc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5464392892243472">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6702067274326661" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_NEXT_FUNC_PENDING_1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4063501828046978" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Value">STAGE_CHANGE_NEXT_FUNC_PENDING_2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3611856998784167" type="Function">
+                                    <param id="0" name="Name">&quot;QuestEngineChangeStage&quot;</param>
+                                    <param id="1" name="Parameter {n}">PendingStageToGo</param>
+                                </action>
+                                <action id="0" name="Call function" sid="546442462290052" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;NEXT&quot;{###}&quot;Player&quot;{###}&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6231158017993934">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3188889837791676" type="System" />
+                                <condition id="-14" name="Compare variable" sid="9002744596343556" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">STAGE_CHANGE_PREV_FUNC_PENDING_1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2897882990104245" type="System">
+                                    <param id="0" name="Variable">StageChangeState</param>
+                                    <param id="1" name="Value">STAGE_CHANGE_PREV_FUNC_PENDING_2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6588408847625521" type="Function">
+                                    <param id="0" name="Name">&quot;QuestEngineChangeStage&quot;</param>
+                                    <param id="1" name="Parameter {n}">PendingStageToGo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

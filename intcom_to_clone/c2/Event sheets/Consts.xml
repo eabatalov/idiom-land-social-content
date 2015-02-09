@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Consts</name>
+    <events>
+        <variable constant="1" name="ANIM_BLEND_MS" sid="8275024928988365" static="0" type="number">1000</variable>
+    </events>
+</c2eventsheet>

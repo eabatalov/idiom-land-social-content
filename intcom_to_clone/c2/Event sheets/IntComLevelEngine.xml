@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComLevelEngine</name>
+    <events>
+        <event-group description="" sid="890701224902969" title="Interactive comic level imports">
+            <sub-events>
+                <include>LevelEngine</include>
+                <include>QuestLevelEngine</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4318445664209983" title="Interactive comic level modules">
+            <sub-events>
+                <include>IntComLevelLogicLib</include>
+                <include>IntComLevelUILib</include>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
