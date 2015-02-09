@@ -64,9 +64,6 @@
                                         <action behavior="Sine" id="0" name="Set active" sid="7493394305746435" type="NavHelper">
                                             <param id="0" name="State">1</param>
                                         </action>
-                                        <action behavior="Sine2" id="0" name="Set active" sid="6078670334747625" type="NavHelper">
-                                            <param id="0" name="State">1</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="7047995377052843" type="System">
                                             <param id="0" name="Variable">IsNavNextShowScheduled</param>
                                             <param id="1" name="Value">0</param>
@@ -100,9 +97,6 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action behavior="Sine" id="0" name="Set active" sid="2364655204691713" type="NavHelper">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action behavior="Sine2" id="0" name="Set active" sid="5104829786476604" type="NavHelper">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="6903055872176464" type="System">
@@ -353,9 +347,6 @@
                                         <action behavior="Sine" id="0" name="Set active" sid="2705283871893323" type="QuizzHelper">
                                             <param id="0" name="State">1</param>
                                         </action>
-                                        <action behavior="Sine2" id="0" name="Set active" sid="6049474344525201" type="QuizzHelper">
-                                            <param id="0" name="State">1</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="682271400878802">
@@ -386,9 +377,6 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action behavior="Sine" id="0" name="Set active" sid="8154170619567631" type="QuizzHelper">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action behavior="Sine2" id="0" name="Set active" sid="5945153360296675" type="QuizzHelper">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="3284831295043991" type="System">
