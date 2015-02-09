@@ -309,7 +309,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1030</x>
+                        <x>1027</x>
                         <y>597</y>
                         <z>0</z>
                         <width>1070</width>
@@ -332,7 +332,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>324</x>
-                        <y>322</y>
+                        <y>307</y>
                         <z>0</z>
                         <width>724.698364258</width>
                         <height>762.499328613</height>
@@ -1933,7 +1933,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-676</x>
+                        <x>-677</x>
                         <y>117</y>
                         <z>0</z>
                         <width>320</width>
@@ -1959,7 +1959,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-997</x>
-                        <y>198</y>
+                        <y>197</y>
                         <z>0</z>
                         <width>320</width>
                         <height>80</height>
@@ -2008,8 +2008,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-996</x>
-                        <y>118</y>
+                        <x>-997</x>
+                        <y>117</y>
                         <z>0</z>
                         <width>320</width>
                         <height>80</height>
@@ -2025,7 +2025,7 @@
                         <text>Player 1st ans I don&apos;t know or I don&apos;t</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-24,400,0</font>
-                        <color>50,50,50</color>
+                        <color>77,137,237</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -2035,10 +2035,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-980.249511719</x>
-                        <y>118</y>
+                        <x>-947.000061035</x>
+                        <y>117</y>
                         <z>0</z>
-                        <width>290</width>
+                        <width>248</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2052,7 +2052,7 @@
                         <text>Player 2nd answer text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-24,400,0</font>
-                        <color>50,50,50</color>
+                        <color>77,137,237</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -2062,10 +2062,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-661.217163086</x>
+                        <x>-627</x>
                         <y>117</y>
                         <z>0</z>
-                        <width>290</width>
+                        <width>248</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2079,7 +2079,7 @@
                         <text>Player 3rd answer text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-24,400,0</font>
-                        <color>50,50,50</color>
+                        <color>77,137,237</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -2089,10 +2089,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-981.249511719</x>
-                        <y>198</y>
+                        <x>-947</x>
+                        <y>197</y>
                         <z>0</z>
-                        <width>290</width>
+                        <width>248</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2106,7 +2106,7 @@
                         <text>Player 4th answer text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-24,400,0</font>
-                        <color>50,50,50</color>
+                        <color>77,137,237</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -2116,10 +2116,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-659.311218262</x>
+                        <x>-627</x>
                         <y>197</y>
                         <z>0</z>
-                        <width>290</width>
+                        <width>248</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

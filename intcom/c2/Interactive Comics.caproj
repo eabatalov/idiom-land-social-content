@@ -376,7 +376,7 @@
                             </instance-variables>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="3213293281862042" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-1.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -388,7 +388,7 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9067309200631302" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-1-active.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -423,7 +423,7 @@
                             </instance-variables>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="4402831604063313" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-2.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -435,7 +435,7 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="493261926668934" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-2-active.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -473,7 +473,7 @@
                             </instance-variables>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="717818763701825" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-3-active.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -485,7 +485,7 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="4914723057507207" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-3.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -517,7 +517,7 @@
                             </instance-variables>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9899613098915002" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-4.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -529,7 +529,7 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6583910298742616" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-4-active.png">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -561,12 +561,12 @@
                             <plugin id="Sprite" />
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="2ans" pingpong="0" repeatcount="1" repeatto="0" sid="7926407920898488" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0">
-                                        <image-point name="QuizHelper" x="0.189063" y="1.0625" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\tile.gif">
+                                        <image-point name="QuizHelper" x="0.189063" y="2.125" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="4ans" pingpong="0" repeatcount="1" repeatto="0" sid="5074208853890428" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\tile-grid.gif">
                                         <image-point name="QuizHelper" x="0.189063" y="1.0625" />
                                     </frame>
                                 </animation>
