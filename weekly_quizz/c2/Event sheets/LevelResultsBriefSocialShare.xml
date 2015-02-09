@@ -6,6 +6,7 @@
         <event-group description="" sid="2287860345232122" title="Level results brief social share">
             <sub-events>
                 <variable constant="1" name="QUIZZ_URL" sid="9266829868150948" static="0" type="text">http://idiomland.com/quiz</variable>
+                <variable constant="1" name="DEMO_URL" sid="3731179217046966" static="0" type="text">http://idiomland.com/game2</variable>
                 <variable constant="1" name="SHARE_REDIRECT" sid="8954915833981114" static="0" type="text">http://idiomland.com?from=quiz</variable>
                 <variable constant="1" name="SHARE_TITLE" sid="9399908345305901" static="0" type="text">Idiom Land Quiz of the Week</variable>
                 <comment>param(0): number of right answers&#x0D;&#x0A;param(1): number of question</comment>
@@ -743,7 +744,7 @@
                                                 </action>
                                                 <action id="0" name="Call function" sid="6303033505245991" type="Function">
                                                     <param id="0" name="Name">&quot;DoResultsShare&quot;</param>
-                                                    <param id="1" name="Parameter {n}">SHARE_REDIRECT</param>
+                                                    <param id="1" name="Parameter {n}">DEMO_URL</param>
                                                 </action>
                                             </actions>
                                         </event-block>

@@ -4,21 +4,43 @@
         "debug" : "no"
     },
     "sections" : [
-        {
+       {
             "polyProps" : {
-                "questCardURL" : "http://photos-e.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/10843919_859160490790204_2056791875_n.jpg"
+                "questCardURL" : "https://lh6.googleusercontent.com/-xg53u71JV8U/VLu6ayTfW_I/AAAAAAAAGSw/qSMR5DM16QQ/s852/223-have-a-dog.jpg"
             },
             "questions" : [
                 {
                     "text" : [
-                        "\"Flog a dead horse\" means to be successful."
+                        "\"Have a dog in the fight\" means",
+                        " \"to be aggressive\""
                     ],
                     "rightAnswer" : false
                 },
                 {
                     "text" : [
-                        "\"Flog a dead horse\" means to waste time trying ",
-                        "to do something that will not succeed."
+                        "\"Have a dog in the fight\" means",
+                        " \"to have an interest in the outcome of a situation\""
+                    ],
+                    "rightAnswer" : true
+                }
+            ]
+       },
+        {
+            "polyProps" : {
+                "questCardURL" : "https://lh6.googleusercontent.com/-XsrRcmd7taE/VL0Xp9hlXHI/AAAAAAAAGVo/Wr9xWDoennw/s852/225-fingers-crossed.jpg"
+            },
+            "questions" : [
+                {
+                    "text" : [
+                        "\"Keep your fingers crossed\" means",
+                        " \"to keep a secret\""
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Keep your fingers crossed\" means",
+                        " \"to hope for a positive outcome\""
                     ],
                     "rightAnswer" : true
                 }
@@ -26,38 +48,82 @@
         },
         {
             "polyProps" : {
-                "questCardURL" : "http://photos-g.ak.instagram.com/hphotos-ak-xpf1/t51.2885-15/891506_1517204398553358_2103760431_n.jpg"
+                "questCardURL" : "https://lh3.googleusercontent.com/-CZJ5M8bp7RY/VL5NX1lRNAI/AAAAAAAAGXU/kvLB8kAOyng/s852/170-rock-the-boat.jpg"
             },
             "questions" : [
                 {
                     "text" : [
-                        "\"Get your wires crossed\" is to misunderstand someone."
+                        "\"Rock the boat\" means",
+                        " \"to miss an opportunity\""
                     ],
-                    "rightAnswer" : true
+                    "rightAnswer" : false
                 },
                 {
                     "text" : [
-                        "\"Get your wires crossed\" means to date with someone."
+                        "\"Rock the boat\" means",
+                        " \"to do or say something that will destabilise a situation\""
                     ],
-                    "rightAnswer" : false
+                    "rightAnswer" : true
                 }
             ]
         },
         {
             "polyProps" : {
-                "questCardURL" : "http://photos-e.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/10881875_365298253642300_268380823_n.jpg"
+                "questCardURL" : "https://lh6.googleusercontent.com/-DiAcju4H5sc/VL_G8nGQYpI/AAAAAAAAGag/9goVxFRwPX4/s852/226-knee-jerk.jpg"
             },
             "questions" : [
                 {
                     "text" : [
-                        "\"Get a kick out of music\" is to listen it loudly.",
+                        "\"Knee-jerk reaction\" is",
+                        " a birthday surprise"
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Knee-jerk reaction\" is",
+                        " an instant, instinctive response to a situation"
+                    ],
+                    "rightAnswer" : true
+                }
+            ]
+       },
+       {
+            "polyProps" : {
+                "questCardURL" : "https://lh4.googleusercontent.com/-HOBMoBe-wAM/VMDlKgnpiyI/AAAAAAAAGcI/bqSjYVCPhhw/s852/217-1bolt-from-the-blue.jpg"
+            },
+            "questions" : [
+                {
+                    "text" : [
+                        "\"Bolt from the blue\" is",
+                        " an old friend"
+                    ],
+                    "rightAnswer" : false
+                },
+                {
+                    "text" : [
+                        "\"Bolt from the blue\" is",
+                        " a complete surprise"
+                    ],
+                    "rightAnswer" : true
+                }
+            ]
+       },
+       {
+            "polyProps" : {
+                "questCardURL" : "https://lh3.googleusercontent.com/-zPUdK1rAHEE/VMJc5CdonxI/AAAAAAAAGek/Tc_do0getQA/s852/229-2mums-the-word.jpg"
+            },
+            "questions" : [
+                {
+                    "text" : [
+                        "\"Mum's the word\" means \"to reveal a secret\"",
                         ""
                     ],
                     "rightAnswer" : false
                 },
                 {
                     "text" : [
-                        "\"Get a kick out of horror movies\" means to enjoy them very much.",
+                        "\"Mum's the word\" means \"to keep a secret\"",
                         ""
                     ],
                     "rightAnswer" : true
@@ -66,83 +132,20 @@
        },
        {
             "polyProps" : {
-                "questCardURL" : "http://photos-g.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/10724219_406139012876782_1987286775_n.jpg"
+                "questCardURL" : "https://lh4.googleusercontent.com/-oRGNgpGJafM/VMN_P51FWTI/AAAAAAAAGgU/mHIxp6Xz83M/s852/233-rise-and-shine.jpg"
             },
             "questions" : [
                 {
                     "text" : [
-                        "\"Drag your feet\" is a sport excercise.",
+                        "\"Rise and shine\" means \"to become rich\"",
                         ""
                     ],
                     "rightAnswer" : false
                 },
                 {
                     "text" : [
-                        "\"Dragging your feet\" is doing something slowly because ",
-                        "you don't want to do it."
-                    ],
-                    "rightAnswer" : true
-                }
-            ]
-       },
-       {
-            "polyProps" : {
-                "questCardURL" : "http://photos-c.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10865052_273523019438586_1611682830_n.jpg"
-            },
-            "questions" : [
-                {
-                    "text" : [
-                        "\"Hit the sack\" is to be kicked by a sack.",
-                        ""
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "\"Hit the sack\" is to go to bed in order to sleep.",
-                        ""
-                    ],
-                    "rightAnswer" : true
-                }
-            ]
-       },
-       {
-            "polyProps" : {
-                "questCardURL" : "http://photos-h.ak.instagram.com/hphotos-ak-xap1/t51.2885-15/1599879_606851646109415_319454872_n.jpg"
-            },
-            "questions" : [
-                {
-                    "text" : [
-                        "\"Have your cake and eat it too\" is to have half of a cake after you bite it.",
-                        ""
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "\"Have your cake and eat it too\" is to have two good things at the same time.",
-                        ""
-                    ],
-                    "rightAnswer" : true
-                }
-            ]
-       },
-       {
-            "polyProps" : {
-                "questCardURL" : "http://photos-b.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848160_364721747061969_392480482_n.jpg"
-            },
-            "questions" : [
-                {
-                    "text" : [
-                        "\"Be down in the dumps\" is to have dirt clothes.",
-                        ""
-                    ],
-                    "rightAnswer" : false
-                },
-                {
-                    "text" : [
-                        "\"Be down in the dumps\" means to be unhappy.",
-                        ""
+                        "\"Rise and shine\" means",
+                        " \"get out of bed and be lively and energetic\""
                     ],
                     "rightAnswer" : true
                 }
