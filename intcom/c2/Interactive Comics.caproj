@@ -562,12 +562,12 @@
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="2ans" pingpong="0" repeatcount="1" repeatto="0" sid="7926407920898488" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\tile.gif">
-                                        <image-point name="QuizHelper" x="0.189063" y="2.125" />
+                                        <image-point name="QuizHelper" x="0.184375" y="1.2375" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="4ans" pingpong="0" repeatcount="1" repeatto="0" sid="5074208853890428" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\tile-grid.gif">
-                                        <image-point name="QuizHelper" x="0.189063" y="1.0625" />
+                                        <image-point name="QuizHelper" x="0.1875" y="1.1125" />
                                     </frame>
                                 </animation>
                             </animation-folder>
@@ -741,7 +741,7 @@
                                         <collision-poly>
                                             <point x="0.148438" y="0.148438" />
                                             <point x="0.5" y="0" />
-                                            <point x="0.851563" y="0.148438" />
+                                            <point x="0.836411" y="0.133286" />
                                             <point x="1" y="0.5" />
                                             <point x="0.851563" y="0.851563" />
                                             <point x="0.5" y="1" />
@@ -2261,55 +2261,17 @@
         <sound-folder name="LevelEngines">
             <sound-folder name="IntComLevelEngine">
                 <sound-folder name="Common">
-                    <sound-folder name="Coins">
-                        <file name="coin_collect.m4a" />
-                        <file name="coin_collect.ogg" />
-                    </sound-folder>
                     <sound-folder name="AnimResult">
                         <file name="result_fail.m4a" />
                         <file name="result_fail.ogg" />
                         <file name="result_success.m4a" />
                         <file name="result_success.ogg" />
                     </sound-folder>
-                    <sound-folder name="Foxy">
-                        <file name="foxy_jump.m4a" />
-                        <file name="foxy_jump.ogg" />
-                        <file name="foxy_shock.m4a" />
-                        <file name="foxy_shock.ogg" />
-                        <file name="foxy_speach.m4a" />
-                        <file name="foxy_speach.ogg" />
-                        <file name="foxy_think.m4a" />
-                        <file name="foxy_think.ogg" />
-                    </sound-folder>
                     <sound-folder name="Notification">
                         <file name="notification_show.m4a" />
                         <file name="notification_show.ogg" />
                         <file name="notification_cross.m4a" />
                         <file name="notification_cross.ogg" />
-                    </sound-folder>
-                    <sound-folder name="NPC">
-                        <file name="npc_think.m4a" />
-                        <file name="npc_think.ogg" />
-                        <file name="npc_speach_boy.m4a" />
-                        <file name="npc_speach_boy.ogg" />
-                        <file name="npc_speach_man.m4a" />
-                        <file name="npc_speach_man.ogg" />
-                        <file name="npc_speach_woman.m4a" />
-                        <file name="npc_speach_woman.ogg" />
-                        <file name="npc_speach_robot.m4a" />
-                        <file name="npc_speach_robot.ogg" />
-                        <file name="npc_think_boy.m4a" />
-                        <file name="npc_think_boy.ogg" />
-                        <file name="npc_think_man.m4a" />
-                        <file name="npc_think_man.ogg" />
-                        <file name="npc_think_robot.m4a" />
-                        <file name="npc_think_robot.ogg" />
-                        <file name="npc_think_woman.m4a" />
-                        <file name="npc_think_woman.ogg" />
-                    </sound-folder>
-                    <sound-folder name="TalkStarter">
-                        <file name="talk_start.ogg" />
-                        <file name="talk_start.m4a" />
                     </sound-folder>
                     <sound-folder name="Help">
                         <file name="platformer_level_help_show_hide.m4a" />
