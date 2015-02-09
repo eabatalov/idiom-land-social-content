@@ -5,11 +5,27 @@
     <events>
         <event-group description="" sid="2805513771497754" title="Quest engine UI quizz rendering">
             <sub-events>
-                <variable constant="0" name="DIALOG_ANS_BG_LEFT_MARGIN" sid="761990318774762" static="1" type="number">0</variable>
-                <variable constant="0" name="DIALOG_ANS_BG_TOP_MARGIN" sid="2170690564492777" static="1" type="number">0</variable>
-                <variable constant="0" name="DIALOG_ANS_TXT_LEFT_MARGIN" sid="3828117608678796" static="1" type="number">0</variable>
-                <variable constant="0" name="DIALOG_ANS_TXT_TOP_MARGIN" sid="2753382002134102" static="1" type="number">0</variable>
+                <comment>1</comment>
+                <variable constant="0" name="DIALOG_ANS1_BG_LEFT_MARGIN" sid="761990318774762" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS1_BG_TOP_MARGIN" sid="2170690564492777" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS1_TXT_LEFT_MARGIN" sid="3828117608678796" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS1_TXT_TOP_MARGIN" sid="2753382002134102" static="1" type="number">0</variable>
                 <variable constant="0" name="DIALOG_ANS_BG_H_SPACING" sid="9269165083185706" static="1" type="number">0</variable>
+                <comment>2</comment>
+                <variable constant="0" name="DIALOG_ANS2_BG_LEFT_MARGIN" sid="7916159182029144" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS2_BG_TOP_MARGIN" sid="5246654268359457" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS2_TXT_LEFT_MARGIN" sid="5771497462903876" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS2_TXT_TOP_MARGIN" sid="8200284892911788" static="1" type="number">0</variable>
+                <comment>3</comment>
+                <variable constant="0" name="DIALOG_ANS3_BG_LEFT_MARGIN" sid="6331346613561286" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS3_BG_TOP_MARGIN" sid="4784726647521244" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS3_TXT_LEFT_MARGIN" sid="7618003982083047" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS3_TXT_TOP_MARGIN" sid="6595211558677673" static="1" type="number">0</variable>
+                <comment>4</comment>
+                <variable constant="0" name="DIALOG_ANS4_BG_LEFT_MARGIN" sid="1906796353393867" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS4_BG_TOP_MARGIN" sid="15566071437869" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS4_TXT_LEFT_MARGIN" sid="3154360755551865" static="1" type="number">0</variable>
+                <variable constant="0" name="DIALOG_ANS4_TXT_TOP_MARGIN" sid="3933668674084376" static="1" type="number">0</variable>
                 <event-block sid="6596440707333772">
                     <conditions>
                         <condition id="0" name="On function" sid="3736553923057175" type="Function">
@@ -19,20 +35,51 @@
                     <actions />
                     <sub-events>
                         <event-block sid="7137761096844039">
-                            <conditions />
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="3622376644666113" type="DialogAns1Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="3260313005467169" type="DialogAns1Bg">
                                     <param id="0" name="Animation">&quot;Inactive&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4172876867892625">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="711430126607368" type="DialogAns2Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
                                 <action id="4" name="Set animation" sid="2649876323613626" type="DialogAns2Bg">
                                     <param id="0" name="Animation">&quot;Inactive&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7322565109567255">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="1104209742015549" type="DialogAns3Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
                                 <action id="4" name="Set animation" sid="7271768643068978" type="DialogAns3Bg">
                                     <param id="0" name="Animation">&quot;Inactive&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4880420670568667">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="7342105268990839" type="DialogAns4Bg">
+                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
                                 <action id="4" name="Set animation" sid="3819288644862055" type="DialogAns4Bg">
                                     <param id="0" name="Animation">&quot;Inactive&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -159,170 +206,247 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5289125146638753">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="3072815087225227" type="System">
-                                    <param id="0" name="First value">len(DialogAns1Txt.Text)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="198728818812885" type="DialogAns1Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS_BG_TOP_MARGIN</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7891724737693395" type="DialogAns1Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                        <event-block sid="3822282277734436">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5289125146638753">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3072815087225227" type="System">
+                                            <param id="0" name="First value">len(DialogAns1Txt.Text)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7305213966603757" type="DialogAns1Bg">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7891724737693395" type="DialogAns1Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9100007970311506">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8020382381665858" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="3413697349736587" type="DialogAns1Bg">
+                                            <param id="0" name="Animation">&quot;Disabled&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1566698615366169" type="DialogAns1Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8961221977889807">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1300613615797377" type="System">
+                                            <param id="0" name="First value">len(DialogAns2Txt.Text)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1692201378359202" type="DialogAns2Bg">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1697954081643341" type="DialogAns2Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5201446443252018">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="828260792900202" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7877135073124487" type="DialogAns2Bg">
+                                            <param id="0" name="Animation">&quot;Disabled&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9542450648406161" type="DialogAns2Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2531496368539095">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1544551763748033" type="System">
+                                            <param id="0" name="First value">len(DialogAns3Txt.Text)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8768850252749899" type="DialogAns3Bg">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5532303801299828" type="DialogAns3Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9558382879269219">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1823676935990382" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9552353361994289" type="DialogAns3Bg">
+                                            <param id="0" name="Animation">&quot;Disabled&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7846939033876167" type="DialogAns3Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3035593374249302">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7468490214780794" type="System">
+                                            <param id="0" name="First value">len(DialogAns4Txt.Text)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1483670862248332" type="DialogAns4Bg">
+                                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1253952509436933" type="DialogAns4Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6420121189502341">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9863483763090306" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="5428405617699886" type="DialogAns4Bg">
+                                            <param id="0" name="Animation">&quot;Disabled&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5566835023979749" type="DialogAns4Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="9100007970311506">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8020382381665858" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="1566698615366169" type="DialogAns1Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
+                        <event-block sid="8880412651146446">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8404089701610332">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="7422382935094281" type="DialogAns1Bg">
+                                            <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS1_BG_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS1_BG_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4823602061314509" type="DialogAns2Bg">
+                                            <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS2_BG_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS2_BG_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1422575000094253" type="DialogAns3Bg">
+                                            <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS3_BG_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS3_BG_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4148459556110198" type="DialogAns4Bg">
+                                            <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS4_BG_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAnsBg.Y + DIALOG_ANS4_BG_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="955575278301203" type="DialogAns1Txt">
+                                            <param id="0" name="X">DialogAns1Bg.X + DIALOG_ANS1_TXT_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAns1Bg.Y + DIALOG_ANS1_TXT_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5938071377793863" type="DialogAns2Txt">
+                                            <param id="0" name="X">DialogAns2Bg.X + DIALOG_ANS2_TXT_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAns2Bg.Y + DIALOG_ANS2_TXT_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5705628656157694" type="DialogAns3Txt">
+                                            <param id="0" name="X">DialogAns3Bg.X + DIALOG_ANS3_TXT_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAns3Bg.Y + DIALOG_ANS3_TXT_TOP_MARGIN</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="3761266580880854" type="DialogAns4Txt">
+                                            <param id="0" name="X">DialogAns4Bg.X + DIALOG_ANS4_TXT_LEFT_MARGIN</param>
+                                            <param id="1" name="Y">DialogAns4Bg.Y + DIALOG_ANS4_TXT_TOP_MARGIN</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="8961221977889807">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="1300613615797377" type="System">
-                                    <param id="0" name="First value">len(DialogAns2Txt.Text)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="3182416264530759" type="DialogAns2Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns1Bg.Y + DialogAns1Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="1697954081643341" type="DialogAns2Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5201446443252018">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="828260792900202" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="2817865621590642" type="DialogAns2Bg">
-                                    <param id="0" name="Object">DialogAns1Bg</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="9542450648406161" type="DialogAns2Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2531496368539095">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="1544551763748033" type="System">
-                                    <param id="0" name="First value">len(DialogAns3Txt.Text)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="5386168220200628" type="DialogAns3Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns2Bg.Y + DialogAns2Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5532303801299828" type="DialogAns3Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9558382879269219">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1823676935990382" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="8257993739373187" type="DialogAns3Bg">
-                                    <param id="0" name="Object">DialogAns2Bg</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7846939033876167" type="DialogAns3Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3035593374249302">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7468490214780794" type="System">
-                                    <param id="0" name="First value">len(DialogAns4Txt.Text)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="9581052006178242" type="DialogAns4Bg">
-                                    <param id="0" name="X">DialogAnsBg.X + DIALOG_ANS_BG_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns3Bg.Y + DialogAns3Bg.Height + DIALOG_ANS_BG_H_SPACING</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="1253952509436933" type="DialogAns4Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6420121189502341">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="9863483763090306" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="7826137305027343" type="DialogAns4Bg">
-                                    <param id="0" name="Object">DialogAns3Bg</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5566835023979749" type="DialogAns4Bg">
-                                    <param id="0" name="Instance variable">IsEnabled</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
+                        <event-block sid="9818893862369771">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="315597469234196">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2269660258676587" type="DialogAns3Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="369987380374045" type="DialogAns4Bg">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6963235664365744" type="DialogAnsBg">
+                                            <param id="0" name="Animation">&quot;4ans&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8833681055996986">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5521758743263437" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9067987521175679" type="DialogAnsBg">
+                                            <param id="0" name="Animation">&quot;2ans&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="7779027103133532">
                             <conditions />
-                            <actions>
-                                <action id="-3" name="Set position" sid="955575278301203" type="DialogAns1Txt">
-                                    <param id="0" name="X">DialogAns1Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns1Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="5938071377793863" type="DialogAns2Txt">
-                                    <param id="0" name="X">DialogAns2Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns2Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="5705628656157694" type="DialogAns3Txt">
-                                    <param id="0" name="X">DialogAns3Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns3Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="3761266580880854" type="DialogAns4Txt">
-                                    <param id="0" name="X">DialogAns4Bg.X + DIALOG_ANS_TXT_LEFT_MARGIN</param>
-                                    <param id="1" name="Y">DialogAns4Bg.Y + DIALOG_ANS_TXT_TOP_MARGIN</param>
-                                </action>
-                                <action id="-6" name="Set height" sid="6533090002394592" type="DialogAnsBg">
-                                    <param id="0" name="Height">DialogAns4Bg.Y - DialogAnsBg.Y + DialogAns4Bg.Height + DIALOG_ANS_BG_TOP_MARGIN</param>
-                                </action>
-                                <action id="-25" name="Move to bottom" sid="4323058668322934" type="DialogAns1Txt" />
-                                <action id="-25" name="Move to bottom" sid="5208227289463443" type="DialogAns2Txt" />
-                                <action id="-25" name="Move to bottom" sid="8912663126474212" type="DialogAns3Txt" />
-                                <action id="-25" name="Move to bottom" sid="6947287004401951" type="DialogAns4Txt" />
-                                <action id="-25" name="Move to bottom" sid="2754672270418308" type="DialogAns1Bg" />
-                                <action id="-25" name="Move to bottom" sid="232166931643273" type="DialogAns2Bg" />
-                                <action id="-25" name="Move to bottom" sid="3329842089770024" type="DialogAns3Bg" />
-                                <action id="-25" name="Move to bottom" sid="3260505799736054" type="DialogAns4Bg" />
-                                <action id="-25" name="Move to bottom" sid="8589484921258955" type="DialogAnsBg" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7478223107249408">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-25" name="Move to bottom" sid="4323058668322934" type="DialogAns1Txt" />
+                                        <action id="-25" name="Move to bottom" sid="5208227289463443" type="DialogAns2Txt" />
+                                        <action id="-25" name="Move to bottom" sid="8912663126474212" type="DialogAns3Txt" />
+                                        <action id="-25" name="Move to bottom" sid="6947287004401951" type="DialogAns4Txt" />
+                                        <action id="-25" name="Move to bottom" sid="2754672270418308" type="DialogAns1Bg" />
+                                        <action id="-25" name="Move to bottom" sid="232166931643273" type="DialogAns2Bg" />
+                                        <action id="-25" name="Move to bottom" sid="3329842089770024" type="DialogAns3Bg" />
+                                        <action id="-25" name="Move to bottom" sid="3260505799736054" type="DialogAns4Bg" />
+                                        <action id="-25" name="Move to bottom" sid="8589484921258955" type="DialogAnsBg" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -338,25 +462,93 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="1386415320580722" type="System">
-                                    <param id="0" name="Variable">DIALOG_ANS_BG_LEFT_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS1_BG_LEFT_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Bg.X - DialogAnsBg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="2355545924419381" type="System">
-                                    <param id="0" name="Variable">DIALOG_ANS_BG_TOP_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS1_BG_TOP_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Bg.Y - DialogAnsBg.Y</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8010484960498579" type="System">
-                                    <param id="0" name="Variable">DIALOG_ANS_TXT_LEFT_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS1_TXT_LEFT_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Txt.X - DialogAns1Bg.X</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="6662107980486236" type="System">
-                                    <param id="0" name="Variable">DIALOG_ANS_TXT_TOP_MARGIN</param>
+                                    <param id="0" name="Variable">DIALOG_ANS1_TXT_TOP_MARGIN</param>
                                     <param id="1" name="Value">DialogAns1Txt.Y - DialogAns1Bg.Y</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="3044326385203882" type="System">
                                     <param id="0" name="Variable">DIALOG_ANS_BG_H_SPACING</param>
                                     <param id="1" name="Value">DialogAns2Bg.Y - (DialogAns1Bg.Y + DialogAns1Bg.Height)</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6304921498309055">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="8564308991743116" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS2_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns2Bg.X - DialogAnsBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="457235229650344" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS2_BG_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns2Bg.Y - DialogAnsBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8563012126205066" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS2_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns2Txt.X - DialogAns2Bg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3856536829290064" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS2_TXT_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns2Txt.Y - DialogAns2Bg.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2308284783745466">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2681524648582758" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS3_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns3Bg.X - DialogAnsBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1146165648718319" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS3_BG_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns3Bg.Y - DialogAnsBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2179199495318436" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS3_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns3Txt.X - DialogAns3Bg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6039639771691915" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS3_TXT_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns3Txt.Y - DialogAns3Bg.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9108235537982547">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5049991042148761" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS4_BG_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns4Bg.X - DialogAnsBg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1244750677252309" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS4_BG_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns4Bg.Y - DialogAnsBg.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2452249774362471" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS4_TXT_LEFT_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns4Txt.X - DialogAns4Bg.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4151015606460666" type="System">
+                                    <param id="0" name="Variable">DIALOG_ANS4_TXT_TOP_MARGIN</param>
+                                    <param id="1" name="Value">DialogAns4Txt.Y - DialogAns4Bg.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7152813048432902">
+                            <conditions />
+                            <actions>
                                 <action id="-26" name="Move to layer" sid="8587187966990952" type="DialogAnsBg">
                                     <param id="0" name="Layer">&quot;Quizz&quot;</param>
                                 </action>

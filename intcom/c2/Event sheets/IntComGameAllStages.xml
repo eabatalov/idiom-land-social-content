@@ -194,14 +194,13 @@
                     <sub-events>
                         <event-block sid="9375622403489078">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="6083492234472897" type="MotorwayCarSide">
-                                    <param id="0" name="Unique ID">4</param>
+                                <condition id="-14" name="Pick by unique ID" sid="6083492234472897" type="Sprite23">
+                                    <param id="0" name="Unique ID">77</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="7171971297215765" type="MotorwayCarSide">
-                                    <param id="0" name="Animation">&quot;go&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action behavior="Sine" id="0" name="Set active" sid="7171971297215765" type="Sprite23">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -219,16 +218,15 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="6982024026700491">
+                        <event-block sid="4886748123923793">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="48304684987799" type="MotorwayCarSide">
-                                    <param id="0" name="Unique ID">4</param>
+                                <condition id="-14" name="Pick by unique ID" sid="570646055846217" type="Sprite23">
+                                    <param id="0" name="Unique ID">77</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="1573024231225894" type="MotorwayCarSide">
-                                    <param id="0" name="Animation">&quot;idle&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action behavior="Sine" id="0" name="Set active" sid="4163983364069804" type="Sprite23">
+                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>

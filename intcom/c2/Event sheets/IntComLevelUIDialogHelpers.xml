@@ -341,6 +341,10 @@
                                         <action id="-26" name="Move to layer" sid="4165782264564682" type="QuizzHelper">
                                             <param id="0" name="Layer">DialogAnsBg.LayerName</param>
                                         </action>
+                                        <action id="-4" name="Set position to another object" sid="99621023527478" type="QuizzHelper">
+                                            <param id="0" name="Object">DialogAnsBg</param>
+                                            <param id="1" name="Image point (optional)">&quot;QuizHelper&quot;</param>
+                                        </action>
                                         <action id="-15" name="Set visible" sid="7776851116341494" type="QuizzHelper">
                                             <param id="0" name="Visibility">1</param>
                                         </action>

@@ -399,6 +399,18 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
+                                <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="3208688789879896" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                        <collision-poly>
+                                            <point x="0.00625" y="0.025" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.99375" y="0.025" />
+                                            <point x="0.99375" y="0.975" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.00625" y="0.975" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
                             </animation-folder>
                         </object-type>
                         <object-type name="DialogAns1Txt" sid="585522396544899">
@@ -434,6 +446,18 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
+                                <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="8272191427531081" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                        <collision-poly>
+                                            <point x="0.00625" y="0.025" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.99375" y="0.025" />
+                                            <point x="0.99375" y="0.975" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.00625" y="0.975" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
                             </animation-folder>
                         </object-type>
                         <object-type name="DialogAns2Txt" sid="237564297327457">
@@ -448,6 +472,18 @@
                                 <instance-variable comment="1 if this answer is possible now, 0 otherwise" name="IsEnabled" sid="5976312748097238" type="number" />
                             </instance-variables>
                             <animation-folder>
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="717818763701825" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-3-active.png">
+                                        <collision-poly>
+                                            <point x="0.00625" y="0.025" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.99375" y="0.025" />
+                                            <point x="0.99375" y="0.975" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.00625" y="0.975" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
                                 <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="4914723057507207" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-3.png">
                                         <collision-poly>
@@ -460,8 +496,8 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="717818763701825" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\OneDrive\!quibble\learzing\Idiom_Land\refactoring\design_ui_notification\png-controls\quiz-answer-3-active.png">
+                                <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="1118218622273339" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
                                             <point x="0.5" y="0" />
@@ -504,6 +540,18 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
+                                <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="2573792099371923" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                        <collision-poly>
+                                            <point x="0.00625" y="0.025" />
+                                            <point x="0.5" y="0" />
+                                            <point x="0.99375" y="0.025" />
+                                            <point x="0.99375" y="0.975" />
+                                            <point x="0.5" y="1" />
+                                            <point x="0.00625" y="0.975" />
+                                        </collision-poly>
+                                    </frame>
+                                </animation>
                             </animation-folder>
                         </object-type>
                         <object-type name="DialogAns4Txt" sid="8380298320961702">
@@ -512,8 +560,15 @@
                         <object-type name="DialogAnsBg" sid="3577120867528994">
                             <plugin id="Sprite" />
                             <animation-folder>
-                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7926407920898488" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                                <animation framecount="1" loop="0" name="2ans" pingpong="0" repeatcount="1" repeatto="0" sid="7926407920898488" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                        <image-point name="QuizHelper" x="0.189063" y="1.0625" />
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="4ans" pingpong="0" repeatcount="1" repeatto="0" sid="5074208853890428" speed="5">
+                                    <frame duration="1" hotspotX="0" hotspotY="0">
+                                        <image-point name="QuizHelper" x="0.189063" y="1.0625" />
+                                    </frame>
                                 </animation>
                             </animation-folder>
                         </object-type>
@@ -1136,7 +1191,7 @@
                             </behaviors>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6888201209251428" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\helper-choose.png">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\helper-choose.png">
                                         <collision-poly>
                                             <point x="0.211921" y="0.25" />
                                             <point x="0.496689" y="0.0078125" />
@@ -1490,37 +1545,13 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="7348698747892953" speed="5">
-                            <frame duration="1" hotspotX="0.506224" hotspotY="0.459016" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front.png">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7348698747892953" speed="5">
+                            <frame duration="1" hotspotX="0.500692" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front.png">
                                 <collision-poly>
                                     <point x="0.00414938" y="0.00819672" />
                                     <point x="0.995851" y="0.00819672" />
                                     <point x="0.995851" y="0.991803" />
                                     <point x="0.00414938" y="0.991803" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="2" loop="1" name="go" pingpong="0" repeatcount="1" repeatto="0" sid="1167847581858053" speed="1">
-                            <frame duration="1" hotspotX="0.500692" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front.png">
-                                <collision-poly>
-                                    <point x="0.144" y="0.102857" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.884" y="0.0828571" />
-                                    <point x="0.94" y="0.5" />
-                                    <point x="0.764" y="0.831429" />
-                                    <point x="0.24" y="0.828571" />
-                                    <point x="0.08" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.500692" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front.png">
-                                <collision-poly>
-                                    <point x="0.144" y="0.102857" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.884" y="0.0828571" />
-                                    <point x="0.94" y="0.5" />
-                                    <point x="0.764" y="0.831429" />
-                                    <point x="0.24" y="0.828571" />
-                                    <point x="0.08" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1604,470 +1635,473 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-folder name="unclassified">
+                <object-type name="Sprite" sid="8288657129095886">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="2671291816797464">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3365209446596613" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\lights.png">
+                                <collision-poly>
+                                    <point x="0.347656" y="0.347656" />
+                                    <point x="0.5" y="0.277344" />
+                                    <point x="0.662109" y="0.337891" />
+                                    <point x="0.435547" y="0.435547" />
+                                    <point x="0.5" y="0.447266" />
+                                    <point x="0.582031" y="0.417969" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite10" sid="9713470389958244">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540021912325189" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite11" sid="2803683734692766">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6056020912783049" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\yellow-bg.png">
+                                <collision-poly>
+                                    <point x="0.0383178" y="0.112637" />
+                                    <point x="0.5" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.961682" y="0.887363" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0252336" y="0.925824" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite12" sid="662366422933507">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4729416655277072" speed="5">
+                            <frame duration="1" hotspotX="0.501484" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\background.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite13" sid="4974450518710892">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8108451705713045" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502128" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\yellow-bg-second.png">
+                                <collision-poly>
+                                    <point x="0.102697" y="0.421277" />
+                                    <point x="0.5" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="0.899378" y="0.587234" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite14" sid="2235491089490216">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7436028258554193" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\castle.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.5" y="0.157143" />
+                                    <point x="1" y="0" />
+                                    <point x="0.905714" y="0.5" />
+                                    <point x="0.988571" y="0.988571" />
+                                    <point x="0.0114286" y="0.988571" />
+                                    <point x="0.0942857" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite15" sid="4956588817781299">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9679425599423681" speed="5">
+                            <frame duration="1" hotspotX="0.501134" hotspotY="0.501134" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\pict.png">
+                                <collision-poly>
+                                    <point x="0.0181406" y="0.0181406" />
+                                    <point x="0.498866" y="0" />
+                                    <point x="0.981859" y="0.0181406" />
+                                    <point x="1" y="0.498866" />
+                                    <point x="0.981859" y="0.981859" />
+                                    <point x="0.498866" y="1" />
+                                    <point x="0.0181406" y="0.981859" />
+                                    <point x="0" y="0.498866" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite17" sid="3800334811353226">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="846272700604257">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6290678552011397" speed="5">
+                            <frame duration="1" hotspotX="0.501134" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\moon.png">
+                                <collision-poly>
+                                    <point x="0.714286" y="0.446809" />
+                                    <point x="0.977324" y="0.5" />
+                                    <point x="0.793651" y="0.677305" />
+                                    <point x="0.594104" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite16" sid="6987869082805489">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9588967524566325" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\plate.png">
+                                <collision-poly>
+                                    <point x="0.0427083" y="0.112637" />
+                                    <point x="0.5" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.957292" y="0.887363" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite18" sid="8442861155293607">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3266591996903013" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\array.png">
+                                <collision-poly>
+                                    <point x="0.0666667" y="0.0666667" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.883333" y="0.116667" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.375" y="0.625" />
+                                    <point x="0.375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite19" sid="358381202417822">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5867170993746285" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\array.png">
+                                <collision-poly>
+                                    <point x="0.0666667" y="0.0666667" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.883333" y="0.116667" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.375" y="0.625" />
+                                    <point x="0.375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite2" sid="315108866667385">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235902993711569" speed="5">
+                            <frame duration="1" hotspotX="0.502304" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cloud.png">
+                                <collision-poly>
+                                    <point x="0.193548" y="0.362069" />
+                                    <point x="0.497696" y="0.00862069" />
+                                    <point x="0.788018" y="0.396552" />
+                                    <point x="0.834101" y="0.5" />
+                                    <point x="0.963134" y="0.931035" />
+                                    <point x="0.497696" y="1" />
+                                    <point x="0.0368664" y="0.931035" />
+                                    <point x="0.0967742" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite20" sid="3444073492438006">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6931531542172247" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chair.png">
+                                <collision-poly>
+                                    <point x="0.139344" y="0.139344" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.860656" y="0.139344" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.934426" y="0.934426" />
+                                    <point x="0.0655738" y="0.934426" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite21" sid="6569776659295115">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9576363507745185" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503268" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\mac.png">
+                                <collision-poly>
+                                    <point x="0.258427" y="0.300654" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.764045" y="0.27451" />
+                                    <point x="0.573034" y="0.496732" />
+                                    <point x="0.97191" y="0.96732" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0449438" y="0.947712" />
+                                    <point x="0.449438" y="0.496732" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite22" sid="2660079177207856">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289849304623767" speed="5">
+                            <frame duration="1" hotspotX="0.500637" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\floor.png">
+                                <collision-poly>
+                                    <point x="0.0292994" y="0.119792" />
+                                    <point x="0.499363" y="0" />
+                                    <point x="0.998726" y="0.00520833" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.970701" y="0.880208" />
+                                    <point x="0.499363" y="1" />
+                                    <point x="0.00127389" y="0.994792" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite23" sid="7182282264236667">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="617204215488371">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5914018453688901" speed="5">
+                            <frame duration="1" hotspotX="0.504211" hotspotY="0.0115741" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front-button.png">
+                                <collision-poly>
+                                    <point x="0.0852632" y="0.1875" />
+                                    <point x="0.5" y="0.00231481" />
+                                    <point x="0.913684" y="0.189815" />
+                                    <point x="0.928421" y="0.842593" />
+                                    <point x="0.5" y="0.787037" />
+                                    <point x="0.0715789" y="0.842593" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite26" sid="4699183133386722">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9242307468166181" speed="5">
+                            <frame duration="1" hotspotX="0.502703" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\solid-timeline.png">
+                                <collision-poly>
+                                    <point x="0.0108108" y="0.142857" />
+                                    <point x="0.497297" y="0" />
+                                    <point x="0.989189" y="0.142857" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.989189" y="0.857143" />
+                                    <point x="0.497297" y="1" />
+                                    <point x="0.0108108" y="0.857143" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite24" sid="9837662430650817">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7217993814558953" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\back-element.png">
+                                <collision-poly>
+                                    <point x="0.434426" y="0.434426" />
+                                    <point x="0.5" y="0.45082" />
+                                    <point x="0.532787" y="0.467213" />
+                                    <point x="0.540984" y="0.5" />
+                                    <point x="0.52459" y="0.52459" />
+                                    <point x="0.5" y="0.737705" />
+                                    <point x="0.303279" y="0.696721" />
+                                    <point x="0.295082" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite25" sid="29453792570437">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7921654208927679" speed="5">
+                            <frame duration="1" hotspotX="0.501285" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\guide-timeline.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite4" sid="4785404405818085">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="1397144382402866">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3362573442139927" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite3" sid="6000445392721754">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="5614976757333374">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1126734886337694" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite7" sid="5793069098357294">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Rotate" sid="3199580693192619">
+                            <behavior id="Rotate" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4498145997003141" speed="5">
+                            <frame duration="1" hotspotX="0.503185" hotspotY="0.503185" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\sun.png">
+                                <collision-poly>
+                                    <point x="0.146497" y="0.146497" />
+                                    <point x="0.496815" y="0" />
+                                    <point x="0.853503" y="0.146497" />
+                                    <point x="1" y="0.496815" />
+                                    <point x="0.853503" y="0.853503" />
+                                    <point x="0.496815" y="1" />
+                                    <point x="0.146497" y="0.853503" />
+                                    <point x="0" y="0.496815" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite5" sid="4263001999975416">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2559135498949582" speed="5">
+                            <frame duration="1" hotspotX="0.500745" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cover-bg.png">
+                                <collision-poly>
+                                    <point x="0.0551416" y="0.0524079" />
+                                    <point x="0.499255" y="0" />
+                                    <point x="0.982116" y="0.0169972" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.944858" y="0.947592" />
+                                    <point x="0.499255" y="1" />
+                                    <point x="0.0178838" y="0.983003" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite8" sid="1140736553375853">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="968616520291641" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\blue-bg.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.957292" y="0.112637" />
+                                    <point x="1" y="0.5" />
+                                    <point x="1" y="1" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0427083" y="0.887363" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite6" sid="4747016531170876">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9328064864160448" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.50193" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cover-logo.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0" />
+                                    <point x="0.78373" y="0.420849" />
+                                    <point x="0.970238" y="0.498069" />
+                                    <point x="0.956349" y="0.915058" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0456349" y="0.911197" />
+                                    <point x="0.00793651" y="0.498069" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite9" sid="7444569231299193">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5707041669943265" speed="5">
+                            <frame duration="1" hotspotX="0.500615" hotspotY="0.501326" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\rocks.png">
+                                <collision-poly>
+                                    <point x="0.098401" y="0.212202" />
+                                    <point x="0.499385" y="0.527851" />
+                                    <point x="0.835178" y="0.355438" />
+                                    <point x="0.901599" y="0.498674" />
+                                    <point x="0.96187" y="0.917772" />
+                                    <point x="0.499385" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.498674" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TiledBackground" sid="7109533523666628">
+                    <plugin id="TiledBg" />
+                    <texture original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\bg.png" />
+                </object-type>
+            </object-folder>
             <object-type name="C2ApiBoolVarDict" sid="4222809921810575">
                 <plugin id="Dictionary" />
             </object-type>
         </object-folder>
-        <object-type name="TiledBackground" sid="7109533523666628">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\bg.png" />
-        </object-type>
-        <object-type name="Sprite" sid="8288657129095886">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="2671291816797464">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3365209446596613" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\lights.png">
-                        <collision-poly>
-                            <point x="0.347656" y="0.347656" />
-                            <point x="0.5" y="0.277344" />
-                            <point x="0.662109" y="0.337891" />
-                            <point x="0.435547" y="0.435547" />
-                            <point x="0.5" y="0.447266" />
-                            <point x="0.582031" y="0.417969" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="315108866667385">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235902993711569" speed="5">
-                    <frame duration="1" hotspotX="0.502304" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cloud.png">
-                        <collision-poly>
-                            <point x="0.193548" y="0.362069" />
-                            <point x="0.497696" y="0.00862069" />
-                            <point x="0.788018" y="0.396552" />
-                            <point x="0.834101" y="0.5" />
-                            <point x="0.963134" y="0.931035" />
-                            <point x="0.497696" y="1" />
-                            <point x="0.0368664" y="0.931035" />
-                            <point x="0.0967742" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite3" sid="6000445392721754">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="5614976757333374">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1126734886337694" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite4" sid="4785404405818085">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="1397144382402866">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3362573442139927" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite5" sid="4263001999975416">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2559135498949582" speed="5">
-                    <frame duration="1" hotspotX="0.500745" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cover-bg.png">
-                        <collision-poly>
-                            <point x="0.0551416" y="0.0524079" />
-                            <point x="0.499255" y="0" />
-                            <point x="0.982116" y="0.0169972" />
-                            <point x="1" y="0.5" />
-                            <point x="0.944858" y="0.947592" />
-                            <point x="0.499255" y="1" />
-                            <point x="0.0178838" y="0.983003" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite6" sid="4747016531170876">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9328064864160448" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50193" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cover-logo.png">
-                        <collision-poly>
-                            <point x="0.5" y="0" />
-                            <point x="0.78373" y="0.420849" />
-                            <point x="0.970238" y="0.498069" />
-                            <point x="0.956349" y="0.915058" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0456349" y="0.911197" />
-                            <point x="0.00793651" y="0.498069" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite7" sid="5793069098357294">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Rotate" sid="3199580693192619">
-                    <behavior id="Rotate" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4498145997003141" speed="5">
-                    <frame duration="1" hotspotX="0.503185" hotspotY="0.503185" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\sun.png">
-                        <collision-poly>
-                            <point x="0.146497" y="0.146497" />
-                            <point x="0.496815" y="0" />
-                            <point x="0.853503" y="0.146497" />
-                            <point x="1" y="0.496815" />
-                            <point x="0.853503" y="0.853503" />
-                            <point x="0.496815" y="1" />
-                            <point x="0.146497" y="0.853503" />
-                            <point x="0" y="0.496815" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite8" sid="1140736553375853">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="968616520291641" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\blue-bg.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.5" y="0" />
-                            <point x="0.957292" y="0.112637" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0427083" y="0.887363" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite9" sid="7444569231299193">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5707041669943265" speed="5">
-                    <frame duration="1" hotspotX="0.500615" hotspotY="0.501326" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\rocks.png">
-                        <collision-poly>
-                            <point x="0.098401" y="0.212202" />
-                            <point x="0.499385" y="0.527851" />
-                            <point x="0.835178" y="0.355438" />
-                            <point x="0.901599" y="0.498674" />
-                            <point x="0.96187" y="0.917772" />
-                            <point x="0.499385" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.498674" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite10" sid="9713470389958244">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540021912325189" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite11" sid="2803683734692766">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6056020912783049" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\yellow-bg.png">
-                        <collision-poly>
-                            <point x="0.0383178" y="0.112637" />
-                            <point x="0.5" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.961682" y="0.887363" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0252336" y="0.925824" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite12" sid="662366422933507">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4729416655277072" speed="5">
-                    <frame duration="1" hotspotX="0.501484" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\background.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite13" sid="4974450518710892">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8108451705713045" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502128" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\yellow-bg-second.png">
-                        <collision-poly>
-                            <point x="0.102697" y="0.421277" />
-                            <point x="0.5" y="0" />
-                            <point x="1" y="0" />
-                            <point x="0.899378" y="0.587234" />
-                            <point x="0.5" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite14" sid="2235491089490216">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7436028258554193" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\castle.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.5" y="0.157143" />
-                            <point x="1" y="0" />
-                            <point x="0.905714" y="0.5" />
-                            <point x="0.988571" y="0.988571" />
-                            <point x="0.0114286" y="0.988571" />
-                            <point x="0.0942857" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite15" sid="4956588817781299">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9679425599423681" speed="5">
-                    <frame duration="1" hotspotX="0.501134" hotspotY="0.501134" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\pict.png">
-                        <collision-poly>
-                            <point x="0.0181406" y="0.0181406" />
-                            <point x="0.498866" y="0" />
-                            <point x="0.981859" y="0.0181406" />
-                            <point x="1" y="0.498866" />
-                            <point x="0.981859" y="0.981859" />
-                            <point x="0.498866" y="1" />
-                            <point x="0.0181406" y="0.981859" />
-                            <point x="0" y="0.498866" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite16" sid="6987869082805489">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9588967524566325" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\plate.png">
-                        <collision-poly>
-                            <point x="0.0427083" y="0.112637" />
-                            <point x="0.5" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.957292" y="0.887363" />
-                            <point x="0.5" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite17" sid="3800334811353226">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="846272700604257">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6290678552011397" speed="5">
-                    <frame duration="1" hotspotX="0.501134" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\moon.png">
-                        <collision-poly>
-                            <point x="0.714286" y="0.446809" />
-                            <point x="0.977324" y="0.5" />
-                            <point x="0.793651" y="0.677305" />
-                            <point x="0.594104" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite18" sid="8442861155293607">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3266591996903013" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\array.png">
-                        <collision-poly>
-                            <point x="0.0666667" y="0.0666667" />
-                            <point x="0.5" y="0.0666667" />
-                            <point x="0.883333" y="0.116667" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="1" />
-                            <point x="0.375" y="0.625" />
-                            <point x="0.375" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite19" sid="358381202417822">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5867170993746285" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\array.png">
-                        <collision-poly>
-                            <point x="0.0666667" y="0.0666667" />
-                            <point x="0.5" y="0.0666667" />
-                            <point x="0.883333" y="0.116667" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="0.5" />
-                            <point x="0.5" y="1" />
-                            <point x="0.375" y="0.625" />
-                            <point x="0.375" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite20" sid="3444073492438006">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6931531542172247" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\chair.png">
-                        <collision-poly>
-                            <point x="0.139344" y="0.139344" />
-                            <point x="0.5" y="0" />
-                            <point x="0.860656" y="0.139344" />
-                            <point x="1" y="0.5" />
-                            <point x="0.934426" y="0.934426" />
-                            <point x="0.0655738" y="0.934426" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite21" sid="6569776659295115">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9576363507745185" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.503268" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\mac.png">
-                        <collision-poly>
-                            <point x="0.258427" y="0.300654" />
-                            <point x="0.5" y="0" />
-                            <point x="0.764045" y="0.27451" />
-                            <point x="0.573034" y="0.496732" />
-                            <point x="0.97191" y="0.96732" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0449438" y="0.947712" />
-                            <point x="0.449438" y="0.496732" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite22" sid="2660079177207856">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289849304623767" speed="5">
-                    <frame duration="1" hotspotX="0.500637" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\floor.png">
-                        <collision-poly>
-                            <point x="0.0292994" y="0.119792" />
-                            <point x="0.499363" y="0" />
-                            <point x="0.998726" y="0.00520833" />
-                            <point x="1" y="0.5" />
-                            <point x="0.970701" y="0.880208" />
-                            <point x="0.499363" y="1" />
-                            <point x="0.00127389" y="0.994792" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite23" sid="7182282264236667">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="617204215488371">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5914018453688901" speed="5">
-                    <frame duration="1" hotspotX="0.504211" hotspotY="0.0115741" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\front-button.png">
-                        <collision-poly>
-                            <point x="0.0852632" y="0.1875" />
-                            <point x="0.5" y="0.00231481" />
-                            <point x="0.913684" y="0.189815" />
-                            <point x="0.928421" y="0.842593" />
-                            <point x="0.5" y="0.787037" />
-                            <point x="0.0715789" y="0.842593" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite25" sid="29453792570437">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7921654208927679" speed="5">
-                    <frame duration="1" hotspotX="0.501285" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\guide-timeline.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite26" sid="4699183133386722">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9242307468166181" speed="5">
-                    <frame duration="1" hotspotX="0.502703" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\solid-timeline.png">
-                        <collision-poly>
-                            <point x="0.0108108" y="0.142857" />
-                            <point x="0.497297" y="0" />
-                            <point x="0.989189" y="0.142857" />
-                            <point x="1" y="0.5" />
-                            <point x="0.989189" y="0.857143" />
-                            <point x="0.497297" y="1" />
-                            <point x="0.0108108" y="0.857143" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite24" sid="9837662430650817">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7217993814558953" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\back-element.png">
-                        <collision-poly>
-                            <point x="0.434426" y="0.434426" />
-                            <point x="0.5" y="0.45082" />
-                            <point x="0.532787" y="0.467213" />
-                            <point x="0.540984" y="0.5" />
-                            <point x="0.52459" y="0.52459" />
-                            <point x="0.5" y="0.737705" />
-                            <point x="0.303279" y="0.696721" />
-                            <point x="0.295082" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="New folder" />
     </object-folder>
     <families>
         <family name="animationresultFamily" plugin-id="Sprite" sid="719736049323703">
@@ -2280,16 +2314,6 @@
                     <sound-folder name="Help">
                         <file name="platformer_level_help_show_hide.m4a" />
                         <file name="platformer_level_help_show_hide.ogg" />
-                    </sound-folder>
-                </sound-folder>
-                <sound-folder name="demo1">
-                    <sound-folder name="Carousel">
-                        <file name="carousel_spin.ogg" />
-                        <file name="carousel_spin.m4a" />
-                    </sound-folder>
-                    <sound-folder name="Secret">
-                        <file name="dumpster_fall_in.ogg" />
-                        <file name="dumpster_fall_in.m4a" />
                     </sound-folder>
                 </sound-folder>
             </sound-folder>
