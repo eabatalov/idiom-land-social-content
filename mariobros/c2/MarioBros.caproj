@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Interactive Comics</name>
-    <description>Foxy adventure in Idiom Land</description>
+    <name>MarioBros</name>
+    <description>create your own storyboard in Clilk</description>
     <version>0.1</version>
-    <author>Eugene Batalov, Andy Legenki, Vladimir Bayatov</author>
-    <author-email>eugene@learzing.com</author-email>
-    <author-website>http://idiomland.com</author-website>
+    <author>Andy Legenki, Eugene Batalov</author>
+    <author-email>andylegenki@gmail.com</author-email>
+    <author-website>http://clilk.com</author-website>
     <app-id>com.idiomland</app-id>
     <unique-id>1qpq9otxp4r4o</unique-id>
     <saved-with-version>19500</saved-with-version>
@@ -23,12 +23,12 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Eugene/Learzing" id="QuestEngineSpriteExtras" version="1">QuestEngineSpriteExtras</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -42,7 +42,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>IntComGame</first-layout>
+    <first-layout>MarioBros</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -1321,8 +1321,8 @@
                             </behaviors>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="teacher_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9959761412612517" speed="5">
-                                    <frame duration="1" hotspotX="0.503876" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\teacher.png">
-                                        <image-point name="SpeechOrigin" x="0.403101" y="0.177083" />
+                                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mario-main.png">
+                                        <image-point name="SpeechOrigin" x="0.402597" y="0.17623" />
                                         <collision-poly>
                                             <point x="0.124031" y="0.0555556" />
                                             <point x="0.496124" y="0" />
@@ -1371,17 +1371,618 @@
         </object-folder>
         <object-folder name="IntComGame">
             <object-folder name="Stages">
-                <object-folder name="Common">
-                    <object-type name="TiledBackground" sid="7109533523666628">
-                        <plugin id="TiledBg" />
-                        <texture original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\bg.png" />
-                    </object-type>
-                </object-folder>
+                <object-folder name="Common" />
             </object-folder>
             <object-type name="C2ApiBoolVarDict" sid="4222809921810575">
                 <plugin id="Dictionary" />
             </object-type>
         </object-folder>
+        <object-type name="Sprite" sid="8088502442916004">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6148663986057458" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\bg-first-level.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.482972" y="0" />
+                            <point x="0.786997" y="0.223657" />
+                            <point x="0.885449" y="0.465734" />
+                            <point x="0.88483" y="0.842013" />
+                            <point x="0.482972" y="0.921007" />
+                            <point x="0" y="0.966024" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="83094197068206">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4176261544361104" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\bg-lover-level.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="2540935909272726">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7476225445517181" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\bg-final-level.png">
+                        <collision-poly>
+                            <point x="0.250625" y="0.313281" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.465625" y="0.417969" />
+                            <point x="0.4175" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="3625054026015717">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4827604541131115" speed="5">
+                    <frame duration="1" hotspotX="0.501199" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\cover.png">
+                        <collision-poly>
+                            <point x="0.242206" y="0.237089" />
+                            <point x="0.498801" y="0.00938967" />
+                            <point x="0.676259" y="0.316901" />
+                            <point x="0.872902" y="0.5" />
+                            <point x="0.959233" y="0.960094" />
+                            <point x="0.498801" y="0.985915" />
+                            <point x="0.0407674" y="0.960094" />
+                            <point x="0.235012" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="7362973758859276">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5723337576744381" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\logo.png">
+                        <collision-poly>
+                            <point x="0.237705" y="0.235772" />
+                            <point x="0.5" y="0.0813008" />
+                            <point x="0.807377" y="0.191057" />
+                            <point x="0.979508" y="0.5" />
+                            <point x="0.819672" y="0.821138" />
+                            <point x="0.5" y="0.951219" />
+                            <point x="0.217213" y="0.784553" />
+                            <point x="0.0942623" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="5708159743805993">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2605223874215722" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505882" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\platform.png">
+                        <collision-poly>
+                            <point x="0.00196592" y="0.0352941" />
+                            <point x="0.5" y="0" />
+                            <point x="0.997379" y="0.0470588" />
+                            <point x="0.997379" y="0.952941" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00262123" y="0.952941" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="8180357562961698">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5151348158270805" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\bliss.png">
+                        <collision-poly>
+                            <point x="0.499649" y="0" />
+                            <point x="0.578356" y="0.0881459" />
+                            <point x="0.499649" y="0.212766" />
+                            <point x="0.401265" y="0.132219" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="7283747280953988">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4036640030485291" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\man-green.png">
+                        <collision-poly>
+                            <point x="0.22093" y="0.139706" />
+                            <point x="0.5" y="0.0147059" />
+                            <point x="0.860465" y="0.0882353" />
+                            <point x="0.616279" y="0.5" />
+                            <point x="0.662791" y="0.786765" />
+                            <point x="0.5" y="0.992647" />
+                            <point x="0.244186" y="0.845588" />
+                            <point x="0.197674" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="3102599629924662">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7408341966696845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503876" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\girl-short.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.0930233" />
+                            <point x="0.5" y="0.0232558" />
+                            <point x="0.840909" y="0.108527" />
+                            <point x="0.988636" y="0.496124" />
+                            <point x="0.5" y="0.937984" />
+                            <point x="0.284091" y="0.806202" />
+                            <point x="0.0909091" y="0.496124" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="6665607141061291">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3377401974511391" speed="5">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\girl-red.png">
+                        <collision-poly>
+                            <point x="0.173913" y="0.0909091" />
+                            <point x="0.492754" y="0.00757576" />
+                            <point x="0.84058" y="0.0833333" />
+                            <point x="0.942029" y="0.5" />
+                            <point x="0.768116" y="0.878788" />
+                            <point x="0.492754" y="0.916667" />
+                            <point x="0.246377" y="0.871212" />
+                            <point x="0.0289855" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="2489192406708062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1428242202052272" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503876" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\girl-green.png">
+                        <collision-poly>
+                            <point x="0.171053" y="0.100775" />
+                            <point x="0.5" y="0.00775194" />
+                            <point x="0.776316" y="0.131783" />
+                            <point x="0.881579" y="0.496124" />
+                            <point x="0.723684" y="0.837209" />
+                            <point x="0.5" y="0.906977" />
+                            <point x="0.302632" y="0.821705" />
+                            <point x="0.118421" y="0.496124" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="8498237360568074">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5396130087577392" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\man-blonde.png">
+                        <collision-poly>
+                            <point x="0.179104" y="0.09375" />
+                            <point x="0.492537" y="0.0078125" />
+                            <point x="0.895522" y="0.0546875" />
+                            <point x="0.880597" y="0.5" />
+                            <point x="0.791045" y="0.890625" />
+                            <point x="0.492537" y="0.945313" />
+                            <point x="0.283582" y="0.851563" />
+                            <point x="0.0447761" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="9651451637173389">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6709373529426244" speed="5">
+                    <frame duration="1" hotspotX="0.506667" hotspotY="0.503597" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\man-white.png">
+                        <collision-poly>
+                            <point x="0.146667" y="0.0791367" />
+                            <point x="0.493333" y="0.028777" />
+                            <point x="0.826667" y="0.0935252" />
+                            <point x="0.786667" y="0.496403" />
+                            <point x="0.786667" y="0.884892" />
+                            <point x="0.493333" y="0.964029" />
+                            <point x="0.293333" y="0.841727" />
+                            <point x="0.346667" y="0.496403" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="7912656441825431">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2507572414798655" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.503759" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\man-redhead.png">
+                        <collision-poly>
+                            <point x="0.0746269" y="0.037594" />
+                            <point x="0.492537" y="0.0075188" />
+                            <point x="0.940298" y="0.0300752" />
+                            <point x="0.716418" y="0.496241" />
+                            <point x="0.746269" y="0.87218" />
+                            <point x="0.492537" y="0.87218" />
+                            <point x="0.19403" y="0.902256" />
+                            <point x="0.19403" y="0.496241" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="8278774754690143">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4742320313844374" speed="5">
+                    <frame duration="1" hotspotX="0.507042" hotspotY="0.503937" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\girl-pink.png">
+                        <collision-poly>
+                            <point x="0.126761" y="0.0708661" />
+                            <point x="0.492958" y="0.023622" />
+                            <point x="0.873239" y="0.0708661" />
+                            <point x="0.901408" y="0.496063" />
+                            <point x="0.788732" y="0.88189" />
+                            <point x="0.492958" y="0.889764" />
+                            <point x="0.253521" y="0.858268" />
+                            <point x="0.140845" y="0.496063" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16" sid="5281999411318427">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2062665687505692" speed="5">
+                    <frame duration="1" hotspotX="0.502538" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\large-fungas.png">
+                        <collision-poly>
+                            <point x="0.126904" y="0.105042" />
+                            <point x="0.497462" y="0.092437" />
+                            <point x="0.766497" y="0.193277" />
+                            <point x="0.812183" y="0.5" />
+                            <point x="0.791878" y="0.827731" />
+                            <point x="0.497462" y="0.970588" />
+                            <point x="0.0659898" y="0.945378" />
+                            <point x="0.00507614" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite17" sid="6951420386439419">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9399865590193259" speed="5">
+                    <frame duration="1" hotspotX="0.505495" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mini-fungas.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.106061" />
+                            <point x="0.494505" y="0.00757576" />
+                            <point x="0.846154" y="0.106061" />
+                            <point x="0.901099" y="0.5" />
+                            <point x="0.736264" y="0.818182" />
+                            <point x="0.494505" y="0.984848" />
+                            <point x="0.186813" y="0.871212" />
+                            <point x="0.10989" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18" sid="453289009459995">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="3983777315173314">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2076669013956501" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\rays.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.2513" />
+                            <point x="0.67474" y="0.325823" />
+                            <point x="0.5" y="0.35182" />
+                            <point x="0.539792" y="0.459272" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite19" sid="8979913000722623">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4822609141875395" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501695" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\muffin.png">
+                        <collision-poly>
+                            <point x="0.0984252" y="0.169492" />
+                            <point x="0.5" y="0.152542" />
+                            <point x="0.88189" y="0.20339" />
+                            <point x="0.994094" y="0.498305" />
+                            <point x="0.903543" y="0.833898" />
+                            <point x="0.5" y="0.762712" />
+                            <point x="0.127953" y="0.779661" />
+                            <point x="0.00787402" y="0.498305" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite20" sid="1178432392584197">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9080955919108607" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\blocks.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0519481" />
+                            <point x="0.974026" y="0.025974" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.025974" y="0.974026" />
+                            <point x="0.0519481" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite21" sid="4912632636174831">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2786048627655589" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\blocks-double.png">
+                        <collision-poly>
+                            <point x="0.349138" y="0.525974" />
+                            <point x="0.5" y="0" />
+                            <point x="0.982759" y="0.025974" />
+                            <point x="0.952586" y="0.5" />
+                            <point x="0.650862" y="0.474026" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0172414" y="0.974026" />
+                            <point x="0.0344828" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite22" sid="7319303749445435">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4482670435605317" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\kitten.png">
+                        <collision-poly>
+                            <point x="0.159574" y="0.130435" />
+                            <point x="0.5" y="0.0695652" />
+                            <point x="0.670213" y="0.269565" />
+                            <point x="0.968085" y="0.495652" />
+                            <point x="0.861702" y="0.886957" />
+                            <point x="0.5" y="0.991304" />
+                            <point x="0.138298" y="0.886957" />
+                            <point x="0.159574" y="0.495652" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite23" sid="2149958512061026">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="728658241213259" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\cloud.png">
+                        <collision-poly>
+                            <point x="0.163415" y="0.335" />
+                            <point x="0.5" y="0.22" />
+                            <point x="0.821951" y="0.365" />
+                            <point x="0.973171" y="0.5" />
+                            <point x="0.885366" y="0.765" />
+                            <point x="0.5" y="0.83" />
+                            <point x="0.0926829" y="0.81" />
+                            <point x="0.0585366" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite24" sid="7568867134900476">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3236766022979699" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503226" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\muffin-king.png">
+                        <collision-poly>
+                            <point x="0.204082" y="0.129032" />
+                            <point x="0.5" y="0.0129032" />
+                            <point x="0.612245" y="0.245161" />
+                            <point x="0.816327" y="0.496774" />
+                            <point x="0.867347" y="0.916129" />
+                            <point x="0.5" y="0.987097" />
+                            <point x="0.132653" y="0.916129" />
+                            <point x="0.27551" y="0.496774" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite25" sid="3127717235798923">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="55287317580236" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501567" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mario-fly.png">
+                        <collision-poly>
+                            <point x="0.38" y="0.416928" />
+                            <point x="0.5" y="0.0501567" />
+                            <point x="0.811429" y="0.206897" />
+                            <point x="0.671429" y="0.498433" />
+                            <point x="0.731429" y="0.705329" />
+                            <point x="0.5" y="0.77116" />
+                            <point x="0.0428571" y="0.952978" />
+                            <point x="0.0885714" y="0.498433" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite26" sid="3204183658428525">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7248893907255148" speed="5">
+                    <frame duration="1" hotspotX="0.431925" hotspotY="0.557003" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\monstro-big.png">
+                        <collision-poly>
+                            <point x="0.197183" y="0.136808" />
+                            <point x="0.497653" y="0.0488599" />
+                            <point x="0.690141" y="0.214984" />
+                            <point x="0.915493" y="0.498371" />
+                            <point x="0.873239" y="0.912052" />
+                            <point x="0.497653" y="0.977199" />
+                            <point x="0.192488" y="0.86645" />
+                            <point x="0.107981" y="0.498371" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite27" sid="4298325258449993">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6136623430306398" speed="5">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\monstro-son.png">
+                        <collision-poly>
+                            <point x="0.307692" y="0.191304" />
+                            <point x="0.496504" y="0.0391304" />
+                            <point x="0.622378" y="0.234783" />
+                            <point x="0.937063" y="0.5" />
+                            <point x="0.762238" y="0.852174" />
+                            <point x="0.496504" y="0.991304" />
+                            <point x="0.181818" y="0.886957" />
+                            <point x="0.048951" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite28" sid="206664168986198">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8073139424198864" speed="5">
+                    <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\monstro-circle.png">
+                        <collision-poly>
+                            <point x="0.193548" y="0.166667" />
+                            <point x="0.494624" y="0.148148" />
+                            <point x="0.924731" y="0.0648148" />
+                            <point x="0.967742" y="0.5" />
+                            <point x="0.817204" y="0.842593" />
+                            <point x="0.494624" y="0.944444" />
+                            <point x="0.139785" y="0.87963" />
+                            <point x="0.0537634" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite29" sid="173001959416133">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1960731321281196" speed="5">
+                    <frame duration="1" hotspotX="0.500843" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\fruits.png">
+                        <collision-poly>
+                            <point x="0.0961214" y="0.195205" />
+                            <point x="0.499157" y="0.30137" />
+                            <point x="0.784148" y="0.438356" />
+                            <point x="0.961214" y="0.5" />
+                            <point x="0.978078" y="0.955479" />
+                            <point x="0.499157" y="0.979452" />
+                            <point x="0.0236088" y="0.952055" />
+                            <point x="0.0337268" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite30" sid="4228234863689955">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1252837333952702" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\turtle.png">
+                        <collision-poly>
+                            <point x="0.2375" y="0.131034" />
+                            <point x="0.5" y="0.0413793" />
+                            <point x="0.775" y="0.124138" />
+                            <point x="0.9" y="0.496552" />
+                            <point x="0.85" y="0.917241" />
+                            <point x="0.5" y="0.993103" />
+                            <point x="0.1625" y="0.910345" />
+                            <point x="0.25" y="0.496552" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite31" sid="6792672216150376">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7908126914078246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mrio_muffin.png">
+                        <collision-poly>
+                            <point x="0.120155" y="0.0939394" />
+                            <point x="0.5" y="0.0515152" />
+                            <point x="0.593023" y="0.318182" />
+                            <point x="0.953488" y="0.5" />
+                            <point x="0.906977" y="0.927273" />
+                            <point x="0.5" y="0.918182" />
+                            <point x="0.503876" y="0.606061" />
+                            <point x="0.403101" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite32" sid="6841032918600783">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2282874985619966" speed="5">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\princess.png">
+                        <collision-poly>
+                            <point x="0.216783" y="0.114815" />
+                            <point x="0.496504" y="0.00740741" />
+                            <point x="0.769231" y="0.122222" />
+                            <point x="0.972028" y="0.5" />
+                            <point x="0.902098" y="0.948148" />
+                            <point x="0.496504" y="0.996296" />
+                            <point x="0.125874" y="0.933333" />
+                            <point x="0.0699301" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite33" sid="7695065801444396">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1615889882385129" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mariomuffinprincess.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.898438" y="0.5" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.5" y="0.851563" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.101563" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="animationresultFamily" plugin-id="Sprite" sid="719736049323703">
@@ -1405,7 +2006,7 @@
                 <layout>LevelResultsBrief.xml</layout>
             </layout-folder>
         </layout-folder>
-        <layout>IntComGame.xml</layout>
+        <layout>MarioBros.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Menus">
