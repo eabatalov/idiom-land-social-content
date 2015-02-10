@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComGameFuncLib</name>
+    <events>
+        <event-block sid="3972643613742069">
+            <conditions>
+                <condition id="0" name="On function" sid="8587516316862444" type="Function">
+                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9462773237754153">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Clear" sid="1879282460668743" type="C2ApiBoolVarDict" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8859104883265302">
+            <conditions>
+                <condition id="0" name="On function" sid="7176229399796632" type="Function">
+                    <param id="0" name="Name">&quot;IntComInitAllStages&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="8080785156122793">
+            <conditions>
+                <condition id="0" name="On function" sid="2687317114523795" type="Function">
+                    <param id="0" name="Name">&quot;C2API_TheEnd&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="50613952918622">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Close" sid="5430897127698701" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>param(&apos;name&apos;): name of var to set&#x0D;&#x0A;param(&apos;val&apos;): &apos;true&apos; or &apos;false&apos;</comment>
+        <event-block sid="9575857612244835">
+            <conditions>
+                <condition id="0" name="On function" sid="7110830680660576" type="Function">
+                    <param id="0" name="Name">&quot;C2API_SetBool&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="64552431477872">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Add key" sid="906895397454384" type="C2ApiBoolVarDict">
+                            <param id="0" name="Key">QuestLevelRuntime.getParamByName(&quot;name&quot;)</param>
+                            <param id="1" name="Value">QuestLevelRuntime.getParamByName(&quot;val&quot;)</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="7226803496510735" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>param(&apos;name&apos;): name of var to set</comment>
+        <event-block sid="9300497748975001">
+            <conditions>
+                <condition id="0" name="On function" sid="8522255173474426" type="Function">
+                    <param id="0" name="Name">&quot;C2API_GetBool&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2626278532005511">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="3615515551663081" type="C2ApiBoolVarDict">
+                            <param id="0" name="Key">QuestLevelRuntime.getParamByName(&quot;name&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4938904326355285">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="3611034060801388" type="C2ApiBoolVarDict">
+                                    <param id="0" name="Key">QuestLevelRuntime.getParamByName(&quot;name&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5374677186730591" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="620514030397898">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6324420604097957" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4010580354780277" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;false&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="526716049629159">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9382179813979459" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4594842706613449" type="Function">
+                            <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}&quot;false&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1589717824194247">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="2028340512249619" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="9673719341818984" title="Stage quiz">
+            <sub-events>
+                <variable constant="0" name="QuizSuccessCnt" sid="233908038270489" static="1" type="number">0</variable>
+                <variable constant="0" name="QuizOverallCnt" sid="7689959955237794" static="1" type="number">0</variable>
+                <event-block sid="9088814398775716">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6855215859250324" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7781518733896495">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2216573833282266" type="System">
+                                    <param id="0" name="Variable">QuizSuccessCnt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2696640048055546" type="System">
+                                    <param id="0" name="Variable">QuizOverallCnt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9721282524702219">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7485888713764551" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowFail&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Kostil</comment>
+                        <event-block sid="5050712781280086">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5734628688422418" type="System">
+                                    <param id="0" name="Variable">CurrentStageName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;quiz&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4415362251333322">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9861663601100977" type="System">
+                                            <param id="0" name="Variable">QuizOverallCnt</param>
+                                            <param id="1" name="Value">QuizOverallCnt + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3793017996164336">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="630105394322647" type="Function">
+                                    <param id="0" name="Name">&quot;RunFailNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="3651906622831895" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6746992719811928">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3848790690823425" type="Function">
+                            <param id="0" name="Name">&quot;C2API_ShowSuccess&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Kostil</comment>
+                        <event-block sid="5597631700320918">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9232111977220989" type="System">
+                                    <param id="0" name="Variable">CurrentStageName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;quiz&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7696510588044551">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2821041351644097" type="System">
+                                            <param id="0" name="Variable">QuizOverallCnt</param>
+                                            <param id="1" name="Value">QuizOverallCnt + 1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4324555743101081" type="System">
+                                            <param id="0" name="Variable">QuizSuccessCnt</param>
+                                            <param id="1" name="Value">QuizSuccessCnt + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3277643396572092">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="167558387318821" type="Function">
+                                    <param id="0" name="Name">&quot;RunSuccessNotification&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="2271016696404903" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="930340040578207">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2188242832488894" type="Function">
+                            <param id="0" name="Name">&quot;C2API_QuizInjectResult&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2447373004691107">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="7133444442536956" type="Function">
+                                    <param id="0" name="Name">&quot;QEEnqueueUIAction&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;CUSTOM_EVENT&quot;{###}&quot;Player&quot;{###}str(QuizSuccessCnt)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="3979238763845015" type="Function">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

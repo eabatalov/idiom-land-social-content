@@ -657,10 +657,6 @@
                                             <param id="0" name="Variable">CurrentDialogStepTargetID</param>
                                             <param id="1" name="Value">NPC.NpcID</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="2677343637144443" type="System">
-                                            <param id="0" name="Variable">CurrentDialogStepTargetName</param>
-                                            <param id="1" name="Value">NPC.NpcName</param>
-                                        </action>
                                         <action id="-9" name="Set value" sid="7063956363751568" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
                                             <param id="1" name="Value">QuestLevelRuntime.getPhraseType</param>
@@ -730,10 +726,6 @@
                                         <action id="-9" name="Set value" sid="1087182450767706" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepTargetID</param>
                                             <param id="1" name="Value">NPC.NpcID</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="2834069235588863" type="System">
-                                            <param id="0" name="Variable">CurrentDialogStepTargetName</param>
-                                            <param id="1" name="Value">NPC.NpcName</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="2533740030057896" type="System">
                                             <param id="0" name="Variable">CurrentDialogStepArgPhraseType</param>
