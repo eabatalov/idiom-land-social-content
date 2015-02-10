@@ -1,0 +1,335 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "stage1",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "stage1",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						3
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 11,
+					"label": "Notification on stage1",
+					"continue": false,
+					"inCondIds": [
+						3
+					],
+					"outCondIds": [
+						4
+					],
+					"props": {
+						"text": "Notification on stage1.\nCondition CUSTOM_EVENT with name \"stage_activate\" should come out of storyline node on the first stage."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 17,
+					"type": 10,
+					"label": "C2API_GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						5
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "stage1",
+								"$$hashKey": "01C"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "stage2",
+								"$$hashKey": "01E"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						4
+					],
+					"outCondIds": [
+						5
+					],
+					"props": {
+						"text": "Let's go to the next stage then.\nCondition to the \"next stage\" function call node should be NEXT.\nYou'll gave to type source and destination stages names in FUNCTION_CALL node parameters."
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 3,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 4,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 13,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 9,
+					"label": "stage2",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"name": "stage2",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [
+						6
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						6
+					],
+					"outCondIds": [
+						7
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "stage1",
+								"$$hashKey": "01M"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "stage2",
+								"$$hashKey": "01O"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7
+					],
+					"outCondIds": [
+						11
+					],
+					"props": {
+						"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						11
+					],
+					"outCondIds": [
+						12
+					],
+					"props": {
+						"id": "Player",
+						"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						12
+					],
+					"outCondIds": [
+						13
+					],
+					"props": {
+						"id": "Player",
+						"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						13
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "Player",
+						"text": "Ok. This is the end,",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		}
+	]
+}
