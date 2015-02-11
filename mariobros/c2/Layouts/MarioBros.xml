@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite4" uid="5">
+                <instance type="Cover" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -117,7 +117,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite5" uid="6">
+                <instance type="Logo" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -161,7 +161,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite18" uid="25">
+                <instance type="Rays" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -180,7 +180,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2444</x>
-                        <y>335</y>
+                        <y>293</y>
                         <z>0</z>
                         <width>578</width>
                         <height>577</height>
@@ -191,7 +191,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite19" uid="26">
+                <instance type="Muffins" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -202,7 +202,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2452</x>
-                        <y>284</y>
+                        <y>242</y>
                         <z>0</z>
                         <width>508</width>
                         <height>295</height>
@@ -213,7 +213,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite5" uid="24">
+                <instance type="Logo" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -224,7 +224,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2454</x>
-                        <y>380</y>
+                        <y>338</y>
                         <z>0</z>
                         <width>244</width>
                         <height>246</height>
@@ -235,7 +235,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite18" uid="27">
+                <instance type="Rays" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -245,7 +245,7 @@
                     <behavior-instances>
                         <behavior-instance type="Rotate">
                             <properties>
-                                <speed>180</speed>
+                                <speed>16</speed>
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
@@ -353,46 +353,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite30" uid="54">
+                <instance type="Rays" uid="62">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>16</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2447</x>
-                        <y>1333</y>
+                        <x>1889</x>
+                        <y>1364</y>
                         <z>0</z>
-                        <width>80</width>
-                        <height>145</height>
+                        <width>340</width>
+                        <height>340</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.503448248</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite31" uid="56">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2203</x>
-                        <y>1452</y>
-                        <z>0</z>
-                        <width>258</width>
-                        <height>330</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.500866532</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -419,12 +405,12 @@
                 <instance type="NPC" uid="59">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>teacher_idle</initial-animation>
+                        <initial-animation>mario_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>stage2</Stage>
+                        <Stage>Intro</Stage>
                         <NpcID>Player</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
@@ -438,7 +424,7 @@
                         <y>480</y>
                         <z>0</z>
                         <width>138</width>
-                        <height>218</height>
+                        <height>218.000015259</height>
                         <depth>0</depth>
                         <hotspotX>0.506493509</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -534,50 +520,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite12" uid="17">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1115.076171875</x>
-                        <y>450.279907227</y>
-                        <z>0</z>
-                        <width>67</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50746268</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite13" uid="18">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1196</x>
-                        <y>447</y>
-                        <z>0</z>
-                        <width>75</width>
-                        <height>139</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50666666</hotspotX>
-                        <hotspotY>0.50359714</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Sprite14" uid="19">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -622,59 +564,15 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite16" uid="22">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1690</x>
-                        <y>463</y>
-                        <z>0</z>
-                        <width>197</width>
-                        <height>238</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502538085</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite17" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1809</x>
-                        <y>529</y>
-                        <z>0</z>
-                        <width>91</width>
-                        <height>132</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505494535</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="NPC" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>teacher_idle</initial-animation>
+                        <initial-animation>mario_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>stage2</Stage>
+                        <Stage>KittySpace</Stage>
                         <NpcID>Player</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
@@ -684,58 +582,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>138</x>
-                        <y>863</y>
+                        <x>197.238296509</x>
+                        <y>912.836730957</y>
                         <z>0</z>
                         <width>138</width>
                         <height>218</height>
                         <depth>0</depth>
                         <hotspotX>0.506493509</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite22" uid="42">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>453</x>
-                        <y>869</y>
-                        <z>0</z>
-                        <width>94</width>
-                        <height>115</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504347801</hotspotY>
-                        <angle>-0.121159919</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite24" uid="46">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1654</x>
-                        <y>879</y>
-                        <z>0</z>
-                        <width>98</width>
-                        <height>155</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.503225803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -743,12 +597,12 @@
                 <instance type="NPC" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>teacher_idle</initial-animation>
+                        <initial-animation>mario_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>stage2</Stage>
+                        <Stage>Underground</Stage>
                         <NpcID>Player</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
@@ -758,175 +612,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>243</x>
-                        <y>1456</y>
+                        <x>671.453857422</x>
+                        <y>1515.241210938</y>
                         <z>0</z>
                         <width>138</width>
                         <height>218</height>
                         <depth>0</depth>
                         <hotspotX>0.506493509</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite26" uid="49">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>596</x>
-                        <y>1463</y>
-                        <z>0</z>
-                        <width>213</width>
-                        <height>307</height>
-                        <depth>0</depth>
-                        <hotspotX>0.43192488</hotspotX>
-                        <hotspotY>0.55700326</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite28" uid="51">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>441</x>
-                        <y>1510</y>
-                        <z>0</z>
-                        <width>93</width>
-                        <height>108</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505376339</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite27" uid="50">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>755</x>
-                        <y>1503</y>
-                        <z>0</z>
-                        <width>143</width>
-                        <height>230</height>
-                        <depth>0</depth>
-                        <hotspotX>0.503496528</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite29" uid="52">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1541</x>
-                        <y>1456</y>
-                        <z>0</z>
-                        <width>593</width>
-                        <height>292</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500843167</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPC" uid="53">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>teacher_idle</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>stage2</Stage>
-                        <NpcID>Player</NpcID>
-                        <AnimPrio>0</AnimPrio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="QuestEngineSpriteExtras" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1331</x>
-                        <y>1558</y>
-                        <z>0</z>
-                        <width>138</width>
-                        <height>218</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506493509</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite25" uid="47">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1389</x>
-                        <y>963</y>
-                        <z>0</z>
-                        <width>350</width>
-                        <height>319</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501567423</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite32" uid="58">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2564</x>
-                        <y>723</y>
-                        <z>0</z>
-                        <width>143</width>
-                        <height>270</height>
-                        <depth>0</depth>
-                        <hotspotX>0.503496528</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -935,12 +627,12 @@
                 <instance type="NPC" uid="57">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>teacher_idle</initial-animation>
+                        <initial-animation>mario_idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>stage2</Stage>
+                        <Stage>Epilog</Stage>
                         <NpcID>Player</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
@@ -980,6 +672,396 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="63">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>mario_fly</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>KingMeet</Stage>
+                        <NpcID>Player</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1432.697631836</x>
+                        <y>1000.031005859</y>
+                        <z>0</z>
+                        <width>350</width>
+                        <height>319</height>
+                        <depth>0</depth>
+                        <hotspotX>0.497142851</hotspotX>
+                        <hotspotY>0.52664578</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="47">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>mario_fun</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Goal</Stage>
+                        <NpcID>Player</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1947</x>
+                        <y>1451</y>
+                        <z>0</z>
+                        <width>258</width>
+                        <height>330</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="56">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>girl</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
+                        <NpcID>Girl</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1116</x>
+                        <y>459</y>
+                        <z>0</z>
+                        <width>69</width>
+                        <height>130</height>
+                        <depth>0</depth>
+                        <hotspotX>0.594202876</hotspotX>
+                        <hotspotY>0.561538458</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>boy</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
+                        <NpcID>Boy</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1188</x>
+                        <y>449</y>
+                        <z>0</z>
+                        <width>75</width>
+                        <height>139</height>
+                        <depth>0</depth>
+                        <hotspotX>0.49333334</hotspotX>
+                        <hotspotY>0.517985582</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>fungas</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
+                        <NpcID>Fungas</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1727</x>
+                        <y>469</y>
+                        <z>0</z>
+                        <width>197</width>
+                        <height>238</height>
+                        <depth>0</depth>
+                        <hotspotX>0.487309635</hotspotX>
+                        <hotspotY>0.529411793</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="22">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>mini_fungas</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
+                        <NpcID>MiniFungas</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1824.311035156</x>
+                        <y>543.106567383</y>
+                        <z>0</z>
+                        <width>91</width>
+                        <height>132</height>
+                        <depth>0</depth>
+                        <hotspotX>0.461538464</hotspotX>
+                        <hotspotY>0.553030312</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="23">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>muffin_king</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>KingMeet</Stage>
+                        <NpcID>KingMuffin</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1681.316772461</x>
+                        <y>952.313842773</y>
+                        <z>0</z>
+                        <width>98</width>
+                        <height>155</height>
+                        <depth>0</depth>
+                        <hotspotX>0.418367356</hotspotX>
+                        <hotspotY>0.496774197</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="46">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>kitty</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>KittySpace</Stage>
+                        <NpcID>Kitty</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>445.893463135</x>
+                        <y>883.282958984</y>
+                        <z>0</z>
+                        <width>94</width>
+                        <height>115</height>
+                        <depth>0</depth>
+                        <hotspotX>0.414893627</hotspotX>
+                        <hotspotY>0.556521714</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="42">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>monstro_big</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Underground</Stage>
+                        <NpcID>BigMonstro</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>997.315307617</x>
+                        <y>1412.774902344</y>
+                        <z>0</z>
+                        <width>213</width>
+                        <height>307</height>
+                        <depth>0</depth>
+                        <hotspotX>0.586854458</hotspotX>
+                        <hotspotY>0.501628637</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="49">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>monstro_son</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Underground</Stage>
+                        <NpcID>SonMonstro</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1150.257446289</x>
+                        <y>1518</y>
+                        <z>0</z>
+                        <width>143</width>
+                        <height>230</height>
+                        <depth>0</depth>
+                        <hotspotX>0.874125898</hotspotX>
+                        <hotspotY>0.543478251</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="50">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>monstro_circle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Underground</Stage>
+                        <NpcID>BunMonstro</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>909.88269043</x>
+                        <y>1581</y>
+                        <z>0</z>
+                        <width>93</width>
+                        <height>108</height>
+                        <depth>0</depth>
+                        <hotspotX>1.344086051</hotspotX>
+                        <hotspotY>1.157407403</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="52">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>turtle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Epilog</Stage>
+                        <NpcID>Turtle</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2480</x>
+                        <y>1338</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>145</height>
+                        <depth>0</depth>
+                        <hotspotX>0.474999994</hotspotX>
+                        <hotspotY>0.510344803</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>princess</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Epilog</Stage>
+                        <NpcID>Player</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2562.704589844</x>
+                        <y>729.471008301</y>
+                        <z>0</z>
+                        <width>143</width>
+                        <height>270</height>
+                        <depth>0</depth>
+                        <hotspotX>0.482517481</hotspotX>
+                        <hotspotY>0.518518507</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1632,6 +1714,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Sprite34" uid="61">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>82</x>
+                        <y>559</y>
+                        <z>0</z>
+                        <width>122</width>
+                        <height>122</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="QuestNavBackBtn" uid="344">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
