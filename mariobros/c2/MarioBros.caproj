@@ -1397,7 +1397,12 @@
                                 </animation>
                                 <animation framecount="1" loop="0" name="princess" pingpong="0" repeatcount="1" repeatto="0" sid="8274094693916361" speed="5">
                                     <frame duration="1" hotspotX="0.482517" hotspotY="0.518519">
-                                        <image-point name="SpeechOrigin" x="0.503497" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="0.755245" y="0.192593" />
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="logo" pingpong="0" repeatcount="1" repeatto="0" sid="2546865165663717" speed="5">
+                                    <frame duration="1" hotspotX="0.483607" hotspotY="0.569106">
+                                        <image-point name="SpeechOrigin" x="0.516393" y="-1.04065" />
                                     </frame>
                                 </animation>
                             </animation-folder>

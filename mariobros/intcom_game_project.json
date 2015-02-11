@@ -11,14 +11,14 @@
 						"ver": 1,
 						"id": 11,
 						"type": 9,
-						"label": "stage1",
+						"label": "Cover",
 						"continue": false,
 						"inCondIds": [],
 						"outCondIds": [
 							0
 						],
 						"props": {
-							"name": "stage1",
+							"name": "Cover",
 							"objs": [
 								"Player"
 							],
@@ -47,26 +47,26 @@
 						"ver": 1,
 						"id": 16,
 						"type": 11,
-						"label": "Notification on stage1",
+						"label": "Notification",
 						"continue": false,
 						"inCondIds": [
 							3
 						],
 						"outCondIds": [
-							4
+							535
 						],
 						"props": {
-							"text": "Notification on stage1.\nCondition CUSTOM_EVENT with name \"stage_activate\" should come out of storyline node on the first stage."
+							"text": "First Test."
 						}
 					},
 					{
 						"ver": 1,
 						"id": 17,
 						"type": 10,
-						"label": "C2API_GoToNextStage",
+						"label": "GoToNextStage",
 						"continue": false,
 						"inCondIds": [
-							5
+							535
 						],
 						"outCondIds": [],
 						"props": {
@@ -77,33 +77,17 @@
 								{
 									"type": "str",
 									"name": "0",
-									"value": "stage1",
+									"value": "Cover",
 									"$$hashKey": "01C"
 								},
 								{
 									"type": "str",
 									"name": "1",
-									"value": "stage2",
+									"value": "Intro",
 									"$$hashKey": "01E"
 								}
 							],
 							"isPure": false
-						}
-					},
-					{
-						"ver": 1,
-						"id": 18,
-						"type": 11,
-						"label": "",
-						"continue": false,
-						"inCondIds": [
-							4
-						],
-						"outCondIds": [
-							5
-						],
-						"props": {
-							"text": "Let's go to the next stage then.\nCondition to the \"next stage\" function call node should be NEXT.\nYou'll gave to type source and destination stages names in FUNCTION_CALL node parameters."
 						}
 					}
 				],
@@ -124,15 +108,7 @@
 					},
 					{
 						"ver": 1,
-						"id": 4,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
-						"id": 5,
+						"id": 535,
 						"type": 11,
 						"props": {
 							"clearStage": true
@@ -148,16 +124,20 @@
 						"ver": 1,
 						"id": 13,
 						"type": 9,
-						"label": "stage2",
+						"label": "Intro",
 						"continue": false,
 						"inCondIds": [],
 						"outCondIds": [
 							1
 						],
 						"props": {
-							"name": "stage2",
+							"name": "Intro",
 							"objs": [
-								"Player"
+								"Player",
+								"Girl",
+								"Boy",
+								"Fungas",
+								"MiniFungas"
 							],
 							"objPool": []
 						}
@@ -176,7 +156,11 @@
 						],
 						"props": {
 							"objs": [
-								"Player"
+								"Player",
+								"Girl",
+								"Boy",
+								"Fungas",
+								"MiniFungas"
 							]
 						}
 					},
@@ -184,13 +168,13 @@
 						"ver": 1,
 						"id": 19,
 						"type": 10,
-						"label": "C2API_GoToPrevStage",
+						"label": "GoToPrevStage",
 						"continue": true,
 						"inCondIds": [
 							6
 						],
 						"outCondIds": [
-							7
+							537
 						],
 						"props": {
 							"name": "C2API_GoToNextStage",
@@ -200,33 +184,17 @@
 								{
 									"type": "str",
 									"name": "0",
-									"value": "stage1",
+									"value": "Cover",
 									"$$hashKey": "01M"
 								},
 								{
 									"type": "str",
 									"name": "1",
-									"value": "stage2",
+									"value": "Intro",
 									"$$hashKey": "01O"
 								}
 							],
 							"isPure": false
-						}
-					},
-					{
-						"ver": 1,
-						"id": 20,
-						"type": 11,
-						"label": "",
-						"continue": false,
-						"inCondIds": [
-							7
-						],
-						"outCondIds": [
-							11
-						],
-						"props": {
-							"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
 						}
 					},
 					{
@@ -236,16 +204,16 @@
 						"label": "",
 						"continue": false,
 						"inCondIds": [
-							11
+							537
 						],
 						"outCondIds": [
 							12
 						],
 						"props": {
-							"id": "Player",
-							"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+							"id": "Girl",
+							"text": "Hello!",
 							"phraseType": "SPEAK",
-							"phraseSize": "LARGE"
+							"phraseSize": "SMALL"
 						}
 					},
 					{
@@ -261,10 +229,10 @@
 							13
 						],
 						"props": {
-							"id": "Player",
-							"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+							"id": "Boy",
+							"text": "Howdy",
 							"phraseType": "SPEAK",
-							"phraseSize": "LARGE"
+							"phraseSize": "SMALL"
 						}
 					},
 					{
@@ -276,12 +244,83 @@
 						"inCondIds": [
 							13
 						],
-						"outCondIds": [],
+						"outCondIds": [
+							523
+						],
 						"props": {
 							"id": "Player",
-							"text": "Ok. This is the end,",
+							"text": "Caramba! I'm Mario!",
 							"phraseType": "SPEAK",
-							"phraseSize": "MEDIUM"
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 322,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							523
+						],
+						"outCondIds": [
+							524
+						],
+						"props": {
+							"id": "Fungas",
+							"text": "Hello!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 323,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							524
+						],
+						"outCondIds": [
+							525
+						],
+						"props": {
+							"id": "MiniFungas",
+							"text": "Ja-ja!",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 324,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							525
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Intro",
+									"$$hashKey": "09K"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "KittySpace",
+									"$$hashKey": "09M"
+								}
+							],
+							"isPure": false
 						}
 					}
 				],
@@ -302,20 +341,6 @@
 					},
 					{
 						"ver": 1,
-						"id": 7,
-						"type": 8,
-						"props": {}
-					},
-					{
-						"ver": 1,
-						"id": 11,
-						"type": 11,
-						"props": {
-							"clearStage": true
-						}
-					},
-					{
-						"ver": 1,
 						"id": 12,
 						"type": 11,
 						"props": {
@@ -329,6 +354,1097 @@
 						"props": {
 							"clearStage": true
 						}
+					},
+					{
+						"ver": 1,
+						"id": 523,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 524,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 525,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 537,
+						"type": 8,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 311,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 311,
+						"type": 9,
+						"label": "KittySpace",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							539
+						],
+						"props": {
+							"name": "KittySpace",
+							"objs": [
+								"Player",
+								"Kitty"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 312,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							539
+						],
+						"outCondIds": [
+							538
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"Kitty"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 325,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							538
+						],
+						"outCondIds": [
+							526
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Intro",
+									"$$hashKey": "0DE"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "KittySpace",
+									"$$hashKey": "0EV"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 326,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							526
+						],
+						"outCondIds": [
+							527
+						],
+						"props": {
+							"id": "Kitty",
+							"text": "What?",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 327,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							527
+						],
+						"outCondIds": [
+							540
+						],
+						"props": {
+							"id": "Player",
+							"text": "it's Nothing",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 340,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							540
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "KittySpace",
+									"$$hashKey": "09K"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Underground",
+									"$$hashKey": "09M"
+								}
+							],
+							"isPure": false
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 526,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 527,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 538,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 539,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 540,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 313,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 313,
+						"type": 9,
+						"label": "Underground",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							506
+						],
+						"props": {
+							"name": "Underground",
+							"objs": [
+								"Player",
+								"BunMonstro",
+								"BigMonstro",
+								"SonMonstro"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 314,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							506
+						],
+						"outCondIds": [
+							541
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"BunMonstro",
+								"SonMonstro",
+								"BigMonstro"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 343,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							541
+						],
+						"outCondIds": [
+							542
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "KittySpace",
+									"$$hashKey": "0DE"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Underground",
+									"$$hashKey": "0EV"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 344,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							542
+						],
+						"outCondIds": [
+							543
+						],
+						"props": {
+							"id": "Player",
+							"text": "Oh my gosh!",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 345,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							543
+						],
+						"outCondIds": [
+							545
+						],
+						"props": {
+							"id": "BunMonstro",
+							"text": "Give me your money!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 346,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							545
+						],
+						"outCondIds": [
+							546
+						],
+						"props": {
+							"id": "BigMonstro",
+							"text": "A-A-A-R-R-H-H!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 347,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							546
+						],
+						"outCondIds": [
+							547
+						],
+						"props": {
+							"id": "SonMonstro",
+							"text": "Boom=)",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 349,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							547
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Underground",
+									"$$hashKey": "09K"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "KingMeet",
+									"$$hashKey": "09M"
+								}
+							],
+							"isPure": false
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 506,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 541,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 542,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 543,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 545,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 546,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 547,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 315,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 315,
+						"type": 9,
+						"label": "KingMeet",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							507
+						],
+						"props": {
+							"name": "KingMeet",
+							"objs": [
+								"Player",
+								"KingMuffin"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 316,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							507
+						],
+						"outCondIds": [
+							560
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"KingMuffin"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 358,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							560
+						],
+						"outCondIds": [
+							561
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Underground",
+									"$$hashKey": "0DE"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "KingMeet",
+									"$$hashKey": "0EV"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 359,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							561
+						],
+						"outCondIds": [
+							563
+						],
+						"props": {
+							"id": "KingMuffin",
+							"text": "Yolo!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 360,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							563
+						],
+						"outCondIds": [
+							564
+						],
+						"props": {
+							"id": "Player",
+							"text": "How crazy are you??",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 361,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							564
+						],
+						"outCondIds": [
+							565
+						],
+						"props": {
+							"id": "KingMuffin",
+							"text": "Nope!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 363,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							565
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "KingMeet",
+									"$$hashKey": "09K"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Goal",
+									"$$hashKey": "09M"
+								}
+							],
+							"isPure": false
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 507,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 560,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 561,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 563,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 564,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 565,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 317,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 317,
+						"type": 9,
+						"label": "Goal",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							508
+						],
+						"props": {
+							"name": "Goal",
+							"objs": [
+								"Player"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 318,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							508
+						],
+						"outCondIds": [
+							566
+						],
+						"props": {
+							"objs": [
+								"Player"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 365,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							566
+						],
+						"outCondIds": [
+							567
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "KingMeet",
+									"$$hashKey": "0DE"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Goal",
+									"$$hashKey": "0EV"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 366,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							567
+						],
+						"outCondIds": [
+							569
+						],
+						"props": {
+							"id": "Player",
+							"text": "Finally, I got a muffin!",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 368,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							569
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Goal",
+									"$$hashKey": "09K"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Epilog",
+									"$$hashKey": "09M"
+								}
+							],
+							"isPure": false
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 508,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 566,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 567,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 569,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 319,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 319,
+						"type": 9,
+						"label": "Epilog",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							509
+						],
+						"props": {
+							"name": "Epilog",
+							"objs": [
+								"Player",
+								"Turtle",
+								"Princess",
+								"Logo"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 320,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							509
+						],
+						"outCondIds": [
+							570
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"Turtle",
+								"Princess",
+								"Logo"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 370,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							570
+						],
+						"outCondIds": [
+							571
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Goal",
+									"$$hashKey": "0DE"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Epilog",
+									"$$hashKey": "0EV"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 371,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							571
+						],
+						"outCondIds": [
+							572
+						],
+						"props": {
+							"id": "Turtle",
+							"text": "This muffins very tasty!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 372,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							572
+						],
+						"outCondIds": [
+							573,
+							574
+						],
+						"props": {
+							"id": "Turtle",
+							"text": "Eat it yourself!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL",
+							"ans1": "Carry princess",
+							"ans2": "Eat myselfself",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 373,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							573
+						],
+						"outCondIds": [
+							575
+						],
+						"props": {
+							"id": "Player",
+							"text": "This is for you",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 374,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							574,
+							578
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "Logo",
+							"text": "The End",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 375,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							575
+						],
+						"outCondIds": [
+							577
+						],
+						"props": {
+							"id": "Princess",
+							"text": "Thank you so much",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 376,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							577
+						],
+						"outCondIds": [
+							578
+						],
+						"props": {
+							"id": "Princess",
+							"text": "Oh as delicious",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 509,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 570,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 571,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 572,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 573,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 574,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 575,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 577,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 578,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
 					}
 				]
 			}
@@ -336,7 +1452,7 @@
 	},
 	"scriptEditor": {
 		"ver": 1,
-		"currentStageId": 13,
+		"currentStageId": 313,
 		"stageEditors": [
 			{
 				"ver": 1,
@@ -344,40 +1460,33 @@
 					{
 						"ver": 1,
 						"nodeId": 11,
-						"x": 400,
-						"y": 100
+						"x": 438,
+						"y": 177
 					},
 					{
 						"ver": 1,
 						"nodeId": 12,
-						"x": 401,
-						"y": 421
+						"x": 695,
+						"y": 175
 					},
 					{
 						"ver": 1,
 						"nodeId": 16,
-						"x": 648,
-						"y": 573
+						"x": 986,
+						"y": 164
 					},
 					{
 						"ver": 1,
 						"nodeId": 17,
-						"x": 982,
-						"y": 220
-					},
-					{
-						"ver": 1,
-						"nodeId": 18,
-						"x": 986,
-						"y": 583
+						"x": 1306.9999999999998,
+						"y": 168.00000000000006
 					}
 				],
 				"nodeIds": [
 					11,
 					12,
 					16,
-					17,
-					18
+					17
 				],
 				"condViews": [
 					{
@@ -385,12 +1494,12 @@
 						"condId": 0,
 						"points": {
 							"src": {
-								"x": 480,
-								"y": 180
+								"x": 518,
+								"y": 257
 							},
 							"dst": {
-								"x": 481,
-								"y": 501
+								"x": 775,
+								"y": 255
 							}
 						}
 					},
@@ -399,40 +1508,26 @@
 						"condId": 3,
 						"points": {
 							"src": {
-								"x": 481,
-								"y": 501
+								"x": 775,
+								"y": 255
 							},
 							"dst": {
-								"x": 728,
-								"y": 653
+								"x": 1066,
+								"y": 244
 							}
 						}
 					},
 					{
 						"ver": 1,
-						"condId": 4,
-						"points": {
-							"src": {
-								"x": 728,
-								"y": 653
-							},
-							"dst": {
-								"x": 1066,
-								"y": 663
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 5,
+						"condId": 535,
 						"points": {
 							"src": {
 								"x": 1066,
-								"y": 663
+								"y": 244
 							},
 							"dst": {
-								"x": 1062,
-								"y": 300
+								"x": 1386.9999999999998,
+								"y": 248.00000000000006
 							}
 						}
 					}
@@ -440,13 +1535,12 @@
 				"condIds": [
 					0,
 					3,
-					4,
-					5
+					535
 				],
-				"scale": 1,
+				"scale": 0.5000000000000001,
 				"pos": {
-					"x": 0,
-					"y": 0
+					"x": 96,
+					"y": 119
 				}
 			},
 			{
@@ -455,54 +1549,68 @@
 					{
 						"ver": 1,
 						"nodeId": 13,
-						"x": 400,
-						"y": 100
+						"x": 400.0000000000002,
+						"y": 131.66666666666666
 					},
 					{
 						"ver": 1,
 						"nodeId": 14,
-						"x": 400,
-						"y": 420
+						"x": 398.8888888888889,
+						"y": 419.99999999999994
 					},
 					{
 						"ver": 1,
 						"nodeId": 19,
-						"x": 673,
-						"y": 412
-					},
-					{
-						"ver": 1,
-						"nodeId": 20,
-						"x": 1014,
-						"y": 405
+						"x": 694.3888888888891,
+						"y": 423.66666666666686
 					},
 					{
 						"ver": 1,
 						"nodeId": 26,
-						"x": 1022,
-						"y": 698
+						"x": 1052,
+						"y": 426.75000000000057
 					},
 					{
 						"ver": 1,
 						"nodeId": 27,
-						"x": 677,
-						"y": 698
+						"x": 1052.4166666666667,
+						"y": 683.0000000000001
 					},
 					{
 						"ver": 1,
 						"nodeId": 28,
-						"x": 386,
-						"y": 701
+						"x": 373.5,
+						"y": 688.5
+					},
+					{
+						"ver": 1,
+						"nodeId": 322,
+						"x": 367.4999999999998,
+						"y": 990.8333333333335
+					},
+					{
+						"ver": 1,
+						"nodeId": 323,
+						"x": 673.7499999999999,
+						"y": 982.4999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 324,
+						"x": 1033.3333333333335,
+						"y": 980.8333333333339
 					}
 				],
 				"nodeIds": [
 					13,
 					14,
 					19,
-					20,
 					26,
 					27,
-					28
+					28,
+					322,
+					323,
+					324
 				],
 				"condViews": [
 					{
@@ -510,12 +1618,12 @@
 						"condId": 1,
 						"points": {
 							"src": {
-								"x": 480,
-								"y": 180
+								"x": 480.0000000000002,
+								"y": 211.66666666666666
 							},
 							"dst": {
-								"x": 480,
-								"y": 500
+								"x": 478.8888888888889,
+								"y": 499.99999999999994
 							}
 						}
 					},
@@ -524,40 +1632,12 @@
 						"condId": 6,
 						"points": {
 							"src": {
-								"x": 480,
-								"y": 500
+								"x": 478.8888888888889,
+								"y": 499.99999999999994
 							},
 							"dst": {
-								"x": 753,
-								"y": 492
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 7,
-						"points": {
-							"src": {
-								"x": 753,
-								"y": 492
-							},
-							"dst": {
-								"x": 1094,
-								"y": 485
-							}
-						}
-					},
-					{
-						"ver": 1,
-						"condId": 11,
-						"points": {
-							"src": {
-								"x": 1094,
-								"y": 485
-							},
-							"dst": {
-								"x": 1102,
-								"y": 778
+								"x": 774.3888888888891,
+								"y": 503.66666666666686
 							}
 						}
 					},
@@ -566,12 +1646,12 @@
 						"condId": 12,
 						"points": {
 							"src": {
-								"x": 1102,
-								"y": 778
+								"x": 1132,
+								"y": 506.75000000000057
 							},
 							"dst": {
-								"x": 757,
-								"y": 778
+								"x": 1132.4166666666667,
+								"y": 763.0000000000001
 							}
 						}
 					},
@@ -580,12 +1660,68 @@
 						"condId": 13,
 						"points": {
 							"src": {
-								"x": 757,
-								"y": 778
+								"x": 1132.4166666666667,
+								"y": 763.0000000000001
 							},
 							"dst": {
-								"x": 466,
-								"y": 781
+								"x": 453.5,
+								"y": 768.5
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 523,
+						"points": {
+							"src": {
+								"x": 453.5,
+								"y": 768.5
+							},
+							"dst": {
+								"x": 447.4999999999998,
+								"y": 1070.8333333333335
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 524,
+						"points": {
+							"src": {
+								"x": 447.4999999999998,
+								"y": 1070.8333333333335
+							},
+							"dst": {
+								"x": 753.7499999999999,
+								"y": 1062.4999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 525,
+						"points": {
+							"src": {
+								"x": 753.7499999999999,
+								"y": 1062.4999999999995
+							},
+							"dst": {
+								"x": 1113.3333333333335,
+								"y": 1060.833333333334
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 537,
+						"points": {
+							"src": {
+								"x": 774.3888888888891,
+								"y": 503.66666666666686
+							},
+							"dst": {
+								"x": 1132,
+								"y": 506.75000000000057
 							}
 						}
 					}
@@ -593,21 +1729,818 @@
 				"condIds": [
 					1,
 					6,
-					7,
-					11,
 					12,
-					13
+					13,
+					523,
+					524,
+					525,
+					537
 				],
-				"scale": 1,
+				"scale": 0.10000000000000014,
 				"pos": {
-					"x": 0,
-					"y": 0
+					"x": 118,
+					"y": -13
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 311,
+						"x": 216,
+						"y": 113
+					},
+					{
+						"ver": 1,
+						"nodeId": 312,
+						"x": 559.3333333333334,
+						"y": 117.66666666666663
+					},
+					{
+						"ver": 1,
+						"nodeId": 325,
+						"x": 881.3333333333338,
+						"y": 119.99999999999983
+					},
+					{
+						"ver": 1,
+						"nodeId": 326,
+						"x": 1138.6666666666667,
+						"y": 479.99999999999966
+					},
+					{
+						"ver": 1,
+						"nodeId": 327,
+						"x": 610.3333333333343,
+						"y": 486.66666666666663
+					},
+					{
+						"ver": 1,
+						"nodeId": 340,
+						"x": 323.99999999999966,
+						"y": 827.9999999999993
+					}
+				],
+				"nodeIds": [
+					311,
+					312,
+					325,
+					326,
+					327,
+					340
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 526,
+						"points": {
+							"src": {
+								"x": 961.3333333333338,
+								"y": 199.99999999999983
+							},
+							"dst": {
+								"x": 1218.6666666666667,
+								"y": 559.9999999999997
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 527,
+						"points": {
+							"src": {
+								"x": 1218.6666666666667,
+								"y": 559.9999999999997
+							},
+							"dst": {
+								"x": 690.3333333333343,
+								"y": 566.6666666666666
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 538,
+						"points": {
+							"src": {
+								"x": 639.3333333333334,
+								"y": 197.66666666666663
+							},
+							"dst": {
+								"x": 961.3333333333338,
+								"y": 199.99999999999983
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 539,
+						"points": {
+							"src": {
+								"x": 296,
+								"y": 193
+							},
+							"dst": {
+								"x": 639.3333333333334,
+								"y": 197.66666666666663
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 540,
+						"points": {
+							"src": {
+								"x": 690.3333333333343,
+								"y": 566.6666666666666
+							},
+							"dst": {
+								"x": 403.99999999999966,
+								"y": 907.9999999999993
+							}
+						}
+					}
+				],
+				"condIds": [
+					526,
+					527,
+					538,
+					539,
+					540
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 165,
+					"y": 130
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 313,
+						"x": 220.14285714285722,
+						"y": 106.14285714285711
+					},
+					{
+						"ver": 1,
+						"nodeId": 314,
+						"x": 604.1428571428572,
+						"y": 112.42857142857139
+					},
+					{
+						"ver": 1,
+						"nodeId": 343,
+						"x": 1029.2857142857142,
+						"y": 117.85714285714297
+					},
+					{
+						"ver": 1,
+						"nodeId": 344,
+						"x": 1023.3333333333337,
+						"y": 455.0000000000003
+					},
+					{
+						"ver": 1,
+						"nodeId": 345,
+						"x": 620.0000000000001,
+						"y": 471.66666666666674
+					},
+					{
+						"ver": 1,
+						"nodeId": 346,
+						"x": 225.00000000000023,
+						"y": 456.6666666666667
+					},
+					{
+						"ver": 1,
+						"nodeId": 347,
+						"x": 221.66666666666669,
+						"y": 738.3333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 349,
+						"x": 646.6666666666667,
+						"y": 738.3333333333347
+					}
+				],
+				"nodeIds": [
+					313,
+					314,
+					343,
+					344,
+					345,
+					346,
+					347,
+					349
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 506,
+						"points": {
+							"src": {
+								"x": 300.1428571428572,
+								"y": 186.1428571428571
+							},
+							"dst": {
+								"x": 684.1428571428572,
+								"y": 192.4285714285714
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 541,
+						"points": {
+							"src": {
+								"x": 684.1428571428572,
+								"y": 192.4285714285714
+							},
+							"dst": {
+								"x": 1109.2857142857142,
+								"y": 197.85714285714297
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 542,
+						"points": {
+							"src": {
+								"x": 1109.2857142857142,
+								"y": 197.85714285714297
+							},
+							"dst": {
+								"x": 1103.3333333333337,
+								"y": 535.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 543,
+						"points": {
+							"src": {
+								"x": 1103.3333333333337,
+								"y": 535.0000000000002
+							},
+							"dst": {
+								"x": 700.0000000000001,
+								"y": 551.6666666666667
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 545,
+						"points": {
+							"src": {
+								"x": 700.0000000000001,
+								"y": 551.6666666666667
+							},
+							"dst": {
+								"x": 305.0000000000002,
+								"y": 536.6666666666667
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 546,
+						"points": {
+							"src": {
+								"x": 305.0000000000002,
+								"y": 536.6666666666667
+							},
+							"dst": {
+								"x": 301.6666666666667,
+								"y": 818.3333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 547,
+						"points": {
+							"src": {
+								"x": 301.6666666666667,
+								"y": 818.3333333333333
+							},
+							"dst": {
+								"x": 726.6666666666667,
+								"y": 818.3333333333347
+							}
+						}
+					}
+				],
+				"condIds": [
+					506,
+					541,
+					542,
+					543,
+					545,
+					546,
+					547
+				],
+				"scale": 0.6000000000000001,
+				"pos": {
+					"x": 138,
+					"y": -27
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 315,
+						"x": 405,
+						"y": 130
+					},
+					{
+						"ver": 1,
+						"nodeId": 316,
+						"x": 408.33333333333337,
+						"y": 465.0000000000001
+					},
+					{
+						"ver": 1,
+						"nodeId": 358,
+						"x": 795.0000000000007,
+						"y": 462.0000000000002
+					},
+					{
+						"ver": 1,
+						"nodeId": 359,
+						"x": 953.3333333333338,
+						"y": 191.66666666666677
+					},
+					{
+						"ver": 1,
+						"nodeId": 360,
+						"x": 1333.333333333334,
+						"y": 193.3333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 361,
+						"x": 1187,
+						"y": 463.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 363,
+						"x": 1543.9999999999995,
+						"y": 467.9999999999999
+					}
+				],
+				"nodeIds": [
+					315,
+					316,
+					358,
+					359,
+					360,
+					361,
+					363
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 507,
+						"points": {
+							"src": {
+								"x": 485,
+								"y": 210
+							},
+							"dst": {
+								"x": 488.33333333333337,
+								"y": 545.0000000000001
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 560,
+						"points": {
+							"src": {
+								"x": 488.33333333333337,
+								"y": 545.0000000000001
+							},
+							"dst": {
+								"x": 875.0000000000007,
+								"y": 542.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 561,
+						"points": {
+							"src": {
+								"x": 875.0000000000007,
+								"y": 542.0000000000002
+							},
+							"dst": {
+								"x": 1033.333333333334,
+								"y": 271.66666666666674
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 563,
+						"points": {
+							"src": {
+								"x": 1033.333333333334,
+								"y": 271.66666666666674
+							},
+							"dst": {
+								"x": 1413.333333333334,
+								"y": 273.33333333333326
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 564,
+						"points": {
+							"src": {
+								"x": 1413.333333333334,
+								"y": 273.33333333333326
+							},
+							"dst": {
+								"x": 1267,
+								"y": 543.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 565,
+						"points": {
+							"src": {
+								"x": 1267,
+								"y": 543.9999999999999
+							},
+							"dst": {
+								"x": 1623.9999999999995,
+								"y": 547.9999999999999
+							}
+						}
+					}
+				],
+				"condIds": [
+					507,
+					560,
+					561,
+					563,
+					564,
+					565
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 13,
+					"y": 19
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 317,
+						"x": 398.3333333333335,
+						"y": 70.00000000000003
+					},
+					{
+						"ver": 1,
+						"nodeId": 318,
+						"x": 395,
+						"y": 425
+					},
+					{
+						"ver": 1,
+						"nodeId": 365,
+						"x": 735.0000000000003,
+						"y": 426.66666666666686
+					},
+					{
+						"ver": 1,
+						"nodeId": 366,
+						"x": 1011.6666666666663,
+						"y": 240.00000000000023
+					},
+					{
+						"ver": 1,
+						"nodeId": 368,
+						"x": 1381.6666666666665,
+						"y": 238.33333333333331
+					}
+				],
+				"nodeIds": [
+					317,
+					318,
+					365,
+					366,
+					368
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 508,
+						"points": {
+							"src": {
+								"x": 478.3333333333335,
+								"y": 150.00000000000003
+							},
+							"dst": {
+								"x": 475,
+								"y": 505
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 566,
+						"points": {
+							"src": {
+								"x": 475,
+								"y": 505
+							},
+							"dst": {
+								"x": 815.0000000000003,
+								"y": 506.66666666666686
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 567,
+						"points": {
+							"src": {
+								"x": 815.0000000000003,
+								"y": 506.66666666666686
+							},
+							"dst": {
+								"x": 1091.6666666666663,
+								"y": 320.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 569,
+						"points": {
+							"src": {
+								"x": 1091.6666666666663,
+								"y": 320.0000000000002
+							},
+							"dst": {
+								"x": 1461.6666666666665,
+								"y": 318.3333333333333
+							}
+						}
+					}
+				],
+				"condIds": [
+					508,
+					566,
+					567,
+					569
+				],
+				"scale": 0.6000000000000001,
+				"pos": {
+					"x": 13,
+					"y": 91
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 319,
+						"x": 400,
+						"y": 100
+					},
+					{
+						"ver": 1,
+						"nodeId": 320,
+						"x": 401.9999999999999,
+						"y": 423.99999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 370,
+						"x": 767.9999999999994,
+						"y": 417.99999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 371,
+						"x": 771.999999999999,
+						"y": 91.99999999999989
+					},
+					{
+						"ver": 1,
+						"nodeId": 372,
+						"x": 1149.999999999998,
+						"y": 83.99999999999989
+					},
+					{
+						"ver": 1,
+						"nodeId": 373,
+						"x": 1153.9999999999982,
+						"y": 503.999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 374,
+						"x": 1550.0000000000002,
+						"y": -105.99999999999983
+					},
+					{
+						"ver": 1,
+						"nodeId": 375,
+						"x": 1531.9999999999998,
+						"y": 501.99999999999966
+					},
+					{
+						"ver": 1,
+						"nodeId": 376,
+						"x": 1817.9999999999995,
+						"y": 290
+					}
+				],
+				"nodeIds": [
+					319,
+					320,
+					370,
+					371,
+					372,
+					373,
+					374,
+					375,
+					376
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 509,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 180
+							},
+							"dst": {
+								"x": 481.9999999999999,
+								"y": 503.99999999999994
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 570,
+						"points": {
+							"src": {
+								"x": 481.9999999999999,
+								"y": 503.99999999999994
+							},
+							"dst": {
+								"x": 847.9999999999994,
+								"y": 497.99999999999994
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 571,
+						"points": {
+							"src": {
+								"x": 847.9999999999994,
+								"y": 497.99999999999994
+							},
+							"dst": {
+								"x": 851.999999999999,
+								"y": 171.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 572,
+						"points": {
+							"src": {
+								"x": 851.999999999999,
+								"y": 171.9999999999999
+							},
+							"dst": {
+								"x": 1229.999999999998,
+								"y": 163.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 573,
+						"points": {
+							"src": {
+								"x": 1229.999999999998,
+								"y": 163.9999999999999
+							},
+							"dst": {
+								"x": 1233.9999999999982,
+								"y": 583.999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 574,
+						"points": {
+							"src": {
+								"x": 1229.999999999998,
+								"y": 163.9999999999999
+							},
+							"dst": {
+								"x": 1630.0000000000002,
+								"y": -25.99999999999983
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 575,
+						"points": {
+							"src": {
+								"x": 1233.9999999999982,
+								"y": 583.999999999999
+							},
+							"dst": {
+								"x": 1611.9999999999998,
+								"y": 581.9999999999997
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 577,
+						"points": {
+							"src": {
+								"x": 1611.9999999999998,
+								"y": 581.9999999999997
+							},
+							"dst": {
+								"x": 1897.9999999999995,
+								"y": 370
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 578,
+						"points": {
+							"src": {
+								"x": 1897.9999999999995,
+								"y": 370
+							},
+							"dst": {
+								"x": 1630.0000000000002,
+								"y": -25.99999999999983
+							}
+						}
+					}
+				],
+				"condIds": [
+					509,
+					570,
+					571,
+					572,
+					573,
+					574,
+					575,
+					577,
+					578
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 72,
+					"y": 166
 				}
 			}
 		],
 		"stageIds": [
 			11,
-			13
+			13,
+			311,
+			313,
+			315,
+			317,
+			319
 		]
 	}
 }

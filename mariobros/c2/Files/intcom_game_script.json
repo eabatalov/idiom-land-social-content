@@ -10,14 +10,14 @@
 					"ver": 1,
 					"id": 11,
 					"type": 9,
-					"label": "stage1",
+					"label": "Cover",
 					"continue": false,
 					"inCondIds": [],
 					"outCondIds": [
 						0
 					],
 					"props": {
-						"name": "stage1",
+						"name": "Cover",
 						"objs": [
 							"Player"
 						],
@@ -46,26 +46,26 @@
 					"ver": 1,
 					"id": 16,
 					"type": 11,
-					"label": "Notification on stage1",
+					"label": "Notification",
 					"continue": false,
 					"inCondIds": [
 						3
 					],
 					"outCondIds": [
-						4
+						535
 					],
 					"props": {
-						"text": "Notification on stage1.\nCondition CUSTOM_EVENT with name \"stage_activate\" should come out of storyline node on the first stage."
+						"text": "First Test."
 					}
 				},
 				{
 					"ver": 1,
 					"id": 17,
 					"type": 10,
-					"label": "C2API_GoToNextStage",
+					"label": "GoToNextStage",
 					"continue": false,
 					"inCondIds": [
-						5
+						535
 					],
 					"outCondIds": [],
 					"props": {
@@ -76,33 +76,17 @@
 							{
 								"type": "str",
 								"name": "0",
-								"value": "stage1",
+								"value": "Cover",
 								"$$hashKey": "01C"
 							},
 							{
 								"type": "str",
 								"name": "1",
-								"value": "stage2",
+								"value": "Intro",
 								"$$hashKey": "01E"
 							}
 						],
 						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 18,
-					"type": 11,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						4
-					],
-					"outCondIds": [
-						5
-					],
-					"props": {
-						"text": "Let's go to the next stage then.\nCondition to the \"next stage\" function call node should be NEXT.\nYou'll gave to type source and destination stages names in FUNCTION_CALL node parameters."
 					}
 				}
 			],
@@ -123,15 +107,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 4,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 5,
+					"id": 535,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -147,16 +123,20 @@
 					"ver": 1,
 					"id": 13,
 					"type": 9,
-					"label": "stage2",
+					"label": "Intro",
 					"continue": false,
 					"inCondIds": [],
 					"outCondIds": [
 						1
 					],
 					"props": {
-						"name": "stage2",
+						"name": "Intro",
 						"objs": [
-							"Player"
+							"Player",
+							"Girl",
+							"Boy",
+							"Fungas",
+							"MiniFungas"
 						],
 						"objPool": []
 					}
@@ -175,7 +155,11 @@
 					],
 					"props": {
 						"objs": [
-							"Player"
+							"Player",
+							"Girl",
+							"Boy",
+							"Fungas",
+							"MiniFungas"
 						]
 					}
 				},
@@ -183,13 +167,13 @@
 					"ver": 1,
 					"id": 19,
 					"type": 10,
-					"label": "C2API_GoToPrevStage",
+					"label": "GoToPrevStage",
 					"continue": true,
 					"inCondIds": [
 						6
 					],
 					"outCondIds": [
-						7
+						537
 					],
 					"props": {
 						"name": "C2API_GoToNextStage",
@@ -199,33 +183,17 @@
 							{
 								"type": "str",
 								"name": "0",
-								"value": "stage1",
+								"value": "Cover",
 								"$$hashKey": "01M"
 							},
 							{
 								"type": "str",
 								"name": "1",
-								"value": "stage2",
+								"value": "Intro",
 								"$$hashKey": "01O"
 							}
 						],
 						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 20,
-					"type": 11,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						7
-					],
-					"outCondIds": [
-						11
-					],
-					"props": {
-						"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
 					}
 				},
 				{
@@ -235,16 +203,16 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						11
+						537
 					],
 					"outCondIds": [
 						12
 					],
 					"props": {
-						"id": "Player",
-						"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+						"id": "Girl",
+						"text": "Hello!",
 						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -260,10 +228,10 @@
 						13
 					],
 					"props": {
-						"id": "Player",
-						"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+						"id": "Boy",
+						"text": "Howdy",
 						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -275,12 +243,83 @@
 					"inCondIds": [
 						13
 					],
-					"outCondIds": [],
+					"outCondIds": [
+						523
+					],
 					"props": {
 						"id": "Player",
-						"text": "Ok. This is the end,",
+						"text": "Caramba! I'm Mario!",
 						"phraseType": "SPEAK",
-						"phraseSize": "MEDIUM"
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 322,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						523
+					],
+					"outCondIds": [
+						524
+					],
+					"props": {
+						"id": "Fungas",
+						"text": "Hello!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 323,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						524
+					],
+					"outCondIds": [
+						525
+					],
+					"props": {
+						"id": "MiniFungas",
+						"text": "Ja-ja!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 324,
+					"type": 10,
+					"label": "GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						525
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Intro",
+								"$$hashKey": "09K"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "KittySpace",
+								"$$hashKey": "09M"
+							}
+						],
+						"isPure": false
 					}
 				}
 			],
@@ -301,20 +340,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 7,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 11,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 12,
 					"type": 11,
 					"props": {
@@ -324,6 +349,1097 @@
 				{
 					"ver": 1,
 					"id": 13,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 523,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 524,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 525,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 537,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 311,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 311,
+					"type": 9,
+					"label": "KittySpace",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						539
+					],
+					"props": {
+						"name": "KittySpace",
+						"objs": [
+							"Player",
+							"Kitty"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 312,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						539
+					],
+					"outCondIds": [
+						538
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"Kitty"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 325,
+					"type": 10,
+					"label": "GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						538
+					],
+					"outCondIds": [
+						526
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Intro",
+								"$$hashKey": "0DE"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "KittySpace",
+								"$$hashKey": "0EV"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 326,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						526
+					],
+					"outCondIds": [
+						527
+					],
+					"props": {
+						"id": "Kitty",
+						"text": "What?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 327,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						527
+					],
+					"outCondIds": [
+						540
+					],
+					"props": {
+						"id": "Player",
+						"text": "it's Nothing",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 340,
+					"type": 10,
+					"label": "GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						540
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "KittySpace",
+								"$$hashKey": "09K"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Underground",
+								"$$hashKey": "09M"
+							}
+						],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 526,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 527,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 538,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 539,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 540,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 313,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 313,
+					"type": 9,
+					"label": "Underground",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						506
+					],
+					"props": {
+						"name": "Underground",
+						"objs": [
+							"Player",
+							"BunMonstro",
+							"BigMonstro",
+							"SonMonstro"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 314,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						506
+					],
+					"outCondIds": [
+						541
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"BunMonstro",
+							"SonMonstro",
+							"BigMonstro"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 343,
+					"type": 10,
+					"label": "GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						541
+					],
+					"outCondIds": [
+						542
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "KittySpace",
+								"$$hashKey": "0DE"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Underground",
+								"$$hashKey": "0EV"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 344,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						542
+					],
+					"outCondIds": [
+						543
+					],
+					"props": {
+						"id": "Player",
+						"text": "Oh my gosh!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 345,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						543
+					],
+					"outCondIds": [
+						545
+					],
+					"props": {
+						"id": "BunMonstro",
+						"text": "Give me your money!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 346,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						545
+					],
+					"outCondIds": [
+						546
+					],
+					"props": {
+						"id": "BigMonstro",
+						"text": "A-A-A-R-R-H-H!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 347,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						546
+					],
+					"outCondIds": [
+						547
+					],
+					"props": {
+						"id": "SonMonstro",
+						"text": "Boom=)",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 349,
+					"type": 10,
+					"label": "GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						547
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Underground",
+								"$$hashKey": "09K"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "KingMeet",
+								"$$hashKey": "09M"
+							}
+						],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 506,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 541,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 542,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 543,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 545,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 546,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 547,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 315,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 315,
+					"type": 9,
+					"label": "KingMeet",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						507
+					],
+					"props": {
+						"name": "KingMeet",
+						"objs": [
+							"Player",
+							"KingMuffin"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 316,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						507
+					],
+					"outCondIds": [
+						560
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"KingMuffin"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 358,
+					"type": 10,
+					"label": "GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						560
+					],
+					"outCondIds": [
+						561
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Underground",
+								"$$hashKey": "0DE"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "KingMeet",
+								"$$hashKey": "0EV"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 359,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						561
+					],
+					"outCondIds": [
+						563
+					],
+					"props": {
+						"id": "KingMuffin",
+						"text": "Yolo!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 360,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						563
+					],
+					"outCondIds": [
+						564
+					],
+					"props": {
+						"id": "Player",
+						"text": "How crazy are you??",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 361,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						564
+					],
+					"outCondIds": [
+						565
+					],
+					"props": {
+						"id": "KingMuffin",
+						"text": "Nope!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 363,
+					"type": 10,
+					"label": "GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						565
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "KingMeet",
+								"$$hashKey": "09K"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Goal",
+								"$$hashKey": "09M"
+							}
+						],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 507,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 560,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 561,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 563,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 564,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 565,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 317,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 317,
+					"type": 9,
+					"label": "Goal",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						508
+					],
+					"props": {
+						"name": "Goal",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 318,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						508
+					],
+					"outCondIds": [
+						566
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 365,
+					"type": 10,
+					"label": "GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						566
+					],
+					"outCondIds": [
+						567
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "KingMeet",
+								"$$hashKey": "0DE"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Goal",
+								"$$hashKey": "0EV"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 366,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						567
+					],
+					"outCondIds": [
+						569
+					],
+					"props": {
+						"id": "Player",
+						"text": "Finally, I got a muffin!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 368,
+					"type": 10,
+					"label": "GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						569
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Goal",
+								"$$hashKey": "09K"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Epilog",
+								"$$hashKey": "09M"
+							}
+						],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 508,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 566,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 567,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 569,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 319,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 319,
+					"type": 9,
+					"label": "Epilog",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						509
+					],
+					"props": {
+						"name": "Epilog",
+						"objs": [
+							"Player",
+							"Turtle",
+							"Princess",
+							"Logo"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 320,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						509
+					],
+					"outCondIds": [
+						570
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"Turtle",
+							"Princess",
+							"Logo"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 370,
+					"type": 10,
+					"label": "GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						570
+					],
+					"outCondIds": [
+						571
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Goal",
+								"$$hashKey": "0DE"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Epilog",
+								"$$hashKey": "0EV"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 371,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						571
+					],
+					"outCondIds": [
+						572
+					],
+					"props": {
+						"id": "Turtle",
+						"text": "This muffins very tasty!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 372,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						572
+					],
+					"outCondIds": [
+						573,
+						574
+					],
+					"props": {
+						"id": "Turtle",
+						"text": "Eat it yourself!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL",
+						"ans1": "Carry princess",
+						"ans2": "Eat myselfself",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 373,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						573
+					],
+					"outCondIds": [
+						575
+					],
+					"props": {
+						"id": "Player",
+						"text": "This is for you",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 374,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						574,
+						578
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "Logo",
+						"text": "The End",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 375,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						575
+					],
+					"outCondIds": [
+						577
+					],
+					"props": {
+						"id": "Princess",
+						"text": "Thank you so much",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 376,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						577
+					],
+					"outCondIds": [
+						578
+					],
+					"props": {
+						"id": "Princess",
+						"text": "Oh as delicious",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 509,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 570,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 571,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 572,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 573,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 574,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 575,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 577,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 578,
 					"type": 11,
 					"props": {
 						"clearStage": true
