@@ -1002,7 +1002,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2480</x>
+                        <x>2450</x>
                         <y>1338</y>
                         <z>0</z>
                         <width>80</width>
@@ -2145,7 +2145,7 @@
         </layer>
         <layer name="FadeOut" sid="1730026197813416">
             <initially-visible>1</initially-visible>
-            <background-color>0,0,0</background-color>
+            <background-color>249,249,249</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>0</x>

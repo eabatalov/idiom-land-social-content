@@ -49,7 +49,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -1803,6 +1803,69 @@
                             <point x="0.295082" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LogoBw" sid="4370876661846279">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5225218462534369" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\loader\logo-bw.png">
+                        <collision-poly>
+                            <point x="0.227273" y="0.227273" />
+                            <point x="0.5" y="0.0606061" />
+                            <point x="0.886364" y="0.113636" />
+                            <point x="0.886364" y="0.886364" />
+                            <point x="0.5" y="0.939394" />
+                            <point x="0.227273" y="0.772727" />
+                            <point x="0.030303" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LogoColor" sid="2953390032195093">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7123115671546505" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\loader\logo-mine.png">
+                        <collision-poly>
+                            <point x="0.227273" y="0.227273" />
+                            <point x="0.5" y="0.0606061" />
+                            <point x="0.886364" y="0.113636" />
+                            <point x="0.886364" y="0.886364" />
+                            <point x="0.5" y="0.939394" />
+                            <point x="0.227273" y="0.772727" />
+                            <point x="0.030303" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LogoType" sid="2287806219472257">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9993672395654504" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\player\loader\type.png">
+                        <collision-poly>
+                            <point x="0.0363636" y="0.173913" />
+                            <point x="0.5" y="0.0434783" />
+                            <point x="0.963636" y="0.173913" />
+                            <point x="0.940909" y="0.5" />
+                            <point x="0.986364" y="0.934783" />
+                            <point x="0.5" y="0.956522" />
+                            <point x="0.0363636" y="0.826087" />
+                            <point x="0.00909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadingBar" sid="9017537848486859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9154843334063407" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

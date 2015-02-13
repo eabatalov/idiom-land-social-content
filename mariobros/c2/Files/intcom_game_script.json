@@ -34,7 +34,7 @@
 						0
 					],
 					"outCondIds": [
-						3
+						582
 					],
 					"props": {
 						"objs": [
@@ -44,28 +44,12 @@
 				},
 				{
 					"ver": 1,
-					"id": 16,
-					"type": 11,
-					"label": "Notification",
-					"continue": false,
-					"inCondIds": [
-						3
-					],
-					"outCondIds": [
-						535
-					],
-					"props": {
-						"text": "First Test."
-					}
-				},
-				{
-					"ver": 1,
 					"id": 17,
 					"type": 10,
 					"label": "GoToNextStage",
 					"continue": false,
 					"inCondIds": [
-						535
+						582
 					],
 					"outCondIds": [],
 					"props": {
@@ -99,15 +83,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 3,
-					"type": 10,
-					"props": {
-						"name": "stage_activate"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 535,
+					"id": 582,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -209,10 +185,10 @@
 						12
 					],
 					"props": {
-						"id": "Girl",
-						"text": "Hello!",
+						"id": "Boy",
+						"text": "Извини, я опоздал. На работе опять завал. Но у меня есть подарок. Я купил тебе тюльпаны.",
 						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"phraseSize": "LARGE"
 					}
 				},
 				{
@@ -225,13 +201,13 @@
 						12
 					],
 					"outCondIds": [
-						13
+						664
 					],
 					"props": {
-						"id": "Boy",
-						"text": "Howdy",
+						"id": "Girl",
+						"text": "Но я не люблю тюльпаны. Я тысячу раз говорила тебе, что мне нравится ромашки.",
 						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"phraseSize": "LARGE"
 					}
 				},
 				{
@@ -241,14 +217,14 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						13
+						666
 					],
 					"outCondIds": [
 						523
 					],
 					"props": {
-						"id": "Player",
-						"text": "Caramba! I'm Mario!",
+						"id": "Fungas",
+						"text": "Карамба! Марио сколько лет, сколько зим?",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -267,9 +243,9 @@
 					],
 					"props": {
 						"id": "Fungas",
-						"text": "Hello!",
+						"text": "Ты совсем не изменился, купи своей принцессе цветочки, бро!",
 						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"phraseSize": "LARGE"
 					}
 				},
 				{
@@ -282,12 +258,12 @@
 						524
 					],
 					"outCondIds": [
-						525
+						667
 					],
 					"props": {
-						"id": "MiniFungas",
-						"text": "Ja-ja!",
-						"phraseType": "THINK",
+						"id": "Player",
+						"text": "У тебя нет интереснее подарка. Это слишком очевидно.",
+						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
 				},
@@ -298,7 +274,7 @@
 					"label": "GoToNextStage",
 					"continue": false,
 					"inCondIds": [
-						525
+						672
 					],
 					"outCondIds": [],
 					"props": {
@@ -320,6 +296,139 @@
 							}
 						],
 						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 426,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						664
+					],
+					"outCondIds": [
+						665
+					],
+					"props": {
+						"id": "Boy",
+						"text": "Эм, чёрт! Просто я хотел сделать тебе сюрприз.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 427,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						665
+					],
+					"outCondIds": [
+						666
+					],
+					"props": {
+						"id": "Girl",
+						"text": "Сюрприз? Это сюрприз? Кажется нам нужно серьёзно поговорить =(",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 428,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						667
+					],
+					"outCondIds": [
+						668
+					],
+					"props": {
+						"id": "Fungas",
+						"text": "Да я тебя понял, заходи в понедельник, будет новая поставка сыра.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 429,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						668
+					],
+					"outCondIds": [
+						669
+					],
+					"props": {
+						"id": "Player",
+						"text": "Договорились. А не знаешь в нашем городе у кого можно приобрести маффины.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 430,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						669
+					],
+					"outCondIds": [
+						670
+					],
+					"props": {
+						"id": "Fungas",
+						"text": "Я слышал, кто-то этим занимается, но кто конкретно, не знаю.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 431,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						670
+					],
+					"outCondIds": [
+						671
+					],
+					"props": {
+						"id": "MiniFungas",
+						"text": "Спроси у кота, он в курсе последних новостей.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 432,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						671
+					],
+					"outCondIds": [
+						672
+					],
+					"props": {
+						"id": "Player",
+						"text": "Хорошо, до встречи.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -348,14 +457,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 13,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 523,
 					"type": 11,
 					"props": {
@@ -372,7 +473,13 @@
 				},
 				{
 					"ver": 1,
-					"id": 525,
+					"id": 537,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 664,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -380,9 +487,67 @@
 				},
 				{
 					"ver": 1,
-					"id": 537,
-					"type": 8,
-					"props": {}
+					"id": 665,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 666,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 667,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 668,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 669,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 670,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 671,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 672,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
 				}
 			]
 		},
@@ -474,8 +639,8 @@
 						527
 					],
 					"props": {
-						"id": "Kitty",
-						"text": "What?",
+						"id": "Player",
+						"text": "Привет, знаешь где можно купить поблизости маффины?",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -490,11 +655,11 @@
 						527
 					],
 					"outCondIds": [
-						540
+						673
 					],
 					"props": {
-						"id": "Player",
-						"text": "it's Nothing",
+						"id": "Kitty",
+						"text": "Знаю, но информация стоит денег.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -506,7 +671,7 @@
 					"label": "GoToNextStage",
 					"continue": false,
 					"inCondIds": [
-						540
+						676
 					],
 					"outCondIds": [],
 					"props": {
@@ -528,6 +693,63 @@
 							}
 						],
 						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 433,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						673
+					],
+					"outCondIds": [
+						674
+					],
+					"props": {
+						"id": "Player",
+						"text": "И почём нынче информация?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 434,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						674
+					],
+					"outCondIds": [
+						675
+					],
+					"props": {
+						"id": "Kitty",
+						"text": "Пару-тройку маффинов «Монти Пайтон». Устроит?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 435,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						675
+					],
+					"outCondIds": [
+						676
+					],
+					"props": {
+						"id": "Player",
+						"text": "Давай, до свидания!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -562,7 +784,31 @@
 				},
 				{
 					"ver": 1,
-					"id": 540,
+					"id": 673,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 674,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 675,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 676,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -663,8 +909,8 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Oh my gosh!",
-						"phraseType": "THINK",
+						"text": "Как делишки?",
+						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
 				},
@@ -678,11 +924,11 @@
 						543
 					],
 					"outCondIds": [
-						545
+						677
 					],
 					"props": {
 						"id": "BunMonstro",
-						"text": "Give me your money!",
+						"text": "Нормально.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -694,7 +940,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						545
+						678
 					],
 					"outCondIds": [
 						546
@@ -703,7 +949,7 @@
 						"id": "BigMonstro",
 						"text": "A-A-A-R-R-H-H!",
 						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -716,11 +962,11 @@
 						546
 					],
 					"outCondIds": [
-						547
+						679
 					],
 					"props": {
 						"id": "SonMonstro",
-						"text": "Boom=)",
+						"text": "Нам не достались маффины “Эрик Картман”. Мы не в настроении.",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
@@ -732,7 +978,7 @@
 					"label": "GoToNextStage",
 					"continue": false,
 					"inCondIds": [
-						547
+						681
 					],
 					"outCondIds": [],
 					"props": {
@@ -754,6 +1000,63 @@
 							}
 						],
 						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 436,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						677
+					],
+					"outCondIds": [
+						678
+					],
+					"props": {
+						"id": "Player",
+						"text": "...а чего хмурые такие?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 437,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						679
+					],
+					"outCondIds": [
+						680
+					],
+					"props": {
+						"id": "Player",
+						"text": "Где мне найти торговца маффинами?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 438,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						680
+					],
+					"outCondIds": [
+						681
+					],
+					"props": {
+						"id": "SonMonstro",
+						"text": "На верху.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -788,14 +1091,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 545,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 546,
 					"type": 11,
 					"props": {
@@ -804,7 +1099,39 @@
 				},
 				{
 					"ver": 1,
-					"id": 547,
+					"id": 677,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 678,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 679,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 680,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 681,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -900,8 +1227,8 @@
 						563
 					],
 					"props": {
-						"id": "KingMuffin",
-						"text": "Yolo!",
+						"id": "Player",
+						"text": "Ну наконец-то я тебя нашёл.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -919,8 +1246,8 @@
 						564
 					],
 					"props": {
-						"id": "Player",
-						"text": "How crazy are you??",
+						"id": "KingMuffin",
+						"text": "Извини приятель, всё раскупили. Остался один…",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -938,8 +1265,8 @@
 						565
 					],
 					"props": {
-						"id": "KingMuffin",
-						"text": "Nope!",
+						"id": "Player",
+						"text": "Заткнись. И возьми мои деньги.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -1110,7 +1437,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "Finally, I got a muffin!",
+						"text": "Есть. Я нашёл тебя!",
 						"phraseType": "THINK",
 						"phraseSize": "SMALL"
 					}
@@ -1271,9 +1598,9 @@
 					],
 					"props": {
 						"id": "Turtle",
-						"text": "This muffins very tasty!",
+						"text": "Ты уверен, что хочешь поделиться с принцессой этим?",
 						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -1291,11 +1618,11 @@
 					],
 					"props": {
 						"id": "Turtle",
-						"text": "Eat it yourself!",
+						"text": "Решайся, принцесса уже рядом.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL",
-						"ans1": "Carry princess",
-						"ans2": "Eat myselfself",
+						"ans1": "Отнести принцессе",
+						"ans2": "Съесть самому =)",
 						"ans3": "",
 						"ans4": ""
 					}
@@ -1314,7 +1641,7 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "This is for you",
+						"text": "Это тебе, моя дорогая!",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -1351,7 +1678,7 @@
 					],
 					"props": {
 						"id": "Princess",
-						"text": "Thank you so much",
+						"text": "Большое спасибо!",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -1370,9 +1697,9 @@
 					],
 					"props": {
 						"id": "Princess",
-						"text": "Oh as delicious",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"text": "Это превосходно!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -1408,18 +1735,14 @@
 				{
 					"ver": 1,
 					"id": 573,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
+					"type": 3,
+					"props": {}
 				},
 				{
 					"ver": 1,
 					"id": 574,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
+					"type": 4,
+					"props": {}
 				},
 				{
 					"ver": 1,
