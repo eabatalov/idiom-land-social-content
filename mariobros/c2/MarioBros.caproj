@@ -374,7 +374,7 @@
                                 <instance-variable comment="1 if this answer is possible now, 0 otherwise" name="IsEnabled" sid="8133434040105874" type="number" />
                             </instance-variables>
                             <animation-folder>
-                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="3213293281862042" speed="5">
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="3213293281862042" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -386,7 +386,7 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9067309200631302" speed="5">
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9067309200631302" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -421,7 +421,7 @@
                                 <instance-variable comment="1 if this answer is possible now, 0 otherwise" name="IsEnabled" sid="1490700551368493" type="number" />
                             </instance-variables>
                             <animation-folder>
-                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="4402831604063313" speed="5">
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="4402831604063313" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -433,7 +433,7 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="493261926668934" speed="5">
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="493261926668934" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -471,7 +471,7 @@
                                 <instance-variable comment="1 if this answer is possible now, 0 otherwise" name="IsEnabled" sid="5976312748097238" type="number" />
                             </instance-variables>
                             <animation-folder>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="717818763701825" speed="5">
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="717818763701825" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -483,7 +483,7 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="4914723057507207" speed="5">
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="4914723057507207" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -515,7 +515,7 @@
                                 <instance-variable comment="1 if this answer is possible now, 0 otherwise" name="IsEnabled" sid="5425494794008212" type="number" />
                             </instance-variables>
                             <animation-folder>
-                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="9899613098915002" speed="5">
+                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="9899613098915002" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-active.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -527,7 +527,7 @@
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="6583910298742616" speed="5">
+                                <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="6583910298742616" speed="5">
                                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\controls\quiz\answer-disable.png">
                                         <collision-poly>
                                             <point x="0.00625" y="0.025" />
@@ -1401,8 +1401,18 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="logo" pingpong="0" repeatcount="1" repeatto="0" sid="2546865165663717" speed="5">
-                                    <frame duration="1" hotspotX="0.483607" hotspotY="0.569106">
+                                    <frame duration="1" hotspotX="0.483607" hotspotY="0.569106" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\logo.png">
                                         <image-point name="SpeechOrigin" x="0.516393" y="-1.04065" />
+                                        <collision-poly>
+                                            <point x="0.237705" y="0.235772" />
+                                            <point x="0.5" y="0.0813008" />
+                                            <point x="0.807377" y="0.191057" />
+                                            <point x="0.979508" y="0.5" />
+                                            <point x="0.819672" y="0.821138" />
+                                            <point x="0.5" y="0.951219" />
+                                            <point x="0.217213" y="0.784553" />
+                                            <point x="0.0942623" y="0.5" />
+                                        </collision-poly>
                                     </frame>
                                 </animation>
                             </animation-folder>

@@ -1054,7 +1054,7 @@
 					],
 					"props": {
 						"id": "SonMonstro",
-						"text": "На верху.",
+						"text": "Наверху.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
