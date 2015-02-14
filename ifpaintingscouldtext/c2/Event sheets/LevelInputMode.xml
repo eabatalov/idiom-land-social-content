@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelInputMode</name>
+    <events>
+        <variable constant="0" name="CurrentInputMode" sid="1999684396469013" static="0" type="text">undefined</variable>
+        <variable constant="1" name="INPUT_MODE_UNDEFINED" sid="3946270364734934" static="0" type="text">undefined</variable>
+        <variable constant="1" name="INPUT_MODE_TOUCH" sid="3288027875673789" static="0" type="text">touch</variable>
+        <variable constant="1" name="INPUT_MODE_KEYBOARD" sid="319275150341512" static="0" type="text">keyboard</variable>
+        <event-group description="" sid="8417160383498971" title="Level input mode">
+            <sub-events>
+                <variable constant="1" name="STORAGE_KEY_INPUT" sid="9543961688287657" static="0" type="text">input_mode</variable>
+                <event-block sid="3312294043615392">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6381294035711177" type="Function">
+                            <param id="0" name="Name">&quot;LoadInputMode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="481107380971616" type="Function">
+                            <param id="0" name="Name">&quot;GetInputMode&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Don&apos;t try to guess. Just show the input choice dialog.</comment>
+                        <event-block sid="590725161392451">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3605747969915593" type="System">
+                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">INPUT_MODE_UNDEFINED</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4993724748928467" type="Function">
+                                    <param id="0" name="Name">&quot;_ShowInputModeChoiceDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6435985767312278">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1374640464277533" type="Function">
+                            <param id="0" name="Name">&quot;_ShowInputModeChoiceDialog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>param(0): input mode</comment>
+                <event-block sid="5311326042038538">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5375775591128434" type="Function">
+                            <param id="0" name="Name">&quot;SetInputMode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3363060480757918" type="System">
+                            <param id="0" name="Variable">CurrentInputMode</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="0" name="Put" sid="3839646705895989" type="QuestPersistentStorage">
+                            <param id="0" name="Name">STORAGE_KEY_INPUT</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="DefaultInputMode" sid="2747646596095196" static="0" type="text"></variable>
+                <event-block sid="1838393264849703">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3956981488705642" type="Function">
+                            <param id="0" name="Name">&quot;GetInputMode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5115388367991001">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4332039895397184" type="System">
+                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">INPUT_MODE_UNDEFINED</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8971262092776875">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4762786987754966" type="System">
+                                            <param id="0" name="Variable">DefaultInputMode</param>
+                                            <param id="1" name="Value">INPUT_MODE_UNDEFINED</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4319517936360159">
+                                    <conditions>
+                                        <condition id="0" name="Is avaliable" sid="4093815406502854" type="QuestPersistentStorage" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4179117634227505">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="4987787124678731" type="System">
+                                                    <param id="0" name="First value">QuestPersistentStorage.get(STORAGE_KEY_INPUT)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7584876171689068" type="System">
+                                                    <param id="0" name="Variable">CurrentInputMode</param>
+                                                    <param id="1" name="Value">DefaultInputMode</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1228594308472342">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="5578818582677264" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="8006014612139704">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="5960662371562133" type="System">
+                                                            <param id="0" name="Variable">CurrentInputMode</param>
+                                                            <param id="1" name="Value">QuestPersistentStorage.get(STORAGE_KEY_INPUT)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8841442847440736">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1333463482606077" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6941150129818965" type="System">
+                                            <param id="0" name="Variable">CurrentInputMode</param>
+                                            <param id="1" name="Value">DefaultInputMode</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="700754410248729">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="3467109573339853" type="Function">
+                                    <param id="0" name="Value">CurrentInputMode</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
