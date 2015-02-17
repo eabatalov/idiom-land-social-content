@@ -29,7 +29,6 @@
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Eugene/Learzing" id="QuestEngineSpriteExtras" version="1">QuestEngineSpriteExtras</behavior>
-        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -610,8 +609,8 @@
                             </behaviors>
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="SpeakLarge" pingpong="0" repeatcount="1" repeatto="0" sid="3527017001319702" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubble.png">
-                                        <image-point name="Cock" x="0.5" y="1.13274" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubbles\white\bubbles-type_05.png">
+                                        <image-point name="Cock" x="0.5" y="1.13426" />
                                         <collision-poly>
                                             <point x="0.040625" y="0.0419355" />
                                             <point x="0.5" y="0.00322581" />
@@ -624,8 +623,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="ThinkLarge" pingpong="0" repeatcount="1" repeatto="0" sid="5903252620591473" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubble-think.png">
-                                        <image-point name="Cock" x="0.5" y="1.13274" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubbles\blue\bubbles-type_05.png">
+                                        <image-point name="Cock" x="0.5" y="1.13426" />
                                         <collision-poly>
                                             <point x="0.075" y="0.0774194" />
                                             <point x="0.5" y="0.0193548" />
@@ -639,8 +638,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="SpeakMedium" pingpong="0" repeatcount="1" repeatto="0" sid="2754157864921075" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubble-mini.png">
-                                        <image-point name="Cock" x="0.5" y="1.14815" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubbles\white\bubbles-type_01.png">
+                                        <image-point name="Cock" x="0.5" y="1.1506" />
                                         <collision-poly>
                                             <point x="0.040625" y="0.0419355" />
                                             <point x="0.5" y="0.00322581" />
@@ -653,8 +652,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="SpeakSmall" pingpong="0" repeatcount="1" repeatto="0" sid="8360185155774922" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubble-mini.png">
-                                        <image-point name="Cock" x="0.5" y="1.14815" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubbles\white\bubbles-type_03.png">
+                                        <image-point name="Cock" x="0.5" y="1.14724" />
                                         <collision-poly>
                                             <point x="0.040625" y="0.0419355" />
                                             <point x="0.5" y="0.00322581" />
@@ -667,8 +666,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="ThinkMedium" pingpong="0" repeatcount="1" repeatto="0" sid="1023183153443301" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubble-think-mini.png">
-                                        <image-point name="Cock" x="0.5" y="1.14815" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubbles\blue\bubbles-type_01.png">
+                                        <image-point name="Cock" x="0.5" y="1.1506" />
                                         <collision-poly>
                                             <point x="0.075" y="0.0774194" />
                                             <point x="0.5" y="0.0193548" />
@@ -682,8 +681,8 @@
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="ThinkSmall" pingpong="0" repeatcount="1" repeatto="0" sid="1842734800220872" speed="5">
-                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubble-think-mini.png">
-                                        <image-point name="Cock" x="0.5" y="1.14815" />
+                                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\player\gui\bubbles\blue\bubbles-type_03.png">
+                                        <image-point name="Cock" x="0.5" y="1.14724" />
                                         <collision-poly>
                                             <point x="0.075" y="0.0774194" />
                                             <point x="0.5" y="0.0193548" />
@@ -1322,99 +1321,89 @@
                                 </behavior-type>
                             </behaviors>
                             <animation-folder>
-                                <animation framecount="1" loop="0" name="mario_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9959761412612517" speed="5">
-                                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mario-main.png">
-                                        <image-point name="SpeechOrigin" x="0.402597" y="0.17623" />
+                                <animation framecount="1" loop="0" name="player" pingpong="0" repeatcount="1" repeatto="0" sid="9959761412612517" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mario-main.png">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                         <collision-poly>
-                                            <point x="0.124031" y="0.0555556" />
-                                            <point x="0.496124" y="0" />
-                                            <point x="0.837209" y="0.0729167" />
-                                            <point x="0.875969" y="0.5" />
-                                            <point x="0.713178" y="0.871528" />
-                                            <point x="0.496124" y="0.993056" />
-                                            <point x="0.465116" y="0.791667" />
-                                            <point x="0.364341" y="0.5" />
+                                            <point x="1" y="0.847223" />
+                                            <point x="1" y="0" />
+                                            <point x="1" y="1" />
+                                            <point x="1" y="1" />
+                                            <point x="1" y="1" />
+                                            <point x="1" y="1" />
+                                            <point x="1" y="1" />
+                                            <point x="1" y="1" />
                                         </collision-poly>
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="mario_fly" pingpong="0" repeatcount="1" repeatto="0" sid="9487890737981837" speed="5">
-                                    <frame duration="1" hotspotX="0.497143" hotspotY="0.526646">
-                                        <image-point name="SpeechOrigin" x="0.491429" y="0.15047" />
-                                    </frame>
-                                </animation>
-                                <animation framecount="1" loop="0" name="mario_fun" pingpong="0" repeatcount="1" repeatto="0" sid="5394252246899427" speed="5">
+                                <animation framecount="1" loop="0" name="girlfront" pingpong="0" repeatcount="1" repeatto="0" sid="9999177747188744" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.709302" y="0.187879" />
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="girl" pingpong="0" repeatcount="1" repeatto="0" sid="9999177747188744" speed="5">
-                                    <frame duration="1" hotspotX="0.594203" hotspotY="0.561538">
-                                        <image-point name="SpeechOrigin" x="0.42029" y="0.1" />
+                                <animation framecount="1" loop="0" name="officeman" pingpong="0" repeatcount="1" repeatto="0" sid="3335585749773151" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="boy" pingpong="0" repeatcount="1" repeatto="0" sid="3335585749773151" speed="5">
-                                    <frame duration="1" hotspotX="0.493333" hotspotY="0.517986">
-                                        <image-point name="SpeechOrigin" x="0.68" y="0.143885" />
+                                <animation framecount="1" loop="0" name="nudewoman" pingpong="0" repeatcount="1" repeatto="0" sid="21908028682571" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="fungas" pingpong="0" repeatcount="1" repeatto="0" sid="21908028682571" speed="5">
-                                    <frame duration="1" hotspotX="0.48731" hotspotY="0.529412">
-                                        <image-point name="SpeechOrigin" x="0.670051" y="0.197479" />
+                                <animation framecount="1" loop="0" name="nudeman" pingpong="0" repeatcount="1" repeatto="0" sid="5605930058762255" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="mini_fungas" pingpong="0" repeatcount="1" repeatto="0" sid="5605930058762255" speed="5">
-                                    <frame duration="1" hotspotX="0.461538" hotspotY="0.55303">
-                                        <image-point name="SpeechOrigin" x="0.505495" y="0.151515" />
+                                <animation framecount="1" loop="0" name="frida" pingpong="0" repeatcount="1" repeatto="0" sid="8353237106644993" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="kitty" pingpong="0" repeatcount="1" repeatto="0" sid="8353237106644993" speed="5">
-                                    <frame duration="1" hotspotX="0.414894" hotspotY="0.556522">
-                                        <image-point name="SpeechOrigin" x="0.574468" y="0.121739" />
+                                <animation framecount="1" loop="0" name="monstro" pingpong="0" repeatcount="1" repeatto="0" sid="7158956453955035" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="monstro_circle" pingpong="0" repeatcount="1" repeatto="0" sid="7158956453955035" speed="5">
-                                    <frame duration="1" hotspotX="1.34409" hotspotY="1.15741">
-                                        <image-point name="SpeechOrigin" x="0.505376" y="0.268519" />
+                                <animation framecount="1" loop="0" name="dreamgirl" pingpong="0" repeatcount="1" repeatto="0" sid="6331197787529111" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="monstro_big" pingpong="0" repeatcount="1" repeatto="0" sid="6331197787529111" speed="5">
-                                    <frame duration="1" hotspotX="0.586854" hotspotY="0.501629">
-                                        <image-point name="SpeechOrigin" x="0.446009" y="0.114007" />
+                                <animation framecount="1" loop="0" name="womanyoung" pingpong="0" repeatcount="1" repeatto="0" sid="373617037557492" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="monstro_son" pingpong="0" repeatcount="1" repeatto="0" sid="5540797449962855" speed="5">
-                                    <frame duration="1" hotspotX="0.874126" hotspotY="0.543478">
-                                        <image-point name="SpeechOrigin" x="0.48951" y="0.23913" />
+                                <animation framecount="1" loop="0" name="manyoung" pingpong="0" repeatcount="1" repeatto="0" sid="6865872621978149" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="muffin_king" pingpong="0" repeatcount="1" repeatto="0" sid="373617037557492" speed="5">
-                                    <frame duration="1" hotspotX="0.418367" hotspotY="0.496774">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.116129" />
+                                <animation framecount="1" loop="0" name="closegirl" pingpong="0" repeatcount="1" repeatto="0" sid="8930609740572147" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="turtle" pingpong="0" repeatcount="1" repeatto="0" sid="6865872621978149" speed="5">
-                                    <frame duration="1" hotspotX="0.475" hotspotY="0.510345">
-                                        <image-point name="SpeechOrigin" x="0.6" y="0.0413793" />
+                                <animation framecount="1" loop="0" name="closeboy" pingpong="0" repeatcount="1" repeatto="0" sid="2213265003300172" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="princess" pingpong="0" repeatcount="1" repeatto="0" sid="8274094693916361" speed="5">
-                                    <frame duration="1" hotspotX="0.482517" hotspotY="0.518519">
-                                        <image-point name="SpeechOrigin" x="0.755245" y="0.192593" />
+                                <animation framecount="1" loop="0" name="alcoman" pingpong="0" repeatcount="1" repeatto="0" sid="6200247282475678" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
-                                <animation framecount="1" loop="0" name="logo" pingpong="0" repeatcount="1" repeatto="0" sid="2546865165663717" speed="5">
-                                    <frame duration="1" hotspotX="0.483607" hotspotY="0.569106" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\logo.png">
-                                        <image-point name="SpeechOrigin" x="0.516393" y="-1.04065" />
-                                        <collision-poly>
-                                            <point x="0.237705" y="0.235772" />
-                                            <point x="0.5" y="0.0813008" />
-                                            <point x="0.807377" y="0.191057" />
-                                            <point x="0.979508" y="0.5" />
-                                            <point x="0.819672" y="0.821138" />
-                                            <point x="0.5" y="0.951219" />
-                                            <point x="0.217213" y="0.784553" />
-                                            <point x="0.0942623" y="0.5" />
-                                        </collision-poly>
+                                <animation framecount="1" loop="0" name="alcogirl" pingpong="0" repeatcount="1" repeatto="0" sid="3342456482275141" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                    </frame>
+                                </animation>
+                                <animation framecount="1" loop="0" name="monalisa" pingpong="0" repeatcount="1" repeatto="0" sid="8971781498494745" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
                                     </frame>
                                 </animation>
                             </animation-folder>
@@ -1459,45 +1448,6 @@
                 <plugin id="Dictionary" />
             </object-type>
         </object-folder>
-        <object-type name="Cover" sid="3625054026015717">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4827604541131115" speed="5">
-                    <frame duration="1" hotspotX="0.501199" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\cover.png">
-                        <collision-poly>
-                            <point x="0.242206" y="0.237089" />
-                            <point x="0.498801" y="0.00938967" />
-                            <point x="0.676259" y="0.316901" />
-                            <point x="0.872902" y="0.5" />
-                            <point x="0.959233" y="0.960094" />
-                            <point x="0.498801" y="0.985915" />
-                            <point x="0.0407674" y="0.960094" />
-                            <point x="0.235012" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Rays" sid="453289009459995">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Rotate" sid="3983777315173314">
-                    <behavior id="Rotate" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2076669013956501" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\rays.png">
-                        <collision-poly>
-                            <point x="0.5" y="0.2513" />
-                            <point x="0.67474" y="0.325823" />
-                            <point x="0.5" y="0.35182" />
-                            <point x="0.539792" y="0.459272" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="LogoBw" sid="4370876661846279">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1555,7 +1505,114 @@
         </object-type>
         <object-type name="TiledBackground" sid="1568971797552754">
             <plugin id="TiledBg" />
-            <texture original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\_bg.png" />
+            <texture original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\frames\pattern.png" />
+        </object-type>
+        <object-type name="EdwardHopperOfficeAtNight" sid="440877124019596">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9772889707836505" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.448071" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Edward Hopper, Office At Night (1).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FrankDickseeAnOffering" sid="2761842606869996">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2724591770816749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Frank Dicksee, An Offering (2).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FridaKahloTheTwoFridas" sid="5241358057644007">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5166968946474455" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501048" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Frida Kahlo, The Two Fridas (2).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GrantWoodAmericanGothic" sid="4168990975383388">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908347326394836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Grant Wood, American Gothic (1).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GuidoReniBacchusAndAriadne" sid="9731625733819076">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6298909514139379" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Guido Reni, Bacchus and Ariadne (2).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HenriDeToulouseLautrec" sid="83516697755418">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6422008651579901" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Henri de Toulouse-Lautrec, At the Café La Mie (1).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HenryFuseliTheNightmare" sid="3566838229111969">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4281283032516458" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Henry Fuseli, The Nightmare (2).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JeanAugusteDominiqueIngreGrandeOdalisque" sid="6227881034948699">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7996415340942319" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Jean-Auguste-Dominique Ingre, Grande Odalisque (1).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ReneMagritteTheLovers" sid="1594970177577761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1887996297247021" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501385" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Rene Magritte, The Lovers (1).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LeonardoDaVinciMonaLisa" sid="4469232570113888">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6397751085504353" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\Leonardo da Vinci, Mona Lisa (1).jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="605678603599117">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2376152527447758" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\frames\forreground.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="3375829478628248">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7096124451242263" speed="5">
+                    <frame duration="1" hotspotX="0.501529" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\bloggers\ifPaintingsCouldText\Sprites\frames\shadow.png">
+                        <collision-poly>
+                            <point x="0.220183" y="0.194595" />
+                            <point x="0.498471" y="0.154054" />
+                            <point x="0.767584" y="0.205405" />
+                            <point x="0.798165" y="0.5" />
+                            <point x="0.75841" y="0.786487" />
+                            <point x="0.498471" y="0.816216" />
+                            <point x="0.232416" y="0.794595" />
+                            <point x="0.174312" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -10,18 +10,24 @@
 					"ver": 1,
 					"id": 11,
 					"type": 9,
-					"label": "Cover",
+					"label": "Intro",
 					"continue": false,
 					"inCondIds": [],
 					"outCondIds": [
 						0
 					],
 					"props": {
-						"name": "Cover",
+						"name": "Intro",
 						"objs": [
-							"Player"
+							"Player",
+							"girlfront",
+							"officeman",
+							"nudewoman",
+							"nudeman",
+							"frida"
 						],
-						"objPool": []
+						"objPool": [],
+						"text": ""
 					}
 				},
 				{
@@ -34,12 +40,34 @@
 						0
 					],
 					"outCondIds": [
-						582
+						3
 					],
 					"props": {
 						"objs": [
-							"Player"
+							"Player",
+							"girlfront",
+							"nudewoman",
+							"officeman",
+							"nudeman",
+							"frida"
 						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 16,
+					"type": 11,
+					"label": "Intro Notification",
+					"continue": false,
+					"inCondIds": [
+						3
+					],
+					"outCondIds": [
+						15
+					],
+					"props": {
+						"text": "Welcome to the gallery.",
+						"name": ""
 					}
 				},
 				{
@@ -49,7 +77,7 @@
 					"label": "GoToNextStage",
 					"continue": false,
 					"inCondIds": [
-						582
+						34
 					],
 					"outCondIds": [],
 					"props": {
@@ -60,17 +88,221 @@
 							{
 								"type": "str",
 								"name": "0",
-								"value": "Cover",
+								"value": "Intro",
 								"$$hashKey": "01C"
 							},
 							{
 								"type": "str",
 								"name": "1",
-								"value": "Intro",
+								"value": "Outro",
 								"$$hashKey": "01E"
 							}
 						],
-						"isPure": false
+						"isPure": false,
+						"text": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 30,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						15
+					],
+					"outCondIds": [
+						18
+					],
+					"props": {
+						"id": "Player",
+						"text": "Apparently, dueling with garden tools in Home Depot is strictly frowned upon.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 31,
+					"type": 1,
+					"label": "JeanDominic",
+					"continue": false,
+					"inCondIds": [
+						18
+					],
+					"outCondIds": [
+						49
+					],
+					"props": {
+						"id": "girlfront",
+						"text": "I want to fuck you on the side of the bed tonight.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 45,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						52
+					],
+					"outCondIds": [
+						53
+					],
+					"props": {
+						"id": "officeman",
+						"text": "I may have used way too many innuendos last night. I scared him off. But really…",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 46,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						58
+					],
+					"outCondIds": [
+						60
+					],
+					"props": {
+						"id": "nudewoman",
+						"text": "No I think it’s cute we had sex on your Bob the Builder sheets.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 47,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						57
+					],
+					"outCondIds": [
+						58
+					],
+					"props": {
+						"id": "nudeman",
+						"text": "You don’t think I’m weird or immature right?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 48,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						61
+					],
+					"outCondIds": [
+						34
+					],
+					"props": {
+						"id": "frida",
+						"text": "...sometimes i think i’m bisexual but then i realize the only girl i’m attracted to is myself.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 64,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						49
+					],
+					"outCondIds": [
+						51
+					],
+					"props": {
+						"id": "Player",
+						"text": "babe, don’t say it like that!",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 65,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						51
+					],
+					"outCondIds": [
+						52
+					],
+					"props": {
+						"id": "girlfront",
+						"text": "I'm sorry, I want to penetrate you on the edge of our sleeping quarters this evening.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 66,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						53
+					],
+					"outCondIds": [
+						55
+					],
+					"props": {
+						"id": "officeman",
+						"text": "How could I pass up *stimulus package *and *flaccid economy. *Don’t answer that.",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 67,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						55
+					],
+					"outCondIds": [
+						57
+					],
+					"props": {
+						"text": "Edward Hopper.\nOffice At Night."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 68,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						60
+					],
+					"outCondIds": [
+						61
+					],
+					"props": {
+						"text": "Frank Dicksee, An Offering"
 					}
 				}
 			],
@@ -83,7 +315,103 @@
 				},
 				{
 					"ver": 1,
-					"id": 582,
+					"id": 3,
+					"type": 10,
+					"props": {
+						"name": "stage_activate"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 15,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 18,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 34,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 49,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 51,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 52,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 53,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 55,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 57,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 58,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 60,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 61,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -99,20 +427,25 @@
 					"ver": 1,
 					"id": 13,
 					"type": 9,
-					"label": "Intro",
+					"label": "stage",
 					"continue": false,
 					"inCondIds": [],
 					"outCondIds": [
 						1
 					],
 					"props": {
-						"name": "Intro",
+						"name": "Outro",
 						"objs": [
 							"Player",
-							"Girl",
-							"Boy",
-							"Fungas",
-							"MiniFungas"
+							"monstro",
+							"dreamgirl",
+							"womanyoung",
+							"manyoung",
+							"closegirl",
+							"closeboy",
+							"alcoman",
+							"alcogirl",
+							"monalisa"
 						],
 						"objPool": []
 					}
@@ -132,10 +465,15 @@
 					"props": {
 						"objs": [
 							"Player",
-							"Girl",
-							"Boy",
-							"Fungas",
-							"MiniFungas"
+							"monalisa",
+							"monstro",
+							"dreamgirl",
+							"womanyoung",
+							"manyoung",
+							"closegirl",
+							"closeboy",
+							"alcoman",
+							"alcogirl"
 						]
 					}
 				},
@@ -149,7 +487,7 @@
 						6
 					],
 					"outCondIds": [
-						537
+						62
 					],
 					"props": {
 						"name": "C2API_GoToNextStage",
@@ -159,13 +497,13 @@
 							{
 								"type": "str",
 								"name": "0",
-								"value": "Cover",
+								"value": "Intro",
 								"$$hashKey": "01M"
 							},
 							{
 								"type": "str",
 								"name": "1",
-								"value": "Intro",
+								"value": "Outro",
 								"$$hashKey": "01O"
 							}
 						],
@@ -179,16 +517,16 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						537
+						62
 					],
 					"outCondIds": [
 						12
 					],
 					"props": {
-						"id": "Boy",
-						"text": "Извини, я опоздал. На работе опять завал. Но у меня есть подарок. Я купил тебе тюльпаны.",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"id": "monstro",
+						"text": "I’m watching CSI, they found semen in the woman’s ear.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -201,13 +539,13 @@
 						12
 					],
 					"outCondIds": [
-						664
+						13
 					],
 					"props": {
-						"id": "Girl",
-						"text": "Но я не люблю тюльпаны. Я тысячу раз говорила тебе, что мне нравится ромашки.",
+						"id": "dreamgirl",
+						"text": "Guess she heard her killer coming.",
 						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -217,218 +555,147 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						666
+						13
 					],
 					"outCondIds": [
-						523
+						42
 					],
 					"props": {
-						"id": "Fungas",
-						"text": "Карамба! Марио сколько лет, сколько зим?",
+						"id": "manyoung",
+						"text": "Can’t decide if this guy is hot or if I’m just bored.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 57,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						42
+					],
+					"outCondIds": [
+						43
+					],
+					"props": {
+						"id": "womanyoung",
+						"text": "Sex is clearly the solution either way.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
 				},
 				{
 					"ver": 1,
-					"id": 322,
+					"id": 58,
 					"type": 1,
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						523
+						43
 					],
 					"outCondIds": [
-						524
+						44
 					],
 					"props": {
-						"id": "Fungas",
-						"text": "Ты совсем не изменился, купи своей принцессе цветочки, бро!",
+						"id": "closeboy",
+						"text": "He likes bondage and spanking and shit.",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 59,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						44
+					],
+					"outCondIds": [
+						45
+					],
+					"props": {
+						"id": "closegirl",
+						"text": "Oh, so “normal” kinky not “I wanna pee on people” kinky. I can handle that.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 60,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						45
+					],
+					"outCondIds": [
+						63
+					],
+					"props": {
+						"id": "alcogirl",
+						"text": "so you had a one ended conversation with the toilet last night in between barfs,",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
 					}
 				},
 				{
 					"ver": 1,
-					"id": 323,
+					"id": 61,
 					"type": 1,
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						524
+						64
 					],
 					"outCondIds": [
-						667
+						47
 					],
 					"props": {
-						"id": "Player",
-						"text": "У тебя нет интереснее подарка. Это слишком очевидно.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"id": "alcoman",
+						"text": "drunk me is so punny.",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
 					}
 				},
 				{
 					"ver": 1,
-					"id": 324,
-					"type": 10,
-					"label": "GoToNextStage",
+					"id": 62,
+					"type": 1,
+					"label": "",
 					"continue": false,
 					"inCondIds": [
-						672
+						47
 					],
 					"outCondIds": [],
 					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "Intro",
-								"$$hashKey": "09K"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "KittySpace",
-								"$$hashKey": "09M"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 426,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						664
-					],
-					"outCondIds": [
-						665
-					],
-					"props": {
-						"id": "Boy",
-						"text": "Эм, чёрт! Просто я хотел сделать тебе сюрприз.",
+						"id": "monalisa",
+						"text": "I love how you can even make your typing come across bitchy.",
 						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
+						"phraseSize": "MEDIUM"
 					}
 				},
 				{
 					"ver": 1,
-					"id": 427,
+					"id": 69,
 					"type": 1,
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						665
+						63
 					],
 					"outCondIds": [
-						666
+						64
 					],
 					"props": {
-						"id": "Girl",
-						"text": "Сюрприз? Это сюрприз? Кажется нам нужно серьёзно поговорить =(",
+						"id": "alcogirl",
+						"text": "you kept telling the toilet how strong it was because it’s gone through a lot of shit in it’s life.",
 						"phraseType": "SPEAK",
 						"phraseSize": "LARGE"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 428,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						667
-					],
-					"outCondIds": [
-						668
-					],
-					"props": {
-						"id": "Fungas",
-						"text": "Да я тебя понял, заходи в понедельник, будет новая поставка сыра.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 429,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						668
-					],
-					"outCondIds": [
-						669
-					],
-					"props": {
-						"id": "Player",
-						"text": "Договорились. А не знаешь в нашем городе у кого можно приобрести маффины.",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 430,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						669
-					],
-					"outCondIds": [
-						670
-					],
-					"props": {
-						"id": "Fungas",
-						"text": "Я слышал, кто-то этим занимается, но кто конкретно, не знаю.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 431,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						670
-					],
-					"outCondIds": [
-						671
-					],
-					"props": {
-						"id": "MiniFungas",
-						"text": "Спроси у кота, он в курсе последних новостей.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 432,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						671
-					],
-					"outCondIds": [
-						672
-					],
-					"props": {
-						"id": "Player",
-						"text": "Хорошо, до встречи.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
 					}
 				}
 			],
@@ -457,7 +724,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 523,
+					"id": 13,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -465,7 +732,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 524,
+					"id": 42,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -473,13 +740,45 @@
 				},
 				{
 					"ver": 1,
-					"id": 537,
+					"id": 43,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 44,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 45,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 47,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 62,
 					"type": 8,
 					"props": {}
 				},
 				{
 					"ver": 1,
-					"id": 664,
+					"id": 63,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -487,1282 +786,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 665,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 666,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 667,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 668,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 669,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 670,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 671,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 672,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				}
-			]
-		},
-		{
-			"ver": 1,
-			"stageNodeId": 311,
-			"nodes": [
-				{
-					"ver": 1,
-					"id": 311,
-					"type": 9,
-					"label": "KittySpace",
-					"continue": false,
-					"inCondIds": [],
-					"outCondIds": [
-						539
-					],
-					"props": {
-						"name": "KittySpace",
-						"objs": [
-							"Player",
-							"Kitty"
-						],
-						"objPool": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 312,
-					"type": 8,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						539
-					],
-					"outCondIds": [
-						538
-					],
-					"props": {
-						"objs": [
-							"Player",
-							"Kitty"
-						]
-					}
-				},
-				{
-					"ver": 1,
-					"id": 325,
-					"type": 10,
-					"label": "GoToPrevStage",
-					"continue": true,
-					"inCondIds": [
-						538
-					],
-					"outCondIds": [
-						526
-					],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "Intro",
-								"$$hashKey": "0DE"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "KittySpace",
-								"$$hashKey": "0EV"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 326,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						526
-					],
-					"outCondIds": [
-						527
-					],
-					"props": {
-						"id": "Player",
-						"text": "Привет, знаешь где можно купить поблизости маффины?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 327,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						527
-					],
-					"outCondIds": [
-						673
-					],
-					"props": {
-						"id": "Kitty",
-						"text": "Знаю, но информация стоит денег.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 340,
-					"type": 10,
-					"label": "GoToNextStage",
-					"continue": false,
-					"inCondIds": [
-						676
-					],
-					"outCondIds": [],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "KittySpace",
-								"$$hashKey": "09K"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "Underground",
-								"$$hashKey": "09M"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 433,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						673
-					],
-					"outCondIds": [
-						674
-					],
-					"props": {
-						"id": "Player",
-						"text": "И почём нынче информация?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 434,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						674
-					],
-					"outCondIds": [
-						675
-					],
-					"props": {
-						"id": "Kitty",
-						"text": "Пару-тройку маффинов «Монти Пайтон». Устроит?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 435,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						675
-					],
-					"outCondIds": [
-						676
-					],
-					"props": {
-						"id": "Player",
-						"text": "Давай, до свидания!",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				}
-			],
-			"conds": [
-				{
-					"ver": 1,
-					"id": 526,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 527,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 538,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 539,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 673,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 674,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 675,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 676,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				}
-			]
-		},
-		{
-			"ver": 1,
-			"stageNodeId": 313,
-			"nodes": [
-				{
-					"ver": 1,
-					"id": 313,
-					"type": 9,
-					"label": "Underground",
-					"continue": false,
-					"inCondIds": [],
-					"outCondIds": [
-						506
-					],
-					"props": {
-						"name": "Underground",
-						"objs": [
-							"Player",
-							"BunMonstro",
-							"BigMonstro",
-							"SonMonstro"
-						],
-						"objPool": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 314,
-					"type": 8,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						506
-					],
-					"outCondIds": [
-						541
-					],
-					"props": {
-						"objs": [
-							"Player",
-							"BunMonstro",
-							"SonMonstro",
-							"BigMonstro"
-						]
-					}
-				},
-				{
-					"ver": 1,
-					"id": 343,
-					"type": 10,
-					"label": "GoToPrevStage",
-					"continue": true,
-					"inCondIds": [
-						541
-					],
-					"outCondIds": [
-						542
-					],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "KittySpace",
-								"$$hashKey": "0DE"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "Underground",
-								"$$hashKey": "0EV"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 344,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						542
-					],
-					"outCondIds": [
-						543
-					],
-					"props": {
-						"id": "Player",
-						"text": "Как делишки?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 345,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						543
-					],
-					"outCondIds": [
-						677
-					],
-					"props": {
-						"id": "BunMonstro",
-						"text": "Нормально.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 346,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						678
-					],
-					"outCondIds": [
-						546
-					],
-					"props": {
-						"id": "BigMonstro",
-						"text": "A-A-A-R-R-H-H!",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 347,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						546
-					],
-					"outCondIds": [
-						679
-					],
-					"props": {
-						"id": "SonMonstro",
-						"text": "Нам не достались маффины “Эрик Картман”. Мы не в настроении.",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 349,
-					"type": 10,
-					"label": "GoToNextStage",
-					"continue": false,
-					"inCondIds": [
-						681
-					],
-					"outCondIds": [],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "Underground",
-								"$$hashKey": "09K"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "KingMeet",
-								"$$hashKey": "09M"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 436,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						677
-					],
-					"outCondIds": [
-						678
-					],
-					"props": {
-						"id": "Player",
-						"text": "...а чего хмурые такие?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 437,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						679
-					],
-					"outCondIds": [
-						680
-					],
-					"props": {
-						"id": "Player",
-						"text": "Где мне найти торговца маффинами?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 438,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						680
-					],
-					"outCondIds": [
-						681
-					],
-					"props": {
-						"id": "SonMonstro",
-						"text": "Наверху.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				}
-			],
-			"conds": [
-				{
-					"ver": 1,
-					"id": 506,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 541,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 542,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 543,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 546,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 677,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 678,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 679,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 680,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 681,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				}
-			]
-		},
-		{
-			"ver": 1,
-			"stageNodeId": 315,
-			"nodes": [
-				{
-					"ver": 1,
-					"id": 315,
-					"type": 9,
-					"label": "KingMeet",
-					"continue": false,
-					"inCondIds": [],
-					"outCondIds": [
-						507
-					],
-					"props": {
-						"name": "KingMeet",
-						"objs": [
-							"Player",
-							"KingMuffin"
-						],
-						"objPool": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 316,
-					"type": 8,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						507
-					],
-					"outCondIds": [
-						560
-					],
-					"props": {
-						"objs": [
-							"Player",
-							"KingMuffin"
-						]
-					}
-				},
-				{
-					"ver": 1,
-					"id": 358,
-					"type": 10,
-					"label": "GoToPrevStage",
-					"continue": true,
-					"inCondIds": [
-						560
-					],
-					"outCondIds": [
-						561
-					],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "Underground",
-								"$$hashKey": "0DE"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "KingMeet",
-								"$$hashKey": "0EV"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 359,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						561
-					],
-					"outCondIds": [
-						563
-					],
-					"props": {
-						"id": "Player",
-						"text": "Ну наконец-то я тебя нашёл.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 360,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						563
-					],
-					"outCondIds": [
-						564
-					],
-					"props": {
-						"id": "KingMuffin",
-						"text": "Извини приятель, всё раскупили. Остался один…",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 361,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						564
-					],
-					"outCondIds": [
-						565
-					],
-					"props": {
-						"id": "Player",
-						"text": "Заткнись. И возьми мои деньги.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 363,
-					"type": 10,
-					"label": "GoToNextStage",
-					"continue": false,
-					"inCondIds": [
-						565
-					],
-					"outCondIds": [],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "KingMeet",
-								"$$hashKey": "09K"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "Goal",
-								"$$hashKey": "09M"
-							}
-						],
-						"isPure": false
-					}
-				}
-			],
-			"conds": [
-				{
-					"ver": 1,
-					"id": 507,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 560,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 561,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 563,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 564,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 565,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				}
-			]
-		},
-		{
-			"ver": 1,
-			"stageNodeId": 317,
-			"nodes": [
-				{
-					"ver": 1,
-					"id": 317,
-					"type": 9,
-					"label": "Goal",
-					"continue": false,
-					"inCondIds": [],
-					"outCondIds": [
-						508
-					],
-					"props": {
-						"name": "Goal",
-						"objs": [
-							"Player"
-						],
-						"objPool": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 318,
-					"type": 8,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						508
-					],
-					"outCondIds": [
-						566
-					],
-					"props": {
-						"objs": [
-							"Player"
-						]
-					}
-				},
-				{
-					"ver": 1,
-					"id": 365,
-					"type": 10,
-					"label": "GoToPrevStage",
-					"continue": true,
-					"inCondIds": [
-						566
-					],
-					"outCondIds": [
-						567
-					],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "KingMeet",
-								"$$hashKey": "0DE"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "Goal",
-								"$$hashKey": "0EV"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 366,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						567
-					],
-					"outCondIds": [
-						569
-					],
-					"props": {
-						"id": "Player",
-						"text": "Есть. Я нашёл тебя!",
-						"phraseType": "THINK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 368,
-					"type": 10,
-					"label": "GoToNextStage",
-					"continue": false,
-					"inCondIds": [
-						569
-					],
-					"outCondIds": [],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "Goal",
-								"$$hashKey": "09K"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "Epilog",
-								"$$hashKey": "09M"
-							}
-						],
-						"isPure": false
-					}
-				}
-			],
-			"conds": [
-				{
-					"ver": 1,
-					"id": 508,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 566,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 567,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 569,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				}
-			]
-		},
-		{
-			"ver": 1,
-			"stageNodeId": 319,
-			"nodes": [
-				{
-					"ver": 1,
-					"id": 319,
-					"type": 9,
-					"label": "Epilog",
-					"continue": false,
-					"inCondIds": [],
-					"outCondIds": [
-						509
-					],
-					"props": {
-						"name": "Epilog",
-						"objs": [
-							"Player",
-							"Turtle",
-							"Princess",
-							"Logo"
-						],
-						"objPool": []
-					}
-				},
-				{
-					"ver": 1,
-					"id": 320,
-					"type": 8,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						509
-					],
-					"outCondIds": [
-						570
-					],
-					"props": {
-						"objs": [
-							"Player",
-							"Turtle",
-							"Princess",
-							"Logo"
-						]
-					}
-				},
-				{
-					"ver": 1,
-					"id": 370,
-					"type": 10,
-					"label": "GoToPrevStage",
-					"continue": true,
-					"inCondIds": [
-						570
-					],
-					"outCondIds": [
-						571
-					],
-					"props": {
-						"name": "C2API_GoToNextStage",
-						"rollbackName": "C2API_GoToPrevStage",
-						"source": "c2",
-						"params": [
-							{
-								"type": "str",
-								"name": "0",
-								"value": "Goal",
-								"$$hashKey": "0DE"
-							},
-							{
-								"type": "str",
-								"name": "1",
-								"value": "Epilog",
-								"$$hashKey": "0EV"
-							}
-						],
-						"isPure": false
-					}
-				},
-				{
-					"ver": 1,
-					"id": 371,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						571
-					],
-					"outCondIds": [
-						572
-					],
-					"props": {
-						"id": "Turtle",
-						"text": "Ты уверен, что хочешь поделиться с принцессой этим?",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 372,
-					"type": 3,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						572
-					],
-					"outCondIds": [
-						573,
-						574
-					],
-					"props": {
-						"id": "Turtle",
-						"text": "Решайся, принцесса уже рядом.",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL",
-						"ans1": "Отнести принцессе",
-						"ans2": "Съесть самому =)",
-						"ans3": "",
-						"ans4": ""
-					}
-				},
-				{
-					"ver": 1,
-					"id": 373,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						573
-					],
-					"outCondIds": [
-						575
-					],
-					"props": {
-						"id": "Player",
-						"text": "Это тебе, моя дорогая!",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 374,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						574,
-						578
-					],
-					"outCondIds": [],
-					"props": {
-						"id": "Logo",
-						"text": "The End",
-						"phraseType": "THINK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 375,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						575
-					],
-					"outCondIds": [
-						577
-					],
-					"props": {
-						"id": "Princess",
-						"text": "Большое спасибо!",
-						"phraseType": "SPEAK",
-						"phraseSize": "SMALL"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 376,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [
-						577
-					],
-					"outCondIds": [
-						578
-					],
-					"props": {
-						"id": "Princess",
-						"text": "Это превосходно!",
-						"phraseType": "THINK",
-						"phraseSize": "SMALL"
-					}
-				}
-			],
-			"conds": [
-				{
-					"ver": 1,
-					"id": 509,
-					"type": 1,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 570,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 571,
-					"type": 8,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 572,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 573,
-					"type": 3,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 574,
-					"type": 4,
-					"props": {}
-				},
-				{
-					"ver": 1,
-					"id": 575,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 577,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 578,
+					"id": 64,
 					"type": 11,
 					"props": {
 						"clearStage": true

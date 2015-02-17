@@ -13,13 +13,13 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="3282508503158459">
+        <layer name="Pattern" sid="5080177062996847">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <transparent>0</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0.64</x>
+                <y>0.64</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -46,40 +46,51 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.200000003</opacity>
                     </world>
                 </instance>
-                <instance type="Rays" uid="25">
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Background" sid="3282508503158459">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Sprite" uid="44">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>16</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>305</x>
-                        <y>324</y>
+                        <x>2462</x>
+                        <y>1109</y>
                         <z>0</z>
-                        <width>578</width>
-                        <height>577</height>
+                        <width>416</width>
+                        <height>557</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.500866532</hotspotY>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cover" uid="5">
+                <instance type="Sprite" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -89,13 +100,409 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>300</x>
-                        <y>310</y>
+                        <x>1956</x>
+                        <y>1133</y>
                         <z>0</z>
-                        <width>417</width>
-                        <height>426</height>
+                        <width>416</width>
+                        <height>557</height>
                         <depth>0</depth>
-                        <hotspotX>0.501199067</hotspotX>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="27">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1406</x>
+                        <y>1140</y>
+                        <z>0</z>
+                        <width>416</width>
+                        <height>557</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="26">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>863</x>
+                        <y>1133</y>
+                        <z>0</z>
+                        <width>416</width>
+                        <height>557</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="25">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>321</x>
+                        <y>1137</y>
+                        <z>0</z>
+                        <width>416</width>
+                        <height>557</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="23">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2473</x>
+                        <y>361</y>
+                        <z>0</z>
+                        <width>537</width>
+                        <height>563</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1906</x>
+                        <y>374</y>
+                        <z>0</z>
+                        <width>537</width>
+                        <height>456</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="6">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1385.5</x>
+                        <y>346.85925293</y>
+                        <z>0</z>
+                        <width>416</width>
+                        <height>557</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="5">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>818</x>
+                        <y>341</y>
+                        <z>0</z>
+                        <width>324</width>
+                        <height>520</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="3">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>252</x>
+                        <y>354</y>
+                        <z>0</z>
+                        <width>459.168243408</width>
+                        <height>519.548156738</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501529038</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EdwardHopperOfficeAtNight" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1376</x>
+                        <y>330</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>337</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.448071212</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FrankDickseeAnOffering" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>847</x>
+                        <y>1110</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FridaKahloTheTwoFridas" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2450</x>
+                        <y>330</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501048207</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GrantWoodAmericanGothic" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>276</x>
+                        <y>348</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GuidoReniBacchusAndAriadne" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1895</x>
+                        <y>330</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HenriDeToulouseLautrec" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1930</x>
+                        <y>1110</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HenryFuseliTheNightmare" uid="21">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>304</x>
+                        <y>1110</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="JeanAugusteDominiqueIngreGrandeOdalisque" uid="24">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>810</x>
+                        <y>330</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>268</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ReneMagritteTheLovers" uid="40">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1385</x>
+                        <y>1110</y>
+                        <z>0</z>
+                        <width>480</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501385033</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeonardoDaVinciMonaLisa" uid="42">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2462</x>
+                        <y>1055</y>
+                        <z>0</z>
+                        <width>366</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -122,14 +529,14 @@
             <instances>
                 <instance type="NPC" uid="59">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>mario_idle</initial-animation>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>girlfront</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <Stage>Intro</Stage>
-                        <NpcID>Player</NpcID>
+                        <NpcID>girlfront</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -138,13 +545,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1449</x>
-                        <y>480</y>
+                        <x>890</x>
+                        <y>330</y>
                         <z>0</z>
-                        <width>138</width>
-                        <height>218.000015259</height>
+                        <width>14.337662697</width>
+                        <height>14.295083046</height>
                         <depth>0</depth>
-                        <hotspotX>0.506493509</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -152,13 +559,73 @@
                 </instance>
                 <instance type="NPC" uid="41">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>mario_idle</initial-animation>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>monstro</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>KittySpace</Stage>
+                        <Stage>Outro</Stage>
+                        <NpcID>monstro</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>267</x>
+                        <y>1108</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="56">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>officeman</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
+                        <NpcID>officeman</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1452</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="17">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>player</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
                         <NpcID>Player</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
@@ -168,88 +635,28 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>197.238296509</x>
-                        <y>912.836730957</y>
+                        <x>407</x>
+                        <y>512</y>
                         <z>0</z>
-                        <width>138</width>
-                        <height>218</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
-                        <hotspotX>0.506493509</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPC" uid="56">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>girl</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>Intro</Stage>
-                        <NpcID>Girl</NpcID>
-                        <AnimPrio>0</AnimPrio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="QuestEngineSpriteExtras" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1116</x>
-                        <y>459</y>
-                        <z>0</z>
-                        <width>69</width>
-                        <height>130</height>
-                        <depth>0</depth>
-                        <hotspotX>0.594202876</hotspotX>
-                        <hotspotY>0.561538458</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPC" uid="17">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>boy</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Stage>Intro</Stage>
-                        <NpcID>Boy</NpcID>
-                        <AnimPrio>0</AnimPrio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="QuestEngineSpriteExtras" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1188</x>
-                        <y>449</y>
-                        <z>0</z>
-                        <width>75</width>
-                        <height>139</height>
-                        <depth>0</depth>
-                        <hotspotX>0.49333334</hotspotX>
-                        <hotspotY>0.517985582</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="NPC" uid="18">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>fungas</initial-animation>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>nudewoman</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <Stage>Intro</Stage>
-                        <NpcID>Fungas</NpcID>
+                        <NpcID>nudewoman</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -258,28 +665,28 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1727</x>
-                        <y>469</y>
+                        <x>1979</x>
+                        <y>241</y>
                         <z>0</z>
-                        <width>197</width>
-                        <height>238</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
-                        <hotspotX>0.487309635</hotspotX>
-                        <hotspotY>0.529411793</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="NPC" uid="22">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>mini_fungas</initial-animation>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>nudeman</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <Stage>Intro</Stage>
-                        <NpcID>MiniFungas</NpcID>
+                        <NpcID>nudeman</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -288,28 +695,28 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1824.311035156</x>
-                        <y>543.106567383</y>
+                        <x>1785</x>
+                        <y>424</y>
                         <z>0</z>
-                        <width>91</width>
-                        <height>132</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
-                        <hotspotX>0.461538464</hotspotX>
-                        <hotspotY>0.553030312</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="NPC" uid="46">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>kitty</initial-animation>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>dreamgirl</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Stage>KittySpace</Stage>
-                        <NpcID>Kitty</NpcID>
+                        <Stage>Outro</Stage>
+                        <NpcID>dreamgirl</NpcID>
                         <AnimPrio>0</AnimPrio>
                     </instance-variables>
                     <behavior-instances>
@@ -318,14 +725,254 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>445.893463135</x>
-                        <y>883.282958984</y>
+                        <x>203</x>
+                        <y>1283</y>
                         <z>0</z>
-                        <width>94</width>
-                        <height>115</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
-                        <hotspotX>0.414893627</hotspotX>
-                        <hotspotY>0.556521714</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="45">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>frida</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Intro</Stage>
+                        <NpcID>frida</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2454</x>
+                        <y>448</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="47">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>manyoung</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>manyoung</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>901</x>
+                        <y>1005</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="48">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>womanyoung</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>womanyoung</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>731</x>
+                        <y>1261</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="49">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>closegirl</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>closegirl</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1272</x>
+                        <y>1051</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="50">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>closeboy</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>closeboy</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1544</x>
+                        <y>1303</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="51">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>monalisa</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>monalisa</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2469</x>
+                        <y>1205</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="52">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>alcogirl</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>alcogirl</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1793</x>
+                        <y>1279</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPC" uid="53">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>alcoman</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Stage>Outro</Stage>
+                        <NpcID>alcoman</NpcID>
+                        <AnimPrio>0</AnimPrio>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="QuestEngineSpriteExtras" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2023</x>
+                        <y>1001</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -338,8 +985,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -348,7 +995,30 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Sprite2" uid="4">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>640</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Speech" sid="548831239829663">
@@ -370,7 +1040,7 @@
                 <instance type="DialogSpeechBg" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>SpeakLarge</initial-animation>
+                        <initial-animation>SpeakSmall</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
                     </properties>
@@ -383,8 +1053,8 @@
                         <x>-681</x>
                         <y>448</y>
                         <z>0</z>
-                        <width>320</width>
-                        <height>226</height>
+                        <width>346</width>
+                        <height>163</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -405,11 +1075,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-665</x>
+                        <x>-664.763305664</x>
                         <y>459</y>
                         <z>0</z>
-                        <width>288.473327637</width>
-                        <height>173.334655762</height>
+                        <width>288</width>
+                        <height>111</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -421,13 +1091,13 @@
                     <properties>
                         <text>Player phrase Now get the first piece of the ticket located on the airplane! LOngword LOngword</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,400,0</font>
+                        <font>Arial,-21,400,0</font>
                         <color>240,236,230</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <line-height>-2</line-height>
+                        <line-height>-4</line-height>
                     </properties>
                     <instance-variables>
                         <SpeechR>69</SpeechR>
@@ -443,11 +1113,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-660</x>
-                        <y>460</y>
+                        <x>-646.095703125</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>280</width>
-                        <height>173.192504883</height>
+                        <width>260.085235596</width>
+                        <height>106</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
