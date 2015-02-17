@@ -145,7 +145,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>863</x>
-                        <y>1133</y>
+                        <y>1121</y>
                         <z>0</z>
                         <width>416</width>
                         <height>557</height>
@@ -575,8 +575,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>267</x>
-                        <y>1108</y>
+                        <x>317</x>
+                        <y>1360</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -635,8 +635,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>407</x>
-                        <y>512</y>
+                        <x>358</x>
+                        <y>530</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -785,8 +785,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>901</x>
-                        <y>1005</y>
+                        <x>806</x>
+                        <y>1349</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -815,8 +815,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>731</x>
-                        <y>1261</y>
+                        <x>889</x>
+                        <y>1251</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -845,8 +845,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1272</x>
-                        <y>1051</y>
+                        <x>1308</x>
+                        <y>1264</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -875,8 +875,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1544</x>
-                        <y>1303</y>
+                        <x>1425</x>
+                        <y>1289</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -905,8 +905,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2469</x>
-                        <y>1205</y>
+                        <x>2466</x>
+                        <y>1360</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -935,8 +935,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1793</x>
-                        <y>1279</y>
+                        <x>2210</x>
+                        <y>1280</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -965,8 +965,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2023</x>
-                        <y>1001</y>
+                        <x>2031</x>
+                        <y>1343</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>

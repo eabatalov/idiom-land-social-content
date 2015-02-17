@@ -1323,7 +1323,7 @@
                             <animation-folder>
                                 <animation framecount="1" loop="0" name="player" pingpong="0" repeatcount="1" repeatto="0" sid="9959761412612517" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GoogleDrive\Clilk\Project\quests\marketing\maffi.nintendo\Sprites\mario-main.png">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="0.5" y="-20.5625" />
                                         <collision-poly>
                                             <point x="1" y="0.847223" />
                                             <point x="1" y="0" />
@@ -1363,7 +1363,7 @@
                                 </animation>
                                 <animation framecount="1" loop="0" name="monstro" pingpong="0" repeatcount="1" repeatto="0" sid="7158956453955035" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="0.625" y="-12.6875" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="dreamgirl" pingpong="0" repeatcount="1" repeatto="0" sid="6331197787529111" speed="5">
@@ -1373,37 +1373,37 @@
                                 </animation>
                                 <animation framecount="1" loop="0" name="womanyoung" pingpong="0" repeatcount="1" repeatto="0" sid="373617037557492" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="-5.875" y="0.375" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="manyoung" pingpong="0" repeatcount="1" repeatto="0" sid="6865872621978149" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="9.3125" y="-18.9375" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="closegirl" pingpong="0" repeatcount="1" repeatto="0" sid="8930609740572147" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="0.25" y="-10.0625" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="closeboy" pingpong="0" repeatcount="1" repeatto="0" sid="2213265003300172" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="-6.375" y="-13.9375" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="alcoman" pingpong="0" repeatcount="1" repeatto="0" sid="6200247282475678" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="0.1875" y="-18.75" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="alcogirl" pingpong="0" repeatcount="1" repeatto="0" sid="3342456482275141" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="-24.3125" y="0.875" />
                                     </frame>
                                 </animation>
                                 <animation framecount="1" loop="0" name="monalisa" pingpong="0" repeatcount="1" repeatto="0" sid="8971781498494745" speed="5">
                                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                        <image-point name="SpeechOrigin" x="0.5" y="0.5" />
+                                        <image-point name="SpeechOrigin" x="0.5625" y="-24.8125" />
                                     </frame>
                                 </animation>
                             </animation-folder>
