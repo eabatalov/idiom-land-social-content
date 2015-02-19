@@ -2059,7 +2059,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9328064864160448" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.50193" original-source="D:\GoogleDrive\Clilk\Project\quests\education\English\sprites\cover-logo.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.50193" original-source="C:\Users\Andy\Desktop\fraegf.png">
                                 <collision-poly>
                                     <point x="0.5" y="0" />
                                     <point x="0.78373" y="0.420849" />
