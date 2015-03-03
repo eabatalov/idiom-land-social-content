@@ -1,0 +1,951 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "Intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "Intro",
+						"objs": [
+							"Player",
+							"girlfront",
+							"officeman",
+							"nudewoman",
+							"nudeman",
+							"frida"
+						],
+						"objPool": [],
+						"text": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						107
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"girlfront",
+							"nudewoman",
+							"officeman",
+							"nudeman",
+							"frida"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 17,
+					"type": 10,
+					"label": "GoToNextStage",
+					"continue": false,
+					"inCondIds": [
+						34
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Intro",
+								"$$hashKey": "01C"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Outro",
+								"$$hashKey": "01E"
+							}
+						],
+						"isPure": false,
+						"text": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 31,
+					"type": 1,
+					"label": "JeanDominic",
+					"continue": false,
+					"inCondIds": [
+						78
+					],
+					"outCondIds": [
+						110
+					],
+					"props": {
+						"id": "Player",
+						"text": "Yeah!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 45,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						118
+					],
+					"outCondIds": [
+						120
+					],
+					"props": {
+						"id": "officeman",
+						"text": "Arguably :)",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 48,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						123
+					],
+					"outCondIds": [
+						34
+					],
+					"props": {
+						"id": "frida",
+						"text": "Ok.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 64,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						109
+					],
+					"outCondIds": [
+						112
+					],
+					"props": {
+						"id": "girlfront",
+						"text": "Maybe...",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 65,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						113
+					],
+					"outCondIds": [
+						116
+					],
+					"props": {
+						"id": "officeman",
+						"text": "Yes. Yes!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 66,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						119
+					],
+					"outCondIds": [
+						121
+					],
+					"props": {
+						"id": "nudewoman",
+						"text": "Yes!",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 84,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						107
+					],
+					"outCondIds": [
+						78,
+						108
+					],
+					"props": {
+						"id": "Player",
+						"text": "What is your favorite bag?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Chanel, Gucci, Louis Vuitton, etc.",
+						"ans2": "Small clutch",
+						"ans3": "Duffel bag",
+						"ans4": "backpack"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 114,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						108,
+						110
+					],
+					"outCondIds": [
+						109,
+						111
+					],
+					"props": {
+						"id": "girlfront",
+						"text": "What shoes do you prefer?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL",
+						"ans1": "Loafers",
+						"ans2": "Tennis",
+						"ans3": "High heels",
+						"ans4": "Sneakers"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 115,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						111,
+						112
+					],
+					"outCondIds": [
+						113,
+						115
+					],
+					"props": {
+						"id": "officeman",
+						"text": "What world you wear for a typical day at school?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Nice outfit",
+						"ans2": "Jeans and sneakers",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 116,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						115,
+						116
+					],
+					"outCondIds": [
+						117,
+						118
+					],
+					"props": {
+						"id": "nudeman",
+						"text": "Which male celebrity do you love to walk down the red carpet with?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Zac Efron",
+						"ans2": "Harry Styles",
+						"ans3": "Taylor Lautner",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 117,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						117,
+						120
+					],
+					"outCondIds": [
+						119,
+						122
+					],
+					"props": {
+						"id": "nudewoman",
+						"text": "What item of clothing would you pull out of your laundry hamper to wear again?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Ew.",
+						"ans2": "Jeans",
+						"ans3": "A dry-clean only party top",
+						"ans4": "Shirt"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 118,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						121,
+						122
+					],
+					"outCondIds": [
+						123
+					],
+					"props": {
+						"id": "frida",
+						"text": "What would you brave the bargain bin for?",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Uh...My whole wardrobe",
+						"ans2": "Halloween costume",
+						"ans3": "Nothing is worth the bargain bin",
+						"ans4": "Zombie style"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 34,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 78,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 107,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 108,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 109,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 110,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 111,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 112,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 113,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 115,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 116,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 117,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 118,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 119,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 120,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 121,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 122,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 123,
+					"type": 7,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 13,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 9,
+					"label": "stage",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"name": "Outro",
+						"objs": [
+							"Player",
+							"monstro",
+							"dreamgirl",
+							"womanyoung",
+							"manyoung",
+							"closegirl",
+							"closeboy",
+							"alcoman",
+							"alcogirl",
+							"monalisa"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [
+						6
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"monalisa",
+							"monstro",
+							"dreamgirl",
+							"womanyoung",
+							"manyoung",
+							"closegirl",
+							"closeboy",
+							"alcoman",
+							"alcogirl"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 10,
+					"label": "GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						6
+					],
+					"outCondIds": [
+						124
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "Intro",
+								"$$hashKey": "01M"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "Outro",
+								"$$hashKey": "01O"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 119,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						124
+					],
+					"outCondIds": [
+						127
+					],
+					"props": {
+						"id": "monstro",
+						"text": "What is your favourite color?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "I don't like colors",
+						"ans2": "Aqua",
+						"ans3": "Dark Black",
+						"ans4": "Tickle Me Pink!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 120,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						127
+					],
+					"outCondIds": [
+						129
+					],
+					"props": {
+						"id": "dreamgirl",
+						"text": "What color of shirt do you usually wear?",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE",
+						"ans1": "I told you, I don't like colors!",
+						"ans2": "Super dark Black",
+						"ans3": "The colors of the rainbow.",
+						"ans4": "White"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 121,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						129
+					],
+					"outCondIds": [
+						133,
+						135
+					],
+					"props": {
+						"id": "womanyoung",
+						"text": "Do you accessorize ever?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Is that like a pair of jeans?",
+						"ans2": "Most of the time, yes.",
+						"ans3": "All I wear is a cloth band around my head.",
+						"ans4": "If I don't like color, I won't accessorize!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 122,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						133,
+						136
+					],
+					"outCondIds": [
+						137
+					],
+					"props": {
+						"id": "manyoung",
+						"text": "Do you like headbands?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Sometimes, yea.",
+						"ans2": "Every single day!",
+						"ans3": "Where do you put them?",
+						"ans4": "Never! It's against the law!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 123,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						135
+					],
+					"outCondIds": [
+						136
+					],
+					"props": {
+						"id": "womanyoung",
+						"text": "Yeah!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 124,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						137
+					],
+					"outCondIds": [
+						140
+					],
+					"props": {
+						"id": "closegirl",
+						"text": "Do you read fashion magazines or regular magazines?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "Regular, please!",
+						"ans2": "What's a magazine?",
+						"ans3": "Fashion",
+						"ans4": "If I don't like color, I won't read a magazine!"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 125,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						140
+					],
+					"outCondIds": [
+						142,
+						144
+					],
+					"props": {
+						"id": "closeboy",
+						"text": "What is your favorite fashion designer name?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "What's a fashion designer?",
+						"ans2": "Dolce & Gabbana",
+						"ans3": "God! If I don't like color, NO FASHION!",
+						"ans4": "Louis Vuitton"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 126,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						142,
+						145
+					],
+					"outCondIds": [
+						147,
+						150
+					],
+					"props": {
+						"id": "alcogirl",
+						"text": "How would your friends describe you?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "traditional and proper",
+						"ans2": "sharp and direct",
+						"ans3": "playful and spirited",
+						"ans4": "relaxed and liberal"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 127,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						144
+					],
+					"outCondIds": [
+						145
+					],
+					"props": {
+						"id": "closeboy",
+						"text": "OH NO!",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 128,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						147,
+						151
+					],
+					"outCondIds": [
+						149
+					],
+					"props": {
+						"id": "monalisa",
+						"text": "How would you rate this quiz?",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM",
+						"ans1": "cool images",
+						"ans2": "Uh....... I don't know",
+						"ans3": "10!",
+						"ans4": "Unusual"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 129,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						149
+					],
+					"outCondIds": [],
+					"props": {
+						"text": "Thank you for answering ;)"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 130,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						150
+					],
+					"outCondIds": [
+						151
+					],
+					"props": {
+						"id": "alcoman",
+						"text": "What is your go-to coat like?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "straight and sleek",
+						"ans2": "sharp and powerful, perhaps boxy",
+						"ans3": "romantic with a flared princess cut",
+						"ans4": "an easy and flowy cape"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 124,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 127,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 129,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 133,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 135,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 136,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 137,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 140,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 142,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 144,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 145,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 147,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 149,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 150,
+					"type": 5,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 151,
+					"type": 7,
+					"props": {}
+				}
+			]
+		}
+	]
+}

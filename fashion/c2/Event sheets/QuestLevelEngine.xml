@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestLevelEngine</name>
+    <events>
+        <event-group description="" sid="7575093077111127" title="Quest level engine imports">
+            <sub-events>
+                <include>LevelEngine</include>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9424937476399224" title="Quest level engine modules">
+            <sub-events>
+                <include>QuestEngineCoreLib</include>
+                <include>QuestEngineUILib</include>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

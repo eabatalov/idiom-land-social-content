@@ -1,0 +1,1745 @@
+{
+	"script": {
+		"ver": 1,
+		"name": "intcom_game",
+		"stages": [
+			{
+				"ver": 1,
+				"stageNodeId": 11,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 9,
+						"label": "Intro",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							0
+						],
+						"props": {
+							"name": "Intro",
+							"objs": [
+								"Player",
+								"girlfront",
+								"officeman",
+								"nudewoman",
+								"nudeman",
+								"frida"
+							],
+							"objPool": [],
+							"text": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							0
+						],
+						"outCondIds": [
+							107
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"girlfront",
+								"nudewoman",
+								"officeman",
+								"nudeman",
+								"frida"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 17,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							34
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Intro",
+									"$$hashKey": "01C"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Outro",
+									"$$hashKey": "01E"
+								}
+							],
+							"isPure": false,
+							"text": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 31,
+						"type": 1,
+						"label": "JeanDominic",
+						"continue": false,
+						"inCondIds": [
+							78
+						],
+						"outCondIds": [
+							110
+						],
+						"props": {
+							"id": "Player",
+							"text": "Yeah!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 45,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							118
+						],
+						"outCondIds": [
+							120
+						],
+						"props": {
+							"id": "officeman",
+							"text": "Arguably :)",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 48,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							123
+						],
+						"outCondIds": [
+							34
+						],
+						"props": {
+							"id": "frida",
+							"text": "Ok.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 64,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							109
+						],
+						"outCondIds": [
+							112
+						],
+						"props": {
+							"id": "girlfront",
+							"text": "Maybe...",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 65,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							113
+						],
+						"outCondIds": [
+							116
+						],
+						"props": {
+							"id": "officeman",
+							"text": "Yes. Yes!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 66,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							119
+						],
+						"outCondIds": [
+							121
+						],
+						"props": {
+							"id": "nudewoman",
+							"text": "Yes!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 84,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							107
+						],
+						"outCondIds": [
+							78,
+							108
+						],
+						"props": {
+							"id": "Player",
+							"text": "What is your favorite bag?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Chanel, Gucci, Louis Vuitton, etc.",
+							"ans2": "Small clutch",
+							"ans3": "Duffel bag",
+							"ans4": "backpack"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 114,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							108,
+							110
+						],
+						"outCondIds": [
+							109,
+							111
+						],
+						"props": {
+							"id": "girlfront",
+							"text": "What shoes do you prefer?",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL",
+							"ans1": "Loafers",
+							"ans2": "Tennis",
+							"ans3": "High heels",
+							"ans4": "Sneakers"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 115,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							111,
+							112
+						],
+						"outCondIds": [
+							113,
+							115
+						],
+						"props": {
+							"id": "officeman",
+							"text": "What world you wear for a typical day at school?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Nice outfit",
+							"ans2": "Jeans and sneakers",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 116,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							115,
+							116
+						],
+						"outCondIds": [
+							117,
+							118
+						],
+						"props": {
+							"id": "nudeman",
+							"text": "Which male celebrity do you love to walk down the red carpet with?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Zac Efron",
+							"ans2": "Harry Styles",
+							"ans3": "Taylor Lautner",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 117,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							117,
+							120
+						],
+						"outCondIds": [
+							119,
+							122
+						],
+						"props": {
+							"id": "nudewoman",
+							"text": "What item of clothing would you pull out of your laundry hamper to wear again?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Ew.",
+							"ans2": "Jeans",
+							"ans3": "A dry-clean only party top",
+							"ans4": "Shirt"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 118,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							121,
+							122
+						],
+						"outCondIds": [
+							123
+						],
+						"props": {
+							"id": "frida",
+							"text": "What would you brave the bargain bin for?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Uh...My whole wardrobe",
+							"ans2": "Halloween costume",
+							"ans3": "Nothing is worth the bargain bin",
+							"ans4": "Zombie style"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 0,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 34,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 78,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 107,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 108,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 109,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 110,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 111,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 112,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 113,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 115,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 116,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 117,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 118,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 119,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 120,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 121,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 122,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 123,
+						"type": 7,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 13,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 9,
+						"label": "stage",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							1
+						],
+						"props": {
+							"name": "Outro",
+							"objs": [
+								"Player",
+								"monstro",
+								"dreamgirl",
+								"womanyoung",
+								"manyoung",
+								"closegirl",
+								"closeboy",
+								"alcoman",
+								"alcogirl",
+								"monalisa"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 14,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							1
+						],
+						"outCondIds": [
+							6
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"monalisa",
+								"monstro",
+								"dreamgirl",
+								"womanyoung",
+								"manyoung",
+								"closegirl",
+								"closeboy",
+								"alcoman",
+								"alcogirl"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 19,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							6
+						],
+						"outCondIds": [
+							124
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Intro",
+									"$$hashKey": "01M"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Outro",
+									"$$hashKey": "01O"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 119,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							124
+						],
+						"outCondIds": [
+							127
+						],
+						"props": {
+							"id": "monstro",
+							"text": "What is your favourite color?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "I don't like colors",
+							"ans2": "Aqua",
+							"ans3": "Dark Black",
+							"ans4": "Tickle Me Pink!"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 120,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							127
+						],
+						"outCondIds": [
+							129
+						],
+						"props": {
+							"id": "dreamgirl",
+							"text": "What color of shirt do you usually wear?",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE",
+							"ans1": "I told you, I don't like colors!",
+							"ans2": "Super dark Black",
+							"ans3": "The colors of the rainbow.",
+							"ans4": "White"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 121,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							129
+						],
+						"outCondIds": [
+							133,
+							135
+						],
+						"props": {
+							"id": "womanyoung",
+							"text": "Do you accessorize ever?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Is that like a pair of jeans?",
+							"ans2": "Most of the time, yes.",
+							"ans3": "All I wear is a cloth band around my head.",
+							"ans4": "If I don't like color, I won't accessorize!"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 122,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							133,
+							136
+						],
+						"outCondIds": [
+							137
+						],
+						"props": {
+							"id": "manyoung",
+							"text": "Do you like headbands?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Sometimes, yea.",
+							"ans2": "Every single day!",
+							"ans3": "Where do you put them?",
+							"ans4": "Never! It's against the law!"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 123,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							135
+						],
+						"outCondIds": [
+							136
+						],
+						"props": {
+							"id": "womanyoung",
+							"text": "Yeah!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 124,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							137
+						],
+						"outCondIds": [
+							140
+						],
+						"props": {
+							"id": "closegirl",
+							"text": "Do you read fashion magazines or regular magazines?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Regular, please!",
+							"ans2": "What's a magazine?",
+							"ans3": "Fashion",
+							"ans4": "If I don't like color, I won't read a magazine!"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 125,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							140
+						],
+						"outCondIds": [
+							142,
+							144
+						],
+						"props": {
+							"id": "closeboy",
+							"text": "What is your favorite fashion designer name?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "What's a fashion designer?",
+							"ans2": "Dolce & Gabbana",
+							"ans3": "God! If I don't like color, NO FASHION!",
+							"ans4": "Louis Vuitton"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 126,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							142,
+							145
+						],
+						"outCondIds": [
+							147,
+							150
+						],
+						"props": {
+							"id": "alcogirl",
+							"text": "How would your friends describe you?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "traditional and proper",
+							"ans2": "sharp and direct",
+							"ans3": "playful and spirited",
+							"ans4": "relaxed and liberal"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 127,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							144
+						],
+						"outCondIds": [
+							145
+						],
+						"props": {
+							"id": "closeboy",
+							"text": "OH NO!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 128,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							147,
+							151
+						],
+						"outCondIds": [
+							149
+						],
+						"props": {
+							"id": "monalisa",
+							"text": "How would you rate this quiz?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "cool images",
+							"ans2": "Uh....... I don't know",
+							"ans3": "10!",
+							"ans4": "Unusual"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 129,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							149
+						],
+						"outCondIds": [],
+						"props": {
+							"text": "Thank you for answering ;)"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 130,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							150
+						],
+						"outCondIds": [
+							151
+						],
+						"props": {
+							"id": "alcoman",
+							"text": "What is your go-to coat like?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "straight and sleek",
+							"ans2": "sharp and powerful, perhaps boxy",
+							"ans3": "romantic with a flared princess cut",
+							"ans4": "an easy and flowy cape"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 1,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 124,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 127,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 129,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 133,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 135,
+						"type": 5,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 136,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 137,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 140,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 142,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 144,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 145,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 147,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 149,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 150,
+						"type": 5,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 151,
+						"type": 7,
+						"props": {}
+					}
+				]
+			}
+		]
+	},
+	"scriptEditor": {
+		"ver": 1,
+		"currentStageId": 11,
+		"stageEditors": [
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 11,
+						"x": 428.57142857142856,
+						"y": 141.4285714285714
+					},
+					{
+						"ver": 1,
+						"nodeId": 12,
+						"x": 120.42857142857156,
+						"y": 390.1428571428573
+					},
+					{
+						"ver": 1,
+						"nodeId": 17,
+						"x": 1452.0000000000002,
+						"y": 132.00000000000009
+					},
+					{
+						"ver": 1,
+						"nodeId": 31,
+						"x": 326.85714285714334,
+						"y": 1356.8666671571284
+					},
+					{
+						"ver": 1,
+						"nodeId": 45,
+						"x": 1593.6190476190513,
+						"y": 523.342857633318
+					},
+					{
+						"ver": 1,
+						"nodeId": 48,
+						"x": 1163.3333333333335,
+						"y": 234.6761909666517
+					},
+					{
+						"ver": 1,
+						"nodeId": 64,
+						"x": 1201.4285714285702,
+						"y": 1452.7619047619064
+					},
+					{
+						"ver": 1,
+						"nodeId": 65,
+						"x": 1766.666666666667,
+						"y": 1229.5238095238103
+					},
+					{
+						"ver": 1,
+						"nodeId": 66,
+						"x": 534.0000000000009,
+						"y": 668.3809523809524
+					},
+					{
+						"ver": 1,
+						"nodeId": 84,
+						"x": 230.00000000000125,
+						"y": 933.3333333333326
+					},
+					{
+						"ver": 1,
+						"nodeId": 114,
+						"x": 739.999999999999,
+						"y": 1176.666666666666
+					},
+					{
+						"ver": 1,
+						"nodeId": 115,
+						"x": 1283.333333333338,
+						"y": 1160.0000000000007
+					},
+					{
+						"ver": 1,
+						"nodeId": 116,
+						"x": 1443.333333333337,
+						"y": 920.0000000000002
+					},
+					{
+						"ver": 1,
+						"nodeId": 117,
+						"x": 919.9999999999998,
+						"y": 800
+					},
+					{
+						"ver": 1,
+						"nodeId": 118,
+						"x": 813.3333333333334,
+						"y": 319.9999999999999
+					}
+				],
+				"nodeIds": [
+					11,
+					12,
+					17,
+					31,
+					45,
+					48,
+					64,
+					65,
+					66,
+					84,
+					114,
+					115,
+					116,
+					117,
+					118
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 0,
+						"points": {
+							"src": {
+								"x": 508.57142857142856,
+								"y": 221.4285714285714
+							},
+							"dst": {
+								"x": 200.42857142857156,
+								"y": 470.1428571428573
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 34,
+						"points": {
+							"src": {
+								"x": 1243.3333333333335,
+								"y": 314.6761909666517
+							},
+							"dst": {
+								"x": 1532.0000000000002,
+								"y": 212.00000000000009
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 78,
+						"points": {
+							"src": {
+								"x": 310.00000000000125,
+								"y": 1013.3333333333326
+							},
+							"dst": {
+								"x": 406.85714285714334,
+								"y": 1436.8666671571284
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 107,
+						"points": {
+							"src": {
+								"x": 200.42857142857156,
+								"y": 470.1428571428573
+							},
+							"dst": {
+								"x": 310.00000000000125,
+								"y": 1013.3333333333326
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 108,
+						"points": {
+							"src": {
+								"x": 310.00000000000125,
+								"y": 1013.3333333333326
+							},
+							"dst": {
+								"x": 819.999999999999,
+								"y": 1256.666666666666
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 109,
+						"points": {
+							"src": {
+								"x": 819.999999999999,
+								"y": 1256.666666666666
+							},
+							"dst": {
+								"x": 1281.4285714285702,
+								"y": 1532.7619047619064
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 110,
+						"points": {
+							"src": {
+								"x": 406.85714285714334,
+								"y": 1436.8666671571284
+							},
+							"dst": {
+								"x": 819.999999999999,
+								"y": 1256.666666666666
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 111,
+						"points": {
+							"src": {
+								"x": 819.999999999999,
+								"y": 1256.666666666666
+							},
+							"dst": {
+								"x": 1363.333333333338,
+								"y": 1240.0000000000007
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 112,
+						"points": {
+							"src": {
+								"x": 1281.4285714285702,
+								"y": 1532.7619047619064
+							},
+							"dst": {
+								"x": 1363.333333333338,
+								"y": 1240.0000000000007
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 113,
+						"points": {
+							"src": {
+								"x": 1363.333333333338,
+								"y": 1240.0000000000007
+							},
+							"dst": {
+								"x": 1846.666666666667,
+								"y": 1309.5238095238103
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 115,
+						"points": {
+							"src": {
+								"x": 1363.333333333338,
+								"y": 1240.0000000000007
+							},
+							"dst": {
+								"x": 1523.333333333337,
+								"y": 1000.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 116,
+						"points": {
+							"src": {
+								"x": 1846.666666666667,
+								"y": 1309.5238095238103
+							},
+							"dst": {
+								"x": 1523.333333333337,
+								"y": 1000.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 117,
+						"points": {
+							"src": {
+								"x": 1523.333333333337,
+								"y": 1000.0000000000002
+							},
+							"dst": {
+								"x": 999.9999999999998,
+								"y": 880
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 118,
+						"points": {
+							"src": {
+								"x": 1523.333333333337,
+								"y": 1000.0000000000002
+							},
+							"dst": {
+								"x": 1673.6190476190513,
+								"y": 603.342857633318
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 119,
+						"points": {
+							"src": {
+								"x": 999.9999999999998,
+								"y": 880
+							},
+							"dst": {
+								"x": 614.0000000000009,
+								"y": 748.3809523809524
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 120,
+						"points": {
+							"src": {
+								"x": 1673.6190476190513,
+								"y": 603.342857633318
+							},
+							"dst": {
+								"x": 999.9999999999998,
+								"y": 880
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 121,
+						"points": {
+							"src": {
+								"x": 614.0000000000009,
+								"y": 748.3809523809524
+							},
+							"dst": {
+								"x": 893.3333333333334,
+								"y": 399.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 122,
+						"points": {
+							"src": {
+								"x": 999.9999999999998,
+								"y": 880
+							},
+							"dst": {
+								"x": 893.3333333333334,
+								"y": 399.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 123,
+						"points": {
+							"src": {
+								"x": 893.3333333333334,
+								"y": 399.9999999999999
+							},
+							"dst": {
+								"x": 1243.3333333333335,
+								"y": 314.6761909666517
+							}
+						}
+					}
+				],
+				"condIds": [
+					0,
+					34,
+					78,
+					107,
+					108,
+					109,
+					110,
+					111,
+					112,
+					113,
+					115,
+					116,
+					117,
+					118,
+					119,
+					120,
+					121,
+					122,
+					123
+				],
+				"scale": 0.30000000000000016,
+				"pos": {
+					"x": 241,
+					"y": 63
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 13,
+						"x": 399,
+						"y": 100
+					},
+					{
+						"ver": 1,
+						"nodeId": 14,
+						"x": 400,
+						"y": 420
+					},
+					{
+						"ver": 1,
+						"nodeId": 19,
+						"x": 714.9999999999997,
+						"y": 422
+					},
+					{
+						"ver": 1,
+						"nodeId": 119,
+						"x": 1084.166666666666,
+						"y": 507.49999999999943
+					},
+					{
+						"ver": 1,
+						"nodeId": 120,
+						"x": 1162.4999999999989,
+						"y": 892.4999999999992
+					},
+					{
+						"ver": 1,
+						"nodeId": 121,
+						"x": 738.3333333333335,
+						"y": 1041.6666666666656
+					},
+					{
+						"ver": 1,
+						"nodeId": 122,
+						"x": 540.8333333333333,
+						"y": 1419.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 123,
+						"x": 354.9999999999996,
+						"y": 1040.8333333333328
+					},
+					{
+						"ver": 1,
+						"nodeId": 124,
+						"x": 905.833333333333,
+						"y": 1529.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 125,
+						"x": 1279.9999999999989,
+						"y": 1430
+					},
+					{
+						"ver": 1,
+						"nodeId": 126,
+						"x": 1493.3333333333328,
+						"y": 1094.999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 127,
+						"x": 1712.4999999999989,
+						"y": 1499.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 128,
+						"x": 1751.6666666666663,
+						"y": 699.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 129,
+						"x": 2141.666666666666,
+						"y": 564.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 130,
+						"x": 1939.9999999999998,
+						"y": 1054.9999999999986
+					}
+				],
+				"nodeIds": [
+					13,
+					14,
+					19,
+					119,
+					120,
+					121,
+					122,
+					123,
+					124,
+					125,
+					126,
+					127,
+					128,
+					129,
+					130
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 1,
+						"points": {
+							"src": {
+								"x": 479,
+								"y": 180
+							},
+							"dst": {
+								"x": 480,
+								"y": 500
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 500
+							},
+							"dst": {
+								"x": 794.9999999999997,
+								"y": 502
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 124,
+						"points": {
+							"src": {
+								"x": 794.9999999999997,
+								"y": 502
+							},
+							"dst": {
+								"x": 1164.166666666666,
+								"y": 587.4999999999994
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 127,
+						"points": {
+							"src": {
+								"x": 1164.166666666666,
+								"y": 587.4999999999994
+							},
+							"dst": {
+								"x": 1242.4999999999989,
+								"y": 972.4999999999992
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 129,
+						"points": {
+							"src": {
+								"x": 1242.4999999999989,
+								"y": 972.4999999999992
+							},
+							"dst": {
+								"x": 818.3333333333335,
+								"y": 1121.6666666666656
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 133,
+						"points": {
+							"src": {
+								"x": 818.3333333333335,
+								"y": 1121.6666666666656
+							},
+							"dst": {
+								"x": 620.8333333333333,
+								"y": 1499.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 135,
+						"points": {
+							"src": {
+								"x": 818.3333333333335,
+								"y": 1121.6666666666656
+							},
+							"dst": {
+								"x": 434.9999999999996,
+								"y": 1120.8333333333328
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 136,
+						"points": {
+							"src": {
+								"x": 434.9999999999996,
+								"y": 1120.8333333333328
+							},
+							"dst": {
+								"x": 620.8333333333333,
+								"y": 1499.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 137,
+						"points": {
+							"src": {
+								"x": 620.8333333333333,
+								"y": 1499.9999999999993
+							},
+							"dst": {
+								"x": 985.833333333333,
+								"y": 1609.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 140,
+						"points": {
+							"src": {
+								"x": 985.833333333333,
+								"y": 1609.9999999999998
+							},
+							"dst": {
+								"x": 1359.9999999999989,
+								"y": 1510
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 142,
+						"points": {
+							"src": {
+								"x": 1359.9999999999989,
+								"y": 1510
+							},
+							"dst": {
+								"x": 1573.3333333333328,
+								"y": 1174.999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 144,
+						"points": {
+							"src": {
+								"x": 1359.9999999999989,
+								"y": 1510
+							},
+							"dst": {
+								"x": 1792.4999999999989,
+								"y": 1579.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 145,
+						"points": {
+							"src": {
+								"x": 1792.4999999999989,
+								"y": 1579.9999999999995
+							},
+							"dst": {
+								"x": 1573.3333333333328,
+								"y": 1174.999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 147,
+						"points": {
+							"src": {
+								"x": 1573.3333333333328,
+								"y": 1174.999999999999
+							},
+							"dst": {
+								"x": 1831.6666666666663,
+								"y": 779.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 149,
+						"points": {
+							"src": {
+								"x": 1831.6666666666663,
+								"y": 779.9999999999993
+							},
+							"dst": {
+								"x": 2221.666666666666,
+								"y": 644.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 150,
+						"points": {
+							"src": {
+								"x": 1573.3333333333328,
+								"y": 1174.999999999999
+							},
+							"dst": {
+								"x": 2019.9999999999998,
+								"y": 1134.9999999999986
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 151,
+						"points": {
+							"src": {
+								"x": 2019.9999999999998,
+								"y": 1134.9999999999986
+							},
+							"dst": {
+								"x": 1831.6666666666663,
+								"y": 779.9999999999993
+							}
+						}
+					}
+				],
+				"condIds": [
+					1,
+					6,
+					124,
+					127,
+					129,
+					133,
+					135,
+					136,
+					137,
+					140,
+					142,
+					144,
+					145,
+					147,
+					149,
+					150,
+					151
+				],
+				"scale": 0.20000000000000015,
+				"pos": {
+					"x": 250,
+					"y": 118
+				}
+			}
+		],
+		"stageIds": [
+			11,
+			13
+		]
+	}
+}

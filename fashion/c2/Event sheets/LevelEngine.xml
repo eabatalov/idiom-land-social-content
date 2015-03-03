@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelEngine</name>
+    <events>
+        <variable constant="1" name="WINDOW_WIDTH" sid="1295065130285739" static="0" type="number">980</variable>
+        <variable constant="1" name="WINDOW_HEIGHT" sid="8561640085275173" static="0" type="number">500</variable>
+        <include>LevelEngineLogic</include>
+        <include>LevelEngineUILib</include>
+    </events>
+</c2eventsheet>
