@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuSound</name>
+    <events>
+        <event-group description="" sid="7942800663498461" title="Menu sound">
+            <sub-events>
+                <event-block sid="2896928984240005">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4859030756928232" type="Function">
+                            <param id="0" name="Name">&quot;onMenuBtnDown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="9982060043657511">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3280161274645509" type="Function">
+                            <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="683507546292465">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6014132496918947" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

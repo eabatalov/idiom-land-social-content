@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelResultsPromoPopup</name>
+    <events>
+        <include>PlayerId</include>
+        <event-group description="" sid="2142958553433011" title="Level results brief main popup">
+            <sub-events>
+                <variable constant="1" name="POPUP_AUTO_SHOW_TIMEOUT_SEC" sid="2360935152376111" static="0" type="number">10</variable>
+                <variable constant="1" name="GAME_SURVEY_ENTERED_KEY" sid="7478509650732039" static="0" type="text">game_survey_entered</variable>
+                <variable constant="1" name="SURVEY_URL" sid="3713919274627755" static="0" type="text">https://docs.google.com/forms/d/1PPEeWB-gg_5DV6fLnzxCyIMtvg80oxKRlItOLM6N4L8/viewform?entry.654823294=</variable>
+                <comment>Reseted only when game is restarted.</comment>
+                <variable constant="0" name="IsPopupShownAfterLevel" sid="8471372970918731" static="1" type="number">0</variable>
+                <event-block sid="6579826143979538">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8057406490312688" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4585414614780111">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="4959635795496469" type="System">
+                                    <param id="0" name="Seconds">POPUP_AUTO_SHOW_TIMEOUT_SEC</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3736822896686815" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6798529197993355">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9822719586102181" type="Function">
+                            <param id="0" name="Name">&quot;onGoToLevel&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5937305061815875">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="367330029413348" type="System">
+                                    <param id="0" name="Variable">IsPopupShownAfterLevel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>returns 1 if popup is shown, 0 otherwise</comment>
+                <event-block sid="4046246521818577">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1517562080072965" type="Function">
+                            <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="3243676221887303">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1733593393517483" type="System">
+                                    <param id="0" name="First value">QuestPersistentStorage.get(GAME_SURVEY_ENTERED_KEY)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="367511491084503" type="System">
+                                    <param id="0" name="Variable">IsPopupShownAfterLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="4654697599730104" type="Function">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3447595122269228">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8643441669109843" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9564291852428423" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPromoPopup&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="3733272499517751" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1253438487771231">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3071081430039471" type="Function">
+                            <param id="0" name="Name">&quot;ShowPromoPopup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3023630740003815">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2781975442624071" type="System">
+                                    <param id="0" name="Variable">IsPopupShownAfterLevel</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2382532134529806" type="Function">
+                                    <param id="0" name="Name">&quot;onPopupShown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7153077284617888">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1734308601127105" type="Function">
+                            <param id="0" name="Name">&quot;HidePromoPopup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9484527690010573">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3199775331664541" type="Function">
+                                    <param id="0" name="Name">&quot;onPopupHidden&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4461096073087089">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5204729765068512" type="Function">
+                            <param id="0" name="Name">&quot;PromoPopupYesBtnClicked&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="playerId" sid="9494292765613178" static="0" type="text"></variable>
+                        <event-block sid="3599142646975935">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3141970690649141" type="Function">
+                                    <param id="0" name="Name">&quot;getPlayerId&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4270831226365265" type="System">
+                                    <param id="0" name="Variable">playerId</param>
+                                    <param id="1" name="Value">Function.ReturnValue</param>
+                                </action>
+                                <action id="0" name="Put" sid="805901370223161" type="QuestPersistentStorage">
+                                    <param id="0" name="Name">GAME_SURVEY_ENTERED_KEY</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7698347868856481" type="Function">
+                                    <param id="0" name="Name">&quot;HidePromoPopup&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="8" name="Open URL in new window" sid="2460485480408652" type="Browser">
+                                    <param id="0" name="URL">SURVEY_URL &amp; URLEncode(playerId)</param>
+                                    <param id="1" name="Tag">&quot;Idiom Land Survey&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2853558796416209">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8151477271948226" type="Function">
+                            <param id="0" name="Name">&quot;PromoPopupNoBtnClicked&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5230808146293744" type="Function">
+                            <param id="0" name="Name">&quot;HidePromoPopup&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8652144622832543">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="8342663541374203" type="Function">
+                                    <param id="0" name="Name">&quot;HidePromoPopup&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="9455908075981332" title="Level results brief main buttons">
+                    <sub-events>
+                        <variable constant="0" name="IsTouchingYesBtn" sid="9023515156333627" static="1" type="number">0</variable>
+                        <variable constant="0" name="IsTouchingNoBtn" sid="1848175593183775" static="1" type="number">0</variable>
+                        <event-block sid="7347308643392504">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9951967395597819" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2506642659253866">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5074639641374311" type="System">
+                                            <param id="0" name="Variable">IsTouchingYesBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6016862865103713" type="System">
+                                            <param id="0" name="Variable">IsTouchingNoBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2822807190985534">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="8117935184200728" type="Touch" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2926927395204654">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9728105799056976" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnDown&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8205245397940214" type="System">
+                                            <param id="0" name="Variable">IsTouchingYesBtn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7176747084406488">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3190237105055211" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8903271602464817" type="Function">
+                                            <param id="0" name="Name">&quot;onMenuBtnDown&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1435168856770015" type="System">
+                                            <param id="0" name="Variable">IsTouchingNoBtn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3027491804372352">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="7205140010514707" type="Touch" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7458833978903066">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6036568265360673" type="System">
+                                            <param id="0" name="Variable">IsTouchingYesBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="862917164605918" type="System">
+                                            <param id="0" name="Variable">IsTouchingYesBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="9950020667839608">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4497146435857455" type="Function">
+                                                    <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="7672554497501421" type="Function">
+                                                    <param id="0" name="Name">&quot;PromoPopupYesBtnClicked&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2571019355171793">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6475128840997407" type="System">
+                                            <param id="0" name="Variable">IsTouchingNoBtn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="534885619395292" type="System">
+                                            <param id="0" name="Variable">IsTouchingNoBtn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="9856741120469714">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="7042261155255014" type="Function">
+                                                    <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="6461252423887035" type="Function">
+                                                    <param id="0" name="Name">&quot;PromoPopupNoBtnClicked&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

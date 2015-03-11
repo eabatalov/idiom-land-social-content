@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerId</name>
+    <events>
+        <event-group description="" sid="6567447834819341" title="Player id">
+            <sub-events>
+                <variable constant="1" name="PLAYER_ID_KEY" sid="1007673582476784" static="0" type="text">player_id</variable>
+                <variable constant="0" name="PlayerId" sid="2565187537436913" static="1" type="text"></variable>
+                <comment>param(0): length</comment>
+                <event-block sid="7698672238279543">
+                    <conditions>
+                        <condition id="0" name="On function" sid="373804486995213" type="Function">
+                            <param id="0" name="Name">&quot;genRandomStr&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="randStr" sid="7584143983868455" static="0" type="text"></variable>
+                        <event-block sid="5663959589912886">
+                            <conditions>
+                                <condition id="-10" name="For" sid="2334464761234187" type="System">
+                                    <param id="0" name="Name">&quot;genRandStr&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Function.Param(0) - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6278009565101931" type="System">
+                                    <param id="0" name="Variable">randStr</param>
+                                    <param id="1" name="Value">randStr &amp; choose(&quot;a&quot;, &quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4408894102835749">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="2539995541991402" type="Function">
+                                    <param id="0" name="Value">randStr</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1132971397568937">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6019170134140861" type="Function">
+                            <param id="0" name="Name">&quot;getPlayerId&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8467308546145508">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5924737356680147" type="System">
+                                    <param id="0" name="First value">PlayerId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7011664765574739" type="System">
+                                    <param id="0" name="Variable">PlayerId</param>
+                                    <param id="1" name="Value">QuestPersistentStorage.get(PLAYER_ID_KEY)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1800289986071926">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3551160003866144" type="System">
+                                            <param id="0" name="Variable">PlayerId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1772616836653337" type="Function">
+                                            <param id="0" name="Name">&quot;genRandomStr&quot;</param>
+                                            <param id="1" name="Parameter {n}">15</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8105781038699328" type="System">
+                                            <param id="0" name="Variable">PlayerId</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6191846903843157">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Put" sid="7326644337141848" type="QuestPersistentStorage">
+                                    <param id="0" name="Name">PLAYER_ID_KEY</param>
+                                    <param id="1" name="Value">PlayerId</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="5732101406428841" type="Function">
+                                    <param id="0" name="Value">PlayerId</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

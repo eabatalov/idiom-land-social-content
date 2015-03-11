@@ -1,0 +1,501 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "Intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "Intro",
+						"objs": [
+							"Player",
+							"batman",
+							"nigga",
+							"yoda",
+							"end",
+							"friend"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						163
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"batman",
+							"nigga",
+							"yoda",
+							"end",
+							"friend"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 147,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						163
+					],
+					"outCondIds": [
+						168
+					],
+					"props": {
+						"id": "Player",
+						"text": "Create a dialogue in Clilk and modeling situation.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 148,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						169
+					],
+					"outCondIds": [
+						170
+					],
+					"props": {
+						"id": "batman",
+						"text": "Easily create interactive storie",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 149,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						171
+					],
+					"outCondIds": [
+						166
+					],
+					"props": {
+						"id": "nigga",
+						"text": "Almost guessed. This Star Wars =)",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 150,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						166,
+						172
+					],
+					"outCondIds": [
+						167
+					],
+					"props": {
+						"id": "yoda",
+						"text": "In Clilk can use photos and video.",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 151,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						167
+					],
+					"outCondIds": [
+						173
+					],
+					"props": {
+						"id": "end",
+						"text": "Your story you can share with your friends.",
+						"phraseType": "THINK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 152,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						168
+					],
+					"outCondIds": [
+						169
+					],
+					"props": {
+						"id": "friend",
+						"text": "Ops! I just print out your comics...",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 153,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						170
+					],
+					"outCondIds": [
+						171,
+						172
+					],
+					"props": {
+						"id": "nigga",
+						"text": "Create a quiz Clilk. By the way, what will be the next stage?",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL",
+						"ans1": "Breaking Bad",
+						"ans2": "Star Wars",
+						"ans3": "House of Cards",
+						"ans4": "Game of Thrones"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 154,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						173
+					],
+					"outCondIds": [
+						184
+					],
+					"props": {
+						"text": "Create your own interactive story. Be the below email."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 165,
+					"type": 7,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						184
+					],
+					"outCondIds": [],
+					"props": {}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 163,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 166,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 167,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 168,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 169,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 170,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 171,
+					"type": 7,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 172,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 173,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 184,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 13,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 9,
+					"label": "stage2",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"name": "stage2",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [
+						6
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						6
+					],
+					"outCondIds": [
+						7
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "stage1",
+								"$$hashKey": "01M"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "stage2",
+								"$$hashKey": "01O"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7
+					],
+					"outCondIds": [
+						11
+					],
+					"props": {
+						"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						11
+					],
+					"outCondIds": [
+						12
+					],
+					"props": {
+						"id": "Player",
+						"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						12
+					],
+					"outCondIds": [
+						13
+					],
+					"props": {
+						"id": "Player",
+						"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						13
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "Player",
+						"text": "Ok. This is the end,",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		}
+	]
+}
