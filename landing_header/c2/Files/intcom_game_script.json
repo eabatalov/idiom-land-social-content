@@ -78,10 +78,10 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						169
+						7791
 					],
 					"outCondIds": [
-						170
+						7793
 					],
 					"props": {
 						"id": "batman",
@@ -158,7 +158,7 @@
 						168
 					],
 					"outCondIds": [
-						169
+						7791
 					],
 					"props": {
 						"id": "friend",
@@ -174,7 +174,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						170
+						7792
 					],
 					"outCondIds": [
 						171,
@@ -218,6 +218,26 @@
 					],
 					"outCondIds": [],
 					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5133,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7793
+					],
+					"outCondIds": [
+						7792
+					],
+					"props": {
+						"name": "StartShadow",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
 				}
 			],
 			"conds": [
@@ -261,22 +281,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 169,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 170,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 171,
 					"type": 7,
 					"props": {}
@@ -301,6 +305,30 @@
 					"type": 11,
 					"props": {
 						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7791,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7792,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7793,
+					"type": 11,
+					"props": {
+						"clearStage": false
 					}
 				}
 			]

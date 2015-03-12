@@ -55,5 +55,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="8351913114349771">
+            <conditions>
+                <condition id="0" name="On function" sid="1909096552205031" type="Function">
+                    <param id="0" name="Name">&quot;StartShadow&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="283734400851829" type="batman">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3377083560951882" type="Halk">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7179126395680074" type="IronMan">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
