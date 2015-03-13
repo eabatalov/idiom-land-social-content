@@ -73,5 +73,33 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3414149953973279">
+            <conditions>
+                <condition id="0" name="On function" sid="4588531865292723" type="Function">
+                    <param id="0" name="Name">&quot;ResetScene&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="7151227068365375" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="1605498501172249">
+            <conditions>
+                <condition id="0" name="On function" sid="1334567104498087" type="Function">
+                    <param id="0" name="Name">&quot;StartVideo&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3418023124068978">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set URL" sid="8916090881060813" type="HTML_iFrame_Pode">
+                            <param id="0" name="URL">&quot;https://www.youtube.com/embed/OMOVFvcNfvE?rel=0&amp;autoplay=1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

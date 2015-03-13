@@ -78,10 +78,10 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						7791
+						7802
 					],
 					"outCondIds": [
-						7793
+						7803
 					],
 					"props": {
 						"id": "batman",
@@ -100,7 +100,7 @@
 						171
 					],
 					"outCondIds": [
-						166
+						7813
 					],
 					"props": {
 						"id": "nigga",
@@ -116,8 +116,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						166,
-						172
+						7817
 					],
 					"outCondIds": [
 						167
@@ -158,7 +157,7 @@
 						168
 					],
 					"outCondIds": [
-						7791
+						7801
 					],
 					"props": {
 						"id": "friend",
@@ -174,11 +173,11 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						7792
+						7803
 					],
 					"outCondIds": [
 						171,
-						172
+						7814
 					],
 					"props": {
 						"id": "nigga",
@@ -212,11 +211,13 @@
 					"id": 165,
 					"type": 7,
 					"label": "",
-					"continue": false,
+					"continue": true,
 					"inCondIds": [
 						184
 					],
-					"outCondIds": [],
+					"outCondIds": [
+						7805
+					],
 					"props": {}
 				},
 				{
@@ -224,12 +225,12 @@
 					"id": 5133,
 					"type": 10,
 					"label": "",
-					"continue": false,
+					"continue": true,
 					"inCondIds": [
-						7793
+						7801
 					],
 					"outCondIds": [
-						7792
+						7802
 					],
 					"props": {
 						"name": "StartShadow",
@@ -237,6 +238,61 @@
 						"source": "c2",
 						"params": [],
 						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5142,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7805
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "ResetScene",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5151,
+					"type": 10,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7813,
+						7814
+					],
+					"outCondIds": [
+						7816
+					],
+					"props": {
+						"name": "StartVideo",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5152,
+					"type": 6,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7816
+					],
+					"outCondIds": [
+						7817
+					],
+					"props": {
+						"secs": 2
 					}
 				}
 			],
@@ -250,14 +306,6 @@
 				{
 					"ver": 1,
 					"id": 163,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 166,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -287,12 +335,6 @@
 				},
 				{
 					"ver": 1,
-					"id": 172,
-					"type": 4,
-					"props": {}
-				},
-				{
-					"ver": 1,
 					"id": 173,
 					"type": 11,
 					"props": {
@@ -309,7 +351,7 @@
 				},
 				{
 					"ver": 1,
-					"id": 7791,
+					"id": 7801,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -317,7 +359,13 @@
 				},
 				{
 					"ver": 1,
-					"id": 7792,
+					"id": 7802,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7803,
 					"type": 11,
 					"props": {
 						"clearStage": true
@@ -325,11 +373,37 @@
 				},
 				{
 					"ver": 1,
-					"id": 7793,
+					"id": 7805,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7813,
 					"type": 11,
 					"props": {
-						"clearStage": false
+						"clearStage": true
 					}
+				},
+				{
+					"ver": 1,
+					"id": 7814,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7816,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7817,
+					"type": 8,
+					"props": {}
 				}
 			]
 		},

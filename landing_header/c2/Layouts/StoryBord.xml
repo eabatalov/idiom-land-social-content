@@ -255,7 +255,7 @@
                 <instance type="HTML_iFrame_Pode" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <url>https://www.youtube.com/embed/OMOVFvcNfvE?rel=0&amp;autoplay=1&amp;loop=1</url>
+                        <url></url>
                         <style>border: 1px;</style>
                         <html-tag-id>my_iframe</html-tag-id>
                         <scrolling>Auto</scrolling>
