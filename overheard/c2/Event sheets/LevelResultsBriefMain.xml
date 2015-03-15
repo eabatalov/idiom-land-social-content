@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelResultsBriefMain</name>
+    <events>
+        <include>LevelResultsCommon</include>
+        <include>LevelResultsBriefSound</include>
+        <event-group description="" sid="8501800471470332" title="Level results brief group">
+            <sub-events>
+                <variable constant="1" name="SUCCESS_COLOR_R" sid="8384096303547795" static="0" type="number">71</variable>
+                <variable constant="1" name="SUCCESS_COLOR_G" sid="9044403269674197" static="0" type="number">189</variable>
+                <variable constant="1" name="SUCCESS_COLOR_B" sid="5817119571671729" static="0" type="number">131</variable>
+                <variable constant="1" name="FAIL_COLOR_R" sid="5500309230561139" static="0" type="number">240</variable>
+                <variable constant="1" name="FAIL_COLOR_G" sid="7408969497604845" static="0" type="number">51</variable>
+                <variable constant="1" name="FAIL_COLOR_B" sid="9454082368479114" static="0" type="number">29</variable>
+                <variable constant="0" name="IsPopupActive" sid="7423836955213398" static="1" type="number">0</variable>
+                <event-block sid="5769935275446483">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7386954451565772" type="System">
+                            <param id="0" name="Variable">IsPopupActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5409839862677707">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3354958724781207" type="Function">
+                                    <param id="0" name="Name">&quot;onMenuBtnUp&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="360642262469873" type="Function">
+                                    <param id="0" name="Name">&quot;ShowPopupIfNeeded&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>TODO</comment>
+                        <event-block sid="8189600599869268">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3899384284234853" type="System">
+                                    <param id="0" name="First value">Function.ReturnValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="9805860923443649" title="Level results brief popup handling">
+                    <sub-events>
+                        <event-block sid="393401933983163">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8375637056932051" type="Function">
+                                    <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3974977265764213" type="System">
+                                    <param id="0" name="Variable">IsPopupActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3985360384050321">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9736082352793984" type="Function">
+                                    <param id="0" name="Name">&quot;onPopupShown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2507813834143186" type="System">
+                                    <param id="0" name="Variable">IsPopupActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1288573461706937">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2892841624707721" type="Function">
+                                    <param id="0" name="Name">&quot;onPopupHidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4093065004514744" type="System">
+                                    <param id="0" name="Variable">IsPopupActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

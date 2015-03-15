@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComLevelNPCAnimation</name>
+    <events>
+        <event-group description="" sid="8087164711371413" title="Interactive comics level NPC animation">
+            <sub-events>
+                <event-group description="" sid="351209168602593" title="Interactive comics level NPC animation (interface)">
+                    <sub-events>
+                        <comment>Play manual animation&#x0D;&#x0A;param(0): NPC UID&#x0D;&#x0A;param(1): animation name</comment>
+                        <event-block sid="9816332067744781">
+                            <conditions>
+                                <condition id="0" name="On function" sid="78575615886477" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnim&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7765059654111419" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7316534022448798">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1580829502787967" type="Function">
+                                            <param id="0" name="Name">&quot;TrySetNPCAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9556267305580947">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="246891249381031" type="System">
+                                            <param id="0" name="First value">Function.ReturnValue</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6058605646829006" type="NPC">
+                                            <param id="0" name="Instance variable">AnimPrio</param>
+                                            <param id="1" name="Value">NPC_ANIM_PRIORITY_MANUAL</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4126503825855898">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9438436172785534" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2961260338118651" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimNPCCanceled&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Play manual timed animation&#x0D;&#x0A;param(0): NPC UID&#x0D;&#x0A;param(1): animation name&#x0D;&#x0A;param(2): duration. ms</comment>
+                        <event-block sid="274562704016703">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9589195958901582" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnimTimed&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7702301100150513" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="830061467471844">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8797726838568999" type="Function">
+                                            <param id="0" name="Name">&quot;TrySetNPCAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <variable constant="0" name="AnimDurationMS" sid="6248042203920165" static="0" type="number">0</variable>
+                                <event-block sid="5680408022892607">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8960101688015556" type="System">
+                                            <param id="0" name="First value">Function.ReturnValue</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4276584741684242" type="NPC">
+                                            <param id="0" name="Instance variable">AnimPrio</param>
+                                            <param id="1" name="Value">NPC_ANIM_PRIORITY_MANUAL</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5223306412972749" type="System">
+                                            <param id="0" name="Variable">AnimDurationMS</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="8606934126511171" type="System">
+                                            <param id="0" name="Seconds">AnimDurationMS / 1000.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1006483780574872" type="Function">
+                                            <param id="0" name="Name">&quot;NPCAnimCancel&quot;</param>
+                                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="253712602811234">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1723342702118418" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6724701819449792" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimNPCCanceled&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Play preemtable animation&#x0D;&#x0A;param(0): NPC UID&#x0D;&#x0A;param(1): animation name</comment>
+                        <event-block sid="9100415667681732">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7296784793231019" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnimRunPreemptable&quot; </param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="13500811184942" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4632809528912663">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9767460393562549" type="NPC">
+                                            <param id="0" name="Instance variable">AnimPrio</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">NPC_ANIM_PRIORITY_MANUAL</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1845805671619933">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="1121974577892913" type="Function">
+                                                    <param id="0" name="Name">&quot;TrySetNPCAnim&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2406541593445995">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="664791734438226" type="System">
+                                                    <param id="0" name="First value">Function.ReturnValue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="4566002236476895" type="NPC">
+                                                    <param id="0" name="Instance variable">AnimPrio</param>
+                                                    <param id="1" name="Value">NPC_ANIM_PRIORITY_PREEMTABLE</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="228946862769336">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="6293334277223477" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="3841694653614575" type="Function">
+                                                    <param id="0" name="Name">&quot;onAnimNPCCanceled&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="7075754354493259">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8865980163612414" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3704752351464359" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimNPCCanceled&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): NPC UID</comment>
+                        <event-block sid="212735689446149">
+                            <conditions>
+                                <condition id="0" name="On function" sid="556392263178027" type="Function">
+                                    <param id="0" name="Name">&quot;NPCAnimCancel&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="6176221127008708" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="1" name="NPC_IDLE_ANIM_NAME" sid="3217351360983001" static="0" type="text">idle</variable>
+                                <event-block any="1" sid="943764750003875">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9908003131625981" type="NPC">
+                                            <param id="0" name="Instance variable">AnimPrio</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">NPC_ANIM_PRIORITY_PREEMTABLE</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7751974940101784" type="Function">
+                                            <param id="0" name="Name">&quot;onAnimNPCCanceled&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="329154543088026">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5364802004885602" type="Function">
+                                            <param id="0" name="Name">&quot;TrySetNPCAnim&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0){###}NPC_IDLE_ANIM_NAME</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7149610017255997" type="NPC">
+                                            <param id="0" name="Instance variable">AnimPrio</param>
+                                            <param id="1" name="Value">NPC_ANIM_PRIORITY_AUTO</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8679396905321526" title="Interactive comics level NPC animation (implementation)">
+                    <sub-events>
+                        <event-block sid="4156035545241978">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="4259362745171517" type="NPC" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8319007539485253">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1649384527371383" type="Function">
+                                            <param id="0" name="Name">&quot;NPCAnimCancel&quot;</param>
+                                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): NPC UID&#x0D;&#x0A;param(1): anim name</comment>
+                        <event-block sid="1354155892149126">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3558429763832426" type="Function">
+                                    <param id="0" name="Name">&quot;GenNPCAnimName&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="4084171099458547" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2493034409494545">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="5983173130746918" type="Function">
+                                            <param id="0" name="Value">NPC.NpcID &amp; &quot;_&quot; &amp; Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1256286181426992">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8248477618754885" type="Function">
+                                    <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="770924888845732">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="2417071714252952" type="System">
+                                            <param id="0" name="Object">NPC</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1912597437140176" type="Function">
+                                            <param id="0" name="Name">&quot;NPCAnimCancel&quot;</param>
+                                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): NPC UID&#x0D;&#x0A;param(1): anim name&#x0D;&#x0A;returns 1 if success, 0 else</comment>
+                        <event-block sid="3036968849506">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6897199139324376" type="Function">
+                                    <param id="0" name="Name">&quot;TrySetNPCAnim&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="4299506708503436" type="NPC">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="AnimName" sid="7910009509304672" static="0" type="text"></variable>
+                                <event-block sid="2764548521977156">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3258064320127706" type="Function">
+                                            <param id="0" name="Name">&quot;GenNPCAnimName&quot;</param>
+                                            <param id="1" name="Parameter {n}">NPC.UID{###}Function.Param(1)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7108033891736652" type="System">
+                                            <param id="0" name="Variable">AnimName</param>
+                                            <param id="1" name="Value">Function.ReturnValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3013732699348898">
+                                    <conditions>
+                                        <condition behavior="QuestEngineSpriteExtras" id="0" name="Has animation" sid="6366287496359747" type="NPC">
+                                            <param id="0" name="Animation name">AnimName</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8361653849089794" type="NPC">
+                                            <param id="0" name="Animation">AnimName</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="8740231712647808" type="Function">
+                                            <param id="0" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1088217166064277">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1024328122666812" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="2659600370870575" type="Function">
+                                            <param id="0" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <variable constant="1" name="NPC_ANIM_PRIORITY_AUTO" sid="9241664571895226" static="0" type="number">0</variable>
+                <variable constant="1" name="NPC_ANIM_PRIORITY_PREEMTABLE" sid="9983221837373751" static="0" type="number">1</variable>
+                <variable constant="1" name="NPC_ANIM_PRIORITY_MANUAL" sid="5861638279206482" static="0" type="number">2</variable>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuestEngineUIDialogFadeInOut</name>
+    <events>
+        <event-group description="" sid="997480748034186" title="Platformer level dialog UI fade">
+            <sub-events>
+                <variable constant="0" name="CurrentSpeechOpacityChangeStepUp" sid="4825987306615553" static="1" type="number">15</variable>
+                <variable constant="0" name="CurrentSpeechOpacityChangeStepDown" sid="8150897963886032" static="1" type="number">15</variable>
+                <variable constant="1" name="DEFAULT_SPEECH_OPACITY_CHANGE_STEP_UP" sid="896969382962582" static="0" type="number">15</variable>
+                <variable constant="1" name="DEFAULT_SPEECH_OPACITY_CHANGE_STEP_DOWN" sid="2707869267321103" static="0" type="number">15</variable>
+                <variable constant="1" name="MINIMAL_TIME_BETWEEN_FADES_SEC" sid="8354941427507652" static="0" type="number">0.5</variable>
+                <variable constant="1" name="OPACITY_CHANGED_THRESHOLD" sid="5547579215716478" static="0" type="number">2</variable>
+                <event-block sid="9928466582649426">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4383654832737289" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear" sid="9407406021264489" type="LastOpacityTransitionsDict" />
+                    </actions>
+                </event-block>
+                <variable constant="0" name="SpeechTargetOpacity" sid="5565827916340631" static="1" type="number">0</variable>
+                <variable constant="0" name="QuizzTargetOpacity" sid="3997317542420415" static="1" type="number">0</variable>
+                <variable constant="0" name="SpeechOpacityTargetReachPending" sid="5170841252083126" static="1" type="number">0</variable>
+                <variable constant="0" name="QuizzOpacityTargetReachPending" sid="9233964998185497" static="1" type="number">0</variable>
+                <event-block sid="7975685022473077">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3498362571994075" type="Function">
+                            <param id="0" name="Name">&quot;VarsReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="779069809254635">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4093183489107359" type="System">
+                                    <param id="0" name="Variable">SpeechTargetOpacity</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4145732158097151" type="System">
+                                    <param id="0" name="Variable">QuizzTargetOpacity</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5611048734238585" type="System">
+                                    <param id="0" name="Variable">SpeechOpacityTargetReachPending</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5320265892292315" type="System">
+                                    <param id="0" name="Variable">QuizzOpacityTargetReachPending</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="9770904231275377" title="Platformer level dialog UI fade (interface)">
+                    <sub-events>
+                        <comment>param(0): opacity</comment>
+                        <variable constant="0" name="SpeechSetTargetOpacityValue" sid="2602975149855904" static="1" type="number">0</variable>
+                        <event-block sid="5453156334827151">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7958585308316241" type="Function">
+                                    <param id="0" name="Name">&quot;SpeechSetTargetOpacity&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6792136372798907" type="System">
+                                    <param id="0" name="Variable">SpeechSetTargetOpacityValue</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7285662807405383">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="7124202044796621" type="LastOpacityTransitionsDict">
+                                            <param id="0" name="Key">str(DialogSpeechBg.UID)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="133354115479813" type="System">
+                                            <param id="0" name="First value">wallclocktime - LastOpacityTransitionsDict.Get(str(DialogSpeechBg.UID))</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">MINIMAL_TIME_BETWEEN_FADES_SEC</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="1613230680680871" type="System">
+                                            <param id="0" name="Seconds">max(MINIMAL_TIME_BETWEEN_FADES_SEC - (wallclocktime - LastOpacityTransitionsDict.Get(str(DialogSpeechBg.UID))), 0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8854007071453572" type="Function">
+                                            <param id="0" name="Name">&quot;SpeechSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">SpeechSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3234365929772428">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2629204208989806" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7856702939054707" type="Function">
+                                            <param id="0" name="Name">&quot;SpeechSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">SpeechSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): 0 - invisible, 1 - visible</comment>
+                        <event-block sid="8350024249357892">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1774765632965764" type="Function">
+                                    <param id="0" name="Name">&quot;SpeechSetVisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7832797532619964">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="528935578425241" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="1038373714058188" type="DialogSpeechBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7591797178955855" type="DialogPhraseTxt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4639471445004374" type="DialogPhraseBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1969914158621867" type="DialogSpeakerPhoto">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9481113991201274" type="DialogSpeakerNameTxt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2531929849770315">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3078090551706265" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="1637592712193701" type="DialogSpeechBg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7796258429368739" type="DialogPhraseTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4242854379824697" type="DialogPhraseBg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7291214151298435" type="DialogSpeakerPhoto">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1861286149690363" type="DialogSpeakerNameTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7731801275290401">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2965344149983955" type="Function">
+                                            <param id="0" name="Name">&quot;onPhraseVisibleChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): opacity</comment>
+                        <variable constant="0" name="CurrentOpacity" sid="2588381458659113" static="0" type="number">0</variable>
+                        <event-block sid="8200201078847688">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6559638631177827" type="Function">
+                                    <param id="0" name="Name">&quot;SpeechSetOpacity&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9973585584701911">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9370634771170566" type="System">
+                                            <param id="0" name="Variable">CurrentOpacity</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="7498157487945869" type="DialogSpeechBg">
+                                            <param id="0" name="Opacity">CurrentOpacity</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="7891932096763077" type="DialogPhraseTxt">
+                                            <param id="0" name="Opacity">CurrentOpacity</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="9719619215195947" type="DialogPhraseBg">
+                                            <param id="0" name="Opacity">CurrentOpacity</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="1928901987494615" type="DialogSpeakerPhoto">
+                                            <param id="0" name="Opacity">CurrentOpacity</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="7767502101996841" type="DialogSpeakerNameTxt">
+                                            <param id="0" name="Opacity">CurrentOpacity</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="9260309134703338" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">CurrentOpacity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): multiplier</comment>
+                        <event-block sid="7040245558687982">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1574570063732174" type="Function">
+                                    <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6870266959551723">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="1190095204915956" type="System">
+                                            <param id="0" name="Variable">CurrentSpeechOpacityChangeStepUp</param>
+                                            <param id="1" name="Value">DEFAULT_SPEECH_OPACITY_CHANGE_STEP_UP * Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6862586997243027" type="System">
+                                            <param id="0" name="Variable">CurrentSpeechOpacityChangeStepDown</param>
+                                            <param id="1" name="Value">DEFAULT_SPEECH_OPACITY_CHANGE_STEP_DOWN * Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7589256174396428" title="Platformer level dialog UI (quizz interface)">
+                    <sub-events>
+                        <comment>param(0): opacity</comment>
+                        <event-block sid="2744653861449916">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1806653119462423" type="Function">
+                                    <param id="0" name="Name">&quot;QuizzSetTargetOpacity&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="QuizzSetTargetOpacityValue" sid="5112952203128145" static="1" type="number">0</variable>
+                                <event-block sid="2817204546532877">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5299575015332312" type="System">
+                                            <param id="0" name="Variable">QuizzSetTargetOpacityValue</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="170659332508204">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="3719091919392271" type="LastOpacityTransitionsDict">
+                                            <param id="0" name="Key">str(DialogAnsBg.UID)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1599072533907529" type="System">
+                                            <param id="0" name="First value">wallclocktime - LastOpacityTransitionsDict.Get(str(DialogAnsBg.UID))</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">MINIMAL_TIME_BETWEEN_FADES_SEC</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="4018134423174059" type="System">
+                                            <param id="0" name="Seconds">max(&#x0D;&#x0A;MINIMAL_TIME_BETWEEN_FADES_SEC - (wallclocktime - LastOpacityTransitionsDict.Get(str(DialogAnsBg.UID))), 0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5597317976571424" type="Function">
+                                            <param id="0" name="Name">&quot;QuizzSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">QuizzSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="445143518888093">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="158949997316633" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7171743367747883" type="Function">
+                                            <param id="0" name="Name">&quot;QuizzSetTargetOpacity_&quot;</param>
+                                            <param id="1" name="Parameter {n}">QuizzSetTargetOpacityValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): 0 - invisible, 1 - visible</comment>
+                        <event-block sid="6480823916035809">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2686612312511555" type="Function">
+                                    <param id="0" name="Name">&quot;QuizzSetVisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="145263436130593">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3399190075655222" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="1866992642876882" type="DialogAnsBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2438174784269858" type="DialogAns1Bg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="556414206242091" type="DialogAns1Txt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="405206592574766" type="DialogAns2Bg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1923856168422525" type="DialogAns2Txt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3589112695365348" type="DialogAns3Bg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="854839832604311" type="DialogAns3Txt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4371156028812285" type="DialogAns4Bg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="256919281291636" type="DialogAns4Txt">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="901046864796009">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2427666602440112" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="3169018293457824" type="DialogAnsBg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="518074675212549" type="DialogAns1Bg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5948784414804731" type="DialogAns1Txt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3762868413019344" type="DialogAns2Bg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5922618928592859" type="DialogAns2Txt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5733577864946585" type="DialogAns3Bg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5553445106541559" type="DialogAns3Txt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7719614309962202" type="DialogAns4Bg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4581851676608438" type="DialogAns4Txt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="277744221163279">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9358963351216552" type="Function">
+                                            <param id="0" name="Name">&quot;onQuizzVisibleChanged&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>param(0): opacity</comment>
+                        <event-block sid="1160797980728493">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5406454146898707" type="Function">
+                                    <param id="0" name="Name">&quot;QuizzSetOpacity&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="CurrentOpacityQ" sid="2149059370684205" static="0" type="number">0</variable>
+                                <event-block sid="6375001582941202">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8955171011519861" type="System">
+                                            <param id="0" name="Variable">CurrentOpacityQ</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="547747221369516" type="DialogAnsBg">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="6875155380273335" type="DialogAns1Bg">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="3340909709737317" type="DialogAns1Txt">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="1232053595406178" type="DialogAns2Bg">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="6529736071922966" type="DialogAns2Txt">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="2865433747843583" type="DialogAns3Bg">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="7577515461224606" type="DialogAns3Txt">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="2028691677010056" type="DialogAns4Bg">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="167399364428252" type="DialogAns4Txt">
+                                            <param id="0" name="Opacity">CurrentOpacityQ</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="3301885887019741" title="Platformer level dialog UI fade (implementation)">
+                    <sub-events>
+                        <comment>param(0): opacity</comment>
+                        <event-block sid="63218017909157">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4172845855975337" type="Function">
+                                    <param id="0" name="Name">&quot;QuizzSetTargetOpacity_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1099228895192289" type="System">
+                                    <param id="0" name="Variable">QuizzOpacityTargetReachPending</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3612947528206223" type="System">
+                                    <param id="0" name="Variable">QuizzTargetOpacity</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>param(0): opacity</comment>
+                        <event-block sid="4772381459577902">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3954867639823246" type="Function">
+                                    <param id="0" name="Name">&quot;SpeechSetTargetOpacity_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="121301467534778" type="System">
+                                    <param id="0" name="Variable">SpeechOpacityTargetReachPending</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3021511235580837" type="System">
+                                    <param id="0" name="Variable">SpeechTargetOpacity</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7383734537952296">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="3588112557789366" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="462114351838236">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8660129602332574" type="System">
+                                            <param id="0" name="Variable">SpeechOpacityTargetReachPending</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3962100352609464">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="9374322901060689" type="System">
+                                                    <param id="0" name="First value">abs(SpeechTargetOpacity - DialogSpeechBg.Opacity)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">OPACITY_CHANGED_THRESHOLD</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="3948556633646237" type="Function">
+                                                    <param id="0" name="Name">&quot;SpeechSetOpacity&quot;</param>
+                                                    <param id="1" name="Parameter {n}">DialogSpeechBg.Opacity +  ( SpeechTargetOpacity &gt; DialogSpeechBg.Opacity ? CurrentSpeechOpacityChangeStepUp : -CurrentSpeechOpacityChangeStepDown)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6729305699273376">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="1990034915271405" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2940302670451108" type="System">
+                                                    <param id="0" name="Variable">SpeechOpacityTargetReachPending</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Add key" sid="1254680422271788" type="LastOpacityTransitionsDict">
+                                                    <param id="0" name="Key">str(DialogSpeechBg.UID)</param>
+                                                    <param id="1" name="Value">wallclocktime</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="4412077651130482" type="Function">
+                                                    <param id="0" name="Name">&quot;SpeechSetVisible&quot;</param>
+                                                    <param id="1" name="Parameter {n}">SpeechTargetOpacity = 0 ? 0 : 1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="2264849187092718" type="Function">
+                                                    <param id="0" name="Name">&quot;onSpeechOpacityChanged&quot;</param>
+                                                    <param id="1" name="Parameter {n}">SpeechTargetOpacity</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="1547565076224449">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1925169830940974" type="System">
+                                            <param id="0" name="Variable">QuizzOpacityTargetReachPending</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7403382111533842">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="793561538958764" type="System">
+                                                    <param id="0" name="First value">abs(QuizzTargetOpacity - DialogAnsBg.Opacity)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">OPACITY_CHANGED_THRESHOLD</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4328295051803992" type="Function">
+                                                    <param id="0" name="Name">&quot;QuizzSetOpacity&quot;</param>
+                                                    <param id="1" name="Parameter {n}">DialogAnsBg.Opacity + (QuizzTargetOpacity &gt; DialogAnsBg.Opacity ? CurrentSpeechOpacityChangeStepUp : -CurrentSpeechOpacityChangeStepDown)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1457188626723998">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="7718051548563855" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="5034022966977158" type="System">
+                                                    <param id="0" name="Variable">QuizzOpacityTargetReachPending</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Add key" sid="4790770718435718" type="LastOpacityTransitionsDict">
+                                                    <param id="0" name="Key">str(DialogAnsBg.UID)</param>
+                                                    <param id="1" name="Value">wallclocktime</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="7447521724805653" type="Function">
+                                                    <param id="0" name="Name">&quot;QuizzSetVisible&quot;</param>
+                                                    <param id="1" name="Parameter {n}">QuizzTargetOpacity = 0 ? 0 : 1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="4537940140533687" type="Function">
+                                                    <param id="0" name="Name">&quot;onQuizzOpacityChanged&quot;</param>
+                                                    <param id="1" name="Parameter {n}">QuizzTargetOpacity</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
