@@ -1,0 +1,6357 @@
+{
+	"script": {
+		"ver": 1,
+		"name": "intcom_game",
+		"stages": [
+			{
+				"ver": 1,
+				"stageNodeId": 11,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 9,
+						"label": "leaving",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							0
+						],
+						"props": {
+							"name": "leaving",
+							"objs": [
+								"Player",
+								"papulia",
+								"mamulia",
+								"sinulia",
+								"car"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							0
+						],
+						"outCondIds": [
+							1
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"car",
+								"papulia",
+								"mamulia",
+								"sinulia"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 11,
+						"label": "Intro",
+						"continue": false,
+						"inCondIds": [
+							1
+						],
+						"outCondIds": [
+							391
+						],
+						"props": {
+							"text": "Вечер пятницы. Дэвид Джорди решил съездить в Оксфорд к родителям на выходные."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 16,
+						"type": 11,
+						"label": "Set off",
+						"continue": false,
+						"inCondIds": [
+							6
+						],
+						"outCondIds": [
+							126
+						],
+						"props": {
+							"text": "Около семи часов вечера семья Дэвида была готова к поездке и села в машину."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 17,
+						"type": 10,
+						"label": "Show/Hide NPCs",
+						"continue": true,
+						"inCondIds": [
+							391
+						],
+						"outCondIds": [
+							6
+						],
+						"props": {
+							"name": "C2API_LeavingShowNPCs",
+							"rollbackName": "C2API_LeavingHideNPCs",
+							"source": "c2",
+							"isPure": false,
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 18,
+						"type": 1,
+						"label": "Have you got everything?",
+						"continue": false,
+						"inCondIds": [
+							128,
+							258
+						],
+						"outCondIds": [
+							140
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Ничего не забыл?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 19,
+						"type": 1,
+						"label": "Of course I have",
+						"continue": false,
+						"inCondIds": [
+							151
+						],
+						"outCondIds": [
+							9
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Я все взял!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 20,
+						"type": 1,
+						"label": "I'm sure we've forgotten something.",
+						"continue": false,
+						"inCondIds": [
+							9
+						],
+						"outCondIds": [
+							10
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Я чувствутю, что мы что-то забыли...",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 21,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							10
+						],
+						"outCondIds": [
+							11
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Подарки на заднем сиденьи, книга, которую просил отец здесь...",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 22,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							11
+						],
+						"outCondIds": [
+							71
+						],
+						"props": {
+							"id": "papulia",
+							"text": "наша походная сумка в багажнике. Что еще мы могли забыть?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 26,
+						"type": 10,
+						"label": "C2API_GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							71,
+							155
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "leaving",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "motorway",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 116,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							126
+						],
+						"outCondIds": [
+							163
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "А ты рассказал родителям о поездке?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 117,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							168
+						],
+						"outCondIds": [
+							128
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Нет, в этот раз мы устроим сюрприз!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 121,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							140
+						],
+						"outCondIds": [
+							143,
+							148
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Все проверил, ничего не забыл?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Да, конечно все взял",
+							"ans2": "Надо подумать...",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 124,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							143
+						],
+						"outCondIds": [
+							144,
+							149
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Все проверил, ничего не забыл?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Да, конечно все взял",
+							"ans2": "Надо подумать...",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 126,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							144
+						],
+						"outCondIds": [
+							150,
+							153
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Все проверил, ничего не забыл?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Да, конечно все взял",
+							"ans2": "Надо подумать...",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 128,
+						"type": 10,
+						"label": "C2API_SetBool",
+						"continue": true,
+						"inCondIds": [
+							148,
+							149,
+							150
+						],
+						"outCondIds": [
+							151
+						],
+						"props": {
+							"name": "C2API_SetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "tank_fill_forgotten",
+									"$$hashKey": "09Y"
+								},
+								{
+									"type": "str",
+									"name": "val",
+									"value": "true",
+									"$$hashKey": "0A0"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 131,
+						"type": 10,
+						"label": "C2API_SetBool",
+						"continue": true,
+						"inCondIds": [
+							153
+						],
+						"outCondIds": [
+							161
+						],
+						"props": {
+							"name": "C2API_SetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "tank_fill_forgotten",
+									"$$hashKey": "09Y"
+								},
+								{
+									"type": "str",
+									"name": "val",
+									"value": "false",
+									"$$hashKey": "0A0"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 132,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							162
+						],
+						"outCondIds": [
+							155
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Я забыл заправить машину. Поедем сначала на заправку.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 136,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							161
+						],
+						"outCondIds": [
+							162
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Ты была права, дорогая.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 137,
+						"type": 3,
+						"label": "Have I notified?",
+						"continue": false,
+						"inCondIds": [
+							163
+						],
+						"outCondIds": [
+							166,
+							167
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Рассказал ли я?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Нет, это сюрприз!",
+							"ans2": "Конечно!",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 138,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							169
+						],
+						"outCondIds": [
+							258
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Вчера вечером я позвонил отцу  и сказал ему, что мы приедем около 10 вечера.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 141,
+						"type": 10,
+						"label": "C2API_SetBool",
+						"continue": true,
+						"inCondIds": [
+							167
+						],
+						"outCondIds": [
+							169
+						],
+						"props": {
+							"name": "C2API_SetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "parents_notified",
+									"$$hashKey": "09Y"
+								},
+								{
+									"type": "str",
+									"name": "val",
+									"value": "true",
+									"$$hashKey": "0A0"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 143,
+						"type": 10,
+						"label": "C2API_SetBool",
+						"continue": true,
+						"inCondIds": [
+							166
+						],
+						"outCondIds": [
+							168
+						],
+						"props": {
+							"name": "C2API_SetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "parents_notified",
+									"$$hashKey": "09Y"
+								},
+								{
+									"type": "str",
+									"name": "val",
+									"value": "false",
+									"$$hashKey": "0A0"
+								}
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 0,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 1,
+						"type": 10,
+						"props": {
+							"name": "stage_activate"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 6,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 9,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 10,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 71,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 126,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 128,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 140,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 143,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 144,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 148,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 149,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 150,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 151,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 153,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 155,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 161,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 162,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 163,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 166,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 167,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 168,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 169,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 258,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 391,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 27,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 27,
+						"type": 9,
+						"label": "motorway",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							16
+						],
+						"props": {
+							"name": "motorway",
+							"objs": [
+								"Player",
+								"sinulia",
+								"papulia",
+								"mamulia",
+								"car"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 28,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							16
+						],
+						"outCondIds": [
+							18
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"car",
+								"sinulia",
+								"papulia",
+								"mamulia"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 31,
+						"type": 10,
+						"label": "C2API_GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							18
+						],
+						"outCondIds": [
+							21
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "leaving",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "motorway",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 32,
+						"type": 1,
+						"label": "How far to go?",
+						"continue": false,
+						"inCondIds": [
+							70
+						],
+						"outCondIds": [
+							23
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Далеко еще?",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 34,
+						"type": 10,
+						"label": "C2API_MotorwayCarGo",
+						"continue": true,
+						"inCondIds": [
+							21
+						],
+						"outCondIds": [
+							69
+						],
+						"props": {
+							"name": "C2API_MotorwayCarGo",
+							"rollbackName": "C2API_MotorwayCarStop",
+							"source": "c2",
+							"isPure": false,
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 35,
+						"type": 1,
+						"label": "Only another fifty miles",
+						"continue": false,
+						"inCondIds": [
+							23
+						],
+						"outCondIds": [
+							156
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Осталось всего 50 миль. Не больше часа.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 39,
+						"type": 10,
+						"label": "C2API_MotorwayCarStop",
+						"continue": true,
+						"inCondIds": [
+							68
+						],
+						"outCondIds": [
+							67
+						],
+						"props": {
+							"name": "C2API_MotorwayCarStop",
+							"rollbackName": "C2API_MotorwayCarGo",
+							"source": "c2",
+							"isPure": false,
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 40,
+						"type": 1,
+						"label": "Damn! Tank",
+						"continue": false,
+						"inCondIds": [
+							66
+						],
+						"outCondIds": [
+							68
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Блин! Я знаю что я забыл. Я забыл заправиться перед выездом!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 41,
+						"type": 11,
+						"label": "slow down.",
+						"continue": false,
+						"inCondIds": [
+							157
+						],
+						"outCondIds": [
+							66
+						],
+						"props": {
+							"text": "Неожиданно мотор начал глохнуть, и машина остановилась."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 42,
+						"type": 11,
+						"label": "Fortunately",
+						"continue": false,
+						"inCondIds": [
+							82
+						],
+						"outCondIds": [
+							36
+						],
+						"props": {
+							"text": "К счастью, они смогли продолжить путешествие."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 43,
+						"type": 1,
+						"label": "I'm sorry, love",
+						"continue": false,
+						"inCondIds": [
+							67
+						],
+						"outCondIds": [
+							32
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Прости дорогая, я должен был послушать тебя.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 44,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							32
+						],
+						"outCondIds": [
+							33
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Ты чувствовала, что мы что-то забыли и ты была права.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 45,
+						"type": 1,
+						"label": "Yes, it's silly to",
+						"continue": false,
+						"inCondIds": [
+							33
+						],
+						"outCondIds": [
+							72
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Да. Остаться без бензина посреди пути это так глупо.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 48,
+						"type": 10,
+						"label": "C2API_GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							36,
+							160
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "motorway",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "near_parents_house",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 78,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							69
+						],
+						"outCondIds": [
+							70
+						],
+						"props": {
+							"text": "Они выехали на шоссе и направились в сторону Оксфорда."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 79,
+						"type": 3,
+						"label": "How can I help",
+						"continue": false,
+						"inCondIds": [
+							72,
+							77
+						],
+						"outCondIds": [
+							73,
+							74,
+							78
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "Как я могу помочь родителям в этой трудной ситуации?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Буду сидеть спокойно",
+							"ans2": "Позвоню в полицию",
+							"ans3": "Спою песню про топливо!",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 80,
+						"type": 1,
+						"label": "What can I do?",
+						"continue": false,
+						"inCondIds": [
+							73
+						],
+						"outCondIds": [
+							75
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Что... Что я могу сделать?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 81,
+						"type": 1,
+						"label": "Mobile Network Not Available",
+						"continue": false,
+						"inCondIds": [
+							74
+						],
+						"outCondIds": [
+							76
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "\"Мобильная связь недоступна\"\n:(",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 82,
+						"type": -1,
+						"label": "Connect",
+						"continue": true,
+						"inCondIds": [
+							75,
+							76
+						],
+						"outCondIds": [
+							77
+						],
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 83,
+						"type": 1,
+						"label": "Gimme fuel",
+						"continue": false,
+						"inCondIds": [
+							78
+						],
+						"outCondIds": [
+							79
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "Gimme fuel,\nGimme fire,\nGimme that which I desire,\nOoh!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 84,
+						"type": 1,
+						"label": "Remember",
+						"continue": false,
+						"inCondIds": [
+							79
+						],
+						"outCondIds": [
+							81
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Сын, я вспомнил!\nЯ оставил канистру бензина в багажнике!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 85,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							81
+						],
+						"outCondIds": [
+							82
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Молодец Томас!\nПрямо в яблочко!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 134,
+						"type": 10,
+						"label": "C2API_GetBool",
+						"continue": false,
+						"inCondIds": [
+							156
+						],
+						"outCondIds": [
+							157,
+							172
+						],
+						"props": {
+							"name": "C2API_GetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": true,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "tank_fill_forgotten",
+									"$$hashKey": "09Y"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 135,
+						"type": 11,
+						"label": "They continued their journey.",
+						"continue": false,
+						"inCondIds": [
+							180
+						],
+						"outCondIds": [
+							160
+						],
+						"props": {
+							"text": "Они продолжили свое путешествие."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 144,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							172
+						],
+						"outCondIds": [
+							173
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "А что в этой коробке, мам?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 145,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							173
+						],
+						"outCondIds": [
+							174
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Это подарок для бабушки.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 146,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							174
+						],
+						"outCondIds": [
+							175
+						],
+						"props": {
+							"id": "papulia",
+							"text": "А что внутри нее?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 147,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							175
+						],
+						"outCondIds": [
+							176
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "На самом деле ничего. Это просто старая коробка. Я нашла ее на чердаке.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 148,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							176
+						],
+						"outCondIds": [
+							177
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "У нас сейчас нет денег на хороший подарок.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 149,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							177
+						],
+						"outCondIds": [
+							178
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "Вчера нам пришло письмо, в котором нашей кошке предлагают кредитную карту на льготных условиях.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 150,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							178
+						],
+						"outCondIds": [
+							179
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Ха-ха-ха!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 151,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							179
+						],
+						"outCondIds": [
+							180
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Тогда мы сможем купить что-то получше к следующему визиту.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 16,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 18,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 21,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 23,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 32,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 33,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 36,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 66,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 67,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 68,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 69,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 70,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 72,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 73,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 74,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 75,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 76,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 77,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 78,
+						"type": 5,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 79,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 81,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 82,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 156,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 157,
+						"type": 10,
+						"props": {
+							"name": "true"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 160,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 172,
+						"type": 10,
+						"props": {
+							"name": "false"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 173,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 174,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 175,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 176,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 177,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 178,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 179,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 180,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 49,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 49,
+						"type": 9,
+						"label": "near_parents_house",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							37
+						],
+						"props": {
+							"name": "near_parents_house",
+							"objs": [
+								"Player",
+								"mamulia",
+								"papulia",
+								"sinulia",
+								"ded",
+								"baba"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 50,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							37
+						],
+						"outCondIds": [
+							39
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"baba",
+								"mamulia",
+								"papulia",
+								"sinulia",
+								"ded"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 53,
+						"type": 10,
+						"label": "C2API_GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							39
+						],
+						"outCondIds": [
+							42
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "motorway",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "near_parents_house",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 54,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							43
+						],
+						"outCondIds": [
+							253
+						],
+						"props": {
+							"text": "Оксфорд был невероятно красив этим вечером. Не зря его называют \"Городом фей\"."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 56,
+						"type": 1,
+						"label": "wow",
+						"continue": true,
+						"inCondIds": [
+							42
+						],
+						"outCondIds": [
+							43
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "Вау!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 60,
+						"type": 10,
+						"label": "C2API_GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							121
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "near_parents_house",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "parents_house",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 86,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							254
+						],
+						"outCondIds": [
+							252
+						],
+						"props": {
+							"text": "Дэвид не сказал родителям о приезде, но его отец уже  ждал у двери дома."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 109,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							252
+						],
+						"outCondIds": [
+							116
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Сюрприз!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 110,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							116
+						],
+						"outCondIds": [
+							117
+						],
+						"props": {
+							"id": "ded",
+							"text": "Сюрприз???\nХа-ха! Я прочитал о приезде в твоем твиттере, Дэвид.\nТы там пишешь больше чем любой подросток!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 111,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							117
+						],
+						"outCondIds": [
+							119
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Подписчик @bigboy777 - мой дед?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 112,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							119
+						],
+						"outCondIds": [
+							122
+						],
+						"props": {
+							"id": "ded",
+							"text": "Ты редко звонишь, поэтому решили присматривать за тобой в твиттере.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 113,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							124
+						],
+						"outCondIds": [
+							121
+						],
+						"props": {
+							"id": "ded",
+							"text": "Ох Томас. Радость моя!\nКакой ты уже большой! Пойдемте все в дом!",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 114,
+						"type": 10,
+						"label": "C2API_NearParentsHouseComeCloser",
+						"continue": true,
+						"inCondIds": [
+							122,
+							256
+						],
+						"outCondIds": [
+							125
+						],
+						"props": {
+							"name": "C2API_NearParentsHouseComeCloser",
+							"rollbackName": "C2API_NearParentsHouseComeBack",
+							"source": "c2",
+							"isPure": false,
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 115,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							125
+						],
+						"outCondIds": [
+							124
+						],
+						"props": {
+							"id": "sinulia",
+							"text": "Привет дед!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 222,
+						"type": 10,
+						"label": "C2API_GetBool",
+						"continue": false,
+						"inCondIds": [
+							253
+						],
+						"outCondIds": [
+							254,
+							255
+						],
+						"props": {
+							"name": "C2API_GetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": true,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "parents_notified",
+									"$$hashKey": "09Y"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 224,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							255
+						],
+						"outCondIds": [
+							256
+						],
+						"props": {
+							"text": "Дэвид рассказал родителям о приезде. Отец уже ждал их у двери дома."
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 37,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 39,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 42,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 43,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 116,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 117,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 119,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 121,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 122,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 124,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 125,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 252,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 253,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 254,
+						"type": 10,
+						"props": {
+							"name": "false"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 255,
+						"type": 10,
+						"props": {
+							"name": "true"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 256,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 57,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 57,
+						"type": 9,
+						"label": "parents_house",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							44
+						],
+						"props": {
+							"name": "parents_house",
+							"objs": [
+								"Player",
+								"ded",
+								"baba",
+								"papulia",
+								"sinulia",
+								"mamulia"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 58,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							44
+						],
+						"outCondIds": [
+							46
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"ded",
+								"baba",
+								"papulia",
+								"sinulia",
+								"mamulia"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 62,
+						"type": 10,
+						"label": "C2API_GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							46
+						],
+						"outCondIds": [
+							47
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "near_parents_house",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "parents_house",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 63,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							47
+						],
+						"outCondIds": [
+							192
+						],
+						"props": {
+							"id": "baba",
+							"text": "Как добрались, дорогие?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 64,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							182,
+							194
+						],
+						"outCondIds": [
+							50
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Эммм.. да, хорошо. Спасибо.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 66,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							50,
+							191
+						],
+						"outCondIds": [
+							61
+						],
+						"props": {
+							"id": "baba",
+							"text": "Кладите сумки на пол и идите сюда, я вас обниму!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 67,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							196,
+							261
+						],
+						"outCondIds": [
+							137
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Это шкатулка, которую я нашла на черд... в антикварном магазине.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 69,
+						"type": 5,
+						"label": "mamulia_box",
+						"continue": true,
+						"inCondIds": [
+							131
+						],
+						"outCondIds": [
+							132
+						],
+						"props": {
+							"id": "mamulia",
+							"name": "box",
+							"secs": -1
+						}
+					},
+					{
+						"ver": 1,
+						"id": 70,
+						"type": 5,
+						"label": "mamulia_idle",
+						"continue": true,
+						"inCondIds": [
+							134
+						],
+						"outCondIds": [
+							56
+						],
+						"props": {
+							"id": "mamulia",
+							"name": "idle",
+							"secs": -1
+						}
+					},
+					{
+						"ver": 1,
+						"id": 71,
+						"type": 5,
+						"label": "baba_box",
+						"continue": true,
+						"inCondIds": [
+							56
+						],
+						"outCondIds": [
+							135
+						],
+						"props": {
+							"id": "baba",
+							"name": "box",
+							"secs": -1
+						}
+					},
+					{
+						"ver": 1,
+						"id": 72,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							135
+						],
+						"outCondIds": [
+							195
+						],
+						"props": {
+							"id": "baba",
+							"text": "Как мило! Что это?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 73,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							137
+						],
+						"outCondIds": [
+							199
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Ммм.. Она из викторианской эпохи...",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 74,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							201,
+							257
+						],
+						"outCondIds": [
+							202
+						],
+						"props": {
+							"id": "baba",
+							"text": "Положу туда свои украшения!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 75,
+						"type": 10,
+						"label": "C2API_ParentsHouseComeHere",
+						"continue": true,
+						"inCondIds": [
+							61
+						],
+						"outCondIds": [
+							131
+						],
+						"props": {
+							"name": "C2API_ParentsHouseComeHere",
+							"rollbackName": "C2API_ParentsHouseComeBack",
+							"source": "c2",
+							"isPure": false,
+							"params": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 118,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							132
+						],
+						"outCondIds": [
+							134
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Небольшой подарок для вас.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 119,
+						"type": 1,
+						"label": "Oh, I'm off the hook!",
+						"continue": false,
+						"inCondIds": [
+							202
+						],
+						"outCondIds": [
+							342
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Уффф... Пронесло...",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 152,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							193
+						],
+						"outCondIds": [
+							182,
+							183
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Что ответить?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Да!",
+							"ans2": "Нет...",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 153,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							183
+						],
+						"outCondIds": [
+							185
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Трудновато.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 154,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							185
+						],
+						"outCondIds": [
+							188
+						],
+						"props": {
+							"id": "papulia",
+							"text": "Я забыл заправиться перед выездом и топливо закончилось прямо в середине пути.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 155,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							189
+						],
+						"outCondIds": [
+							190
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Томас нас спас!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 156,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							188
+						],
+						"outCondIds": [
+							189
+						],
+						"props": {
+							"id": "ded",
+							"text": "Ну как обычно, Дэвид!\n:))",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 157,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							190
+						],
+						"outCondIds": [
+							191
+						],
+						"props": {
+							"id": "ded",
+							"text": "Молодец!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 160,
+						"type": 10,
+						"label": "C2API_GetBool",
+						"continue": false,
+						"inCondIds": [
+							192
+						],
+						"outCondIds": [
+							193,
+							194
+						],
+						"props": {
+							"name": "C2API_GetBool",
+							"rollbackName": null,
+							"source": "c2",
+							"isPure": true,
+							"params": [
+								{
+									"type": "str",
+									"name": "name",
+									"value": "tank_fill_forgotten",
+									"$$hashKey": "09Y"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 161,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							195
+						],
+						"outCondIds": [
+							196,
+							259
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Что ответить?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL",
+							"ans1": "Это антикварная шкатулка",
+							"ans2": "Я нашла ее на чердаке",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 162,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							260
+						],
+						"outCondIds": [
+							257
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Это просто маленькая коробка, которую я нашла на чердаке.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 164,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							199
+						],
+						"outCondIds": [
+							201
+						],
+						"props": {
+							"id": "baba",
+							"text": "Выглядит очень дорого!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 225,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							259
+						],
+						"outCondIds": [
+							260,
+							261
+						],
+						"props": {
+							"id": "mamulia",
+							"text": "Если я скажу правду, бабушка может разозлиться. Мне не нужны скандалы в семье.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE",
+							"ans1": "Say that the box is antique",
+							"ans2": "Say that the box is just old",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 257,
+						"type": 10,
+						"label": "C2API_GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							342
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "parents_house",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "quiz",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 44,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 46,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 47,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 50,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 56,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 61,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 131,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 132,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 134,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 135,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 137,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 182,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 183,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 185,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 188,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 189,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 190,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 191,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 192,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 193,
+						"type": 10,
+						"props": {
+							"name": "true"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 194,
+						"type": 10,
+						"props": {
+							"name": "false"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 195,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 196,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 199,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 201,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 202,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 257,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 259,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 260,
+						"type": 7,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 261,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 342,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 254,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 254,
+						"type": 9,
+						"label": "quiz",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							341
+						],
+						"props": {
+							"name": "quiz",
+							"objs": [
+								"Player",
+								"teacher"
+							],
+							"objPool": [],
+							"text": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 255,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							341
+						],
+						"outCondIds": [
+							388
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"teacher"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 261,
+						"type": 10,
+						"label": "C2API_GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							388
+						],
+						"outCondIds": [
+							389
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"isPure": false,
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "parents_house",
+									"$$hashKey": "036"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "quiz",
+									"$$hashKey": "038"
+								}
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 262,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							389
+						],
+						"outCondIds": [
+							348
+						],
+						"props": {
+							"id": "teacher",
+							"text": "Вот и конец истории.\nПроверим как хорошо вы ее поняли.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 263,
+						"type": 3,
+						"label": "Oxford?",
+						"continue": false,
+						"inCondIds": [
+							348
+						],
+						"outCondIds": [
+							362,
+							364
+						],
+						"props": {
+							"id": "teacher",
+							"text": "Семья ехала в Оксфорд на машине.\nЭто правда?",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE",
+							"ans1": "Да, это правда",
+							"ans2": "Нет, это ложь",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 264,
+						"type": 3,
+						"label": "Enough fuel?",
+						"continue": false,
+						"inCondIds": [
+							376,
+							378
+						],
+						"outCondIds": [
+							366,
+							369
+						],
+						"props": {
+							"id": "teacher",
+							"text": "Достаточно ли было горючего в баке, чтобы добраться до Оксфорда?",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE",
+							"ans1": "Достаточно",
+							"ans2": "Нет, была нужна дозаправка",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 270,
+						"type": 3,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							375,
+							379
+						],
+						"outCondIds": [
+							371,
+							373
+						],
+						"props": {
+							"id": "teacher",
+							"text": "Что было внутри шкатулки, которую подарили бабушке?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM",
+							"ans1": "Серьги",
+							"ans2": "Ничего",
+							"ans3": "",
+							"ans4": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 272,
+						"type": 1,
+						"label": "Wrong",
+						"continue": false,
+						"inCondIds": [
+							374
+						],
+						"outCondIds": [
+							382
+						],
+						"props": {
+							"id": "teacher",
+							"text": "Бабушка решила положить свои серьги в шкатулку, но  сама шкатулка была пуста.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 275,
+						"type": 10,
+						"label": "C2API_ShowSuccess",
+						"continue": true,
+						"inCondIds": [
+							362
+						],
+						"outCondIds": [
+							376
+						],
+						"props": {
+							"name": "C2API_ShowSuccess",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 277,
+						"type": 10,
+						"label": "C2API_ShowFail",
+						"continue": true,
+						"inCondIds": [
+							364
+						],
+						"outCondIds": [
+							378
+						],
+						"props": {
+							"name": "C2API_ShowFail",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 279,
+						"type": 10,
+						"label": "C2API_ShowFail",
+						"continue": true,
+						"inCondIds": [
+							366
+						],
+						"outCondIds": [
+							379
+						],
+						"props": {
+							"name": "C2API_ShowFail",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 281,
+						"type": 10,
+						"label": "C2API_ShowSuccess",
+						"continue": true,
+						"inCondIds": [
+							369
+						],
+						"outCondIds": [
+							375
+						],
+						"props": {
+							"name": "C2API_ShowSuccess",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 283,
+						"type": 10,
+						"label": "C2API_ShowSuccess",
+						"continue": true,
+						"inCondIds": [
+							371
+						],
+						"outCondIds": [
+							381
+						],
+						"props": {
+							"name": "C2API_ShowSuccess",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 285,
+						"type": 10,
+						"label": "C2API_ShowFail",
+						"continue": true,
+						"inCondIds": [
+							373
+						],
+						"outCondIds": [
+							374
+						],
+						"props": {
+							"name": "C2API_ShowFail",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 287,
+						"type": 10,
+						"label": "C2API_QuizInjectResult",
+						"continue": false,
+						"inCondIds": [
+							381,
+							382
+						],
+						"outCondIds": [
+							383,
+							384,
+							385,
+							386
+						],
+						"props": {
+							"name": "C2API_QuizInjectResult",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 288,
+						"type": 1,
+						"label": "0",
+						"continue": false,
+						"inCondIds": [
+							383
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "0 из 3. Очень слабо.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 293,
+						"type": 1,
+						"label": "1",
+						"continue": false,
+						"inCondIds": [
+							384
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "1 из 3. Есть куда стремиться.",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 295,
+						"type": 1,
+						"label": "2",
+						"continue": false,
+						"inCondIds": [
+							385
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "2 из 3. Неплохо.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 297,
+						"type": 1,
+						"label": "3",
+						"continue": false,
+						"inCondIds": [
+							386
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "teacher",
+							"text": "3 из 3. Идеально!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 341,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 348,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 362,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 364,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 366,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 369,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 371,
+						"type": 4,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 373,
+						"type": 3,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 374,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 375,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 376,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 378,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 379,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 381,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 382,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 383,
+						"type": 10,
+						"props": {
+							"name": "0"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 384,
+						"type": 10,
+						"props": {
+							"name": "1"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 385,
+						"type": 10,
+						"props": {
+							"name": "2"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 386,
+						"type": 10,
+						"props": {
+							"name": "3"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 388,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 389,
+						"type": 8,
+						"props": {}
+					}
+				]
+			}
+		]
+	},
+	"scriptEditor": {
+		"ver": 1,
+		"currentStageId": 254,
+		"stageEditors": [
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 11,
+						"x": -23.999999999999886,
+						"y": -279.99999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 12,
+						"x": -9.999999999999886,
+						"y": 16.000000000000114
+					},
+					{
+						"ver": 1,
+						"nodeId": 13,
+						"x": 228.9999999999999,
+						"y": -278.5555555555554
+					},
+					{
+						"ver": 1,
+						"nodeId": 16,
+						"x": 505.5714285714282,
+						"y": 2.0000000000004547
+					},
+					{
+						"ver": 1,
+						"nodeId": 17,
+						"x": 506.6428571428569,
+						"y": -272.1904761904751
+					},
+					{
+						"ver": 1,
+						"nodeId": 18,
+						"x": 808.7619047619052,
+						"y": 1194.476190476191
+					},
+					{
+						"ver": 1,
+						"nodeId": 19,
+						"x": 1080.0000000000014,
+						"y": 839.047619047619
+					},
+					{
+						"ver": 1,
+						"nodeId": 20,
+						"x": 1180.9523809523807,
+						"y": 596.9047619047616
+					},
+					{
+						"ver": 1,
+						"nodeId": 21,
+						"x": 1328.0952380952378,
+						"y": 851.1904761904758
+					},
+					{
+						"ver": 1,
+						"nodeId": 22,
+						"x": 1429.047619047619,
+						"y": 604.7619047619047
+					},
+					{
+						"ver": 1,
+						"nodeId": 26,
+						"x": 1891.2380952380945,
+						"y": 568.5238095238095
+					},
+					{
+						"ver": 1,
+						"nodeId": 116,
+						"x": 507,
+						"y": 292.5238095238106
+					},
+					{
+						"ver": 1,
+						"nodeId": 117,
+						"x": 799.0000000000001,
+						"y": 842.5714285714287
+					},
+					{
+						"ver": 1,
+						"nodeId": 121,
+						"x": 1050.0000000000002,
+						"y": 1356.666666666667
+					},
+					{
+						"ver": 1,
+						"nodeId": 124,
+						"x": 1323.6666666666665,
+						"y": 1495.3333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 126,
+						"x": 1581.6666666666665,
+						"y": 1338.333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 128,
+						"x": 1305.3333333333335,
+						"y": 1131.3333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 131,
+						"x": 1869.3333333333344,
+						"y": 1491.6666666666665
+					},
+					{
+						"ver": 1,
+						"nodeId": 132,
+						"x": 1857.666666666666,
+						"y": 882.3333333333338
+					},
+					{
+						"ver": 1,
+						"nodeId": 136,
+						"x": 1867.9999999999995,
+						"y": 1199.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 137,
+						"x": 137.99999999999926,
+						"y": 282.00000000000057
+					},
+					{
+						"ver": 1,
+						"nodeId": 138,
+						"x": 292,
+						"y": 843.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 141,
+						"x": -42.000000000000455,
+						"y": 586.0000000000001
+					},
+					{
+						"ver": 1,
+						"nodeId": 143,
+						"x": 509.99999999999955,
+						"y": 521.9999999999997
+					}
+				],
+				"nodeIds": [
+					11,
+					12,
+					13,
+					16,
+					17,
+					18,
+					19,
+					20,
+					21,
+					22,
+					26,
+					116,
+					117,
+					121,
+					124,
+					126,
+					128,
+					131,
+					132,
+					136,
+					137,
+					138,
+					141,
+					143
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 0,
+						"points": {
+							"src": {
+								"x": 56.000000000000114,
+								"y": -199.99999999999994
+							},
+							"dst": {
+								"x": 70.00000000000011,
+								"y": 96.00000000000011
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 1,
+						"points": {
+							"src": {
+								"x": 70.00000000000011,
+								"y": 96.00000000000011
+							},
+							"dst": {
+								"x": 308.9999999999999,
+								"y": -198.55555555555537
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6,
+						"points": {
+							"src": {
+								"x": 586.6428571428569,
+								"y": -192.19047619047512
+							},
+							"dst": {
+								"x": 585.5714285714282,
+								"y": 82.00000000000045
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 9,
+						"points": {
+							"src": {
+								"x": 1160.0000000000014,
+								"y": 919.047619047619
+							},
+							"dst": {
+								"x": 1260.9523809523807,
+								"y": 676.9047619047616
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 10,
+						"points": {
+							"src": {
+								"x": 1260.9523809523807,
+								"y": 676.9047619047616
+							},
+							"dst": {
+								"x": 1408.0952380952378,
+								"y": 931.1904761904758
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 11,
+						"points": {
+							"src": {
+								"x": 1408.0952380952378,
+								"y": 931.1904761904758
+							},
+							"dst": {
+								"x": 1509.047619047619,
+								"y": 684.7619047619047
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 71,
+						"points": {
+							"src": {
+								"x": 1509.047619047619,
+								"y": 684.7619047619047
+							},
+							"dst": {
+								"x": 1971.2380952380945,
+								"y": 648.5238095238095
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 126,
+						"points": {
+							"src": {
+								"x": 585.5714285714282,
+								"y": 82.00000000000045
+							},
+							"dst": {
+								"x": 587,
+								"y": 372.5238095238106
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 128,
+						"points": {
+							"src": {
+								"x": 879.0000000000001,
+								"y": 922.5714285714287
+							},
+							"dst": {
+								"x": 888.7619047619052,
+								"y": 1274.476190476191
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 140,
+						"points": {
+							"src": {
+								"x": 888.7619047619052,
+								"y": 1274.476190476191
+							},
+							"dst": {
+								"x": 1130.0000000000002,
+								"y": 1436.666666666667
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 143,
+						"points": {
+							"src": {
+								"x": 1130.0000000000002,
+								"y": 1436.666666666667
+							},
+							"dst": {
+								"x": 1403.6666666666665,
+								"y": 1575.3333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 144,
+						"points": {
+							"src": {
+								"x": 1403.6666666666665,
+								"y": 1575.3333333333333
+							},
+							"dst": {
+								"x": 1661.6666666666665,
+								"y": 1418.333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 148,
+						"points": {
+							"src": {
+								"x": 1130.0000000000002,
+								"y": 1436.666666666667
+							},
+							"dst": {
+								"x": 1385.3333333333335,
+								"y": 1211.3333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 149,
+						"points": {
+							"src": {
+								"x": 1403.6666666666665,
+								"y": 1575.3333333333333
+							},
+							"dst": {
+								"x": 1385.3333333333335,
+								"y": 1211.3333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 150,
+						"points": {
+							"src": {
+								"x": 1661.6666666666665,
+								"y": 1418.333333333333
+							},
+							"dst": {
+								"x": 1385.3333333333335,
+								"y": 1211.3333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 151,
+						"points": {
+							"src": {
+								"x": 1385.3333333333335,
+								"y": 1211.3333333333333
+							},
+							"dst": {
+								"x": 1160.0000000000014,
+								"y": 919.047619047619
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 153,
+						"points": {
+							"src": {
+								"x": 1661.6666666666665,
+								"y": 1418.333333333333
+							},
+							"dst": {
+								"x": 1949.3333333333344,
+								"y": 1571.6666666666665
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 155,
+						"points": {
+							"src": {
+								"x": 1937.666666666666,
+								"y": 962.3333333333338
+							},
+							"dst": {
+								"x": 1971.2380952380945,
+								"y": 648.5238095238095
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 161,
+						"points": {
+							"src": {
+								"x": 1949.3333333333344,
+								"y": 1571.6666666666665
+							},
+							"dst": {
+								"x": 1947.9999999999995,
+								"y": 1279.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 162,
+						"points": {
+							"src": {
+								"x": 1947.9999999999995,
+								"y": 1279.9999999999995
+							},
+							"dst": {
+								"x": 1937.666666666666,
+								"y": 962.3333333333338
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 163,
+						"points": {
+							"src": {
+								"x": 587,
+								"y": 372.5238095238106
+							},
+							"dst": {
+								"x": 217.99999999999926,
+								"y": 362.00000000000057
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 166,
+						"points": {
+							"src": {
+								"x": 217.99999999999926,
+								"y": 362.00000000000057
+							},
+							"dst": {
+								"x": 589.9999999999995,
+								"y": 601.9999999999997
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 167,
+						"points": {
+							"src": {
+								"x": 217.99999999999926,
+								"y": 362.00000000000057
+							},
+							"dst": {
+								"x": 37.999999999999545,
+								"y": 666.0000000000001
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 168,
+						"points": {
+							"src": {
+								"x": 589.9999999999995,
+								"y": 601.9999999999997
+							},
+							"dst": {
+								"x": 879.0000000000001,
+								"y": 922.5714285714287
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 169,
+						"points": {
+							"src": {
+								"x": 37.999999999999545,
+								"y": 666.0000000000001
+							},
+							"dst": {
+								"x": 372,
+								"y": 923.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 258,
+						"points": {
+							"src": {
+								"x": 372,
+								"y": 923.9999999999995
+							},
+							"dst": {
+								"x": 888.7619047619052,
+								"y": 1274.476190476191
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 391,
+						"points": {
+							"src": {
+								"x": 308.9999999999999,
+								"y": -198.55555555555537
+							},
+							"dst": {
+								"x": 586.6428571428569,
+								"y": -192.19047619047512
+							}
+						}
+					}
+				],
+				"condIds": [
+					0,
+					1,
+					6,
+					9,
+					10,
+					11,
+					71,
+					126,
+					128,
+					140,
+					143,
+					144,
+					148,
+					149,
+					150,
+					151,
+					153,
+					155,
+					161,
+					162,
+					163,
+					166,
+					167,
+					168,
+					169,
+					258,
+					391
+				],
+				"scale": 0.6000000000000001,
+				"pos": {
+					"x": -12,
+					"y": -171
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 27,
+						"x": 238,
+						"y": 89
+					},
+					{
+						"ver": 1,
+						"nodeId": 28,
+						"x": 231.7499999999999,
+						"y": 362.7499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 31,
+						"x": 242.25,
+						"y": 622.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 32,
+						"x": 252.49999999999994,
+						"y": 1442.4999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 34,
+						"x": 247.4999999999999,
+						"y": 891.2499999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 35,
+						"x": 237.7499999999999,
+						"y": 1743.2499999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 39,
+						"x": 2097.9999999999986,
+						"y": 1733.4999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 40,
+						"x": 2102.999999999999,
+						"y": 1981.4999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 41,
+						"x": 1840.499999999999,
+						"y": 1980.7499999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 42,
+						"x": 1371.7499999999993,
+						"y": 313.99999999999994
+					},
+					{
+						"ver": 1,
+						"nodeId": 43,
+						"x": 2085.749999999999,
+						"y": 1471.75
+					},
+					{
+						"ver": 1,
+						"nodeId": 44,
+						"x": 1735.9999999999993,
+						"y": 1491.2499999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 45,
+						"x": 2086.4999999999986,
+						"y": 1214.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 48,
+						"x": 593.9999999999995,
+						"y": 138.24999999999983
+					},
+					{
+						"ver": 1,
+						"nodeId": 78,
+						"x": 253.24999999999966,
+						"y": 1193
+					},
+					{
+						"ver": 1,
+						"nodeId": 79,
+						"x": 1760.9999999999989,
+						"y": 1229.499999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 80,
+						"x": 1914.4999999999989,
+						"y": 682.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 81,
+						"x": 1972.9999999999986,
+						"y": 899.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 82,
+						"x": 2320.499999999999,
+						"y": 902.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 83,
+						"x": 1516.499999999999,
+						"y": 1082
+					},
+					{
+						"ver": 1,
+						"nodeId": 84,
+						"x": 1356.4999999999986,
+						"y": 829.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 85,
+						"x": 1369.9999999999995,
+						"y": 594.4999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 134,
+						"x": 526.9999999999997,
+						"y": 1954.4999999999989
+					},
+					{
+						"ver": 1,
+						"nodeId": 135,
+						"x": 592.4999999999989,
+						"y": 412.49999999999886
+					},
+					{
+						"ver": 1,
+						"nodeId": 144,
+						"x": 514.9999999999998,
+						"y": 1684.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 145,
+						"x": 764.9999999999997,
+						"y": 1685.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 146,
+						"x": 512.4999999999997,
+						"y": 1475.4999999999989
+					},
+					{
+						"ver": 1,
+						"nodeId": 147,
+						"x": 752.4999999999998,
+						"y": 1472.4999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 148,
+						"x": 758.4999999999997,
+						"y": 1247.4999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 149,
+						"x": 522.4999999999998,
+						"y": 1259.9999999999995
+					},
+					{
+						"ver": 1,
+						"nodeId": 150,
+						"x": 515,
+						"y": 1019.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 151,
+						"x": 742.4999999999998,
+						"y": 1024.9999999999993
+					}
+				],
+				"nodeIds": [
+					27,
+					28,
+					31,
+					32,
+					34,
+					35,
+					39,
+					40,
+					41,
+					42,
+					43,
+					44,
+					45,
+					48,
+					78,
+					79,
+					80,
+					81,
+					82,
+					83,
+					84,
+					85,
+					134,
+					135,
+					144,
+					145,
+					146,
+					147,
+					148,
+					149,
+					150,
+					151
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 16,
+						"points": {
+							"src": {
+								"x": 318,
+								"y": 169
+							},
+							"dst": {
+								"x": 311.7499999999999,
+								"y": 442.7499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 18,
+						"points": {
+							"src": {
+								"x": 311.7499999999999,
+								"y": 442.7499999999999
+							},
+							"dst": {
+								"x": 322.25,
+								"y": 702.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 21,
+						"points": {
+							"src": {
+								"x": 322.25,
+								"y": 702.9999999999999
+							},
+							"dst": {
+								"x": 327.4999999999999,
+								"y": 971.2499999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 23,
+						"points": {
+							"src": {
+								"x": 332.49999999999994,
+								"y": 1522.4999999999993
+							},
+							"dst": {
+								"x": 317.7499999999999,
+								"y": 1823.2499999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 32,
+						"points": {
+							"src": {
+								"x": 2165.749999999999,
+								"y": 1551.75
+							},
+							"dst": {
+								"x": 1815.9999999999993,
+								"y": 1571.2499999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 33,
+						"points": {
+							"src": {
+								"x": 1815.9999999999993,
+								"y": 1571.2499999999995
+							},
+							"dst": {
+								"x": 2166.4999999999986,
+								"y": 1294.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 36,
+						"points": {
+							"src": {
+								"x": 1451.7499999999993,
+								"y": 393.99999999999994
+							},
+							"dst": {
+								"x": 673.9999999999995,
+								"y": 218.24999999999983
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 66,
+						"points": {
+							"src": {
+								"x": 1920.499999999999,
+								"y": 2060.7499999999995
+							},
+							"dst": {
+								"x": 2182.999999999999,
+								"y": 2061.499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 67,
+						"points": {
+							"src": {
+								"x": 2177.9999999999986,
+								"y": 1813.4999999999993
+							},
+							"dst": {
+								"x": 2165.749999999999,
+								"y": 1551.75
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 68,
+						"points": {
+							"src": {
+								"x": 2182.999999999999,
+								"y": 2061.499999999999
+							},
+							"dst": {
+								"x": 2177.9999999999986,
+								"y": 1813.4999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 69,
+						"points": {
+							"src": {
+								"x": 327.4999999999999,
+								"y": 971.2499999999998
+							},
+							"dst": {
+								"x": 333.24999999999966,
+								"y": 1273
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 70,
+						"points": {
+							"src": {
+								"x": 333.24999999999966,
+								"y": 1273
+							},
+							"dst": {
+								"x": 332.49999999999994,
+								"y": 1522.4999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 72,
+						"points": {
+							"src": {
+								"x": 2166.4999999999986,
+								"y": 1294.9999999999995
+							},
+							"dst": {
+								"x": 1840.9999999999989,
+								"y": 1309.499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 73,
+						"points": {
+							"src": {
+								"x": 1840.9999999999989,
+								"y": 1309.499999999999
+							},
+							"dst": {
+								"x": 1994.4999999999989,
+								"y": 762.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 74,
+						"points": {
+							"src": {
+								"x": 1840.9999999999989,
+								"y": 1309.499999999999
+							},
+							"dst": {
+								"x": 2052.9999999999986,
+								"y": 979.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 75,
+						"points": {
+							"src": {
+								"x": 1994.4999999999989,
+								"y": 762.9999999999998
+							},
+							"dst": {
+								"x": 2400.499999999999,
+								"y": 982.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 76,
+						"points": {
+							"src": {
+								"x": 2052.9999999999986,
+								"y": 979.9999999999993
+							},
+							"dst": {
+								"x": 2400.499999999999,
+								"y": 982.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 77,
+						"points": {
+							"src": {
+								"x": 2400.499999999999,
+								"y": 982.9999999999998
+							},
+							"dst": {
+								"x": 1840.9999999999989,
+								"y": 1309.499999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 78,
+						"points": {
+							"src": {
+								"x": 1840.9999999999989,
+								"y": 1309.499999999999
+							},
+							"dst": {
+								"x": 1596.499999999999,
+								"y": 1162
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 79,
+						"points": {
+							"src": {
+								"x": 1596.499999999999,
+								"y": 1162
+							},
+							"dst": {
+								"x": 1436.4999999999986,
+								"y": 909.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 81,
+						"points": {
+							"src": {
+								"x": 1436.4999999999986,
+								"y": 909.9999999999998
+							},
+							"dst": {
+								"x": 1449.9999999999995,
+								"y": 674.4999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 82,
+						"points": {
+							"src": {
+								"x": 1449.9999999999995,
+								"y": 674.4999999999998
+							},
+							"dst": {
+								"x": 1451.7499999999993,
+								"y": 393.99999999999994
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 156,
+						"points": {
+							"src": {
+								"x": 317.7499999999999,
+								"y": 1823.2499999999993
+							},
+							"dst": {
+								"x": 606.9999999999997,
+								"y": 2034.4999999999989
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 157,
+						"points": {
+							"src": {
+								"x": 606.9999999999997,
+								"y": 2034.4999999999989
+							},
+							"dst": {
+								"x": 1920.499999999999,
+								"y": 2060.7499999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 160,
+						"points": {
+							"src": {
+								"x": 672.4999999999989,
+								"y": 492.49999999999886
+							},
+							"dst": {
+								"x": 673.9999999999995,
+								"y": 218.24999999999983
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 172,
+						"points": {
+							"src": {
+								"x": 606.9999999999997,
+								"y": 2034.4999999999989
+							},
+							"dst": {
+								"x": 594.9999999999998,
+								"y": 1764.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 173,
+						"points": {
+							"src": {
+								"x": 594.9999999999998,
+								"y": 1764.9999999999993
+							},
+							"dst": {
+								"x": 844.9999999999997,
+								"y": 1765.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 174,
+						"points": {
+							"src": {
+								"x": 844.9999999999997,
+								"y": 1765.9999999999995
+							},
+							"dst": {
+								"x": 592.4999999999997,
+								"y": 1555.4999999999989
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 175,
+						"points": {
+							"src": {
+								"x": 592.4999999999997,
+								"y": 1555.4999999999989
+							},
+							"dst": {
+								"x": 832.4999999999998,
+								"y": 1552.4999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 176,
+						"points": {
+							"src": {
+								"x": 832.4999999999998,
+								"y": 1552.4999999999995
+							},
+							"dst": {
+								"x": 838.4999999999997,
+								"y": 1327.4999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 177,
+						"points": {
+							"src": {
+								"x": 838.4999999999997,
+								"y": 1327.4999999999995
+							},
+							"dst": {
+								"x": 602.4999999999998,
+								"y": 1339.9999999999995
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 178,
+						"points": {
+							"src": {
+								"x": 602.4999999999998,
+								"y": 1339.9999999999995
+							},
+							"dst": {
+								"x": 595,
+								"y": 1099.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 179,
+						"points": {
+							"src": {
+								"x": 595,
+								"y": 1099.9999999999993
+							},
+							"dst": {
+								"x": 822.4999999999998,
+								"y": 1104.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 180,
+						"points": {
+							"src": {
+								"x": 822.4999999999998,
+								"y": 1104.9999999999993
+							},
+							"dst": {
+								"x": 672.4999999999989,
+								"y": 492.49999999999886
+							}
+						}
+					}
+				],
+				"condIds": [
+					16,
+					18,
+					21,
+					23,
+					32,
+					33,
+					36,
+					66,
+					67,
+					68,
+					69,
+					70,
+					72,
+					73,
+					74,
+					75,
+					76,
+					77,
+					78,
+					79,
+					81,
+					82,
+					156,
+					157,
+					160,
+					172,
+					173,
+					174,
+					175,
+					176,
+					177,
+					178,
+					179,
+					180
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 85,
+					"y": 67
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 49,
+						"x": 299,
+						"y": 82
+					},
+					{
+						"ver": 1,
+						"nodeId": 50,
+						"x": 298,
+						"y": 352
+					},
+					{
+						"ver": 1,
+						"nodeId": 53,
+						"x": 295,
+						"y": 603
+					},
+					{
+						"ver": 1,
+						"nodeId": 54,
+						"x": 381.3492063492067,
+						"y": 1217.1428571428573
+					},
+					{
+						"ver": 1,
+						"nodeId": 56,
+						"x": 314.44444444444457,
+						"y": 893.1746031746032
+					},
+					{
+						"ver": 1,
+						"nodeId": 60,
+						"x": 846.1111111111115,
+						"y": 117.22222222222265
+					},
+					{
+						"ver": 1,
+						"nodeId": 86,
+						"x": 989.0476190476188,
+						"y": 1380.714285714286
+					},
+					{
+						"ver": 1,
+						"nodeId": 109,
+						"x": 1234.1666666666677,
+						"y": 1373.333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 110,
+						"x": 1531.6666666666686,
+						"y": 1350
+					},
+					{
+						"ver": 1,
+						"nodeId": 111,
+						"x": 1771.6666666666674,
+						"y": 1325
+					},
+					{
+						"ver": 1,
+						"nodeId": 112,
+						"x": 1816.6666666666679,
+						"y": 1095
+					},
+					{
+						"ver": 1,
+						"nodeId": 113,
+						"x": 838.3333333333353,
+						"y": 396.6666666666673
+					},
+					{
+						"ver": 1,
+						"nodeId": 114,
+						"x": 1345.0000000000007,
+						"y": 388.3333333333343
+					},
+					{
+						"ver": 1,
+						"nodeId": 115,
+						"x": 1088.3333333333342,
+						"y": 406.6666666666672
+					},
+					{
+						"ver": 1,
+						"nodeId": 222,
+						"x": 636.6666666666671,
+						"y": 1336.6666666666667
+					},
+					{
+						"ver": 1,
+						"nodeId": 224,
+						"x": 976.6666666666667,
+						"y": 1096.6666666666665
+					}
+				],
+				"nodeIds": [
+					49,
+					50,
+					53,
+					54,
+					56,
+					60,
+					86,
+					109,
+					110,
+					111,
+					112,
+					113,
+					114,
+					115,
+					222,
+					224
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 37,
+						"points": {
+							"src": {
+								"x": 379,
+								"y": 162
+							},
+							"dst": {
+								"x": 378,
+								"y": 432
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 39,
+						"points": {
+							"src": {
+								"x": 378,
+								"y": 432
+							},
+							"dst": {
+								"x": 375,
+								"y": 683
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 42,
+						"points": {
+							"src": {
+								"x": 375,
+								"y": 683
+							},
+							"dst": {
+								"x": 394.44444444444457,
+								"y": 973.1746031746032
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 43,
+						"points": {
+							"src": {
+								"x": 394.44444444444457,
+								"y": 973.1746031746032
+							},
+							"dst": {
+								"x": 461.3492063492067,
+								"y": 1297.1428571428573
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 116,
+						"points": {
+							"src": {
+								"x": 1314.1666666666677,
+								"y": 1453.333333333333
+							},
+							"dst": {
+								"x": 1611.6666666666686,
+								"y": 1430
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 117,
+						"points": {
+							"src": {
+								"x": 1611.6666666666686,
+								"y": 1430
+							},
+							"dst": {
+								"x": 1851.6666666666674,
+								"y": 1405
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 119,
+						"points": {
+							"src": {
+								"x": 1851.6666666666674,
+								"y": 1405
+							},
+							"dst": {
+								"x": 1896.6666666666679,
+								"y": 1175
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 121,
+						"points": {
+							"src": {
+								"x": 918.3333333333353,
+								"y": 476.6666666666673
+							},
+							"dst": {
+								"x": 926.1111111111115,
+								"y": 197.22222222222265
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 122,
+						"points": {
+							"src": {
+								"x": 1896.6666666666679,
+								"y": 1175
+							},
+							"dst": {
+								"x": 1425.0000000000007,
+								"y": 468.3333333333343
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 124,
+						"points": {
+							"src": {
+								"x": 1168.3333333333342,
+								"y": 486.6666666666672
+							},
+							"dst": {
+								"x": 918.3333333333353,
+								"y": 476.6666666666673
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 125,
+						"points": {
+							"src": {
+								"x": 1425.0000000000007,
+								"y": 468.3333333333343
+							},
+							"dst": {
+								"x": 1168.3333333333342,
+								"y": 486.6666666666672
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 252,
+						"points": {
+							"src": {
+								"x": 1069.0476190476188,
+								"y": 1460.714285714286
+							},
+							"dst": {
+								"x": 1314.1666666666677,
+								"y": 1453.333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 253,
+						"points": {
+							"src": {
+								"x": 461.3492063492067,
+								"y": 1297.1428571428573
+							},
+							"dst": {
+								"x": 716.6666666666671,
+								"y": 1416.6666666666667
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 254,
+						"points": {
+							"src": {
+								"x": 716.6666666666671,
+								"y": 1416.6666666666667
+							},
+							"dst": {
+								"x": 1069.0476190476188,
+								"y": 1460.714285714286
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 255,
+						"points": {
+							"src": {
+								"x": 716.6666666666671,
+								"y": 1416.6666666666667
+							},
+							"dst": {
+								"x": 1056.6666666666667,
+								"y": 1176.6666666666665
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 256,
+						"points": {
+							"src": {
+								"x": 1056.6666666666667,
+								"y": 1176.6666666666665
+							},
+							"dst": {
+								"x": 1425.0000000000007,
+								"y": 468.3333333333343
+							}
+						}
+					}
+				],
+				"condIds": [
+					37,
+					39,
+					42,
+					43,
+					116,
+					117,
+					119,
+					121,
+					122,
+					124,
+					125,
+					252,
+					253,
+					254,
+					255,
+					256
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 142,
+					"y": 87
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 57,
+						"x": 210,
+						"y": 82.28571428571428
+					},
+					{
+						"ver": 1,
+						"nodeId": 58,
+						"x": 210.42857142857144,
+						"y": 377.14285714285705
+					},
+					{
+						"ver": 1,
+						"nodeId": 62,
+						"x": 208.71428571428567,
+						"y": 660.8571428571427
+					},
+					{
+						"ver": 1,
+						"nodeId": 63,
+						"x": 4.571428571428612,
+						"y": 921.9642857142858
+					},
+					{
+						"ver": 1,
+						"nodeId": 64,
+						"x": 422.6190476190475,
+						"y": 1197.7261904761913
+					},
+					{
+						"ver": 1,
+						"nodeId": 66,
+						"x": 731.3214285714292,
+						"y": 1321.535714285715
+					},
+					{
+						"ver": 1,
+						"nodeId": 67,
+						"x": 1503.0714285714278,
+						"y": 878.8928571428571
+					},
+					{
+						"ver": 1,
+						"nodeId": 69,
+						"x": 1394.3571428571431,
+						"y": 1409.2142857142849
+					},
+					{
+						"ver": 1,
+						"nodeId": 70,
+						"x": 1888.4642857142858,
+						"y": 1440.5714285714275
+					},
+					{
+						"ver": 1,
+						"nodeId": 71,
+						"x": 1887.7499999999986,
+						"y": 1171.8571428571427
+					},
+					{
+						"ver": 1,
+						"nodeId": 72,
+						"x": 1646.7142857142849,
+						"y": 1187.0714285714278
+					},
+					{
+						"ver": 1,
+						"nodeId": 73,
+						"x": 1532.4999999999998,
+						"y": 616.357142857143
+					},
+					{
+						"ver": 1,
+						"nodeId": 74,
+						"x": 1298.3571428571415,
+						"y": 122.71428571428481
+					},
+					{
+						"ver": 1,
+						"nodeId": 75,
+						"x": 1139.9999999999995,
+						"y": 1424
+					},
+					{
+						"ver": 1,
+						"nodeId": 118,
+						"x": 1641.4285714285709,
+						"y": 1430.8571428571413
+					},
+					{
+						"ver": 1,
+						"nodeId": 119,
+						"x": 948.5714285714273,
+						"y": -95.14285714285731
+					},
+					{
+						"ver": 1,
+						"nodeId": 152,
+						"x": 397.6666666666665,
+						"y": 1561.3333333333346
+					},
+					{
+						"ver": 1,
+						"nodeId": 153,
+						"x": 47.00000000000023,
+						"y": 1578.0000000000011
+					},
+					{
+						"ver": 1,
+						"nodeId": 154,
+						"x": 61.66666666666691,
+						"y": 1816.6666666666683
+					},
+					{
+						"ver": 1,
+						"nodeId": 155,
+						"x": 716.6666666666674,
+						"y": 1813.3333333333355
+					},
+					{
+						"ver": 1,
+						"nodeId": 156,
+						"x": 414.00000000000017,
+						"y": 1820.3333333333348
+					},
+					{
+						"ver": 1,
+						"nodeId": 157,
+						"x": 823.3333333333333,
+						"y": 1603.3333333333333
+					},
+					{
+						"ver": 1,
+						"nodeId": 160,
+						"x": -43.33333333333326,
+						"y": 1195.0000000000007
+					},
+					{
+						"ver": 1,
+						"nodeId": 161,
+						"x": 1427.999999999999,
+						"y": 1215.9999999999993
+					},
+					{
+						"ver": 1,
+						"nodeId": 162,
+						"x": 1061.9999999999989,
+						"y": 547.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 164,
+						"x": 1531.9999999999989,
+						"y": 331.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 225,
+						"x": 1117.9999999999995,
+						"y": 967.9999999999998
+					},
+					{
+						"ver": 1,
+						"nodeId": 257,
+						"x": 633.9999999999999,
+						"y": -88
+					}
+				],
+				"nodeIds": [
+					57,
+					58,
+					62,
+					63,
+					64,
+					66,
+					67,
+					69,
+					70,
+					71,
+					72,
+					73,
+					74,
+					75,
+					118,
+					119,
+					152,
+					153,
+					154,
+					155,
+					156,
+					157,
+					160,
+					161,
+					162,
+					164,
+					225,
+					257
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 44,
+						"points": {
+							"src": {
+								"x": 290,
+								"y": 162.28571428571428
+							},
+							"dst": {
+								"x": 290.42857142857144,
+								"y": 457.14285714285705
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 46,
+						"points": {
+							"src": {
+								"x": 290.42857142857144,
+								"y": 457.14285714285705
+							},
+							"dst": {
+								"x": 288.71428571428567,
+								"y": 740.8571428571427
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 47,
+						"points": {
+							"src": {
+								"x": 288.71428571428567,
+								"y": 740.8571428571427
+							},
+							"dst": {
+								"x": 84.57142857142861,
+								"y": 1001.9642857142858
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 50,
+						"points": {
+							"src": {
+								"x": 502.6190476190475,
+								"y": 1277.7261904761913
+							},
+							"dst": {
+								"x": 811.3214285714292,
+								"y": 1401.535714285715
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 56,
+						"points": {
+							"src": {
+								"x": 1968.4642857142858,
+								"y": 1520.5714285714275
+							},
+							"dst": {
+								"x": 1967.7499999999986,
+								"y": 1251.8571428571427
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 61,
+						"points": {
+							"src": {
+								"x": 811.3214285714292,
+								"y": 1401.535714285715
+							},
+							"dst": {
+								"x": 1219.9999999999995,
+								"y": 1504
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 131,
+						"points": {
+							"src": {
+								"x": 1219.9999999999995,
+								"y": 1504
+							},
+							"dst": {
+								"x": 1474.3571428571431,
+								"y": 1489.2142857142849
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 132,
+						"points": {
+							"src": {
+								"x": 1474.3571428571431,
+								"y": 1489.2142857142849
+							},
+							"dst": {
+								"x": 1721.4285714285709,
+								"y": 1510.8571428571413
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 134,
+						"points": {
+							"src": {
+								"x": 1721.4285714285709,
+								"y": 1510.8571428571413
+							},
+							"dst": {
+								"x": 1968.4642857142858,
+								"y": 1520.5714285714275
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 135,
+						"points": {
+							"src": {
+								"x": 1967.7499999999986,
+								"y": 1251.8571428571427
+							},
+							"dst": {
+								"x": 1726.7142857142849,
+								"y": 1267.0714285714278
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 137,
+						"points": {
+							"src": {
+								"x": 1583.0714285714278,
+								"y": 958.8928571428571
+							},
+							"dst": {
+								"x": 1612.4999999999998,
+								"y": 696.357142857143
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 182,
+						"points": {
+							"src": {
+								"x": 477.6666666666665,
+								"y": 1641.3333333333346
+							},
+							"dst": {
+								"x": 502.6190476190475,
+								"y": 1277.7261904761913
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 183,
+						"points": {
+							"src": {
+								"x": 477.6666666666665,
+								"y": 1641.3333333333346
+							},
+							"dst": {
+								"x": 127.00000000000023,
+								"y": 1658.0000000000011
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 185,
+						"points": {
+							"src": {
+								"x": 127.00000000000023,
+								"y": 1658.0000000000011
+							},
+							"dst": {
+								"x": 141.6666666666669,
+								"y": 1896.6666666666683
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 188,
+						"points": {
+							"src": {
+								"x": 141.6666666666669,
+								"y": 1896.6666666666683
+							},
+							"dst": {
+								"x": 494.00000000000017,
+								"y": 1900.3333333333348
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 189,
+						"points": {
+							"src": {
+								"x": 494.00000000000017,
+								"y": 1900.3333333333348
+							},
+							"dst": {
+								"x": 796.6666666666674,
+								"y": 1893.3333333333355
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 190,
+						"points": {
+							"src": {
+								"x": 796.6666666666674,
+								"y": 1893.3333333333355
+							},
+							"dst": {
+								"x": 903.3333333333333,
+								"y": 1683.3333333333333
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 191,
+						"points": {
+							"src": {
+								"x": 903.3333333333333,
+								"y": 1683.3333333333333
+							},
+							"dst": {
+								"x": 811.3214285714292,
+								"y": 1401.535714285715
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 192,
+						"points": {
+							"src": {
+								"x": 84.57142857142861,
+								"y": 1001.9642857142858
+							},
+							"dst": {
+								"x": 36.66666666666674,
+								"y": 1275.0000000000007
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 193,
+						"points": {
+							"src": {
+								"x": 36.66666666666674,
+								"y": 1275.0000000000007
+							},
+							"dst": {
+								"x": 477.6666666666665,
+								"y": 1641.3333333333346
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 194,
+						"points": {
+							"src": {
+								"x": 36.66666666666674,
+								"y": 1275.0000000000007
+							},
+							"dst": {
+								"x": 502.6190476190475,
+								"y": 1277.7261904761913
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 195,
+						"points": {
+							"src": {
+								"x": 1726.7142857142849,
+								"y": 1267.0714285714278
+							},
+							"dst": {
+								"x": 1507.999999999999,
+								"y": 1295.9999999999993
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 196,
+						"points": {
+							"src": {
+								"x": 1507.999999999999,
+								"y": 1295.9999999999993
+							},
+							"dst": {
+								"x": 1583.0714285714278,
+								"y": 958.8928571428571
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 199,
+						"points": {
+							"src": {
+								"x": 1612.4999999999998,
+								"y": 696.357142857143
+							},
+							"dst": {
+								"x": 1611.9999999999989,
+								"y": 411.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 201,
+						"points": {
+							"src": {
+								"x": 1611.9999999999989,
+								"y": 411.9999999999998
+							},
+							"dst": {
+								"x": 1378.3571428571415,
+								"y": 202.7142857142848
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 202,
+						"points": {
+							"src": {
+								"x": 1378.3571428571415,
+								"y": 202.7142857142848
+							},
+							"dst": {
+								"x": 1028.5714285714273,
+								"y": -15.14285714285731
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 257,
+						"points": {
+							"src": {
+								"x": 1141.9999999999989,
+								"y": 627.9999999999999
+							},
+							"dst": {
+								"x": 1378.3571428571415,
+								"y": 202.7142857142848
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 259,
+						"points": {
+							"src": {
+								"x": 1507.999999999999,
+								"y": 1295.9999999999993
+							},
+							"dst": {
+								"x": 1197.9999999999995,
+								"y": 1047.9999999999998
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 260,
+						"points": {
+							"src": {
+								"x": 1197.9999999999995,
+								"y": 1047.9999999999998
+							},
+							"dst": {
+								"x": 1141.9999999999989,
+								"y": 627.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 261,
+						"points": {
+							"src": {
+								"x": 1197.9999999999995,
+								"y": 1047.9999999999998
+							},
+							"dst": {
+								"x": 1583.0714285714278,
+								"y": 958.8928571428571
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 342,
+						"points": {
+							"src": {
+								"x": 1028.5714285714273,
+								"y": -15.14285714285731
+							},
+							"dst": {
+								"x": 713.9999999999999,
+								"y": -8
+							}
+						}
+					}
+				],
+				"condIds": [
+					44,
+					46,
+					47,
+					50,
+					56,
+					61,
+					131,
+					132,
+					134,
+					135,
+					137,
+					182,
+					183,
+					185,
+					188,
+					189,
+					190,
+					191,
+					192,
+					193,
+					194,
+					195,
+					196,
+					199,
+					201,
+					202,
+					257,
+					259,
+					260,
+					261,
+					342
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 218,
+					"y": 155
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 254,
+						"x": -29.28571428571422,
+						"y": -129
+					},
+					{
+						"ver": 1,
+						"nodeId": 255,
+						"x": 286.0952380952382,
+						"y": -130.82539682539687
+					},
+					{
+						"ver": 1,
+						"nodeId": 261,
+						"x": 155.57142857142833,
+						"y": 50.53968253968182
+					},
+					{
+						"ver": 1,
+						"nodeId": 262,
+						"x": 9.20634920634933,
+						"y": 310.6349206349208
+					},
+					{
+						"ver": 1,
+						"nodeId": 263,
+						"x": 383.8095238095239,
+						"y": 214.28571428571405
+					},
+					{
+						"ver": 1,
+						"nodeId": 264,
+						"x": 126.66666666666657,
+						"y": 1006.8253968253965
+					},
+					{
+						"ver": 1,
+						"nodeId": 270,
+						"x": 604.285714285714,
+						"y": 1487.1428571428569
+					},
+					{
+						"ver": 1,
+						"nodeId": 272,
+						"x": 1148.5714285714284,
+						"y": 901.4285714285709
+					},
+					{
+						"ver": 1,
+						"nodeId": 275,
+						"x": 291.4285714285713,
+						"y": 547.1428571428569
+					},
+					{
+						"ver": 1,
+						"nodeId": 277,
+						"x": 2.857142857142435,
+						"y": 549.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 279,
+						"x": 152.85714285714272,
+						"y": 1382.857142857143
+					},
+					{
+						"ver": 1,
+						"nodeId": 281,
+						"x": 425.714285714286,
+						"y": 1142.8571428571422
+					},
+					{
+						"ver": 1,
+						"nodeId": 283,
+						"x": 837.1428571428576,
+						"y": 1081.4285714285716
+					},
+					{
+						"ver": 1,
+						"nodeId": 285,
+						"x": 1148.5714285714284,
+						"y": 1215.7142857142856
+					},
+					{
+						"ver": 1,
+						"nodeId": 287,
+						"x": 985.7142857142858,
+						"y": 617.142857142857
+					},
+					{
+						"ver": 1,
+						"nodeId": 288,
+						"x": 657.1428571428571,
+						"y": 407.1428571428571
+					},
+					{
+						"ver": 1,
+						"nodeId": 293,
+						"x": 907.142857142857,
+						"y": 237.42857142857144
+					},
+					{
+						"ver": 1,
+						"nodeId": 295,
+						"x": 1157.142857142857,
+						"y": 239.4285714285715
+					},
+					{
+						"ver": 1,
+						"nodeId": 297,
+						"x": 1284.285714285714,
+						"y": 465.71428571428555
+					}
+				],
+				"nodeIds": [
+					254,
+					255,
+					261,
+					262,
+					263,
+					264,
+					270,
+					272,
+					275,
+					277,
+					279,
+					281,
+					283,
+					285,
+					287,
+					288,
+					293,
+					295,
+					297
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 341,
+						"points": {
+							"src": {
+								"x": 50.71428571428578,
+								"y": -49
+							},
+							"dst": {
+								"x": 366.0952380952382,
+								"y": -50.825396825396865
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 348,
+						"points": {
+							"src": {
+								"x": 89.20634920634933,
+								"y": 390.6349206349208
+							},
+							"dst": {
+								"x": 463.8095238095239,
+								"y": 294.28571428571405
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 362,
+						"points": {
+							"src": {
+								"x": 463.8095238095239,
+								"y": 294.28571428571405
+							},
+							"dst": {
+								"x": 371.4285714285713,
+								"y": 627.1428571428569
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 364,
+						"points": {
+							"src": {
+								"x": 463.8095238095239,
+								"y": 294.28571428571405
+							},
+							"dst": {
+								"x": 82.85714285714243,
+								"y": 629.9999999999999
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 366,
+						"points": {
+							"src": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							},
+							"dst": {
+								"x": 232.85714285714272,
+								"y": 1462.857142857143
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 369,
+						"points": {
+							"src": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							},
+							"dst": {
+								"x": 505.714285714286,
+								"y": 1222.8571428571422
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 371,
+						"points": {
+							"src": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							},
+							"dst": {
+								"x": 917.1428571428576,
+								"y": 1161.4285714285716
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 373,
+						"points": {
+							"src": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							},
+							"dst": {
+								"x": 1228.5714285714284,
+								"y": 1295.7142857142856
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 374,
+						"points": {
+							"src": {
+								"x": 1228.5714285714284,
+								"y": 1295.7142857142856
+							},
+							"dst": {
+								"x": 1228.5714285714284,
+								"y": 981.4285714285709
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 375,
+						"points": {
+							"src": {
+								"x": 505.714285714286,
+								"y": 1222.8571428571422
+							},
+							"dst": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 376,
+						"points": {
+							"src": {
+								"x": 371.4285714285713,
+								"y": 627.1428571428569
+							},
+							"dst": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 378,
+						"points": {
+							"src": {
+								"x": 82.85714285714243,
+								"y": 629.9999999999999
+							},
+							"dst": {
+								"x": 206.66666666666657,
+								"y": 1086.8253968253966
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 379,
+						"points": {
+							"src": {
+								"x": 232.85714285714272,
+								"y": 1462.857142857143
+							},
+							"dst": {
+								"x": 684.285714285714,
+								"y": 1567.1428571428569
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 381,
+						"points": {
+							"src": {
+								"x": 917.1428571428576,
+								"y": 1161.4285714285716
+							},
+							"dst": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 382,
+						"points": {
+							"src": {
+								"x": 1228.5714285714284,
+								"y": 981.4285714285709
+							},
+							"dst": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 383,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 737.1428571428571,
+								"y": 487.1428571428571
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 384,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 987.142857142857,
+								"y": 317.42857142857144
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 385,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 1237.142857142857,
+								"y": 319.4285714285715
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 386,
+						"points": {
+							"src": {
+								"x": 1065.7142857142858,
+								"y": 697.142857142857
+							},
+							"dst": {
+								"x": 1364.285714285714,
+								"y": 545.7142857142856
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 388,
+						"points": {
+							"src": {
+								"x": 366.0952380952382,
+								"y": -50.825396825396865
+							},
+							"dst": {
+								"x": 235.57142857142833,
+								"y": 130.53968253968182
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 389,
+						"points": {
+							"src": {
+								"x": 235.57142857142833,
+								"y": 130.53968253968182
+							},
+							"dst": {
+								"x": 89.20634920634933,
+								"y": 390.6349206349208
+							}
+						}
+					}
+				],
+				"condIds": [
+					341,
+					348,
+					362,
+					364,
+					366,
+					369,
+					371,
+					373,
+					374,
+					375,
+					376,
+					378,
+					379,
+					381,
+					382,
+					383,
+					384,
+					385,
+					386,
+					388,
+					389
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 231,
+					"y": 88
+				}
+			}
+		],
+		"stageIds": [
+			11,
+			27,
+			49,
+			57,
+			254
+		]
+	}
+}

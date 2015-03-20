@@ -1,0 +1,1379 @@
+{
+	"script": {
+		"ver": 1,
+		"name": "intcom_game",
+		"stages": [
+			{
+				"ver": 1,
+				"stageNodeId": 11,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 9,
+						"label": "Intro",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							0
+						],
+						"props": {
+							"name": "Intro",
+							"objs": [
+								"Player",
+								"girlfront",
+								"officeman",
+								"nudewoman",
+								"nudeman",
+								"frida"
+							],
+							"objPool": [],
+							"text": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							0
+						],
+						"outCondIds": [
+							3
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"girlfront",
+								"nudewoman",
+								"officeman",
+								"nudeman",
+								"frida"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 16,
+						"type": 11,
+						"label": "Intro Notification",
+						"continue": false,
+						"inCondIds": [
+							3
+						],
+						"outCondIds": [
+							15
+						],
+						"props": {
+							"text": "Добро пожаловать в говорящую галерею.",
+							"name": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 17,
+						"type": 10,
+						"label": "GoToNextStage",
+						"continue": false,
+						"inCondIds": [
+							34
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Intro",
+									"$$hashKey": "01C"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Outro",
+									"$$hashKey": "01E"
+								}
+							],
+							"isPure": false,
+							"text": ""
+						}
+					},
+					{
+						"ver": 1,
+						"id": 30,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							15
+						],
+						"outCondIds": [
+							18
+						],
+						"props": {
+							"id": "Player",
+							"text": "Теперь я точно знаю, что дуэль на лопатах в Ашане была не лучшей идеей.",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 31,
+						"type": 1,
+						"label": "JeanDominic",
+						"continue": false,
+						"inCondIds": [
+							18
+						],
+						"outCondIds": [
+							49
+						],
+						"props": {
+							"id": "girlfront",
+							"text": "Этим вечером я хочу тебя на углу кровати.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 45,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							52
+						],
+						"outCondIds": [
+							53
+						],
+						"props": {
+							"id": "officeman",
+							"text": "Что он читает?",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 46,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							58
+						],
+						"outCondIds": [
+							60
+						],
+						"props": {
+							"id": "nudewoman",
+							"text": "Только после свадьбы!",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 47,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							57
+						],
+						"outCondIds": [
+							58
+						],
+						"props": {
+							"id": "nudeman",
+							"text": "Ты не против если я присоединюсь?",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 48,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							61
+						],
+						"outCondIds": [
+							34
+						],
+						"props": {
+							"id": "frida",
+							"text": "Иногда мне кажется, что я бисексуальна. Но потом я понимаю, что единственная женщина, которая нравится мне это я сама.",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 64,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							49
+						],
+						"outCondIds": [
+							51
+						],
+						"props": {
+							"id": "Player",
+							"text": "Женщина, полегче!",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 65,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							51
+						],
+						"outCondIds": [
+							52
+						],
+						"props": {
+							"id": "girlfront",
+							"text": "Прошу прощения...",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 66,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							53
+						],
+						"outCondIds": [
+							55
+						],
+						"props": {
+							"id": "officeman",
+							"text": "Гороскоп???",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 67,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							55
+						],
+						"outCondIds": [
+							57
+						],
+						"props": {
+							"text": "Картина Эварда Хоппера.\nОфис ночью."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 68,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							60
+						],
+						"outCondIds": [
+							61
+						],
+						"props": {
+							"text": "Фрэнк Дикси.\nПредложение."
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 0,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 3,
+						"type": 10,
+						"props": {
+							"name": "stage_activate"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 15,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 18,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 34,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 49,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 51,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 52,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 53,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 55,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 57,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 58,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 60,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 61,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 13,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 9,
+						"label": "stage",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							1
+						],
+						"props": {
+							"name": "Outro",
+							"objs": [
+								"Player",
+								"monstro",
+								"dreamgirl",
+								"womanyoung",
+								"manyoung",
+								"closegirl",
+								"closeboy",
+								"alcoman",
+								"alcogirl",
+								"monalisa"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 14,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							1
+						],
+						"outCondIds": [
+							6
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"monalisa",
+								"monstro",
+								"dreamgirl",
+								"womanyoung",
+								"manyoung",
+								"closegirl",
+								"closeboy",
+								"alcoman",
+								"alcogirl"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 19,
+						"type": 10,
+						"label": "GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							6
+						],
+						"outCondIds": [
+							62
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "Intro",
+									"$$hashKey": "01M"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "Outro",
+									"$$hashKey": "01O"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 26,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							62
+						],
+						"outCondIds": [
+							12
+						],
+						"props": {
+							"id": "monstro",
+							"text": "ФБР нашли шерсть в кровати этой женщины.",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 27,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							12
+						],
+						"outCondIds": [
+							13
+						],
+						"props": {
+							"id": "dreamgirl",
+							"text": "И сказали что это был кот убийца!",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 28,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							13
+						],
+						"outCondIds": [
+							42
+						],
+						"props": {
+							"id": "womanyoung",
+							"text": "Не могу опеределиться. Этот парень классный или мне просто скучно?",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 57,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							42
+						],
+						"outCondIds": [
+							43
+						],
+						"props": {
+							"id": "manyoung",
+							"text": "В любом случае секс это выход.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 58,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							43
+						],
+						"outCondIds": [
+							44
+						],
+						"props": {
+							"id": "closeboy",
+							"text": "Катерина или Анжела?",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 59,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							44
+						],
+						"outCondIds": [
+							45
+						],
+						"props": {
+							"id": "closegirl",
+							"text": "Вася, Паша или Гоген?",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 60,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							45
+						],
+						"outCondIds": [
+							75
+						],
+						"props": {
+							"id": "alcogirl",
+							"text": "Жизнь - боль.",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 61,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							75
+						],
+						"outCondIds": [
+							47
+						],
+						"props": {
+							"id": "alcoman",
+							"text": "Алкгль",
+							"phraseType": "THINK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 62,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							47
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "monalisa",
+							"text": "Спасибо за просмотр наше говорящей галереи!",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 1,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 42,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 43,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 44,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 45,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 47,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 62,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 75,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			}
+		]
+	},
+	"scriptEditor": {
+		"ver": 1,
+		"currentStageId": 11,
+		"stageEditors": [
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 11,
+						"x": 428.57142857142856,
+						"y": 141.4285714285714
+					},
+					{
+						"ver": 1,
+						"nodeId": 12,
+						"x": 120.42857142857156,
+						"y": 390.1428571428573
+					},
+					{
+						"ver": 1,
+						"nodeId": 16,
+						"x": 112.85714285714249,
+						"y": 706.1428571428568
+					},
+					{
+						"ver": 1,
+						"nodeId": 17,
+						"x": 1452.0000000000002,
+						"y": 132.00000000000009
+					},
+					{
+						"ver": 1,
+						"nodeId": 30,
+						"x": 552.8571428571424,
+						"y": 708.7714290618898
+					},
+					{
+						"ver": 1,
+						"nodeId": 31,
+						"x": 926.8571428571424,
+						"y": 1051.6285719190323
+					},
+					{
+						"ver": 1,
+						"nodeId": 45,
+						"x": 1150.285714285714,
+						"y": 563.3428576333179
+					},
+					{
+						"ver": 1,
+						"nodeId": 46,
+						"x": 918.0000000000005,
+						"y": 298.2000004904607
+					},
+					{
+						"ver": 1,
+						"nodeId": 47,
+						"x": 699.1428571428577,
+						"y": 106.77142906188934
+					},
+					{
+						"ver": 1,
+						"nodeId": 48,
+						"x": 1289.9999999999993,
+						"y": 341.34285763331826
+					},
+					{
+						"ver": 1,
+						"nodeId": 64,
+						"x": 1291.4285714285693,
+						"y": 799.4285714285719
+					},
+					{
+						"ver": 1,
+						"nodeId": 65,
+						"x": 929.9999999999993,
+						"y": 802.8571428571432
+					},
+					{
+						"ver": 1,
+						"nodeId": 66,
+						"x": 823.9999999999998,
+						"y": 563.1428571428573
+					},
+					{
+						"ver": 1,
+						"nodeId": 67,
+						"x": 565.999999999999,
+						"y": 405.42857142857133
+					},
+					{
+						"ver": 1,
+						"nodeId": 68,
+						"x": 1131.9999999999989,
+						"y": 122
+					}
+				],
+				"nodeIds": [
+					11,
+					12,
+					16,
+					17,
+					30,
+					31,
+					45,
+					46,
+					47,
+					48,
+					64,
+					65,
+					66,
+					67,
+					68
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 0,
+						"points": {
+							"src": {
+								"x": 508.57142857142856,
+								"y": 221.4285714285714
+							},
+							"dst": {
+								"x": 200.42857142857156,
+								"y": 470.1428571428573
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 3,
+						"points": {
+							"src": {
+								"x": 200.42857142857156,
+								"y": 470.1428571428573
+							},
+							"dst": {
+								"x": 192.8571428571425,
+								"y": 786.1428571428568
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 15,
+						"points": {
+							"src": {
+								"x": 192.8571428571425,
+								"y": 786.1428571428568
+							},
+							"dst": {
+								"x": 632.8571428571424,
+								"y": 788.7714290618898
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 18,
+						"points": {
+							"src": {
+								"x": 632.8571428571424,
+								"y": 788.7714290618898
+							},
+							"dst": {
+								"x": 1006.8571428571424,
+								"y": 1131.6285719190323
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 34,
+						"points": {
+							"src": {
+								"x": 1369.9999999999993,
+								"y": 421.34285763331826
+							},
+							"dst": {
+								"x": 1532.0000000000002,
+								"y": 212.00000000000009
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 49,
+						"points": {
+							"src": {
+								"x": 1006.8571428571424,
+								"y": 1131.6285719190323
+							},
+							"dst": {
+								"x": 1371.4285714285693,
+								"y": 879.4285714285719
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 51,
+						"points": {
+							"src": {
+								"x": 1371.4285714285693,
+								"y": 879.4285714285719
+							},
+							"dst": {
+								"x": 1009.9999999999993,
+								"y": 882.8571428571432
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 52,
+						"points": {
+							"src": {
+								"x": 1009.9999999999993,
+								"y": 882.8571428571432
+							},
+							"dst": {
+								"x": 1230.285714285714,
+								"y": 643.3428576333179
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 53,
+						"points": {
+							"src": {
+								"x": 1230.285714285714,
+								"y": 643.3428576333179
+							},
+							"dst": {
+								"x": 903.9999999999998,
+								"y": 643.1428571428573
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 55,
+						"points": {
+							"src": {
+								"x": 903.9999999999998,
+								"y": 643.1428571428573
+							},
+							"dst": {
+								"x": 645.999999999999,
+								"y": 485.42857142857133
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 57,
+						"points": {
+							"src": {
+								"x": 645.999999999999,
+								"y": 485.42857142857133
+							},
+							"dst": {
+								"x": 779.1428571428577,
+								"y": 186.77142906188934
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 58,
+						"points": {
+							"src": {
+								"x": 779.1428571428577,
+								"y": 186.77142906188934
+							},
+							"dst": {
+								"x": 998.0000000000005,
+								"y": 378.2000004904607
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 60,
+						"points": {
+							"src": {
+								"x": 998.0000000000005,
+								"y": 378.2000004904607
+							},
+							"dst": {
+								"x": 1211.9999999999989,
+								"y": 202
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 61,
+						"points": {
+							"src": {
+								"x": 1211.9999999999989,
+								"y": 202
+							},
+							"dst": {
+								"x": 1369.9999999999993,
+								"y": 421.34285763331826
+							}
+						}
+					}
+				],
+				"condIds": [
+					0,
+					3,
+					15,
+					18,
+					34,
+					49,
+					51,
+					52,
+					53,
+					55,
+					57,
+					58,
+					60,
+					61
+				],
+				"scale": 0.7000000000000001,
+				"pos": {
+					"x": 190,
+					"y": -1
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 13,
+						"x": 399,
+						"y": 100
+					},
+					{
+						"ver": 1,
+						"nodeId": 14,
+						"x": 400,
+						"y": 420
+					},
+					{
+						"ver": 1,
+						"nodeId": 19,
+						"x": 714.9999999999997,
+						"y": 422
+					},
+					{
+						"ver": 1,
+						"nodeId": 26,
+						"x": 1088.0000000000005,
+						"y": 494.33333333333337
+					},
+					{
+						"ver": 1,
+						"nodeId": 27,
+						"x": 849,
+						"y": 780
+					},
+					{
+						"ver": 1,
+						"nodeId": 28,
+						"x": 374.6666666666666,
+						"y": 783.6666666666672
+					},
+					{
+						"ver": 1,
+						"nodeId": 57,
+						"x": 691.9999999999997,
+						"y": 1030.6666666666667
+					},
+					{
+						"ver": 1,
+						"nodeId": 58,
+						"x": 1040.6666666666677,
+						"y": 1032.6666666666679
+					},
+					{
+						"ver": 1,
+						"nodeId": 59,
+						"x": 1336.3333333333335,
+						"y": 931.0000000000002
+					},
+					{
+						"ver": 1,
+						"nodeId": 60,
+						"x": 1328.3333333333342,
+						"y": 624.3333333333334
+					},
+					{
+						"ver": 1,
+						"nodeId": 61,
+						"x": 1675.0000000000007,
+						"y": 483.3333333333335
+					},
+					{
+						"ver": 1,
+						"nodeId": 62,
+						"x": 1666.0000000000018,
+						"y": 836.3333333333338
+					}
+				],
+				"nodeIds": [
+					13,
+					14,
+					19,
+					26,
+					27,
+					28,
+					57,
+					58,
+					59,
+					60,
+					61,
+					62
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 1,
+						"points": {
+							"src": {
+								"x": 479,
+								"y": 180
+							},
+							"dst": {
+								"x": 480,
+								"y": 500
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 500
+							},
+							"dst": {
+								"x": 794.9999999999997,
+								"y": 502
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 12,
+						"points": {
+							"src": {
+								"x": 1168.0000000000005,
+								"y": 574.3333333333334
+							},
+							"dst": {
+								"x": 929,
+								"y": 860
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 13,
+						"points": {
+							"src": {
+								"x": 929,
+								"y": 860
+							},
+							"dst": {
+								"x": 454.6666666666666,
+								"y": 863.6666666666672
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 42,
+						"points": {
+							"src": {
+								"x": 454.6666666666666,
+								"y": 863.6666666666672
+							},
+							"dst": {
+								"x": 771.9999999999997,
+								"y": 1110.6666666666667
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 43,
+						"points": {
+							"src": {
+								"x": 771.9999999999997,
+								"y": 1110.6666666666667
+							},
+							"dst": {
+								"x": 1120.6666666666677,
+								"y": 1112.6666666666679
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 44,
+						"points": {
+							"src": {
+								"x": 1120.6666666666677,
+								"y": 1112.6666666666679
+							},
+							"dst": {
+								"x": 1416.3333333333335,
+								"y": 1011.0000000000002
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 45,
+						"points": {
+							"src": {
+								"x": 1416.3333333333335,
+								"y": 1011.0000000000002
+							},
+							"dst": {
+								"x": 1408.3333333333342,
+								"y": 704.3333333333334
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 47,
+						"points": {
+							"src": {
+								"x": 1755.0000000000007,
+								"y": 563.3333333333335
+							},
+							"dst": {
+								"x": 1746.0000000000018,
+								"y": 916.3333333333338
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 62,
+						"points": {
+							"src": {
+								"x": 794.9999999999997,
+								"y": 502
+							},
+							"dst": {
+								"x": 1168.0000000000005,
+								"y": 574.3333333333334
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 75,
+						"points": {
+							"src": {
+								"x": 1408.3333333333342,
+								"y": 704.3333333333334
+							},
+							"dst": {
+								"x": 1755.0000000000007,
+								"y": 563.3333333333335
+							}
+						}
+					}
+				],
+				"condIds": [
+					1,
+					6,
+					12,
+					13,
+					42,
+					43,
+					44,
+					45,
+					47,
+					62,
+					75
+				],
+				"scale": 0.6000000000000001,
+				"pos": {
+					"x": 5,
+					"y": 26
+				}
+			}
+		],
+		"stageIds": [
+			11,
+			13
+		]
+	}
+}

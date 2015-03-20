@@ -1,0 +1,652 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "Intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "Intro",
+						"objs": [
+							"Player",
+							"batman",
+							"nigga",
+							"yoda",
+							"end",
+							"friend"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						163
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"batman",
+							"nigga",
+							"yoda",
+							"end",
+							"friend"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 147,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						163
+					],
+					"outCondIds": [
+						7834
+					],
+					"props": {
+						"id": "Player",
+						"text": "Еще маленькой, когда я ехала в поезде, я постоянно что-то изобретала и рассказывала о своих идеях маме, а потом...",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 148,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7837
+					],
+					"outCondIds": [
+						7826
+					],
+					"props": {
+						"id": "batman",
+						"text": "Ну и? Чего будем делать?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 149,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7826
+					],
+					"outCondIds": [
+						7852
+					],
+					"props": {
+						"id": "nigga",
+						"text": "Мммм... можно пойти ко мне, к тебе,",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 150,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7851
+					],
+					"outCondIds": [
+						7829
+					],
+					"props": {
+						"id": "yoda",
+						"text": "В Clilk вы можете вставлять свои фото и видео.",
+						"phraseType": "THINK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 152,
+					"type": 1,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7835
+					],
+					"outCondIds": [
+						7847
+					],
+					"props": {
+						"id": "friend",
+						"text": "Ооо, правда?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 165,
+					"type": 7,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7831
+					],
+					"outCondIds": [
+						7805
+					],
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 5142,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7805
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "ResetScene",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5161,
+					"type": 3,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7829
+					],
+					"outCondIds": [
+						7831,
+						7846
+					],
+					"props": {
+						"id": "end",
+						"text": "Узнать больше об интерактивных историях?",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Yes",
+						"ans2": "No",
+						"ans3": "",
+						"ans4": ""
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5162,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7849
+					],
+					"outCondIds": [
+						7836
+					],
+					"props": {
+						"id": "Player",
+						"text": "Дааа. Раза 3. Я говорила маме о чем-то в поезде...",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5163,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7834
+					],
+					"outCondIds": [
+						7835
+					],
+					"props": {
+						"id": "Player",
+						"text": "...месяц спустя это изобрелтали!",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5164,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7836
+					],
+					"outCondIds": [
+						7837
+					],
+					"props": {
+						"id": "Player",
+						"text": "...и потом это изобретали.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5173,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7846
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "end",
+						"text": "Спасибо за просмотр Clilk",
+						"phraseType": "THINK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5174,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7847
+					],
+					"outCondIds": [
+						7849
+					],
+					"props": {
+						"name": "bigface",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5175,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7853
+					],
+					"outCondIds": [
+						7851
+					],
+					"props": {
+						"id": "nigga",
+						"text": "или можно забить и пойти поесть выпечки.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5176,
+					"type": 10,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7852
+					],
+					"outCondIds": [
+						7853
+					],
+					"props": {
+						"name": "funface",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 163,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7805,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7826,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7829,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7831,
+					"type": 3,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7834,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7835,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7836,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7837,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7846,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7847,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7849,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7851,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7852,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7853,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 13,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 9,
+					"label": "stage2",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"name": "stage2",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [
+						6
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						6
+					],
+					"outCondIds": [
+						7
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "stage1",
+								"$$hashKey": "01M"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "stage2",
+								"$$hashKey": "01O"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7
+					],
+					"outCondIds": [
+						11
+					],
+					"props": {
+						"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						11
+					],
+					"outCondIds": [
+						12
+					],
+					"props": {
+						"id": "Player",
+						"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						12
+					],
+					"outCondIds": [
+						13
+					],
+					"props": {
+						"id": "Player",
+						"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						13
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "Player",
+						"text": "Ok. This is the end,",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		}
+	]
+}
