@@ -68,5 +68,41 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="7017253594421292">
+            <conditions>
+                <condition id="0" name="On function" sid="1581513488712948" type="Function">
+                    <param id="0" name="Name">&quot;troll&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8401155243083228" type="troll">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4287340600730205">
+            <conditions>
+                <condition id="0" name="On function" sid="8879254483699835" type="Function">
+                    <param id="0" name="Name">&quot;bigface&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9852582673818601" type="face1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3131385325496803">
+            <conditions>
+                <condition id="0" name="On function" sid="7959325594188659" type="Function">
+                    <param id="0" name="Name">&quot;funface&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4205653763991529" type="face2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

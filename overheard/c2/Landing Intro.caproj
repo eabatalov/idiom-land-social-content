@@ -1102,6 +1102,73 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="troll" sid="2167390751723626">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="7094437952219554">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2162011347962976" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\troll.png">
+                        <collision-poly>
+                            <point x="0.16875" y="0.184932" />
+                            <point x="0.5" y="0.113014" />
+                            <point x="0.828125" y="0.188356" />
+                            <point x="0.95625" y="0.5" />
+                            <point x="0.76875" y="0.746575" />
+                            <point x="0.5" y="0.886986" />
+                            <point x="0.1125" y="0.876712" />
+                            <point x="0.08125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="face1" sid="5735289153602359">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3673037279961824" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\face.png">
+                        <collision-poly>
+                            <point x="0.1375" y="0.1375" />
+                            <point x="0.5" y="0.0375" />
+                            <point x="0.8375" y="0.1625" />
+                            <point x="0.965625" y="0.5" />
+                            <point x="0.775" y="0.775" />
+                            <point x="0.5" y="0.884375" />
+                            <point x="0.19375" y="0.80625" />
+                            <point x="0.025" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="face2" sid="2076401220961793">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="2277510280205825">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249682428566747" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Desktop\face2.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.79375" y="0.20625" />
+                            <point x="0.903125" y="0.5" />
+                            <point x="0.8625" y="0.8625" />
+                            <point x="0.5" y="0.96875" />
+                            <point x="0.146875" y="0.853125" />
+                            <point x="0.078125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="notifyoneFamily" plugin-id="Sprite" sid="3983726985608804">

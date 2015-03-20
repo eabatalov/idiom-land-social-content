@@ -85,9 +85,9 @@
 					],
 					"props": {
 						"id": "batman",
-						"text": "Master super power hidden in easy tool!",
+						"text": "So what do you want to do?",
 						"phraseType": "THINK",
-						"phraseSize": "MEDIUM"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -100,11 +100,11 @@
 						7826
 					],
 					"outCondIds": [
-						7827
+						7852
 					],
 					"props": {
 						"id": "nigga",
-						"text": "Almost guessed. This is Star Wars =)",
+						"text": "Well, we could go to my house, your house,",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
 					}
@@ -116,33 +116,16 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						7827
+						7851
 					],
 					"outCondIds": [
-						7829
-					],
-					"props": {
-						"id": "yoda",
-						"text": "You can use photos and videos with Clilk.",
-						"phraseType": "THINK",
-						"phraseSize": "MEDIUM"
-					}
-				},
-				{
-					"ver": 1,
-					"id": 151,
-					"type": 1,
-					"label": "",
-					"continue": false,
-					"inCondIds": [],
-					"outCondIds": [
-						7828
+						7854
 					],
 					"props": {
 						"id": "end",
-						"text": "You can share your story with friends.",
+						"text": "Did you just say “jubble”? That can’t be a real word.",
 						"phraseType": "THINK",
-						"phraseSize": "LARGE"
+						"phraseSize": "SMALL"
 					}
 				},
 				{
@@ -150,12 +133,12 @@
 					"id": 152,
 					"type": 1,
 					"label": "",
-					"continue": false,
+					"continue": true,
 					"inCondIds": [
 						7835
 					],
 					"outCondIds": [
-						7832
+						7847
 					],
 					"props": {
 						"id": "friend",
@@ -171,7 +154,6 @@
 					"label": "",
 					"continue": true,
 					"inCondIds": [
-						7828,
 						7831
 					],
 					"outCondIds": [
@@ -204,18 +186,19 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						7829
+						7860
 					],
 					"outCondIds": [
-						7831
+						7831,
+						7846
 					],
 					"props": {
 						"id": "end",
-						"text": "",
-						"phraseType": "SPEAK",
-						"phraseSize": "LARGE",
-						"ans1": "",
-						"ans2": "",
+						"text": "Learn more about interactive stories",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL",
+						"ans1": "Yes",
+						"ans2": "No",
 						"ans3": "",
 						"ans4": ""
 					}
@@ -227,7 +210,7 @@
 					"label": "",
 					"continue": false,
 					"inCondIds": [
-						7832
+						7849
 					],
 					"outCondIds": [
 						7836
@@ -272,9 +255,219 @@
 					],
 					"props": {
 						"id": "Player",
-						"text": "...on the train and then it got invented. –2 train",
+						"text": "...on the train and then it got invented.",
 						"phraseType": "SPEAK",
 						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5173,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7846
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "end",
+						"text": "Thanks for watching Clilk",
+						"phraseType": "THINK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5174,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7847
+					],
+					"outCondIds": [
+						7849
+					],
+					"props": {
+						"name": "bigface",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5175,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7853
+					],
+					"outCondIds": [
+						7851
+					],
+					"props": {
+						"id": "nigga",
+						"text": "or we could just get it over with and visit Becker at the big house.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5176,
+					"type": 10,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7852
+					],
+					"outCondIds": [
+						7853
+					],
+					"props": {
+						"name": "funface",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5177,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7854
+					],
+					"outCondIds": [
+						7855
+					],
+					"props": {
+						"id": "yoda",
+						"text": "It’s like, silent onomatopoeia.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5178,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7855
+					],
+					"outCondIds": [
+						7856
+					],
+					"props": {
+						"id": "end",
+						"text": "There’s no such thing as silent onomatopoeia.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5179,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7856
+					],
+					"outCondIds": [
+						7862
+					],
+					"props": {
+						"id": "end",
+						"text": "The very definition of the word “onomatopoeia” contradicts silence.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5180,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7864
+					],
+					"outCondIds": [
+						7858
+					],
+					"props": {
+						"id": "yoda",
+						"text": "Well, it’s like the sound that boobs would make if they made sound.",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5181,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7858
+					],
+					"outCondIds": [
+						7859
+					],
+					"props": {
+						"id": "yoda",
+						"text": "They’d go “jubble, jubble, jubble.”",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5182,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7859
+					],
+					"outCondIds": [
+						7860
+					],
+					"props": {
+						"id": "end",
+						"text": "I’m afraid I’m going to have to smack you now. Seriously.",
+						"phraseType": "THINK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5184,
+					"type": 10,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7862
+					],
+					"outCondIds": [
+						7864
+					],
+					"props": {
+						"name": "troll",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
 					}
 				}
 			],
@@ -309,43 +502,9 @@
 				},
 				{
 					"ver": 1,
-					"id": 7827,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 7828,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 7829,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
 					"id": 7831,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
-				},
-				{
-					"ver": 1,
-					"id": 7832,
-					"type": 11,
-					"props": {
-						"clearStage": true
-					}
+					"type": 3,
+					"props": {}
 				},
 				{
 					"ver": 1,
@@ -378,6 +537,110 @@
 					"props": {
 						"clearStage": true
 					}
+				},
+				{
+					"ver": 1,
+					"id": 7846,
+					"type": 4,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7847,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7849,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7851,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7852,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7853,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7854,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7855,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7856,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7858,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7859,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7860,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7862,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7864,
+					"type": 8,
+					"props": {}
 				}
 			]
 		},
