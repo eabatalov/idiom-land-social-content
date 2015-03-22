@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IntComGameMain</name>
+    <events>
+        <include>IntComLevelEngine</include>
+        <include>IntComGameFuncLib</include>
+        <include>IntComGameStagesLogic</include>
+        <event-group description="" sid="460933006001851" title="Interactive comics starting">
+            <sub-events>
+                <comment>Type prefix of quest script file name here</comment>
+                <variable constant="1" name="LEVEL_NAME" sid="146390735041057" static="0" type="text">intcom_game</variable>
+                <comment>Type name of the first stage here</comment>
+                <variable constant="1" name="LEVEL_INITIAL_STAGE" sid="4210704395276113" static="0" type="text">Intro</variable>
+                <variable constant="1" name="LEVEL_SPRITER_ANIMS_TO_INIT" sid="5379837504000799" static="0" type="number">0</variable>
+                <event-block sid="2994783783040874">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9886935471380511" type="Function">
+                            <param id="0" name="Name">&quot;onIntComLevelStartReady&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8930605218157595" type="Function">
+                            <param id="0" name="Name">&quot;StartIntComLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">LEVEL_NAME{###}LEVEL_INITIAL_STAGE {###}LEVEL_SPRITER_ANIMS_TO_INIT </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7992040032857145">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4507575217954968" type="Function">
+                            <param id="0" name="Name">&quot;onInitUI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7516301801037677">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="4272883742543504" type="Function">
+                                    <param id="0" name="Name">&quot;IntComInitAllStages&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5431196656068474">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6875055154176057" type="Function">
+                            <param id="0" name="Name">&quot;onLevelStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6384103541569454">
+            <conditions>
+                <condition id="0" name="On function" sid="5316270140704932" type="Function">
+                    <param id="0" name="Name">&quot;mouth&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4471313989267728" type="mouth">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Start" sid="9219218079599721" type="mouth">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

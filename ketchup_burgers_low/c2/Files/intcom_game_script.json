@@ -1,0 +1,468 @@
+{
+	"ver": 1,
+	"name": "intcom_game",
+	"stages": [
+		{
+			"ver": 1,
+			"stageNodeId": 11,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 9,
+					"label": "Intro",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						0
+					],
+					"props": {
+						"name": "Intro",
+						"objs": [
+							"Player",
+							"batman",
+							"nigga",
+							"yoda",
+							"end",
+							"friend"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						0
+					],
+					"outCondIds": [
+						7892
+					],
+					"props": {
+						"objs": [
+							"Player",
+							"batman",
+							"nigga",
+							"yoda",
+							"end",
+							"friend"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 147,
+					"type": 1,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7914
+					],
+					"outCondIds": [
+						7915
+					],
+					"props": {
+						"id": "Player",
+						"text": "Попробуй меня в Кетч Ап Бургерс на Литейном, 58",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 148,
+					"type": 1,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7918
+					],
+					"outCondIds": [
+						7920
+					],
+					"props": {
+						"id": "batman",
+						"text": "До встречи =)",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 152,
+					"type": 1,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7916
+					],
+					"outCondIds": [
+						7917
+					],
+					"props": {
+						"id": "friend",
+						"text": "Здесь можно отлично провести время.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5209,
+					"type": 1,
+					"label": "",
+					"continue": true,
+					"inCondIds": [
+						7892
+					],
+					"outCondIds": [
+						7913
+					],
+					"props": {
+						"id": "yoda",
+						"text": "Привет! Я итальянский бургер",
+						"phraseType": "SPEAK",
+						"phraseSize": "SMALL"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5221,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7913
+					],
+					"outCondIds": [
+						7914
+					],
+					"props": {
+						"name": "mouth",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5222,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7915
+					],
+					"outCondIds": [
+						7916
+					],
+					"props": {
+						"name": "mouth",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5223,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7917
+					],
+					"outCondIds": [
+						7918
+					],
+					"props": {
+						"name": "mouth",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 5224,
+					"type": 10,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7920
+					],
+					"outCondIds": [],
+					"props": {
+						"name": "mouth",
+						"rollbackName": null,
+						"source": "c2",
+						"params": [],
+						"isPure": false
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 0,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7892,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7913,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7914,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7915,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7916,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7917,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 7918,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7920,
+					"type": 8,
+					"props": {}
+				}
+			]
+		},
+		{
+			"ver": 1,
+			"stageNodeId": 13,
+			"nodes": [
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 9,
+					"label": "stage2",
+					"continue": false,
+					"inCondIds": [],
+					"outCondIds": [
+						1
+					],
+					"props": {
+						"name": "stage2",
+						"objs": [
+							"Player"
+						],
+						"objPool": []
+					}
+				},
+				{
+					"ver": 1,
+					"id": 14,
+					"type": 8,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						1
+					],
+					"outCondIds": [
+						6
+					],
+					"props": {
+						"objs": [
+							"Player"
+						]
+					}
+				},
+				{
+					"ver": 1,
+					"id": 19,
+					"type": 10,
+					"label": "C2API_GoToPrevStage",
+					"continue": true,
+					"inCondIds": [
+						6
+					],
+					"outCondIds": [
+						7
+					],
+					"props": {
+						"name": "C2API_GoToNextStage",
+						"rollbackName": "C2API_GoToPrevStage",
+						"source": "c2",
+						"params": [
+							{
+								"type": "str",
+								"name": "0",
+								"value": "stage1",
+								"$$hashKey": "01M"
+							},
+							{
+								"type": "str",
+								"name": "1",
+								"value": "stage2",
+								"$$hashKey": "01O"
+							}
+						],
+						"isPure": false
+					}
+				},
+				{
+					"ver": 1,
+					"id": 20,
+					"type": 11,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						7
+					],
+					"outCondIds": [
+						11
+					],
+					"props": {
+						"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
+					}
+				},
+				{
+					"ver": 1,
+					"id": 26,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						11
+					],
+					"outCondIds": [
+						12
+					],
+					"props": {
+						"id": "Player",
+						"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 27,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						12
+					],
+					"outCondIds": [
+						13
+					],
+					"props": {
+						"id": "Player",
+						"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+						"phraseType": "SPEAK",
+						"phraseSize": "LARGE"
+					}
+				},
+				{
+					"ver": 1,
+					"id": 28,
+					"type": 1,
+					"label": "",
+					"continue": false,
+					"inCondIds": [
+						13
+					],
+					"outCondIds": [],
+					"props": {
+						"id": "Player",
+						"text": "Ok. This is the end,",
+						"phraseType": "SPEAK",
+						"phraseSize": "MEDIUM"
+					}
+				}
+			],
+			"conds": [
+				{
+					"ver": 1,
+					"id": 1,
+					"type": 1,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 6,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 7,
+					"type": 8,
+					"props": {}
+				},
+				{
+					"ver": 1,
+					"id": 11,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 12,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				},
+				{
+					"ver": 1,
+					"id": 13,
+					"type": 11,
+					"props": {
+						"clearStage": true
+					}
+				}
+			]
+		}
+	]
+}

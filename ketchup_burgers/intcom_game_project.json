@@ -1,0 +1,856 @@
+{
+	"script": {
+		"ver": 1,
+		"name": "intcom_game",
+		"stages": [
+			{
+				"ver": 1,
+				"stageNodeId": 11,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 9,
+						"label": "Intro",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							0
+						],
+						"props": {
+							"name": "Intro",
+							"objs": [
+								"Player",
+								"batman",
+								"nigga",
+								"yoda",
+								"end",
+								"friend"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							0
+						],
+						"outCondIds": [
+							7892
+						],
+						"props": {
+							"objs": [
+								"Player",
+								"batman",
+								"nigga",
+								"yoda",
+								"end",
+								"friend"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 147,
+						"type": 1,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							7914
+						],
+						"outCondIds": [
+							7915
+						],
+						"props": {
+							"id": "Player",
+							"text": "Меня можно купить в Кетч Ап Бургерс на Литейном, 58",
+							"phraseType": "SPEAK",
+							"phraseSize": "SMALL"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 148,
+						"type": 1,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							7918
+						],
+						"outCondIds": [
+							7920
+						],
+						"props": {
+							"id": "batman",
+							"text": "До встречи =)",
+							"phraseType": "THINK",
+							"phraseSize": "MEDIUM"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 152,
+						"type": 1,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							7916
+						],
+						"outCondIds": [
+							7917
+						],
+						"props": {
+							"id": "friend",
+							"text": "Здесь можно отлично провести время.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 5209,
+						"type": 1,
+						"label": "",
+						"continue": true,
+						"inCondIds": [
+							7892
+						],
+						"outCondIds": [
+							7913
+						],
+						"props": {
+							"id": "yoda",
+							"text": "Привет! Я итальянский бургер",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 5221,
+						"type": 10,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							7913
+						],
+						"outCondIds": [
+							7914
+						],
+						"props": {
+							"name": "mouth",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 5222,
+						"type": 10,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							7915
+						],
+						"outCondIds": [
+							7916
+						],
+						"props": {
+							"name": "mouth",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 5223,
+						"type": 10,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							7917
+						],
+						"outCondIds": [
+							7918
+						],
+						"props": {
+							"name": "mouth",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 5224,
+						"type": 10,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							7920
+						],
+						"outCondIds": [],
+						"props": {
+							"name": "mouth",
+							"rollbackName": null,
+							"source": "c2",
+							"params": [],
+							"isPure": false
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 0,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 7892,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 7913,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 7914,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 7915,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 7916,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 7917,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 7918,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 7920,
+						"type": 8,
+						"props": {}
+					}
+				]
+			},
+			{
+				"ver": 1,
+				"stageNodeId": 13,
+				"nodes": [
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 9,
+						"label": "stage2",
+						"continue": false,
+						"inCondIds": [],
+						"outCondIds": [
+							1
+						],
+						"props": {
+							"name": "stage2",
+							"objs": [
+								"Player"
+							],
+							"objPool": []
+						}
+					},
+					{
+						"ver": 1,
+						"id": 14,
+						"type": 8,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							1
+						],
+						"outCondIds": [
+							6
+						],
+						"props": {
+							"objs": [
+								"Player"
+							]
+						}
+					},
+					{
+						"ver": 1,
+						"id": 19,
+						"type": 10,
+						"label": "C2API_GoToPrevStage",
+						"continue": true,
+						"inCondIds": [
+							6
+						],
+						"outCondIds": [
+							7
+						],
+						"props": {
+							"name": "C2API_GoToNextStage",
+							"rollbackName": "C2API_GoToPrevStage",
+							"source": "c2",
+							"params": [
+								{
+									"type": "str",
+									"name": "0",
+									"value": "stage1",
+									"$$hashKey": "01M"
+								},
+								{
+									"type": "str",
+									"name": "1",
+									"value": "stage2",
+									"$$hashKey": "01O"
+								}
+							],
+							"isPure": false
+						}
+					},
+					{
+						"ver": 1,
+						"id": 20,
+						"type": 11,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							7
+						],
+						"outCondIds": [
+							11
+						],
+						"props": {
+							"text": "This is the first notification on the second stage named stage2.\nOn all the not first stages NEXT condition should come out of storyline node.\nIf you want to be able to get back to previous stage FUNCTION_CALL node should come next. You also should type source and dest stage names in its parameters. Use Ctrl+C & Ctrl+Alt+V + mouse click to copy nodes as FUNCTION_CALL nodes are almost identical. FUNCTION_CALL node should have \"continue\" True and should have CONTINUE outcoming condition."
+						}
+					},
+					{
+						"ver": 1,
+						"id": 26,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							11
+						],
+						"outCondIds": [
+							12
+						],
+						"props": {
+							"id": "Player",
+							"text": "I am NPC from stage2. My id is Player. Player always exists on any stage.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 27,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							12
+						],
+						"outCondIds": [
+							13
+						],
+						"props": {
+							"id": "Player",
+							"text": "To add more NPCs in script editor go to stage node and to storyline node after that. My C2 NpcId field value should be the same as NPC id in quest script.",
+							"phraseType": "SPEAK",
+							"phraseSize": "LARGE"
+						}
+					},
+					{
+						"ver": 1,
+						"id": 28,
+						"type": 1,
+						"label": "",
+						"continue": false,
+						"inCondIds": [
+							13
+						],
+						"outCondIds": [],
+						"props": {
+							"id": "Player",
+							"text": "Ok. This is the end,",
+							"phraseType": "SPEAK",
+							"phraseSize": "MEDIUM"
+						}
+					}
+				],
+				"conds": [
+					{
+						"ver": 1,
+						"id": 1,
+						"type": 1,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 6,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 7,
+						"type": 8,
+						"props": {}
+					},
+					{
+						"ver": 1,
+						"id": 11,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 12,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					},
+					{
+						"ver": 1,
+						"id": 13,
+						"type": 11,
+						"props": {
+							"clearStage": true
+						}
+					}
+				]
+			}
+		]
+	},
+	"scriptEditor": {
+		"ver": 1,
+		"currentStageId": 11,
+		"stageEditors": [
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 11,
+						"x": 749.9999999999998,
+						"y": 393.9999999999999
+					},
+					{
+						"ver": 1,
+						"nodeId": 12,
+						"x": 312.14207844517796,
+						"y": 399.1428706796952
+					},
+					{
+						"ver": 1,
+						"nodeId": 147,
+						"x": 312.284212511617,
+						"y": 1089.429771101909
+					},
+					{
+						"ver": 1,
+						"nodeId": 148,
+						"x": 1332.6446926445299,
+						"y": 1081.5749071651485
+					},
+					{
+						"ver": 1,
+						"nodeId": 152,
+						"x": 736.5010197231513,
+						"y": 1405.0034883350186
+					},
+					{
+						"ver": 1,
+						"nodeId": 5209,
+						"x": 312.99998145957846,
+						"y": 732.4999861821098
+					},
+					{
+						"ver": 1,
+						"nodeId": 5221,
+						"x": 738.0089659342734,
+						"y": 736.0463131486379
+					},
+					{
+						"ver": 1,
+						"nodeId": 5222,
+						"x": 924.0106901934209,
+						"y": 1084.0486685585793
+					},
+					{
+						"ver": 1,
+						"nodeId": 5223,
+						"x": 1142.0127110993046,
+						"y": 1408.0508615264537
+					},
+					{
+						"ver": 1,
+						"nodeId": 5224,
+						"x": 1346.0146022222416,
+						"y": 752.0464214433482
+					}
+				],
+				"nodeIds": [
+					11,
+					12,
+					147,
+					148,
+					152,
+					5209,
+					5221,
+					5222,
+					5223,
+					5224
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 0,
+						"points": {
+							"src": {
+								"x": 829.9999999999998,
+								"y": 473.9999999999999
+							},
+							"dst": {
+								"x": 392.14207844517796,
+								"y": 479.1428706796952
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7892,
+						"points": {
+							"src": {
+								"x": 392.14207844517796,
+								"y": 479.1428706796952
+							},
+							"dst": {
+								"x": 392.99998145957846,
+								"y": 812.4999861821098
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7913,
+						"points": {
+							"src": {
+								"x": 392.99998145957846,
+								"y": 812.4999861821098
+							},
+							"dst": {
+								"x": 818.0089659342734,
+								"y": 816.0463131486379
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7914,
+						"points": {
+							"src": {
+								"x": 818.0089659342734,
+								"y": 816.0463131486379
+							},
+							"dst": {
+								"x": 392.284212511617,
+								"y": 1169.429771101909
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7915,
+						"points": {
+							"src": {
+								"x": 392.284212511617,
+								"y": 1169.429771101909
+							},
+							"dst": {
+								"x": 1004.0106901934209,
+								"y": 1164.0486685585793
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7916,
+						"points": {
+							"src": {
+								"x": 1004.0106901934209,
+								"y": 1164.0486685585793
+							},
+							"dst": {
+								"x": 816.5010197231513,
+								"y": 1485.0034883350186
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7917,
+						"points": {
+							"src": {
+								"x": 816.5010197231513,
+								"y": 1485.0034883350186
+							},
+							"dst": {
+								"x": 1222.0127110993046,
+								"y": 1488.0508615264537
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7918,
+						"points": {
+							"src": {
+								"x": 1222.0127110993046,
+								"y": 1488.0508615264537
+							},
+							"dst": {
+								"x": 1412.6446926445299,
+								"y": 1161.5749071651485
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7920,
+						"points": {
+							"src": {
+								"x": 1412.6446926445299,
+								"y": 1161.5749071651485
+							},
+							"dst": {
+								"x": 1426.0146022222416,
+								"y": 832.0464214433482
+							}
+						}
+					}
+				],
+				"condIds": [
+					0,
+					7892,
+					7913,
+					7914,
+					7915,
+					7916,
+					7917,
+					7918,
+					7920
+				],
+				"scale": 0.5000000000000001,
+				"pos": {
+					"x": 211.00088994020558,
+					"y": -125.000678691964
+				}
+			},
+			{
+				"ver": 1,
+				"nodeViews": [
+					{
+						"ver": 1,
+						"nodeId": 13,
+						"x": 400,
+						"y": 100
+					},
+					{
+						"ver": 1,
+						"nodeId": 14,
+						"x": 400,
+						"y": 420
+					},
+					{
+						"ver": 1,
+						"nodeId": 19,
+						"x": 688,
+						"y": 332
+					},
+					{
+						"ver": 1,
+						"nodeId": 20,
+						"x": 1014,
+						"y": 405
+					},
+					{
+						"ver": 1,
+						"nodeId": 26,
+						"x": 1022,
+						"y": 698
+					},
+					{
+						"ver": 1,
+						"nodeId": 27,
+						"x": 677,
+						"y": 698
+					},
+					{
+						"ver": 1,
+						"nodeId": 28,
+						"x": 386,
+						"y": 701
+					}
+				],
+				"nodeIds": [
+					13,
+					14,
+					19,
+					20,
+					26,
+					27,
+					28
+				],
+				"condViews": [
+					{
+						"ver": 1,
+						"condId": 1,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 180
+							},
+							"dst": {
+								"x": 480,
+								"y": 500
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 6,
+						"points": {
+							"src": {
+								"x": 480,
+								"y": 500
+							},
+							"dst": {
+								"x": 768,
+								"y": 412
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 7,
+						"points": {
+							"src": {
+								"x": 768,
+								"y": 412
+							},
+							"dst": {
+								"x": 1094,
+								"y": 485
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 11,
+						"points": {
+							"src": {
+								"x": 1094,
+								"y": 485
+							},
+							"dst": {
+								"x": 1102,
+								"y": 778
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 12,
+						"points": {
+							"src": {
+								"x": 1102,
+								"y": 778
+							},
+							"dst": {
+								"x": 757,
+								"y": 778
+							}
+						}
+					},
+					{
+						"ver": 1,
+						"condId": 13,
+						"points": {
+							"src": {
+								"x": 757,
+								"y": 778
+							},
+							"dst": {
+								"x": 466,
+								"y": 781
+							}
+						}
+					}
+				],
+				"condIds": [
+					1,
+					6,
+					7,
+					11,
+					12,
+					13
+				],
+				"scale": 0.10000000000000014,
+				"pos": {
+					"x": 218,
+					"y": 123
+				}
+			}
+		],
+		"stageIds": [
+			11,
+			13
+		]
+	}
+}

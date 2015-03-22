@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelUIResultNotification</name>
+    <events>
+        <event-group description="" sid="4882388701730434" title="Result notification">
+            <sub-events>
+                <variable constant="1" name="RESULT_NOTIF_ANIM_SOUND_TAG" sid="818913488175506" static="0" type="text">RESULT_NOTIF_ANIM_SOUND_TAG</variable>
+                <event-block sid="7121955129387895">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4081579553018218" type="Function">
+                            <param id="0" name="Name">&quot;onStartOfLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>param(0): multiplier</comment>
+                <event-block sid="8039620327268653">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9158245211568899" type="Function">
+                            <param id="0" name="Name">&quot;SetUITransitionsSpeedMultyplier&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>Also calls onFuncCallCompleted when finished</comment>
+                <event-block sid="1865452838951086">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3616108639167081" type="Function">
+                            <param id="0" name="Name">&quot;RunSuccessNotification&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>Also calls onFuncCallCompleted when finished</comment>
+                <event-block sid="3674146306886579">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1002185689840158" type="Function">
+                            <param id="0" name="Name">&quot;RunFailNotification&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="2958136203611812">
+                    <conditions />
+                    <actions>
+                        <action id="6" name="Stop" sid="60919701183731" type="Audio">
+                            <param id="0" name="Tag">RESULT_NOTIF_ANIM_SOUND_TAG</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8623914445668807">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="9985825493914913" type="Function">
+                                    <param id="0" name="Name">&quot;onFuncCallCompleted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2685174324089181">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="7789903081523683" type="Function">
+                                    <param id="0" name="Name">&quot;onFuncCallCompleted&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
